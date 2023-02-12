@@ -1,0 +1,15 @@
+server:
+  port: 80
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sgmis
+    username: root
+    password: 799823
+
+encrypt:
+  memoryPowOfTwo: 14
+  iterations: 10
+  parallelism: 5
+  hashLength: 512

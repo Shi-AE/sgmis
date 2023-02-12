@@ -1,18 +1,13 @@
-@font-face {
-    font-family: 'Arima Madurai';
-    font-style: normal;
-    font-weight: 300;
-    src: url(https://fonts.gstatic.com/s/arimamadurai/v14/t5t7IRoeKYORG0WNMgnC3seB1ZXtupymeg.ttf) format('truetype');
-}
-
-h1 {
-    font-family: 'Arima Madurai', cursive;
-    color: black;
+h1,
+h2 {
+    font-family: "Nunito", sans-serif;
+    color: #3D8BFD;
     font-weight: bold;
-    letter-spacing: 5px;
+    letter-spacing: 10px;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
     position: relative;
     z-index: 3;
+    text-align: center;
 }
 
 .main {
@@ -22,18 +17,43 @@ h1 {
     position: fixed;
     overflow: hidden;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     min-height: 35rem;
-    background-image: linear-gradient(to bottom, rgba(255, 168, 76, 0.6) 0%, rgba(255, 123, 13, 0.6) 100%), url('https://images.unsplash.com/photo-1446824505046-e43605ffb17f');
+    background-image: linear-gradient(to bottom, #ffffff 0%, #0c8d66ab 70%, #022218ab 100%), url(../img/photo-1446824505046-e43605ffb17f.jfif);
     background-blend-mode: soft-light;
     background-size: cover;
     background-position: center center;
     padding: 2rem;
 }
 
+#login {
+    width: 100%;
+    max-width: 540px;
+}
+
+#login form {
+    background-color: #ffffff97;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 0 0 10px #00000050;
+}
+
+#login form * {
+    margin: 5px 0;
+}
+
+input[type="text"],
+[type="password"] {
+    background-color: #ffffff50;
+}
+
 .bird {
-    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
+    background-image: url(../img/bird-cells-new.svg);
     background-size: auto 100%;
     width: 88px;
     height: 125px;
