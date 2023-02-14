@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赛鸽云库 -- 系统错误</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@next"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/init.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <div class="main">
+
+        <div>
+            <h1>系统错误</h1>
+            <h1>联系管理员</h1>
+        </div>
+
+        <div id="message">
+            <h2>Error message: {{ errorMessage }}</h2>
+        </div>
+
+        <div></div>
+
+        <div class="bird-container bird-container--one">
+            <div class="bird bird--one"></div>
+        </div>
+
+        <div class="bird-container bird-container--two">
+            <div class="bird bird--two"></div>
+        </div>
+
+        <div class="bird-container bird-container--three">
+            <div class="bird bird--three"></div>
+        </div>
+
+        <div class="bird-container bird-container--four">
+            <div class="bird bird--four"></div>
+        </div>
+
+    </div>
+
+    <script>
+        Vue.createApp({
+            setup() {
+                let errorMessage;
+
+                // 获取 URL 参数
+                let searchParams = new URL(window.location.href).searchParams;
+                errorMessage = searchParams.get('message');
+
+                return { errorMessage };
+            },
+        }).mount("#message");
+    </script>
+
+</body>
+
+</html>

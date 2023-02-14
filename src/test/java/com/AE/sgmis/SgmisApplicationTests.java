@@ -18,7 +18,7 @@ class SgmisApplicationTests {
     @Test
     void contextLoads() {
         User user = new User();
-        user.setPassword(new byte[]{49, 50, 51, 52, 53, 54});
+        user.setPassword(new byte[]{55, 57, 57, 56, 50, 51});
         user.setAccount("root");
         QueryWrapper<User> accountQuery = new QueryWrapper<User>().eq("account", user.getAccount());
         encryptUtil.passwordEncrypt(user);
