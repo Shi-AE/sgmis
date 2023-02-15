@@ -71,6 +71,16 @@ ready(() => {
     let main = $("#main");
     main.remove();
 
+    let cookies = document.cookie.split("; ");
+    let username;
+    for (const cookie of cookies) {
+        const [name, value] = cookie.split("=");
+        if (name === "user") {
+            username = value;
+            break;
+        }
+    }
+
     $(`
     <div class="container-scroller">
         <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
@@ -81,7 +91,7 @@ ready(() => {
                     <a class="navbar-brand brand-logo-mini" href=""><img src="../img/logo.jpg" alt="logo"></a>
                     <button class="navbar-toggler navbar-toggler align-self-center" type="button"
                         data-toggle="minimize">
-                        <span class="mdi mdi-sort-variant"></span>
+                        <span class="bi bi-justify-left"></span>
                     </button>
                 </div>
             </div>
@@ -91,17 +101,18 @@ ready(() => {
                 </ul>
                 <ul class="navbar-nav navbar-nav-right">
                     <li class="nav-item nav-profile dropdown">
-                        <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" id="profileDropdown">
-                            <span class="nav-profile-name fs-2">root</span>
+                        <div class="bi bi-person-fill fs-2 text-primary"></div>
+                        <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown" id="profileDropdown">\
+                            <span class="nav-profile-name fs-2">${username}</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right navbar-dropdown"
                             aria-labelledby="profileDropdown">
                             <a class="dropdown-item" href="setting.html">
-                                <i class="mdi mdi-settings text-primary"></i>
+                                <i class="bi bi-gear-fill text-primary"></i>
                                 <span class="text-center">设置</span>
                             </a>
                             <a class="dropdown-item">
-                                <i class="mdi mdi-logout text-primary"></i>
+                                <i class="bi bi-box-arrow-left text-primary"></i>
                                 <span class="text-center">退出</span>
                             </a>
                         </div>
@@ -109,34 +120,34 @@ ready(() => {
                 </ul>
                 <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
                     data-toggle="offcanvas">
-                    <span class="mdi mdi-menu"></span>
+                    <span class="bi bi-justify-left"></span>
                 </button>
             </div>
         </nav>
-        <div class="container-fluid page-body-wrapper">
+        <div class="container-fluid page-body-wrapper" style="height: 100vh">
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <ul class="nav">
                     <li class="nav-item">
                         <a class="nav-link" href="home.html">
-                            <i class="mdi mdi-home menu-icon"></i>
-                            <span class="menu-title">首页</span>
+                            <i class="bi bi-house-door-fill menu-icon fs-3"></i>
+                            <span class="menu-title fs-3">首页</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="sg.html">
-                            <i class="mdi mdi-view-headline menu-icon"></i>
-                            <span class="menu-title">鸽子库</span>
+                            <i class="bi bi-pass-fill menu-icon fs-3"></i>
+                            <span class="menu-title fs-3">鸽子库</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="sgin.html">
-                            <i class="mdi mdi-grid-large menu-icon"></i>
-                            <span class="menu-title">血统库</span>
+                            <i class="bi bi-menu-button-wide-fill menu-icon fs-3"></i>
+                            <span class="menu-title fs-3">血统库</span>
                         </a>
                     </li>
                 </ul>
             </nav>
-            <div class="main-panel">
+            <div class="main-panel align-items-stretch" style="overflow: auto;">
             </div>
         </div>
     </div>
