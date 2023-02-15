@@ -10,11 +10,13 @@ ready(() => {
         },
         methods: {
             submit() {
+                let spinner = Spinner(color.green);
                 axios({
                     method: "post",
                     url: "/login",
                     data: this.formMess
                 }).then((res) => {
+                    spinner.remove();
                     console.log(res);
                     switch(res.data.code) {
                         case 5001:
@@ -31,6 +33,7 @@ ready(() => {
                         location.href = "main/home.html";
                     }
                 }).catch((res) => {
+                    spinner.remove();
                     location.href = `error/systemError.html?message=${res}`;
                 })
             }
