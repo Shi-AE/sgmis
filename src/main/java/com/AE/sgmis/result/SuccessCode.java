@@ -2,7 +2,10 @@ package com.AE.sgmis.result;
 
 public enum SuccessCode {
 
-    LoginSuccess(2000);
+    Success(200),
+    LoginSuccess(201),
+    ExitSuccess(202),
+    AccessSuccess(203);
 
     public final int code;
 

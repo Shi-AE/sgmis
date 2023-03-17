@@ -1,8 +1,10 @@
 package com.AE.sgmis.result;
 
 public enum ExceptionCode {
-    NotFindUserException(5001),
-    PasswordErrorException(5002);
+    NotFindUserException(401),
+    PasswordErrorException(402),
+    AccessException(403),
+    ExpiredException(405);
 
     public final int code;
     ExceptionCode(int code) {

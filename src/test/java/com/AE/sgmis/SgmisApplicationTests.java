@@ -3,6 +3,8 @@ package com.AE.sgmis;
 import com.AE.sgmis.mapper.UserMapper;
 import com.AE.sgmis.pojo.User;
 import com.AE.sgmis.util.EncryptUtil;
+import com.AE.sgmis.util.JwtUtil;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +14,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 class SgmisApplicationTests {
     @Autowired
     private EncryptUtil encryptUtil;
+    @Autowired
+    private JwtUtil jwtUtil;
     @Autowired
     private UserMapper userMapper;
 
@@ -23,6 +27,12 @@ class SgmisApplicationTests {
         QueryWrapper<User> accountQuery = new QueryWrapper<User>().eq("account", user.getAccount());
         encryptUtil.passwordEncrypt(user);
         userMapper.update(user, accountQuery);
+    }
+
+    @Test
+    void testJwtUtil() {
+        String token = jwtUtil.getToken("root");
+        System.out.println(token);
     }
 
 }

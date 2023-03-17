@@ -30,3 +30,4 @@ build/
 
 ### VS Code ###
 .vscode/
+/v-dev/node_modules/

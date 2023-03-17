@@ -7,9 +7,16 @@ spring:
     url: jdbc:mysql://localhost:3306/sgmis
     username: root
     password: 799823
+  jackson:
+    date-format: yyyy-MM-dd hh:mm:ss
+    time-zone: GMT+8
 
 encrypt:
-  memoryPowOfTwo: 14
-  iterations: 10
+  memoryPowOfTwo: 13
+  iterations: 9
   parallelism: 5
   hashLength: 512
+
+jwt:
+  expires: 86400
+  secret-key: S&h(i(to*A@E#

@@ -1,0 +1,96 @@
+<script>
+import axiosx from "@/assets/js/axiosx.js"
+import store from "@/store"
+
+export default {
+    data() {
+        return {
+            formMess: {
+                account: "",
+                password: ""
+            }
+        }
+    },
+    methods: {
+        submit() {
+            axiosx({
+                method: "POST",
+                url: "/login/authority",
+                data: this.formMess,
+                message: "正在验证登录信息"
+            }).then((res) => {
+                switch (res.data.code) {
+                    case 201: {
+                        this.$notification.success(res.data.message)
+                        store.commit("setToken", res.data.data)
+                        store.commit("setAccount", this.formMess.account)
+                        this.$router.push({ name: "home" })
+                        break
+                    }
+                    case 401:
+                    case 402: {
+                        this.$notification.error(res.data.message)
+                        break
+                    }
+                }
+            })
+        }
+    }
+}
+</script>
+<template>
+    <div class="login-form">
+        <form @submit.prevent="submit">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="account" placeholder="name@example.com"
+                    v-model.lazy="formMess.account">
+                <label for="account">账号</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="password" placeholder="name@example.com"
+                    v-model.lazy="formMess.password">
+                <label for="password">密码</label>
+            </div>
+            <input type="submit" class="btn btn-primary" value="登录">
+        </form>
+    </div>
+</template>
+<style scoped lang="scss">
+.login-form {
+    flex: 1;
+    display: flex;
+    align-items: start;
+    width: 100%;
+    max-width: 480px;
+}
+
+.login-form form {
+    width: 100%;
+    background-color: #ffffff90;
+    padding: 50px 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 0 0 10px #00000050;
+    backdrop-filter: blur(10px)
+}
+
+.btn-primary {
+    background-color: #F754A8;
+    border: #F979B7 solid var(--bs-danger-border-color)
+}
+
+.btn-primary:active {
+    background-color: #D91AD9;
+}
+
+.login-form form * {
+    margin: 5px 0;
+}
+
+input[type="text"],
+[type="password"] {
+    background-color: #ffffff50;
+}
+</style>

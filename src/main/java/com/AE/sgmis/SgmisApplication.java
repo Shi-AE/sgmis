@@ -1,6 +1,6 @@
 package com.AE.sgmis;
 
-import com.AE.sgmis.filter.LoginInterceptor;
+import com.AE.sgmis.interceptor.LoginInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -23,6 +23,8 @@ public class SgmisApplication implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(loginInterceptor).addPathPatterns("/private/*");
+        registry.addInterceptor(loginInterceptor)
+                .addPathPatterns("/api/*")
+                .excludePathPatterns("/api/login/authority");
     }
 }
