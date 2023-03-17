@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
 public class ExceptionAdvice {
-    @ExceptionHandler({NotFindUserException.class, PasswordErrorException.class})
+    @ExceptionHandler({NotFindUserException.class, PasswordErrorException.class,
+            ConfirmPasswordInconsistencyException.class, UnchangedPasswordException.class})
     private Result loginException(ProjectException exception) {
         return new Result(exception.getCode(), exception.getMessage());
     }
@@ -20,7 +21,7 @@ public class ExceptionAdvice {
      */
     @ExceptionHandler({JWTDecodeException.class, SignatureVerificationException.class})
     private Result accessException(Exception exception) {
-        return new Result(ExceptionCode.AccessException.code, exception.getMessage());
+        return new Result(ExceptionCode.AccessException.code, "通行证失效");
     }
 
     /**
@@ -28,6 +29,6 @@ public class ExceptionAdvice {
      */
     @ExceptionHandler({TokenExpiredException.class})
     private Result expiredException(Exception exception) {
-        return new Result(ExceptionCode.ExpiredException.code, exception.getMessage());
+        return new Result(ExceptionCode.ExpiredException.code, "通信证过期");
     }
 }

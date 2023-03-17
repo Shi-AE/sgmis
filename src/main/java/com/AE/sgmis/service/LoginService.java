@@ -10,9 +10,14 @@ import java.util.List;
  */
 public interface LoginService {
     /**
-     * 登录验证
+     * 登录账号密码
      */
     void loginVerify(User inputUser);
+
+    /**
+     * 更新加密结果
+     */
+    void updateEncrypt(User user);
 
     /**
      * 添加登录信息

@@ -33,6 +33,8 @@ export default {
                         break
                     }
                 }
+                this.formMess.account = ""
+                this.formMess.password = ""
             })
         }
     }
@@ -42,13 +44,11 @@ export default {
     <div class="login-form">
         <form @submit.prevent="submit">
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="account" placeholder="name@example.com"
-                    v-model.lazy="formMess.account">
+                <input type="text" class="form-control" placeholder="name@example.com" v-model.lazy="formMess.account" required>
                 <label for="account">账号</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="password" placeholder="name@example.com"
-                    v-model.lazy="formMess.password">
+                <input type="password" class="form-control" placeholder="name@example.com" v-model.lazy="formMess.password" required>
                 <label for="password">密码</label>
             </div>
             <input type="submit" class="btn btn-primary" value="登录">
@@ -77,12 +77,17 @@ export default {
 }
 
 .btn-primary {
-    background-color: #F754A8;
-    border: #F979B7 solid var(--bs-danger-border-color)
+    background-color: #F754A8 !important;
+    border: #F979B7 solid var(--bs-danger-border-color) !important
 }
 
 .btn-primary:active {
-    background-color: #D91AD9;
+    background-color: #D91AD9 !important;
+}
+
+.form-control:focus {
+    border-color: #F979B7 !important;
+    box-shadow: 0 0 0 0.25rem #f754a835 !important;
 }
 
 .login-form form * {

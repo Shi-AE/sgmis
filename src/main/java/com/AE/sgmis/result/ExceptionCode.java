@@ -4,7 +4,9 @@ public enum ExceptionCode {
     NotFindUserException(401),
     PasswordErrorException(402),
     AccessException(403),
-    ExpiredException(405);
+    ExpiredException(405),
+    ConfirmPasswordInconsistencyException(405),
+    UnchangedPasswordException(406);
 
     public final int code;
     ExceptionCode(int code) {

@@ -1,8 +1,20 @@
 <script>
-import { defineComponent, ref } from 'vue';
+import {defineComponent, ref} from 'vue';
 import {
-    IconCaretRight, IconCaretLeft, IconHome, IconCalendar, IconBranch, IconStorage, IconNav, IconSettings,
-    IconApps, IconSearch, IconBook, IconUser, IconQuestionCircle, IconCustomerService
+  IconApps,
+  IconBook,
+  IconBranch,
+  IconCalendar,
+  IconCaretLeft,
+  IconCaretRight,
+  IconCustomerService,
+  IconHome,
+  IconNav,
+  IconQuestionCircle,
+  IconSearch,
+  IconSettings,
+  IconStorage,
+  IconUser
 } from '@arco-design/web-vue/es/icon'
 import axiosx from "@/assets/js/axiosx.js"
 

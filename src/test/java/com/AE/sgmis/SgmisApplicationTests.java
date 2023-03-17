@@ -4,7 +4,6 @@ import com.AE.sgmis.mapper.UserMapper;
 import com.AE.sgmis.pojo.User;
 import com.AE.sgmis.util.EncryptUtil;
 import com.AE.sgmis.util.JwtUtil;
-import com.auth0.jwt.interfaces.DecodedJWT;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

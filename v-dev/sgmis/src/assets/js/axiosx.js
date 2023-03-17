@@ -2,6 +2,7 @@ import axios from "axios"
 import { addLoading, clearLoading } from "@/assets/js/loading.js"
 import router from "@/router"
 import store from "@/store"
+import {Notification} from '@arco-design/web-vue'
 
 const axiosx = axios.create({
     baseURL: "/api",
@@ -24,6 +25,10 @@ axiosx.interceptors.request.use(config => {
 //响应拦截
 axiosx.interceptors.response.use(response => {
     clearLoading()
+    if (response.data.code === 403) {
+        Notification.error(response.data.message)
+        router.push({ name: "403" })
+    }
     return response;
 }, error => {
     clearLoading()

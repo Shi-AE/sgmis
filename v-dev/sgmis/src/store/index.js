@@ -1,4 +1,4 @@
-import { createStore } from 'vuex'
+import {createStore} from 'vuex'
 import createPersistedState from "vuex-persistedstate";
 
 const store = createStore({
@@ -16,7 +16,7 @@ const store = createStore({
                 loading: false,
                 tip: ""
             },
-            token: "",
+            token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2ODkzODY3MTEsImFjY291bnQiOiJyb290In0.Aase1fm80R-A7Efjhy1bExtXsuSjPRudUWMaUikB4T0",
             account: "root"
         }
     },

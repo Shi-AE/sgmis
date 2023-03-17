@@ -1,6 +1,5 @@
-import { createRouter, createWebHistory } from "vue-router"
+import {createRouter, createWebHistory} from "vue-router"
 import axiosx from "@/assets/js/axiosx.js"
-import { Notification } from '@arco-design/web-vue'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -153,23 +152,16 @@ const router = createRouter({
 })
 
 router.beforeEach(async (to) => {
-    let next = true
     if (to.meta.requiresAuth) {
         await axiosx({
             method: "GET",
             url: "/login",
             message: "登录验证"
-        }).then((res) => {
-            if (res.data.code === 403) {
-                Notification.error(res.data.message)
-                next = { name: "403" }
-            }
         })
     }
     if (to.meta.title) {
         document.title = `赛鸽云库 -- ${to.meta.title}`
     }
-    return next
 })
 
 export default router

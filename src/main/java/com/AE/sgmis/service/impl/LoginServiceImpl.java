@@ -11,12 +11,10 @@ import com.AE.sgmis.util.EncryptUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
-@Transactional
 public class LoginServiceImpl implements LoginService {
 
     @Autowired
@@ -40,10 +38,13 @@ public class LoginServiceImpl implements LoginService {
         if (!passVerify) {
             throw new PasswordErrorException("密码错误");
         }
+    }
 
-        //更新加密结果
-        encryptUtil.passwordEncrypt(inputUser);
-        userMapper.update(inputUser, accountQuery);
+    @Override
+    public void updateEncrypt(User user) {
+        QueryWrapper<User> accountQuery = new QueryWrapper<User>().eq("account", user.getAccount());
+        encryptUtil.passwordEncrypt(user);
+        userMapper.update(user, accountQuery);
     }
 
     @Autowired
