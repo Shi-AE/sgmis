@@ -2,16 +2,26 @@ import axios from "axios"
 import { addLoading, clearLoading } from "@/assets/js/loading.js"
 import router from "@/router"
 import store from "@/store"
-import {Notification} from '@arco-design/web-vue'
+import { Notification } from '@arco-design/web-vue'
+import JSONbigint from "json-bigint"
 
 const axiosx = axios.create({
     baseURL: "/api",
     timeout: 10000,
+    transformResponse: [function (data) {
+        // 使用json-bigint解析响应数据
+        try {
+            return JSONbigint.parse(data)
+        } catch (error) {
+            return data
+        }
+    }]
 })
 
 //请求拦截
 axiosx.interceptors.request.use(config => {
     addLoading(config.message)
+    store.commit("setPending", true)
     return {
         ...config,
         headers: {
@@ -19,6 +29,7 @@ axiosx.interceptors.request.use(config => {
         }
     }
 }, error => {
+    store.commit("setPending", false)
     return Promise.reject(error);
 })
 
@@ -29,10 +40,12 @@ axiosx.interceptors.response.use(response => {
         Notification.error(response.data.message)
         router.push({ name: "403" })
     }
+    store.commit("setPending", false)
     return response;
 }, error => {
     clearLoading()
-    router.push({ name: "500" })
+    // router.push({ name: "500" })
+    store.commit("setPending", false)
     return Promise.reject(error)
 });
 

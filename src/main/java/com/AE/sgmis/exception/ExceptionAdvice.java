@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class ExceptionAdvice {
     @ExceptionHandler({NotFindUserException.class, PasswordErrorException.class,
-            ConfirmPasswordInconsistencyException.class, UnchangedPasswordException.class})
+            ConfirmPasswordInconsistencyException.class, UnchangedPasswordException.class,
+            DeleteFailException.class, SaveFailException.class, FieldsDuplicateException.class})
     private Result loginException(ProjectException exception) {
         return new Result(exception.getCode(), exception.getMessage());
     }
@@ -20,7 +21,7 @@ public class ExceptionAdvice {
      * 403无访问权限
      */
     @ExceptionHandler({JWTDecodeException.class, SignatureVerificationException.class})
-    private Result accessException(Exception exception) {
+    private Result accessException() {
         return new Result(ExceptionCode.AccessException.code, "通行证失效");
     }
 
@@ -28,7 +29,7 @@ public class ExceptionAdvice {
      * 登录过期
      */
     @ExceptionHandler({TokenExpiredException.class})
-    private Result expiredException(Exception exception) {
+    private Result expiredException() {
         return new Result(ExceptionCode.ExpiredException.code, "通信证过期");
     }
 }

@@ -101,7 +101,7 @@ public class LoginController {
             throw new ConfirmPasswordInconsistencyException("新密码和确认密码不一致");
         }
         if (userInfo.getOldPassword().equals(userInfo.getNewPassword())) {
-            throw new UnchangedPasswordException("密码未改变");
+            throw new UnchangedPasswordException("密码未变更");
         }
 
         //装配为二进制

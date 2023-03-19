@@ -1,20 +1,20 @@
 <script>
-import {defineComponent, ref} from 'vue';
+import { defineComponent, ref } from 'vue';
 import {
-  IconApps,
-  IconBook,
-  IconBranch,
-  IconCalendar,
-  IconCaretLeft,
-  IconCaretRight,
-  IconCustomerService,
-  IconHome,
-  IconNav,
-  IconQuestionCircle,
-  IconSearch,
-  IconSettings,
-  IconStorage,
-  IconUser
+    IconApps,
+    IconBook,
+    IconBranch,
+    IconCalendar,
+    IconCaretLeft,
+    IconCaretRight,
+    IconCustomerService,
+    IconHome,
+    IconNav,
+    IconQuestionCircle,
+    IconSearch,
+    IconSettings,
+    IconStorage,
+    IconUser
 } from '@arco-design/web-vue/es/icon'
 import axiosx from "@/assets/js/axiosx.js"
 
@@ -170,7 +170,7 @@ export default defineComponent({
                     <IconCaretLeft v-else />
                 </a-button>
                 <div class="header-title">{{ title }}</div>
-                <div class="d-flex align-items-center">
+                <div class="user d-flex align-items-center">
                     <div class="header-title" style="margin-right: 5px;">{{ this.$store.state.account }}</div>
                     <a-dropdown>
                         <a-button>
@@ -226,6 +226,7 @@ export default defineComponent({
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1;
 }
 
 .layout-main :deep(.arco-layout-footer) {
@@ -267,7 +268,7 @@ export default defineComponent({
     background-color: #F08EE6;
 }
 
-.layout-main :deep(.arco-btn-shape-square) {
+.layout-main .user :deep(.arco-btn-shape-square) {
     border-radius: 25%;
 }
 

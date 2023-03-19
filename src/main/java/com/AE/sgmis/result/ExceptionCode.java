@@ -6,7 +6,10 @@ public enum ExceptionCode {
     AccessException(403),
     ExpiredException(405),
     ConfirmPasswordInconsistencyException(405),
-    UnchangedPasswordException(406);
+    UnchangedPasswordException(406),
+    DeleteFailException(407),
+    SaveFailException(408),
+    FieldsDuplicateException(409);
 
     public final int code;
     ExceptionCode(int code) {

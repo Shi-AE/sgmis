@@ -17,7 +17,8 @@ const store = createStore({
                 tip: ""
             },
             token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2ODkzODY3MTEsImFjY291bnQiOiJyb290In0.Aase1fm80R-A7Efjhy1bExtXsuSjPRudUWMaUikB4T0",
-            account: "root"
+            account: "root",
+            isPending: false
         }
     },
     mutations: {
@@ -29,6 +30,9 @@ const store = createStore({
         },
         setAccount(state, payload) {
             state.account = payload
+        },
+        setPending(state, payload) {
+            state.isPending = payload
         }
     },
     getters: {

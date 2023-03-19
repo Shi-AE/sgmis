@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@arco-iconbox/vue-sgmis": "^0.0.1",
+    "json-bigint": "^1.0.0",
     "vuex-persistedstate": "^4.1.0"
   }
 }
