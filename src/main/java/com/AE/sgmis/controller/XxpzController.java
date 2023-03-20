@@ -7,6 +7,7 @@ import com.AE.sgmis.pojo.Xxpz;
 import com.AE.sgmis.result.Result;
 import com.AE.sgmis.result.SuccessCode;
 import com.AE.sgmis.service.XxpzService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.transaction.annotation.Transactional;
@@ -42,6 +43,9 @@ public class XxpzController {
         return new Result(SuccessCode.Success.code, "删除成功");
     }
 
+    /**
+     * 批量删除选项配置
+     */
     @Transactional
     @PostMapping("/delete")
     public Result batchDelete(@RequestBody Long[] ids, @PathVariable String tableName) {
@@ -57,19 +61,20 @@ public class XxpzController {
     /**
      * 新增选项配置
      */
-    // TODO 改路由
-    @PostMapping("/{name}")
-    public Result add(@PathVariable String name, @PathVariable String tableName) {
-        Xxpz xxpz = new Xxpz();
+    @PostMapping
+    public Result add(@RequestBody Xxpz xxpz, @PathVariable String tableName, HttpServletRequest request) {
+
+        //从请求域中获取用户信息
+        String account = (String) request.getAttribute("account");
+        xxpz.setAuthor(account);
+
         try {
-            xxpz.setName(name);
-            xxpz.setAuthor("系统");
             boolean success = xxpzService.dynamicSave(xxpz, "t_" + tableName);
             if (!success) {
                 throw new SaveFailException("服务错误，添加失败");
             }
         } catch (DuplicateKeyException e) {
-            throw new FieldsDuplicateException("\"" + name + "\"已经存在，无法添加重复的配置名称");
+            throw new FieldsDuplicateException("\"" + xxpz.getName() + "\"已经存在，无法添加重复的配置名称");
         }
         return new Result(xxpz, SuccessCode.Success.code, "添加成功");
     }

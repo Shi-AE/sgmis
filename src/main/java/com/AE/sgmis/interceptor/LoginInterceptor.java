@@ -1,6 +1,7 @@
 package com.AE.sgmis.interceptor;
 
 import com.AE.sgmis.util.JwtUtil;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,11 @@ public class LoginInterceptor implements HandlerInterceptor {
         String token = request.getHeader("Authorization");
 
         //验证证书
-        jwtUtil.verifyToken(token);
+        DecodedJWT decodedJWT = jwtUtil.verifyToken(token);
+
+        //向请求域中添加用户信息
+        String account = decodedJWT.getClaim("account").asString();
+        request.setAttribute("account", account);
 
         return true;
     }

@@ -127,7 +127,10 @@ export default {
             }
             await axiosx({
                 method: "POST",
-                url: `xxpz/${this.$props.api}/${this.form.name}`,
+                url: `xxpz/${this.$props.api}`,
+                data: {
+                    name: this.form.name
+                },
                 message: "正在处理添加请求"
             }).then(res => {
                 if (res.data.code === 200) {
@@ -150,6 +153,10 @@ export default {
         },
         //批量删除处理
         async handleBatchDelete() {
+            if (!this.selectedKeys.length) {
+                Notification.error("未选中信息")
+                return true
+            }
             let ids = Object.values(this.selectedKeys)
             await axiosx({
                 method: "POST",
