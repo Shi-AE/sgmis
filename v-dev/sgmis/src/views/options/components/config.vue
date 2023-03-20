@@ -14,10 +14,6 @@ export default {
         head: {
             type: String,
             required: true
-        },
-        dbn: {
-            type: String,
-            required: true
         }
     },
     data() {
@@ -29,16 +25,16 @@ export default {
                 },
                 {
                     title: this.$props.head,
-                    dataIndex: this.$props.dbn,
+                    dataIndex: "name",
                     align: "left",
                     filterable: {
-                        filter: (value, record) => record[this.$props.dbn].includes(value),
+                        filter: (value, record) => record.name.includes(value),
                         slotName: 'head-filter',
                         icon: () => h(IconSearch)
                     }
                 },
                 {
-                    title: "操作者",
+                    title: "来源",
                     dataIndex: "author",
                     align: "center"
                 },
@@ -89,7 +85,7 @@ export default {
                 //询问对话框
                 const modal = Modal.warning({
                     title: "删除配置选项",
-                    content: `确认要删除"${record[this.$props.dbn]}"吗？`,
+                    content: `确认要删除"${record.name}"吗？`,
                     closable: true,
                     hideCancel: false,
                     onCancel: () => {
@@ -103,7 +99,7 @@ export default {
                     onBeforeOk: () => {
                         axiosx({
                             method: "DELETE",
-                            url: `${this.$props.api}/${record.id}`,
+                            url: `xxpz/${this.$props.api}/${record.id}`,
                             message: "正在处理删除请求"
                         }).then(res => {
                             if (res.data.code === 200) {
@@ -123,10 +119,15 @@ export default {
                 })
             }
         },
+        //添加处理
         async handleInput() {
+            if (this.form.name === "") {
+                Notification.error("提交信息为空")
+                return true
+            }
             await axiosx({
                 method: "POST",
-                url: `${this.$props.api}/${this.form.name}`,
+                url: `xxpz/${this.$props.api}/${this.form.name}`,
                 message: "正在处理添加请求"
             }).then(res => {
                 if (res.data.code === 200) {
@@ -147,12 +148,12 @@ export default {
                 this.inputModal = false
             })
         },
+        //批量删除处理
         async handleBatchDelete() {
             let ids = Object.values(this.selectedKeys)
-            // this.data = this.data.filter(item => !ids.includes(item.id))
             await axiosx({
                 method: "POST",
-                url: `${this.$props.api}/delete`,
+                url: `xxpz/${this.$props.api}/delete`,
                 data: ids,
                 message: "正在批量删除"
             }).then(res => {
@@ -172,7 +173,7 @@ export default {
     created() {
         axiosx({
             method: "GET",
-            url: this.$props.api,
+            url: `xxpz/${this.$props.api}`,
             message: "查询配置信息"
         }).then(res => {
             if (res.data.code === 200) {

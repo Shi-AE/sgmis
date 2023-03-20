@@ -206,8 +206,10 @@ export default defineComponent({
 }
 
 .layout-main :deep(.arco-layout-sider) .logo {
-    height: 48px;
+    height: 56px;
     background: rgba(255, 255, 255, 0.2);
+    border-bottom: #D91AD950 1px solid;
+    border-right: #D91AD950 1px solid;
 }
 
 .layout-main :deep(.arco-layout-sider-light) .logo {
@@ -226,6 +228,7 @@ export default defineComponent({
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: #D91AD950 1px solid;
     z-index: 1;
 }
 

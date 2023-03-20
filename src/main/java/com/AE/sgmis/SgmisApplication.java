@@ -13,7 +13,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @ServletComponentScan("com.AE.sgmis.filter")
 @MapperScan("com.AE.sgmis.mapper")
 public class SgmisApplication implements WebMvcConfigurer {
-
     @Autowired
     private LoginInterceptor loginInterceptor;
 

@@ -36,6 +36,13 @@ axiosx.interceptors.request.use(config => {
 //响应拦截
 axiosx.interceptors.response.use(response => {
     clearLoading()
+    //恶意sql注入
+    if (response.data.code === 410) {
+        Notification.error(response.data.message)
+        store.commit("setToken", "")
+        router.push({ name: "403" })
+    }
+    //访问权限异常
     if (response.data.code === 403) {
         Notification.error(response.data.message)
         router.push({ name: "403" })

@@ -20,3 +20,7 @@ encrypt:
 jwt:
   expires: 86400
   secret-key: S&h(i(to*A@E#
+
+# 配置信息的表名，防止sql注入
+xxpz:
+  tableNames: yspz, lxpz, yanpz, jbpz, ylhl, gdcgzt

@@ -2,9 +2,11 @@ package com.AE.sgmis;
 
 import com.AE.sgmis.mapper.UserMapper;
 import com.AE.sgmis.pojo.User;
+import com.AE.sgmis.service.impl.XxpzServiceImpl;
 import com.AE.sgmis.util.EncryptUtil;
 import com.AE.sgmis.util.JwtUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.IdWorker;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -34,4 +36,10 @@ class SgmisApplicationTests {
         System.out.println(token);
     }
 
+    @Test
+    void idTest() {
+        for (int i = 0; i < 25; i++) {
+            System.out.println(IdWorker.getId());
+        }
+    }
 }

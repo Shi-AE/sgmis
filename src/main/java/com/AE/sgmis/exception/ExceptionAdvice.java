@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class ExceptionAdvice {
     @ExceptionHandler({NotFindUserException.class, PasswordErrorException.class,
             ConfirmPasswordInconsistencyException.class, UnchangedPasswordException.class,
-            DeleteFailException.class, SaveFailException.class, FieldsDuplicateException.class})
+            DeleteFailException.class, SaveFailException.class, FieldsDuplicateException.class
+            , MaliciousSqlInjection.class})
     private Result loginException(ProjectException exception) {
         return new Result(exception.getCode(), exception.getMessage());
     }
