@@ -12,14 +12,14 @@ import com.AE.sgmis.service.LoginService;
 import com.AE.sgmis.util.JwtUtil;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/login")
@@ -34,7 +34,7 @@ public class LoginController {
      * 验证登录
      */
     @PostMapping("/authority")
-    public Result login(@RequestBody ParamUser paramUser, HttpServletResponse response, HttpServletRequest request) {
+    public Result login(@RequestBody ParamUser paramUser, HttpServletRequest request) {
         String account = paramUser.getAccount();
         String password = paramUser.getPassword();
         //装配为二进制
@@ -43,25 +43,28 @@ public class LoginController {
         user.setPassword(password.getBytes());
 
         //验证密码
-        loginService.loginVerify(user);
+        Long id = loginService.loginVerify(user);
         //更新加密
         loginService.updateEncrypt(user);
 
-        //为用户生成token
-        String token = jwtUtil.getToken(account);
+        String ip = request.getRemoteAddr();
+        System.out.println(id);
 
-        //cookie添加用户信息
-        Cookie cookie = new Cookie("user", account);
-        cookie.setMaxAge(-1);
-        cookie.setPath("/");
-        response.addCookie(cookie);
+        Map<String ,String> claim = new HashMap<>();
+
+        claim.put("id", String.valueOf(id));
+        claim.put("account", account);
+        claim.put("ip",ip);
 
         //添加登录信息
         LoginMsg loginMsg = new LoginMsg();
         loginMsg.setUser(account);
-        loginMsg.setIp(request.getRemoteAddr());
+        loginMsg.setIp(ip);
         loginMsg.setDate(new Date());
         loginService.addLoginMsg(loginMsg);
+
+        //为用户生成token
+        String token = jwtUtil.getToken(claim);
 
         return new Result(token, SuccessCode.LoginSuccess.code, "登录成功");
     }

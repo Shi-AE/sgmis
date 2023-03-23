@@ -1,20 +1,20 @@
 <script>
-import { defineComponent, ref } from 'vue';
+import {defineComponent, ref} from 'vue';
 import {
-    IconApps,
-    IconBook,
-    IconBranch,
-    IconCalendar,
-    IconCaretLeft,
-    IconCaretRight,
-    IconCustomerService,
-    IconHome,
-    IconNav,
-    IconQuestionCircle,
-    IconSearch,
-    IconSettings,
-    IconStorage,
-    IconUser
+  IconApps,
+  IconBook,
+  IconBranch,
+  IconCalendar,
+  IconCaretLeft,
+  IconCaretRight,
+  IconCustomerService,
+  IconHome,
+  IconNav,
+  IconQuestionCircle,
+  IconSearch,
+  IconSettings,
+  IconStorage,
+  IconUser
 } from '@arco-design/web-vue/es/icon'
 import axiosx from "@/assets/js/axiosx.js"
 
@@ -115,7 +115,7 @@ export default defineComponent({
                     <template #title>
                         <span>
                             <IconSettings />
-                            系统设置
+                            系统配置
                         </span>
                     </template>
                     <a-divider margin="0 0 5px" />
@@ -169,9 +169,9 @@ export default defineComponent({
                     <IconCaretRight v-if="collapsed" />
                     <IconCaretLeft v-else />
                 </a-button>
-                <div class="header-title">{{ title }}</div>
+                <div class="header-title .container-sm">{{ title }}</div>
                 <div class="user d-flex align-items-center">
-                    <div class="header-title" style="margin-right: 5px;">{{ this.$store.state.account }}</div>
+                    <div class="header-title .container-sm" style="margin-right: 5px;">{{ this.$store.state.account }}</div>
                     <a-dropdown>
                         <a-button>
                             <IconUser />
@@ -283,7 +283,7 @@ export default defineComponent({
     white-space: nowrap;
     text-overflow: ellipsis;
     font-weight: 600;
-    font-size: 1.3vw;
+    /* font-size: 1.3vw; */
     color: #E865DF;
 }
 </style>

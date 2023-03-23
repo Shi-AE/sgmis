@@ -1,5 +1,5 @@
 <script>
-import { verifyData } from "@/assets/js/loading.js"
+import {verifyData} from "@/assets/js/loading.js"
 import axiosx from "@/assets/js/axiosx.js"
 
 export default {
@@ -60,7 +60,7 @@ export default {
 </script>
 <template>
     <div class="full-screen d-flex align-items-center flex-column">
-        <div class="title">修改密码</div>
+        <div class="title fs-1">修改密码</div>
         <form class="d-flex flex-column" @submit.prevent="submit">
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" placeholder="name@example.com" v-model.lazy="form.oldPassword"
@@ -93,7 +93,6 @@ export default {
         white-space: nowrap;
         text-overflow: ellipsis;
         font-weight: 600;
-        font-size: 1.3vw;
         color: var(--bs-blue);
     }
 

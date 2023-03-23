@@ -22,8 +22,9 @@ public class LoginServiceImpl implements LoginService {
     @Autowired
     private EncryptUtil encryptUtil;
 
+
     @Override
-    public void loginVerify(User inputUser) {
+    public Long loginVerify(User inputUser) {
         //查询用户
         QueryWrapper<User> accountQuery = new QueryWrapper<User>().eq("account", inputUser.getAccount());
         User user = userMapper.selectOne(accountQuery);
@@ -38,6 +39,8 @@ public class LoginServiceImpl implements LoginService {
         if (!passVerify) {
             throw new PasswordErrorException("密码错误");
         }
+
+        return user.getId();
     }
 
     @Override

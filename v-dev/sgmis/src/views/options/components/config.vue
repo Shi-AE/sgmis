@@ -1,9 +1,8 @@
 <script>
-import { h } from 'vue';
-import { IconSearch } from '@arco-design/web-vue/es/icon'
+import {h} from 'vue';
+import {IconSearch} from '@arco-design/web-vue/es/icon'
 import axiosx from "@/assets/js/axiosx.js"
-import { Modal } from '@arco-design/web-vue'
-import { Notification } from '@arco-design/web-vue'
+import {Modal, Notification} from '@arco-design/web-vue'
 
 export default {
     props: {
@@ -225,7 +224,7 @@ export default {
             @cancel="handleCancel">
             <a-form :model="form">
                 <a-form-item field="name" label="Name">
-                    <a-input v-model="form.name" />
+                    <a-input v-model.lazy="form.name" />
                 </a-form-item>
             </a-form>
         </a-modal>

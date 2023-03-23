@@ -11,8 +11,10 @@ import java.util.List;
 public interface LoginService {
     /**
      * 登录账号密码
+     *
+     * @return 用户id
      */
-    void loginVerify(User inputUser);
+    Long loginVerify(User inputUser);
 
     /**
      * 更新加密结果
