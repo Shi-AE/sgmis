@@ -14,7 +14,7 @@ public interface LoginService {
      *
      * @return 用户id
      */
-    Long loginVerify(User inputUser);
+    User loginVerify(User inputUser);
 
     /**
      * 更新加密结果

@@ -10,7 +10,8 @@ public enum ExceptionCode {
     DeleteFailException(407),
     SaveFailException(408),
     FieldsDuplicateException(409),
-    MaliciousSqlInjection(410);
+    MaliciousSqlInjection(410),
+    PasswordUpdateFailException(411);
 
     public final int code;
     ExceptionCode(int code) {

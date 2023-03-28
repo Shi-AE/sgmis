@@ -19,19 +19,13 @@ export default {
                 data: this.formMess,
                 message: "正在验证登录信息"
             }).then((res) => {
-                switch (res.data.code) {
-                    case 201: {
-                        this.$notification.success(res.data.message)
-                        store.commit("setToken", res.data.data)
-                        store.commit("setAccount", this.formMess.account)
-                        this.$router.push({ name: "home" })
-                        break
-                    }
-                    case 401:
-                    case 402: {
-                        this.$notification.error(res.data.message)
-                        break
-                    }
+                if (res.data.code === 201) {
+                    this.$notification.success(res.data.message)
+                    store.commit("setToken", res.data.data)
+                    store.commit("setAccount", this.formMess.account)
+                    this.$router.push({ name: "home" })
+                } else {
+                    this.$notification.error(res.data.message)
                 }
                 this.formMess.account = ""
                 this.formMess.password = ""
@@ -44,11 +38,13 @@ export default {
     <div class="login-form">
         <form @submit.prevent="submit">
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" placeholder="name@example.com" v-model.lazy="formMess.account" required>
+                <input type="text" class="form-control" placeholder="name@example.com" v-model.lazy="formMess.account"
+                    required>
                 <label for="account">账号</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="password" class="form-control" placeholder="name@example.com" v-model.lazy="formMess.password" required>
+                <input type="password" class="form-control" placeholder="name@example.com" v-model.lazy="formMess.password"
+                    required>
                 <label for="password">密码</label>
             </div>
             <input type="submit" class="btn btn-primary" value="登录">

@@ -13,4 +13,6 @@ public class User {
     private String account;
     private byte[] password;
     private byte[] salt;
+    private Long gid;
+    private Boolean admin;
 }

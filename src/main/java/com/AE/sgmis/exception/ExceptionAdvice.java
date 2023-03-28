@@ -13,7 +13,7 @@ public class ExceptionAdvice {
     @ExceptionHandler({NotFindUserException.class, PasswordErrorException.class,
             ConfirmPasswordInconsistencyException.class, UnchangedPasswordException.class,
             DeleteFailException.class, SaveFailException.class, FieldsDuplicateException.class
-            , MaliciousSqlInjection.class})
+            , MaliciousSqlInjection.class, PasswordUpdateFailException.class})
     private Result loginException(ProjectException exception) {
         return new Result(exception.getCode(), exception.getMessage());
     }

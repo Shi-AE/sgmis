@@ -20,13 +20,10 @@ public class LoginInterceptor implements HandlerInterceptor {
         String token = request.getHeader("Authorization");
 
         //验证证书
-        DecodedJWT decodedJWT = jwtUtil.verifyToken(token);
+        DecodedJWT decoded = jwtUtil.verifyToken(token);
 
         //向请求域中添加用户信息
-        String id = decodedJWT.getClaim("id").asString();
-        String account = decodedJWT.getClaim("account").asString();
-        request.setAttribute("id", id);
-        request.setAttribute("account", account);
+        request.setAttribute("decoded", decoded);
 
         return true;
     }

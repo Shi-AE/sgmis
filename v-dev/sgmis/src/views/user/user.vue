@@ -63,7 +63,7 @@ export default {
         <div class="title fs-1">修改密码</div>
         <form class="d-flex flex-column" @submit.prevent="submit">
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" placeholder="name@example.com" v-model.lazy="form.oldPassword"
+                <input type="password" class="form-control" placeholder="name@example.com" v-model.lazy="form.oldPassword"
                     required>
                 <label for="oldPassword">当前密码</label>
             </div>

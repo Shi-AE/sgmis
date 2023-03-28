@@ -5,6 +5,7 @@ import com.AE.sgmis.pojo.Gsxx;
 import com.AE.sgmis.result.Result;
 import com.AE.sgmis.result.SuccessCode;
 import com.AE.sgmis.service.GsxxService;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/gsxx")
-//todo 多人合作的时候会产生多个id
+//todo 内部系统取消uid的区分
 public class GsxxController {
 
     @Autowired
@@ -21,7 +22,8 @@ public class GsxxController {
     @GetMapping
     public Result getGsxx(HttpServletRequest request) {
         //获取id
-        Long id = Long.valueOf((String) request.getAttribute("id"));
+        DecodedJWT decoded = (DecodedJWT) request.getAttribute("decoded");
+        Long id = Long.valueOf(decoded.getClaim("id").asString());
         //匹配规则
         QueryWrapper<Gsxx> wrapper = new QueryWrapper<>();
         wrapper.eq("uid", id);
@@ -37,7 +39,8 @@ public class GsxxController {
 
     @PostMapping
     public Result postGsxx(HttpServletRequest request, @RequestBody Gsxx gsxx) {
-        Long id = Long.valueOf((String) request.getAttribute("id"));
+        DecodedJWT decoded = (DecodedJWT) request.getAttribute("decoded");
+        Long id = Long.valueOf(decoded.getClaim("id").asString());
         //匹配规则
         QueryWrapper<Gsxx> wrapper = new QueryWrapper<>();
         wrapper.eq("uid", id);

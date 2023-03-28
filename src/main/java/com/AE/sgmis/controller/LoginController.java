@@ -10,16 +10,16 @@ import com.AE.sgmis.result.Result;
 import com.AE.sgmis.result.SuccessCode;
 import com.AE.sgmis.service.LoginService;
 import com.AE.sgmis.util.JwtUtil;
-import jakarta.servlet.http.Cookie;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 
 @RestController
 @RequestMapping("/api/login")
@@ -37,33 +37,31 @@ public class LoginController {
     public Result login(@RequestBody ParamUser paramUser, HttpServletRequest request) {
         String account = paramUser.getAccount();
         String password = paramUser.getPassword();
+
         //装配为二进制
         User user = new User();
         user.setAccount(account);
         user.setPassword(password.getBytes());
 
-        //验证密码
-        Long id = loginService.loginVerify(user);
-        //更新加密
+        //验证密码并更新加密
+        user = loginService.loginVerify(user);
         loginService.updateEncrypt(user);
 
+        //把用户信息集合成map
         String ip = request.getRemoteAddr();
-        System.out.println(id);
+        Long id = user.getId();
+        Long gid = user.getGid();
+        Boolean admin = user.getAdmin();
 
-        Map<String ,String> claim = new HashMap<>();
+        Map<String, String> claim = new HashMap<>();
 
         claim.put("id", String.valueOf(id));
         claim.put("account", account);
-        claim.put("ip",ip);
+        claim.put("gid", String.valueOf(gid));
+        claim.put("admin", String.valueOf(admin));
+        claim.put("ip", ip);
 
-        //添加登录信息
-        LoginMsg loginMsg = new LoginMsg();
-        loginMsg.setUser(account);
-        loginMsg.setIp(ip);
-        loginMsg.setDate(new Date());
-        loginService.addLoginMsg(loginMsg);
-
-        //为用户生成token
+        //传入用户信息map，为用户生成token
         String token = jwtUtil.getToken(claim);
 
         return new Result(token, SuccessCode.LoginSuccess.code, "登录成功");
@@ -82,19 +80,9 @@ public class LoginController {
      * 退出登录
      */
     @DeleteMapping
-    public Result exit(HttpSession session, HttpServletRequest request) {
+    public Result exit(HttpSession session) {
+        //销毁session
         session.invalidate();
-
-        Cookie[] cookies = request.getCookies();
-        if (cookies != null) {
-            for (Cookie cookie : cookies) {
-                if (cookie.getName().equals("user")) {
-                    cookie.setMaxAge(0);
-                    break;
-                }
-            }
-        }
-
         return new Result(SuccessCode.ExitSuccess.code, "退出成功");
     }
 
@@ -102,7 +90,7 @@ public class LoginController {
      * 修改密码
      */
     @PutMapping
-    public Result updatePassword(@RequestBody UpdateUserInfo userInfo) {
+    public Result updatePassword(@RequestBody UpdateUserInfo userInfo, HttpServletRequest request) {
         if (!userInfo.getNewPassword().equals(userInfo.getConfirmPassword())) {
             throw new ConfirmPasswordInconsistencyException("新密码和确认密码不一致");
         }
@@ -120,6 +108,10 @@ public class LoginController {
 
         //装配为现密码
         user.setPassword(userInfo.getNewPassword().getBytes());
+
+        //添加id
+        DecodedJWT decoded = (DecodedJWT) request.getAttribute("decoded");
+        user.setId(Long.valueOf(decoded.getClaim("id").asString()));
 
         //更新密码，并加密
         loginService.updateEncrypt(user);

@@ -7,6 +7,7 @@ import com.AE.sgmis.pojo.Xxpz;
 import com.AE.sgmis.result.Result;
 import com.AE.sgmis.result.SuccessCode;
 import com.AE.sgmis.service.XxpzService;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
@@ -65,8 +66,8 @@ public class XxpzController {
     public Result add(@RequestBody Xxpz xxpz, @PathVariable String tableName, HttpServletRequest request) {
 
         //从请求域中获取用户信息
-        String account = (String) request.getAttribute("account");
-        xxpz.setAuthor(account);
+        DecodedJWT decoded = (DecodedJWT) request.getAttribute("decoded");
+        xxpz.setAuthor(decoded.getClaim("account").asString());
 
         try {
             boolean success = xxpzService.dynamicSave(xxpz, "t_" + tableName);

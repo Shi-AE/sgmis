@@ -12,5 +12,6 @@ public class Gsxx {
     private Integer years;
     private String bloodLine;
     private String performance;
+    //todo 取消uid的区分
     private Long uid;
 }

@@ -55,7 +55,7 @@ class SgmisApplicationTests {
 
     @Test
     void idTest() {
-        for (int i = 0; i < 25; i++) {
+        for (int i = 0; i < 1; i++) {
             System.out.println(IdWorker.getId());
         }
     }

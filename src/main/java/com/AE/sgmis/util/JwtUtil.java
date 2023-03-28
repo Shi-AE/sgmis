@@ -38,7 +38,6 @@ public class JwtUtil {
 
         return builder.withExpiresAt(instance.getTime())
                 .sign(Algorithm.HMAC256(secretKey));
-
     }
 
     /**
