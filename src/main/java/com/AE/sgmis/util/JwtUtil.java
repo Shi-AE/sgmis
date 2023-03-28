@@ -26,7 +26,7 @@ public class JwtUtil {
      *
      * @return token值
      */
-    public String getToken(Map<String, String> claim) {
+    public String getToken(Map<String, Object> claim) {
 
         Calendar instance = Calendar.getInstance();
         instance.add(Calendar.SECOND, expires);
@@ -34,7 +34,7 @@ public class JwtUtil {
         JWTCreator.Builder builder = JWT.create();
 
         //填充用户信息
-        claim.forEach(builder::withClaim);
+        builder.withClaim("info", claim);
 
         return builder.withExpiresAt(instance.getTime())
                 .sign(Algorithm.HMAC256(secretKey));

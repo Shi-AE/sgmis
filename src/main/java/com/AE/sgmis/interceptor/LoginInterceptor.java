@@ -23,7 +23,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         DecodedJWT decoded = jwtUtil.verifyToken(token);
 
         //向请求域中添加用户信息
-        request.setAttribute("decoded", decoded);
+        request.setAttribute("info", decoded.getClaim("info").asMap());
 
         return true;
     }

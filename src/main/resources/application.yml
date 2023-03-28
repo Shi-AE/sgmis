@@ -24,3 +24,4 @@ jwt:
 # 配置信息的表名，防止sql注入
 xxpz:
   tableNames: yspz, lxpz, yanpz, jbpz, ylhl, gdcgzt
+  systemGid: 0

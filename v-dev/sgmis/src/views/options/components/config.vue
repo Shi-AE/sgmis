@@ -98,7 +98,7 @@ export default {
                     onBeforeOk: () => {
                         axiosx({
                             method: "DELETE",
-                            url: `xxpz/${this.$props.api}/${record.id}`,
+                            url: `xxpz/${record.id}`,
                             message: "正在处理删除请求"
                         }).then(res => {
                             if (res.data.code === 200) {
@@ -120,8 +120,13 @@ export default {
         },
         //添加处理
         async handleInput() {
-            if (this.form.name === "") {
+            let name = this.form.name
+            if (name === "") {
                 Notification.error("提交信息为空")
+                return true
+            }
+            if (this.data.some(item => item.name === name)) {
+                Notification.error("提交重复信息")
                 return true
             }
             await axiosx({
@@ -159,7 +164,7 @@ export default {
             let ids = Object.values(this.selectedKeys)
             await axiosx({
                 method: "POST",
-                url: `xxpz/${this.$props.api}/delete`,
+                url: `xxpz/delete`,
                 data: ids,
                 message: "正在批量删除"
             }).then(res => {

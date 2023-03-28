@@ -10,7 +10,6 @@ import com.AE.sgmis.result.Result;
 import com.AE.sgmis.result.SuccessCode;
 import com.AE.sgmis.service.LoginService;
 import com.AE.sgmis.util.JwtUtil;
-import com.auth0.jwt.interfaces.DecodedJWT;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,12 +52,12 @@ public class LoginController {
         Long gid = user.getGid();
         Boolean admin = user.getAdmin();
 
-        Map<String, String> claim = new HashMap<>();
+        Map<String, Object> claim = new HashMap<>();
 
-        claim.put("id", String.valueOf(id));
+        claim.put("id", id);
         claim.put("account", account);
-        claim.put("gid", String.valueOf(gid));
-        claim.put("admin", String.valueOf(admin));
+        claim.put("gid", gid);
+        claim.put("admin", admin);
         claim.put("ip", ip);
 
         //传入用户信息map，为用户生成token
@@ -110,8 +109,9 @@ public class LoginController {
         user.setPassword(userInfo.getNewPassword().getBytes());
 
         //添加id
-        DecodedJWT decoded = (DecodedJWT) request.getAttribute("decoded");
-        user.setId(Long.valueOf(decoded.getClaim("id").asString()));
+        Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
+        Long id = (Long) info.get("id");
+        user.setId(id);
 
         //更新密码，并加密
         loginService.updateEncrypt(user);
