@@ -1,8 +1,8 @@
 import axios from "axios"
-import {addLoading, clearLoading} from "@/assets/js/loading.js"
+import { addLoading, clearLoading } from "@/assets/js/loading.js"
 import router from "@/router"
 import store from "@/store"
-import {Notification} from '@arco-design/web-vue'
+import { Notification } from '@arco-design/web-vue'
 import JSONbigint from "json-bigint"
 
 function preventKeyDown(event) {

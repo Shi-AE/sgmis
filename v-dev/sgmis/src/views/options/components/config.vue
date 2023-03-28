@@ -1,8 +1,8 @@
 <script>
-import {h} from 'vue';
-import {IconSearch} from '@arco-design/web-vue/es/icon'
+import { h } from 'vue';
+import { IconSearch } from '@arco-design/web-vue/es/icon'
 import axiosx from "@/assets/js/axiosx.js"
-import {Modal, Notification} from '@arco-design/web-vue'
+import { Modal, Notification } from '@arco-design/web-vue'
 
 export default {
     props: {
@@ -206,7 +206,8 @@ export default {
             </a-space>
         </div>
         <a-table :columns="columns" :data="data" :scroll="{ minWidth: 540 }" :pagination="false"
-            :row-selection="rowSelection" v-model:selectedKeys="selectedKeys" :bordered="tableBorder" @cell-click="handleCellClick">
+            :row-selection="rowSelection" v-model:selectedKeys="selectedKeys" :bordered="tableBorder"
+            @cell-click="handleCellClick">
             <template #head-filter="{ filterValue, setFilterValue, handleFilterConfirm, handleFilterReset }">
                 <div class="custom-filter">
                     <a-space direction="vertical">

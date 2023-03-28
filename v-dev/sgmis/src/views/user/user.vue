@@ -1,5 +1,5 @@
 <script>
-import {verifyData} from "@/assets/js/loading.js"
+import { verifyData } from "@/assets/js/loading.js"
 import axiosx from "@/assets/js/axiosx.js"
 
 export default {
@@ -68,8 +68,8 @@ export default {
                 <label for="oldPassword">当前密码</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="password" class="form-control" placeholder="name@example.com"
-                    v-model.lazy="form.newPassword" required>
+                <input type="password" class="form-control" placeholder="name@example.com" v-model.lazy="form.newPassword"
+                    required>
                 <label for="newPassword">新密码（不少于8个字符）</label>
             </div>
             <div class="form-floating mb-3">
