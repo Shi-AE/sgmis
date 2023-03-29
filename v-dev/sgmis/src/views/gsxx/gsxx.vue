@@ -1,6 +1,6 @@
 <script>
 import axiosx from "@/assets/js/axiosx.js"
-import {Notification} from '@arco-design/web-vue'
+import { Notification } from '@arco-design/web-vue'
 
 const levelMap = {
     provincial: {
@@ -26,7 +26,8 @@ export default {
                 name: "",
                 years: undefined,
                 location: [],
-                bloodLine: "",
+                address: "",
+                bloodline: "",
                 performance: ""
             },
             options: []
@@ -35,13 +36,12 @@ export default {
     methods: {
         submit() {
             const { location, ...form } = this.info
-            let address = location[0] + "," + location[1] + "," + location[2]
             axiosx({
                 method: "POST",
                 url: "gsxx",
                 data: {
                     ...form,
-                    location: address
+                    location: location.length === 0 ? null : location.join(",")
                 },
                 message: "正在上传信息"
             }).then(res => {
@@ -79,12 +79,11 @@ export default {
             url: "gsxx"
         }).then(res => {
             if (res.data.code === 200) {
-                let data = res.data.data;
-                this.info.name = data.name
-                this.info.years = data.years
-                this.info.location = data.location === null ? "" : data.location.split(",")
-                this.info.bloodLine = data.bloodLine
-                this.info.performance = data.performance
+                const { location, ...from } = res.data.data
+                this.info = {
+                    ...from,
+                    location: location === null ? [] : location.split(",")
+                }
             }
         })
         //查询一级地址信息
@@ -118,11 +117,14 @@ export default {
                 <a-cascader v-model.lazy="info.location" :options="options" placeholder="地址" allow-clear path-mode
                     :load-more="loadMore" />
             </a-form-item>
+            <a-form-item field="address" tooltip="具体地址信息，方便他人联系你" label="具体地址">
+                <a-input v-model.lazy="info.address" placeholder="具体地址" />
+            </a-form-item>
             <a-form-item field="years" label="养鸽年数">
                 <a-input-number v-model.lazy.number="info.years" placeholder="养鸽年数" />
             </a-form-item>
             <a-form-item field="bloodLine" label="主养血系">
-                <a-textarea v-model.lazy="info.bloodLine" placeholder="主养血系" />
+                <a-textarea v-model.lazy="info.bloodline" placeholder="主养血系" />
             </a-form-item>
             <a-form-item field="performance" label="优秀赛绩">
                 <a-textarea v-model.lazy="info.performance" placeholder="优秀赛绩" />

@@ -9,9 +9,9 @@ public class Gsxx {
     private Long id;
     private String name;
     private String location;
+    private String address;
     private Integer years;
-    private String bloodLine;
+    private String bloodline;
     private String performance;
-    //todo 取消uid的区分
-    private Long uid;
+    private Long gid;
 }

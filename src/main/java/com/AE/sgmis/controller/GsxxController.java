@@ -7,14 +7,15 @@ import com.AE.sgmis.result.SuccessCode;
 import com.AE.sgmis.service.GsxxService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
+@Slf4j
 @RestController
 @RequestMapping("api/gsxx")
-//todo 内部系统取消uid的区分
 public class GsxxController {
 
     @Autowired
@@ -22,37 +23,38 @@ public class GsxxController {
 
     @GetMapping
     public Result getGsxx(HttpServletRequest request) {
-        //获取id
+        //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
-        Long id = (Long) info.get("id");
-        //匹配规则
+        Long gid = (Long) info.get("gid");
+        //条件 gid = gid
         QueryWrapper<Gsxx> wrapper = new QueryWrapper<>();
-        wrapper.eq("uid", id);
-
+        wrapper.eq("gid", gid);
+        //执行
         Gsxx gsxx = gsxxService.getOne(wrapper);
-        //防止前端空值
         if (gsxx == null) {
             gsxx = new Gsxx();
         }
-
+        //返回
         return new Result(gsxx, SuccessCode.Success.code, "查询成功");
     }
 
     @PostMapping
     public Result postGsxx(HttpServletRequest request, @RequestBody Gsxx gsxx) {
-        //获取id
+        //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
-        Long id = (Long) info.get("id");
-        //匹配规则
+        Long gid = (Long) info.get("gid");
+        //防止私自上传gid
+        gsxx.setGid(gid);
+        //条件 gid = gid
         QueryWrapper<Gsxx> wrapper = new QueryWrapper<>();
-        wrapper.eq("uid", id);
-        //如果是save则要用到id
-        gsxx.setUid(id);
-        //更新或者新建
+        wrapper.eq("gid", gid);
+        //保存或者更新
         boolean success = gsxxService.saveOrUpdate(gsxx, wrapper);
         if (!success) {
-            throw new SaveFailException("提交失败");
+            log.error("未知错误，传入 {} 导致保存失败", gsxx);
+            throw new SaveFailException("保存失败");
         }
+        //返回
         return new Result(SuccessCode.Success.code, "保存成功");
     }
 }
