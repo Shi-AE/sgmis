@@ -11,10 +11,10 @@ const levelMap = {
     urban: {
         value: "urban",
         isLeaf: false,
-        next: "areas",
+        next: "area",
     },
-    areas: {
-        value: "areas",
+    area: {
+        value: "area",
         isLeaf: true
     }
 }
@@ -146,7 +146,7 @@ export default {
 
     .title {
         text-align: start;
-        padding: 30px 2px;
+        padding: 30px 90px;
         white-space: nowrap;
         text-overflow: ellipsis;
         font-weight: 600;

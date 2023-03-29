@@ -1,7 +1,7 @@
 package com.AE.sgmis.controller;
 
 
-import com.AE.sgmis.pojo.Areas;
+import com.AE.sgmis.pojo.Area;
 import com.AE.sgmis.pojo.Provincial;
 import com.AE.sgmis.pojo.Urban;
 import com.AE.sgmis.result.Result;
@@ -43,11 +43,11 @@ public class AddressController {
         return new Result(list, SuccessCode.Success.code, "查询成功");
     }
 
-    @GetMapping("areas/{id}")
+    @GetMapping("area/{id}")
     public Result getAreas(@PathVariable Long id) {
-        QueryWrapper<Areas> wrapper = new QueryWrapper<>();
+        QueryWrapper<Area> wrapper = new QueryWrapper<>();
         wrapper.eq("uid", id);
-        List<Areas> list = areasService.list(wrapper);
+        List<Area> list = areasService.list(wrapper);
         return new Result(list, SuccessCode.Success.code, "查询成功");
     }
 }

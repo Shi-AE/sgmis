@@ -6,9 +6,9 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 @Data
-@TableName("t_areas")
+@TableName("t_area")
 // todo 修改名字为area
-public class Areas {
+public class Area {
     @TableId(type = IdType.NONE)
     private Long id;
     private String value;
