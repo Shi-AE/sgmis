@@ -1,6 +1,7 @@
 package com.AE.sgmis.controller;
 
 import com.AE.sgmis.exception.DeleteFailException;
+import com.AE.sgmis.exception.MaliciousSqlInjectionException;
 import com.AE.sgmis.exception.SaveFailException;
 import com.AE.sgmis.pojo.Xxpz;
 import com.AE.sgmis.result.Result;
@@ -105,6 +106,10 @@ public class XxpzController {
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
+        //安全检查
+        if (!xxpz.getGid().equals(gid)) {
+            throw new SaveFailException("用户信息不匹配，请重试");
+        }
         //条件 id = id and gid = gid
         QueryWrapper<Xxpz> wrapper = new QueryWrapper<>();
         wrapper.eq("id", xxpz.getId()).eq("gid", gid);

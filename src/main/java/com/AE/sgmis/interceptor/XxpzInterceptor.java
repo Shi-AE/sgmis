@@ -1,6 +1,6 @@
 package com.AE.sgmis.interceptor;
 
-import com.AE.sgmis.exception.MaliciousSqlInjection;
+import com.AE.sgmis.exception.MaliciousSqlInjectionException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.InitializingBean;
@@ -36,7 +36,7 @@ public class XxpzInterceptor implements HandlerInterceptor, InitializingBean {
         String[] path = servletPath.split("/");
         String tableName = path[3];
         if (!tableNames.contains(tableName)) {
-            throw new MaliciousSqlInjection("发现恶意sql注入");
+            throw new MaliciousSqlInjectionException("发现恶意sql注入");
             //todo 禁用ip一段时间
         }
         return true;

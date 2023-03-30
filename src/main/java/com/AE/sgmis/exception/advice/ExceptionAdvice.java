@@ -1,5 +1,6 @@
-package com.AE.sgmis.exception;
+package com.AE.sgmis.exception.advice;
 
+import com.AE.sgmis.exception.*;
 import com.AE.sgmis.result.ExceptionCode;
 import com.AE.sgmis.result.Result;
 import com.auth0.jwt.exceptions.JWTDecodeException;
@@ -13,7 +14,7 @@ public class ExceptionAdvice {
     @ExceptionHandler({NotFindUserException.class, PasswordErrorException.class,
             ConfirmPasswordInconsistencyException.class, UnchangedPasswordException.class,
             DeleteFailException.class, SaveFailException.class, FieldsDuplicateException.class
-            , MaliciousSqlInjection.class, PasswordUpdateFailException.class})
+            , MaliciousSqlInjectionException.class, PasswordUpdateFailException.class})
     private Result loginException(ProjectException exception) {
         return new Result(exception.getCode(), exception.getMessage());
     }
