@@ -55,7 +55,7 @@ public class XxpzController {
         //执行
         boolean success = xxpzService.remove(wrapper);
         if (!success) {
-            throw new DeleteFailException("配置选项不存在，删除失败");
+            throw new DeleteFailException("配置选项不存在或无法删除");
         }
         return new Result(SuccessCode.Success.code, "删除成功");
     }
@@ -75,7 +75,7 @@ public class XxpzController {
 
         boolean success = xxpzService.remove(wrapper);
         if (!success) {
-            throw new DeleteFailException("配置选项不存在，删除失败");
+            throw new DeleteFailException("配置选项不存在或无法删除");
         }
 
         return new Result(SuccessCode.Success.code, "删除成功");
@@ -98,5 +98,21 @@ public class XxpzController {
         }
 
         return new Result(xxpz, SuccessCode.Success.code, "添加成功");
+    }
+
+    @PutMapping
+    public Result update(@RequestBody Xxpz xxpz, HttpServletRequest request) {
+        //获取gid
+        Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
+        Long gid = (Long) info.get("gid");
+        //条件 id = id and gid = gid
+        QueryWrapper<Xxpz> wrapper = new QueryWrapper<>();
+        wrapper.eq("id", xxpz.getId()).eq("gid", gid);
+        //执行
+        boolean success = xxpzService.update(xxpz, wrapper);
+        if (!success) {
+            throw new SaveFailException("数据更新失败，请重试");
+        }
+        return new Result(SuccessCode.Success.code, "更新成功");
     }
 }

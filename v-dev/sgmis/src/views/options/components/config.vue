@@ -39,7 +39,7 @@ export default {
                 },
                 {
                     title: "操作",
-                    dataIndex: "delete",
+                    slotName: "operation",
                     align: "right"
                 }
             ],
@@ -54,12 +54,23 @@ export default {
             },
             inputModal: false,
             batchDeleteModal: false,
+            updateModal: false,
             form: {
-                name: ""
+                name: "",
+                id: null,
+                gid: null
             }
         }
     },
     methods: {
+        //重置表单
+        resetForm() {
+            this.form = {
+                name: "",
+                id: null,
+                gid: null
+            }
+        },
         //添加
         handleInputModal() {
             this.inputModal = true
@@ -67,6 +78,17 @@ export default {
         //批量删除
         handleBatchDeleteModal() {
             this.batchDeleteModal = true
+        },
+        //编辑
+        handlUpdateModal(record) {
+            if (record.gid === 0) {
+                Notification.error("无法修改系统选项")
+                return
+            }
+            this.form.name = record.name
+            this.form.id = record.id
+            this.form.gid = record.gid
+            this.updateModal = true
         },
         //处理关闭窗口
         handleCancel() {
@@ -76,47 +98,7 @@ export default {
             } else {
                 Notification.info("已取消")
             }
-        },
-        //删除单个
-        handleCellClick(record, column) {
-            //判断点击是否为删除
-            if (column.title === "操作") {
-                //询问对话框
-                const modal = Modal.warning({
-                    title: "删除配置选项",
-                    content: `确认要删除"${record.name}"吗？`,
-                    closable: true,
-                    hideCancel: false,
-                    onCancel: () => {
-                        //判断请求是否发送
-                        if (this.$store.state.isPending) {
-                            Notification.error("请求已发送，取消失败")
-                        } else {
-                            Notification.info("已取消")
-                        }
-                    },
-                    onBeforeOk: () => {
-                        axiosx({
-                            method: "DELETE",
-                            url: `xxpz/${record.id}`,
-                            message: "正在处理删除请求"
-                        }).then(res => {
-                            if (res.data.code === 200) {
-                                Notification.success(res.data.message)
-                                //删除选中的配置选项，
-                                //不重复提交请求减少服务器压力，
-                                //但可能出现数据版本不对称
-                                this.data = this.data.filter((item) => item.id !== record.id)
-                            } else {
-                                Notification.error(res.data.message)
-                            }
-                            modal.close()
-                        }).catch(() => {
-                            modal.close()
-                        })
-                    }
-                })
-            }
+            this.resetForm()
         },
         //添加处理
         async handleInput() {
@@ -144,15 +126,57 @@ export default {
                         ...res.data.data,
                         key: res.data.data.id,
                         index: this.data.length + 1,
-                        disabled: res.data.data.author === "系统",
-                        delete: "删除"
+                        disabled: res.data.data.gid === 0
                     })
                 } else {
                     Notification.error(res.data.message)
                 }
+                this.resetForm()
                 return true
             }).catch(() => {
                 this.inputModal = false
+            })
+        },
+        //处理单个删除
+        handleDelete(record) {
+            if (record.gid === 0) {
+                Notification.error("无法删除系统选项")
+                return
+            }
+            //询问模态框
+            const modal = Modal.warning({
+                title: "删除配置选项",
+                content: `确认要删除"${record.name}"吗？`,
+                closable: true,
+                hideCancel: false,
+                onCancel: () => {
+                    //判断请求是否发送
+                    if (this.$store.state.isPending) {
+                        Notification.error("请求已发送，取消失败")
+                    } else {
+                        Notification.info("已取消")
+                    }
+                },
+                onBeforeOk: () => {
+                    axiosx({
+                        method: "DELETE",
+                        url: `xxpz/${record.id}`,
+                        message: "正在处理删除请求"
+                    }).then(res => {
+                        if (res.data.code === 200) {
+                            Notification.success(res.data.message)
+                            //删除选中的配置选项，
+                            //不重复提交请求减少服务器压力，
+                            //但可能出现数据版本不对称
+                            this.data = this.data.filter((item) => item.id !== record.id)
+                        } else {
+                            Notification.error(res.data.message)
+                        }
+                        modal.close()
+                    }).catch(() => {
+                        modal.close()
+                    })
+                }
             })
         },
         //批量删除处理
@@ -179,6 +203,31 @@ export default {
             }).catch(() => {
                 this.inputModal = false
             })
+        },
+        async handlUpdate() {
+            await axiosx({
+                method: "PUT",
+                url: "xxpz",
+                data: this.form,
+                message: "正在更新数据"
+            }).then(res => {
+                if (res.data.code === 200) {
+                    Notification.success(res.data.message)
+                    //添加写入的配置选项，原因、结果同上
+                    this.data = this.data.map(item => {
+                        if (item.id === this.form.id) {
+                            item.name = this.form.name
+                        }
+                        return item
+                    })
+                    this.resetForm()
+                    return true
+                } else {
+                    Notification.error(res.data.message)
+                }
+            }).catch(() => {
+                this.updateModal = false
+            })
         }
     },
     created() {
@@ -193,8 +242,7 @@ export default {
                         ...item,
                         key: item.id,
                         index: index + 1,
-                        disabled: item.author === "系统",
-                        delete: "删除"
+                        disabled: item.gid === 0
                     }
                 })
             }
@@ -211,8 +259,8 @@ export default {
             </a-space>
         </div>
         <a-table :columns="columns" :data="data" :scroll="{ minWidth: 540 }" :pagination="false"
-            :row-selection="rowSelection" v-model:selectedKeys="selectedKeys" :bordered="tableBorder"
-            @cell-click="handleCellClick">
+            :row-selection="rowSelection" v-model:selectedKeys="selectedKeys" :bordered="tableBorder">
+            <!-- 筛选器 -->
             <template #head-filter="{ filterValue, setFilterValue, handleFilterConfirm, handleFilterReset }">
                 <div class="custom-filter">
                     <a-space direction="vertical">
@@ -224,9 +272,25 @@ export default {
                     </a-space>
                 </div>
             </template>
+            <!-- 控制按钮 -->
+            <template #operation="{ record }">
+                <a-space>
+                    <a-button type="primary" @click="handlUpdateModal(record)">编辑</a-button>
+                    <a-button type="primary" status="danger" @click="handleDelete(record)">删除</a-button>
+                </a-space>
+            </template>
         </a-table>
         <!-- 添加提交信息框 -->
         <a-modal v-model:visible="inputModal" width="calc(300px + 0.1 * 100vw)" title="添加配置选项" @before-ok="handleInput"
+            @cancel="handleCancel">
+            <a-form :model="form">
+                <a-form-item field="name" label="Name">
+                    <a-input v-model.lazy="form.name" />
+                </a-form-item>
+            </a-form>
+        </a-modal>
+        <!-- 修改提交信息框 -->
+        <a-modal v-model:visible="updateModal" width="calc(300px + 0.1 * 100vw)" title="编辑配置选项" @before-ok="handlUpdate"
             @cancel="handleCancel">
             <a-form :model="form">
                 <a-form-item field="name" label="Name">
