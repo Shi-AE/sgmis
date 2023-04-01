@@ -21,7 +21,7 @@ const router = createRouter({
                     name: "home",
                     component: () => import("@/views/home/home.vue"),
                     meta: {
-                        title: "首页",
+                        title: "首页"
                     }
                 },
                 {
@@ -29,7 +29,7 @@ const router = createRouter({
                     name: "feedback",
                     component: () => import("@/views/feedback/feedback.vue"),
                     meta: {
-                        title: "反馈中心",
+                        title: "反馈中心"
                     }
                 },
                 {
@@ -37,7 +37,7 @@ const router = createRouter({
                     name: "gpcx",
                     component: () => import("@/views/gpcx/gpcx.vue"),
                     meta: {
-                        title: "鸽棚巢箱",
+                        title: "鸽棚巢箱"
                     }
                 },
                 {
@@ -45,7 +45,7 @@ const router = createRouter({
                     name: "gsxx",
                     component: () => import("@/views/gsxx/gsxx.vue"),
                     meta: {
-                        title: "鸽舍信息",
+                        title: "鸽舍信息"
                     }
                 },
                 {
@@ -53,7 +53,7 @@ const router = createRouter({
                     name: "gzk",
                     component: () => import("@/views/gzk/gzk.vue"),
                     meta: {
-                        title: "鸽子库",
+                        title: "鸽子库"
                     }
                 },
                 {
@@ -61,7 +61,7 @@ const router = createRouter({
                     name: "help",
                     component: () => import("@/views/help/help.vue"),
                     meta: {
-                        title: "帮助中心",
+                        title: "帮助中心"
                     }
                 },
                 {
@@ -69,7 +69,7 @@ const router = createRouter({
                     name: "options",
                     component: () => import("@/views/options/options.vue"),
                     meta: {
-                        title: "选项设置",
+                        title: "选项设置"
                     }
                 },
                 {
@@ -77,7 +77,7 @@ const router = createRouter({
                     name: "xtspz",
                     component: () => import("@/views/xtspz/xtspz.vue"),
                     meta: {
-                        title: "血统书配置",
+                        title: "血统书配置"
                     }
                 },
                 {
@@ -86,6 +86,7 @@ const router = createRouter({
                     component: () => import("@/views/admin/admin.vue"),
                     meta: {
                         title: "管理员设置",
+                        // requiresAdminAuth: true
                     }
                 },
                 {
@@ -93,7 +94,7 @@ const router = createRouter({
                     name: "user",
                     component: () => import("@/views/user/user.vue"),
                     meta: {
-                        title: "用户设置",
+                        title: "用户设置"
                     }
                 },
                 {
@@ -101,7 +102,7 @@ const router = createRouter({
                     name: "xtk",
                     component: () => import("@/views/xtk/xtk.vue"),
                     meta: {
-                        title: "血统库",
+                        title: "血统库"
                     }
                 }
             ],
@@ -155,8 +156,15 @@ router.beforeEach(async (to) => {
     if (to.meta.requiresAuth) {
         await axiosx({
             method: "GET",
-            url: "/login",
+            url: "login",
             message: "登录验证"
+        })
+    }
+    if(to.meta.requiresAdminAuth) {
+        await axiosx({
+            method: "GET",
+            url: "login/admin",
+            message: "验证管理员信息"
         })
     }
     if (to.meta.title) {

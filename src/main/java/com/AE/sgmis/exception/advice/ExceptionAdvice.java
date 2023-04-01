@@ -14,8 +14,9 @@ public class ExceptionAdvice {
     @ExceptionHandler({NotFindUserException.class, PasswordErrorException.class,
             ConfirmPasswordInconsistencyException.class, UnchangedPasswordException.class,
             DeleteFailException.class, SaveFailException.class, FieldsDuplicateException.class
-            , MaliciousSqlInjectionException.class, PasswordUpdateFailException.class})
-    private Result loginException(ProjectException exception) {
+            , MaliciousSqlInjectionException.class, PasswordUpdateFailException.class,
+            AccessException.class})
+    private Result commonException(ProjectException exception) {
         return new Result(exception.getCode(), exception.getMessage());
     }
 

@@ -204,6 +204,7 @@ export default {
                 this.inputModal = false
             })
         },
+        //更新
         async handlUpdate() {
             await axiosx({
                 method: "PUT",
@@ -272,7 +273,7 @@ export default {
                     </a-space>
                 </div>
             </template>
-            <!-- 控制按钮 -->
+            <!-- 每条记录控制按钮 -->
             <template #operation="{ record }">
                 <a-space>
                     <a-button type="primary" @click="handlUpdateModal(record)">编辑</a-button>
@@ -284,7 +285,7 @@ export default {
         <a-modal v-model:visible="inputModal" width="calc(300px + 0.1 * 100vw)" title="添加配置选项" @before-ok="handleInput"
             @cancel="handleCancel">
             <a-form :model="form">
-                <a-form-item field="name" label="Name">
+                <a-form-item field="name" label="选项名称">
                     <a-input v-model.lazy="form.name" />
                 </a-form-item>
             </a-form>
@@ -293,7 +294,7 @@ export default {
         <a-modal v-model:visible="updateModal" width="calc(300px + 0.1 * 100vw)" title="编辑配置选项" @before-ok="handlUpdate"
             @cancel="handleCancel">
             <a-form :model="form">
-                <a-form-item field="name" label="Name">
+                <a-form-item field="name" label="选项名称">
                     <a-input v-model.lazy="form.name" />
                 </a-form-item>
             </a-form>

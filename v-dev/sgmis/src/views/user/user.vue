@@ -19,7 +19,7 @@ export default {
                 let oldPassword = this.form.oldPassword
                 let newPassword = this.form.newPassword
                 let confirmPassword = this.form.confirmPassword
-                if (newPassword.length < 8) {
+                if (newPassword.length < 6) {
                     this.$notification.error("新密码过短")
                     return false
                 }
@@ -70,7 +70,7 @@ export default {
             <div class="form-floating mb-3">
                 <input type="password" class="form-control" placeholder="name@example.com" v-model.lazy="form.newPassword"
                     required>
-                <label for="newPassword">新密码（不少于8个字符）</label>
+                <label for="newPassword">新密码（不少于6个字符）</label>
             </div>
             <div class="form-floating mb-3">
                 <input type="password" class="form-control" placeholder="name@example.com"

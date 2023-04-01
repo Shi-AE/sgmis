@@ -59,6 +59,7 @@ export default defineComponent({
                 }).then(() => {
                     this.$store.commit("setToken", "")
                     this.$store.commit("setAccount", "")
+                    this.$store.commit("setAdmin", false)
                     this.$router.push({ name: "login" })
                 })
             }
@@ -111,6 +112,7 @@ export default defineComponent({
                     </a-menu-item>
                 </RouterLink>
                 <a-divider margin="0 0 5px" />
+
                 <a-sub-menu key="system">
                     <template #title>
                         <span>
@@ -139,13 +141,15 @@ export default defineComponent({
                             血统书配置
                         </a-menu-item>
                     </RouterLink>
-                    <a-divider margin="0 0 5px" />
-                    <RouterLink :to="{ name: 'admin' }">
-                        <a-menu-item key="admin">
-                            <IconUser />
-                            管理员设置
-                        </a-menu-item>
-                    </RouterLink>
+                    <div v-if="$store.state.admin">
+                        <a-divider margin="0 0 5px" />
+                        <RouterLink :to="{ name: 'admin' }">
+                            <a-menu-item key="admin">
+                                <IconUser />
+                                管理员设置
+                            </a-menu-item>
+                        </RouterLink>
+                    </div>
                 </a-sub-menu>
                 <a-divider margin="0 0 5px" />
                 <RouterLink :to="{ name: 'help' }">

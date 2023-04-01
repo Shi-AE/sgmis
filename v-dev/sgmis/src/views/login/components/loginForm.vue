@@ -20,9 +20,11 @@ export default {
                 message: "正在验证登录信息"
             }).then((res) => {
                 if (res.data.code === 201) {
+                    console.log(res.data.data);
                     this.$notification.success(res.data.message)
-                    store.commit("setToken", res.data.data)
+                    store.commit("setToken", res.data.data.token)
                     store.commit("setAccount", this.formMess.account)
+                    store.commit("setAdmin", res.data.data.admin)
                     this.$router.push({ name: "home" })
                 } else {
                     this.$notification.error(res.data.message)

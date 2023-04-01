@@ -1,7 +1,6 @@
 package com.AE.sgmis.controller;
 
 import com.AE.sgmis.exception.DeleteFailException;
-import com.AE.sgmis.exception.MaliciousSqlInjectionException;
 import com.AE.sgmis.exception.SaveFailException;
 import com.AE.sgmis.pojo.Xxpz;
 import com.AE.sgmis.result.Result;
@@ -9,6 +8,7 @@ import com.AE.sgmis.result.SuccessCode;
 import com.AE.sgmis.service.XxpzService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
+@Slf4j
 @RestController
 @RequestMapping("api/xxpz")
 public class XxpzController {
@@ -95,6 +96,7 @@ public class XxpzController {
 
         boolean success = xxpzService.save(xxpz);
         if (!success) {
+            log.error("新增配置传入 {} 时发生服务错误", xxpz);
             throw new SaveFailException("服务错误，添加失败");
         }
 

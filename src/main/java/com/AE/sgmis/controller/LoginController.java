@@ -1,5 +1,6 @@
 package com.AE.sgmis.controller;
 
+import com.AE.sgmis.exception.AccessException;
 import com.AE.sgmis.exception.ConfirmPasswordInconsistencyException;
 import com.AE.sgmis.exception.UnchangedPasswordException;
 import com.AE.sgmis.pojo.LoginMsg;
@@ -21,7 +22,7 @@ import java.util.Map;
 
 
 @RestController
-@RequestMapping("/api/login")
+@RequestMapping("api/login")
 public class LoginController {
 
     @Autowired
@@ -32,7 +33,7 @@ public class LoginController {
     /**
      * 验证登录
      */
-    @PostMapping("/authority")
+    @PostMapping("authority")
     public Result login(@RequestBody ParamUser paramUser, HttpServletRequest request) {
         String account = paramUser.getAccount();
         String password = paramUser.getPassword();
@@ -63,7 +64,11 @@ public class LoginController {
         //传入用户信息map，为用户生成token
         String token = jwtUtil.getToken(claim);
 
-        return new Result(token, SuccessCode.LoginSuccess.code, "登录成功");
+        Map<String, Object> map = new HashMap<>();
+        map.put("token", token);
+        map.put("admin", admin);
+
+        return new Result(map, SuccessCode.LoginSuccess.code, "登录成功");
     }
 
     /**
@@ -72,6 +77,24 @@ public class LoginController {
     @GetMapping
     public Result verifyLogin() {
         //普通请求由请求头控制
+        return new Result(SuccessCode.AccessSuccess.code, "访问通过");
+    }
+
+    @GetMapping("admin")
+    public Result verifyAdmin(HttpServletRequest request) {
+        //获取用户信息
+        Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
+        Long id = (Long) info.get("id");
+        //请求头判断
+        Boolean admin = (Boolean) info.get("admin");
+        if (!admin) {
+            throw new AccessException("你无权访问该页面，请联系管理员开通权限");
+        }
+        //数据库检索防止信息篡改
+        User user = loginService.getById(id);
+        if (!user.getAdmin()) {
+            throw new AccessException("请求头信息异常");
+        }
         return new Result(SuccessCode.AccessSuccess.code, "访问通过");
     }
 

@@ -25,3 +25,6 @@ jwt:
 xxpz:
   tableNames: yspz, lxpz, yanpz, jbpz, ylhl, gdcgzt
   systemGid: 0
+
+user:
+  defaultPassword: 123456
