@@ -109,29 +109,36 @@ export default {
 <template>
     <div class="full-screen d-flex align-items-center flex-column">
         <div class="title fs-1">鸽舍信息</div>
+        <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">信息</a-divider>
         <a-form ref="formRef" :model="info" @submit="submit" size="large" layout="horizontal" :auto-label-width="true">
             <a-form-item field="name" tooltip="你的鸽舍名称" label="鸽舍名称">
                 <a-input v-model.lazy="info.name" placeholder="鸽舍名称" />
             </a-form-item>
+            <a-divider :size="2" style="border-bottom-style: dotted" />
             <a-form-item field="location" label="地址">
                 <a-cascader v-model.lazy="info.location" :options="options" placeholder="地址" allow-clear path-mode
                     :load-more="loadMore" />
             </a-form-item>
+            <a-divider :size="2" style="border-bottom-style: dotted" />
             <a-form-item field="address" tooltip="具体地址信息，方便他人联系你" label="具体地址">
                 <a-input v-model.lazy="info.address" placeholder="具体地址" />
             </a-form-item>
+            <a-divider :size="2" style="border-bottom-style: dotted" />
             <a-form-item field="years" label="养鸽年数">
                 <a-input-number v-model.lazy.number="info.years" placeholder="养鸽年数" />
             </a-form-item>
+            <a-divider :size="2" style="border-bottom-style: dotted" />
             <a-form-item field="bloodLine" label="主养血系">
                 <a-textarea v-model.lazy="info.bloodline" placeholder="主养血系" />
             </a-form-item>
+            <a-divider :size="2" style="border-bottom-style: dotted" />
             <a-form-item field="performance" label="优秀赛绩">
                 <a-textarea v-model.lazy="info.performance" placeholder="优秀赛绩" />
             </a-form-item>
+            <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">操作</a-divider>
             <a-form-item>
                 <a-space>
-                    <a-button type="primary" html-type="submit">提交</a-button>
+                    <a-button type="primary" html-type="submit">保存</a-button>
                     <a-button @click="$refs.formRef.resetFields()">重置</a-button>
                 </a-space>
             </a-form-item>

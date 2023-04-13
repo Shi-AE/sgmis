@@ -10,6 +10,10 @@ spring:
   jackson:
     date-format: yyyy-MM-dd hh:mm:ss
     time-zone: GMT+8
+  servlet:
+    multipart:
+      max-file-size: 10GB
+      max-request-size: 10MB
 
 encrypt:
   memoryPowOfTwo: 13
@@ -28,3 +32,7 @@ xxpz:
 
 user:
   defaultPassword: 123456
+
+file:
+  logo:
+    path: logo

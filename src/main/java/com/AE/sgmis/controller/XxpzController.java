@@ -1,7 +1,7 @@
 package com.AE.sgmis.controller;
 
-import com.AE.sgmis.exception.DeleteFailException;
-import com.AE.sgmis.exception.SaveFailException;
+import com.AE.sgmis.exceptions.DeleteFailException;
+import com.AE.sgmis.exceptions.SaveFailException;
 import com.AE.sgmis.pojo.Xxpz;
 import com.AE.sgmis.result.Result;
 import com.AE.sgmis.result.SuccessCode;
@@ -103,6 +103,9 @@ public class XxpzController {
         return new Result(xxpz, SuccessCode.Success.code, "添加成功");
     }
 
+    /**
+     * 更新数据
+     */
     @PutMapping
     public Result update(@RequestBody Xxpz xxpz, HttpServletRequest request) {
         //获取gid

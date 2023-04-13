@@ -1,4 +1,4 @@
-package com.AE.sgmis.exception;
+package com.AE.sgmis.exceptions;
 
 import com.AE.sgmis.result.ExceptionCode;
 

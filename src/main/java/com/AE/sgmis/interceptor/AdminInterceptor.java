@@ -1,6 +1,6 @@
 package com.AE.sgmis.interceptor;
 
-import com.AE.sgmis.exception.AccessException;
+import com.AE.sgmis.exceptions.AccessException;
 import com.AE.sgmis.pojo.User;
 import com.AE.sgmis.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;

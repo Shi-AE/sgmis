@@ -1,7 +1,7 @@
 package com.AE.sgmis.controller;
 
-import com.AE.sgmis.exception.DeleteFailException;
-import com.AE.sgmis.exception.SaveFailException;
+import com.AE.sgmis.exceptions.DeleteFailException;
+import com.AE.sgmis.exceptions.SaveFailException;
 import com.AE.sgmis.pojo.User;
 import com.AE.sgmis.result.Result;
 import com.AE.sgmis.result.SuccessCode;
@@ -125,6 +125,9 @@ public class UserController implements InitializingBean {
         return new Result(user, SuccessCode.Success.code, "创建新用户成功，请新用户尽快更改密码");
     }
 
+    /**
+     * 根据id删除
+     */
     @DeleteMapping("{id}")
     public Result deleteUser(HttpServletRequest request, @PathVariable Long id) {
         System.out.println(id);

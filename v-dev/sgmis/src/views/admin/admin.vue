@@ -183,11 +183,13 @@ export default {
 }
 </script>
 <template>
+    <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">操作</a-divider>
     <div class="button-group">
         <a-space>
             <a-button type="primary" status="success" @click="inputModal = true">新建成员</a-button>
         </a-space>
     </div>
+    <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">成员</a-divider>
     <a-table :columns="columns" :data="data" :pagination="false">
         <template #empty>
             <a-empty>

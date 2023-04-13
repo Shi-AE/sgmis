@@ -1,6 +1,6 @@
 package com.AE.sgmis.controller;
 
-import com.AE.sgmis.exception.SaveFailException;
+import com.AE.sgmis.exceptions.SaveFailException;
 import com.AE.sgmis.pojo.Gsxx;
 import com.AE.sgmis.result.Result;
 import com.AE.sgmis.result.SuccessCode;
@@ -21,6 +21,9 @@ public class GsxxController {
     @Autowired
     private GsxxService gsxxService;
 
+    /**
+     * 获取所有信息
+     */
     @GetMapping
     public Result getGsxx(HttpServletRequest request) {
         //获取gid
@@ -38,6 +41,9 @@ public class GsxxController {
         return new Result(gsxx, SuccessCode.Success.code, "查询成功");
     }
 
+    /**
+     * 上传鸽舍信息
+     */
     @PostMapping
     public Result postGsxx(HttpServletRequest request, @RequestBody Gsxx gsxx) {
         //获取gid

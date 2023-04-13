@@ -1,8 +1,8 @@
 package com.AE.sgmis.service.impl;
 
-import com.AE.sgmis.exception.NotFindUserException;
-import com.AE.sgmis.exception.PasswordErrorException;
-import com.AE.sgmis.exception.PasswordUpdateFailException;
+import com.AE.sgmis.exceptions.NotFindUserException;
+import com.AE.sgmis.exceptions.PasswordErrorException;
+import com.AE.sgmis.exceptions.PasswordUpdateFailException;
 import com.AE.sgmis.mapper.LoginMsgMapper;
 import com.AE.sgmis.mapper.UserMapper;
 import com.AE.sgmis.pojo.LoginMsg;

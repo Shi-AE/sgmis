@@ -4,14 +4,16 @@ public enum ExceptionCode {
     NotFindUserException(401),
     PasswordErrorException(402),
     AccessException(403),
+    NotFoundException(404),
     ExpiredException(405),
-    ConfirmPasswordInconsistencyException(405),
-    UnchangedPasswordException(406),
-    DeleteFailException(407),
-    SaveFailException(408),
-    FieldsDuplicateException(409),
-    MaliciousSqlInjectionException(410),
-    PasswordUpdateFailException(411);
+    ConfirmPasswordInconsistencyException(406),
+    UnchangedPasswordException(407),
+    DeleteFailException(408),
+    SaveFailException(409),
+    FieldsDuplicateException(410),
+    MaliciousSqlInjectionException(411),
+    PasswordUpdateFailException(412),
+    FileSaveException(413);
 
     public final int code;
     ExceptionCode(int code) {

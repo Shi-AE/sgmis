@@ -1,8 +1,8 @@
 package com.AE.sgmis.controller;
 
-import com.AE.sgmis.exception.AccessException;
-import com.AE.sgmis.exception.ConfirmPasswordInconsistencyException;
-import com.AE.sgmis.exception.UnchangedPasswordException;
+import com.AE.sgmis.exceptions.AccessException;
+import com.AE.sgmis.exceptions.ConfirmPasswordInconsistencyException;
+import com.AE.sgmis.exceptions.UnchangedPasswordException;
 import com.AE.sgmis.pojo.LoginMsg;
 import com.AE.sgmis.pojo.ParamUser;
 import com.AE.sgmis.pojo.UpdateUserInfo;

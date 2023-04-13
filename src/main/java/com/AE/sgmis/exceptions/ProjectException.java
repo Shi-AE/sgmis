@@ -1,4 +1,4 @@
-package com.AE.sgmis.exception;
+package com.AE.sgmis.exceptions;
 
 public class ProjectException extends RuntimeException{
     private int code;

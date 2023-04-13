@@ -32,3 +32,4 @@ build/
 .vscode/
 /v-dev/node_modules/
 /src/test/
+/logo/

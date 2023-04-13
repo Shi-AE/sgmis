@@ -253,12 +253,14 @@ export default {
 </script>
 <template>
     <div>
+        <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">操作</a-divider>
         <div class="button-group">
             <a-space>
                 <a-button type="primary" status="success" @click="handleInputModal()">添加</a-button>
                 <a-button type="primary" status="danger" @click="handleBatchDeleteModal()">批量删除</a-button>
             </a-space>
         </div>
+        <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">基础选项</a-divider>
         <a-table :columns="columns" :data="data" :scroll="{ minWidth: 540 }" :pagination="false"
             :row-selection="rowSelection" v-model:selectedKeys="selectedKeys" :bordered="tableBorder">
             <!-- 筛选器 -->

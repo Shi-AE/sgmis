@@ -50,7 +50,7 @@ axiosx.interceptors.response.use(response => {
     //解除键盘事件
     document.removeEventListener('keydown', preventKeyDown, false);
     //恶意sql注入
-    if (response.data.code === 410) {
+    if (response.data.code === 411) {
         Notification.error(response.data.message)
         store.commit("setToken", "")
         router.push({ name: "403" })

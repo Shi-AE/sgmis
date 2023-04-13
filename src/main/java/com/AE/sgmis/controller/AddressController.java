@@ -29,12 +29,18 @@ public class AddressController {
     @Autowired
     private AreasService areasService;
 
+    /**
+     * 查询省
+     */
     @GetMapping("provincial")
     public Result getProvincial() {
         List<Provincial> list = provincialService.list();
         return new Result(list, SuccessCode.Success.code, "查询成功");
     }
 
+    /**
+     * 根据省查询市
+     */
     @GetMapping("urban/{id}")
     public Result getUrban(@PathVariable Long id) {
         QueryWrapper<Urban> wrapper = new QueryWrapper<>();
@@ -43,6 +49,9 @@ public class AddressController {
         return new Result(list, SuccessCode.Success.code, "查询成功");
     }
 
+    /**
+     * 根据市查询区
+     */
     @GetMapping("area/{id}")
     public Result getAreas(@PathVariable Long id) {
         QueryWrapper<Area> wrapper = new QueryWrapper<>();

@@ -20,7 +20,8 @@ const store = createStore({
             token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2ODkzODY3MTEsImFjY291bnQiOiJyb290In0.Aase1fm80R-A7Efjhy1bExtXsuSjPRudUWMaUikB4T0",
             account: "root",
             admin: false,
-            isPending: false
+            isPending: false,
+            logoName: ""
         }
     },
     mutations: {
@@ -38,6 +39,9 @@ const store = createStore({
         },
         setPending(state, payload) {
             state.isPending = payload
+        },
+        setLogoName(state, payload) {
+            state.logoName = payload
         }
     },
     getters: {
