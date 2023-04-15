@@ -1,7 +1,7 @@
 <script>
-
 import axiosx from "@/assets/js/axiosx.js"
 import { Modal, Notification } from '@arco-design/web-vue'
+import { h } from "vue"
 
 export default {
     data() {
@@ -62,7 +62,11 @@ export default {
             }
             const modal = Modal.warning({
                 title: "重置成员密码",
-                content: "确认要重置该成员的密码吗？",
+                content: () => [
+                    h("div", `确认要重置成员${record.account}的密码吗？`),
+                    h("div", `重置后密码初始值为“123456”`),
+                    h("div", `成功后请尽快更换密码！`),
+                ],
                 closable: true,
                 hideCancel: false,
                 onCancel: () => {
@@ -102,7 +106,7 @@ export default {
             }
             const modal = Modal.warning({
                 title: "删除成员",
-                content: "确认要删除该成员吗？",
+                content: `确认要删除成员${record.account}吗？`,
                 closable: true,
                 hideCancel: false,
                 onCancel: () => {
@@ -131,6 +135,7 @@ export default {
                 }
             })
         },
+        //添加新成员
         async handleInput() {
             await axiosx({
                 method: "POST",
@@ -219,7 +224,7 @@ export default {
         </div>
     </a-modal>
 </template>
-<style>
+<style scoped>
 .button-group {
     margin: 10px;
 }

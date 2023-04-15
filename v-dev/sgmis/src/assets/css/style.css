@@ -9,3 +9,7 @@
 a {
     text-decoration: none !important;
 }
+
+.arco-modal-body {
+    text-align: center;
+}

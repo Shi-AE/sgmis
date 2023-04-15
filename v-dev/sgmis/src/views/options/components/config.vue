@@ -221,11 +221,11 @@ export default {
                         }
                         return item
                     })
-                    this.resetForm()
-                    return true
                 } else {
                     Notification.error(res.data.message)
                 }
+                this.resetForm()
+                return true
             }).catch(() => {
                 this.updateModal = false
             })
@@ -246,6 +246,8 @@ export default {
                         disabled: item.gid === 0
                     }
                 })
+            } else {
+                Notification.error(res.data.message)
             }
         })
     }

@@ -13,7 +13,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.dao.DuplicateKeyException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -113,14 +112,10 @@ public class UserController implements InitializingBean {
         //加密密码
         encryptUtil.passwordEncrypt(user);
         //执行
-        try {
-            boolean success = userService.save(user);
-            if (!success) {
-                log.error("新建传入 {} 发生服务器错误", user);
-                throw new SaveFailException("创建新用户发生错误，请重试");
-            }
-        } catch (DuplicateKeyException e) {
-            throw new SaveFailException("该用户名已被使用，请重试");
+        boolean success = userService.save(user);
+        if (!success) {
+            log.error("新建传入 {} 发生服务器错误", user);
+            throw new SaveFailException("创建新用户发生错误，请重试");
         }
         return new Result(user, SuccessCode.Success.code, "创建新用户成功，请新用户尽快更改密码");
     }

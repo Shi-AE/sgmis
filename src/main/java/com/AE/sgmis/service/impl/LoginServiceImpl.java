@@ -10,7 +10,6 @@ import com.AE.sgmis.pojo.User;
 import com.AE.sgmis.service.LoginService;
 import com.AE.sgmis.util.EncryptUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +19,7 @@ import java.util.List;
 
 @Slf4j
 @Service
-public class LoginServiceImpl extends ServiceImpl<BaseMapper<User>, User> implements LoginService {
+public class LoginServiceImpl extends ServiceImpl<UserMapper, User> implements LoginService {
 
     @Autowired
     private UserMapper userMapper;

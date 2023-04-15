@@ -40,7 +40,7 @@ export default {
                 data: this.info,
                 message: "正在保存配置"
             }).then(res => {
-                if(res.data.code === 200) {
+                if (res.data.code === 200) {
                     Notification.success(res.data.message)
                 } else {
                     Notification.error(res.data.message)
@@ -86,10 +86,10 @@ export default {
             url: "xtspz",
             message: "正在获取用户信息"
         }).then(res => {
-            const {logoUrl, ...data} = res.data.data
+            const { logoUrl, ...data } = res.data.data
             if (res.data.code === 200) {
                 //显示图片
-                if (logoUrl !== null &&  logoUrl.length > 0) {
+                if (logoUrl !== null && logoUrl.length > 0) {
                     store.commit("setLogoName", res.data.data.logoUrl)
                     this.file = {
                         url: `${logoResourcePath}/${this.$store.state.logoName}`,

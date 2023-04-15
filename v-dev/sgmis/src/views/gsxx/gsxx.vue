@@ -45,7 +45,6 @@ export default {
                 },
                 message: "正在上传信息"
             }).then(res => {
-                console.log(res);
                 if (res.data.code === 200) {
                     Notification.success(res.data.message)
                 } else {
@@ -125,7 +124,7 @@ export default {
             </a-form-item>
             <a-divider :size="2" style="border-bottom-style: dotted" />
             <a-form-item field="years" label="养鸽年数">
-                <a-input-number v-model.lazy.number="info.years" placeholder="养鸽年数" />
+                <a-input-number v-model.lazy.number="info.years" placeholder="养鸽年数" :min="0" :max="100" />
             </a-form-item>
             <a-divider :size="2" style="border-bottom-style: dotted" />
             <a-form-item field="bloodLine" label="主养血系">
