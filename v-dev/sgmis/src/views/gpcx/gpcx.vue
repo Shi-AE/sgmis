@@ -212,7 +212,7 @@ export default {
             this.updateModal = true;
         }
     },
-    created() {
+    mounted() {
         axiosx({
             method: "GET",
             url: "gpcx",

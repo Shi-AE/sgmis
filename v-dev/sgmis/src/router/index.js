@@ -57,6 +57,14 @@ const router = createRouter({
                     }
                 },
                 {
+                    path: "editPigeon/:id(\\d+)?",
+                    name: "editPigeon",
+                    component: () => import("@/views/editPigeon/editPigeon.vue"),
+                    meta: {
+                        title: "编辑鸽子"
+                    }
+                },
+                {
                     path: "help",
                     name: "help",
                     component: () => import("@/views/help/help.vue"),
@@ -90,19 +98,11 @@ const router = createRouter({
                     }
                 },
                 {
-                    path: "user",
+                    path: "system/user",
                     name: "user",
                     component: () => import("@/views/user/user.vue"),
                     meta: {
                         title: "用户设置"
-                    }
-                },
-                {
-                    path: "xtk",
-                    name: "xtk",
-                    component: () => import("@/views/xtk/xtk.vue"),
-                    meta: {
-                        title: "血统库"
                     }
                 }
             ],

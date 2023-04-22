@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
@@ -20,6 +21,18 @@ import java.util.UUID;
 public class FileUtil {
 
     private final Tika tika = new Tika();
+
+    /**
+     * 初始化文件夹
+     */
+    public void initDirectory(Path path) {
+        try {
+            Files.createDirectory(path);
+        } catch (FileAlreadyExistsException ignored) {
+        } catch (IOException e) {
+            log.error("初始化bean发生错误，{} 存储文件夹创建失败", path.getFileName(), e);
+        }
+    }
 
     /**
      * 将文件保存在本地
@@ -63,7 +76,10 @@ public class FileUtil {
     /**
      * 检查文件类型是否匹配
      */
-    public boolean checkFileType(MultipartFile file, List<String> typeList) {
-        return typeList.contains(getFileType(file));
+    public void checkFileType(MultipartFile file, List<String> typeList) {
+        boolean checked = typeList.contains(getFileType(file));
+        if (!checked) {
+            throw new FileSaveException("文件类型错误，请上传图片类型");
+        }
     }
 }

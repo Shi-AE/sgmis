@@ -22,6 +22,7 @@ import config from "./components/config.vue"
             <config api="gdcgzt" head="状态"></config>
         </a-tab-pane>
         <a-tab-pane key="7" title="作育者">
+            <config api="breeder" head="姓名"></config>
         </a-tab-pane>
     </a-tabs>
 </template>

@@ -162,7 +162,7 @@ export default {
             })
         }
     },
-    created() {
+    mounted() {
         //查询原有成员
         axiosx({
             method: "GET",
@@ -195,7 +195,7 @@ export default {
         </a-space>
     </div>
     <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">成员</a-divider>
-    <a-table :columns="columns" :data="data" :pagination="false">
+    <a-table :columns="columns" :data="data" :pagination="false" :scroll="{ minWidth: 540 }">
         <template #empty>
             <a-empty>
                 数据发生异常，请重试

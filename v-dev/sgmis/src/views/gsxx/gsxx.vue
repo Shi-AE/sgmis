@@ -71,7 +71,7 @@ export default {
             })
         }
     },
-    created() {
+    mounted() {
         //查询原有信息
         axiosx({
             method: "GET",

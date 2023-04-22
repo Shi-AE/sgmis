@@ -49,9 +49,6 @@ export default {
                 showCheckedAll: true
             },
             selectedKeys: [],
-            tableBorder: {
-                headerCell: true
-            },
             inputModal: false,
             batchDeleteModal: false,
             updateModal: false,
@@ -231,7 +228,7 @@ export default {
             })
         }
     },
-    created() {
+    mounted() {
         axiosx({
             method: "GET",
             url: `xxpz/${this.$props.api}`,
@@ -258,13 +255,16 @@ export default {
         <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">操作</a-divider>
         <div class="button-group">
             <a-space>
+                <template #split>
+                    <a-divider direction="vertical" />
+                </template>
                 <a-button type="primary" status="success" @click="handleInputModal()">添加</a-button>
                 <a-button type="primary" status="danger" @click="handleBatchDeleteModal()">批量删除</a-button>
             </a-space>
         </div>
         <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">基础选项</a-divider>
         <a-table :columns="columns" :data="data" :scroll="{ minWidth: 540 }" :pagination="false"
-            :row-selection="rowSelection" v-model:selectedKeys="selectedKeys" :bordered="tableBorder">
+            :row-selection="rowSelection" v-model:selectedKeys="selectedKeys" :filter-icon-align-left="true">
             <!-- 筛选器 -->
             <template #head-filter="{ filterValue, setFilterValue, handleFilterConfirm, handleFilterReset }">
                 <div class="custom-filter">
@@ -277,7 +277,7 @@ export default {
                     </a-space>
                 </div>
             </template>
-            <!-- 每条记录控制按钮 -->
+            <!-- 每条记录控制按钮插槽 -->
             <template #operation="{ record }">
                 <a-space>
                     <a-button type="primary" @click="handlUpdateModal(record)">编辑</a-button>

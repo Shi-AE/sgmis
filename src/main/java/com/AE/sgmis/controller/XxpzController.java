@@ -28,16 +28,39 @@ public class XxpzController {
     private XxpzService xxpzService;
 
     /**
-     * 获取所有数据
+     * 获取所有类型的所有数据
      */
-    @GetMapping("{type}")
-    public Result showList(@PathVariable String type, HttpServletRequest request) {
+    @GetMapping
+    public Result getAll(HttpServletRequest request) {
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
+
+        //添加条件 gid or gid = systemGid
+        QueryWrapper<Xxpz> wrapper = new QueryWrapper<>();
+        wrapper.eq("gid", gid).or().eq("gid", systemGid);
+
+        //字段
+        wrapper.select("name", "type");
+
+        //查询
+        List<Xxpz> list = xxpzService.list(wrapper);
+        return new Result(list, SuccessCode.Success.code, "查询成功");
+    }
+
+    /**
+     * 根据类型获取所有数据
+     */
+    @GetMapping("{type}")
+    public Result getAllByType(@PathVariable String type, HttpServletRequest request) {
+        //获取gid
+        Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
+        Long gid = (Long) info.get("gid");
+
         //添加条件 type and gid or gid
         QueryWrapper<Xxpz> wrapper = new QueryWrapper<>();
         wrapper.eq("type", type).and(qw -> qw.eq("gid", systemGid).or().eq("gid", gid));
+
         //查询
         List<Xxpz> list = xxpzService.list(wrapper);
         return new Result(list, SuccessCode.Success.code, "查询成功");
@@ -51,9 +74,11 @@ public class XxpzController {
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
+
         //添加条件 id = id and gid = gid
         QueryWrapper<Xxpz> wrapper = new QueryWrapper<>();
         wrapper.eq("gid", gid).eq("id", id);
+
         //执行
         boolean success = xxpzService.remove(wrapper);
         if (!success) {
@@ -72,6 +97,7 @@ public class XxpzController {
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
 
+        //条件 (id in ids) and gid = gid
         QueryWrapper<Xxpz> wrapper = new QueryWrapper<>();
         wrapper.in("id", ids).eq("gid", gid);
 
@@ -86,6 +112,7 @@ public class XxpzController {
     /**
      * 新增选项配置
      */
+    // TODO 数据库控制输入数据
     @PostMapping("{type}")
     public Result add(@RequestBody Xxpz xxpz, @PathVariable String type, HttpServletRequest request) {
         //从请求域中获取用户信息
@@ -111,13 +138,16 @@ public class XxpzController {
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
+
         //安全检查
         if (!xxpz.getGid().equals(gid)) {
             throw new SaveFailException("用户信息不匹配，请重试");
         }
+
         //条件 id = id and gid = gid
         QueryWrapper<Xxpz> wrapper = new QueryWrapper<>();
         wrapper.eq("id", xxpz.getId()).eq("gid", gid);
+
         //执行
         boolean success = xxpzService.update(xxpz, wrapper);
         if (!success) {

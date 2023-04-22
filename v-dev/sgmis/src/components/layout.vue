@@ -14,14 +14,15 @@ import {
     IconSearch,
     IconSettings,
     IconStorage,
-    IconUser
+    IconUser,
+    IconSubscribeAdd
 } from '@arco-design/web-vue/es/icon'
 import axiosx from "@/assets/js/axiosx.js"
 
 export default defineComponent({
     components: {
         IconCaretRight, IconCaretLeft, IconHome, IconCalendar, IconBranch, IconStorage, IconNav, IconSettings,
-        IconApps, IconSearch, IconBook, IconUser, IconQuestionCircle, IconCustomerService
+        IconApps, IconSearch, IconBook, IconUser, IconQuestionCircle, IconCustomerService,IconSubscribeAdd
     },
     setup() {
         const collapsed = ref(false)
@@ -36,21 +37,30 @@ export default defineComponent({
             },
             getSelectedKeys() {
                 let path = this.$route.path.split('/')
+                let params = this.$route.params
+                for (let key in params) {
+                    if (params[key] && params[key] > 0) {
+                        path.pop()
+                    }
+                }
                 return path.pop()
             },
             getOpenKeys() {
                 let path = this.$route.path.split('/')
+                let params = this.$route.params
+                for (let key in params) {
+                    if (params[key] && params[key] > 0) {
+                        path.pop()
+                    }
+                }
                 path.pop()
                 path.shift()
                 path.shift()
                 return path
             },
             toSetting() {
-                let selected = document.getElementsByClassName("arco-menu-selected")
-                for (let i = selected.length - 1; i >= 0; i--) {
-                    selected[i].classList.remove("arco-menu-selected")
-                }
                 this.$router.push({ name: "user" })
+                this.$forceUpdate()
             },
             exit() {
                 axiosx({
@@ -62,6 +72,10 @@ export default defineComponent({
                     this.$store.commit("setAdmin", false)
                     this.$router.push({ name: "login" })
                 })
+            },
+            toAdmin() {
+                this.$router.push({ name: "admin" })
+                this.$forceUpdate()
             }
         }
     },
@@ -83,7 +97,7 @@ export default defineComponent({
     <a-layout class="layout-main">
         <a-layout-sider hide-trigger collapsible :collapsed="collapsed" breakpoint="lg" :width="220" @collapse="onCollapse">
             <div class="logo"></div>
-            <a-menu :defaultOpenKeys="getOpenKeys()" :defaultSelectedKeys="[getSelectedKeys()]" :style="{ width: '100%' }">
+            <a-menu :default-open-keys="getOpenKeys()" :selected-keys="[getSelectedKeys()]" :style="{ width: '100%' }">
                 <RouterLink :to="{ name: 'home' }">
                     <a-menu-item key="home">
                         <IconHome />
@@ -91,17 +105,17 @@ export default defineComponent({
                     </a-menu-item>
                 </RouterLink>
                 <a-divider margin="0 0 5px" />
-                <RouterLink :to="{ name: 'xtk' }">
-                    <a-menu-item key="xtk">
-                        <IconBranch />
-                        血统库
-                    </a-menu-item>
-                </RouterLink>
-                <a-divider margin="0 0 5px" />
                 <RouterLink :to="{ name: 'gzk' }">
                     <a-menu-item key="gzk">
                         <IconStorage />
                         鸽子库
+                    </a-menu-item>
+                </RouterLink>
+                <a-divider margin="0 0 5px" />
+                <RouterLink :to="{ name: 'editPigeon' }">
+                    <a-menu-item key="editPigeon">
+                        <IconSubscribeAdd />
+                        新增鸽子
                     </a-menu-item>
                 </RouterLink>
                 <a-divider margin="0 0 5px" />
@@ -139,6 +153,13 @@ export default defineComponent({
                         <a-menu-item key="xtspz">
                             <IconBook />
                             血统书配置
+                        </a-menu-item>
+                    </RouterLink>
+                    <a-divider margin="0 0 5px" />
+                    <RouterLink :to="{ name: 'user' }">
+                        <a-menu-item key="user">
+                            <IconUser />
+                            用户设置
                         </a-menu-item>
                     </RouterLink>
                     <div v-if="$store.state.admin">
@@ -182,6 +203,7 @@ export default defineComponent({
                         </a-button>
                         <template #content>
                             <a-doption @click="toSetting()">用户设置</a-doption>
+                            <a-doption v-if="$store.state.admin" @click="toAdmin()">管理员设置</a-doption>
                             <a-doption @click="exit()">退出登录</a-doption>
                         </template>
                     </a-dropdown>
@@ -196,7 +218,7 @@ export default defineComponent({
                 <a-layout-content>
                     <RouterView></RouterView>
                 </a-layout-content>
-                <a-layout-footer>@sgmis</a-layout-footer>
+                <a-layout-footer>2023-09@sgmis</a-layout-footer>
             </a-layout>
         </a-layout>
     </a-layout>
@@ -217,7 +239,7 @@ export default defineComponent({
 }
 
 .layout-main :deep(.arco-layout-sider-light) .logo {
-    background-image: url("@/assets/img/logo.jpg");
+    background-image: url(/img/logo.jpg);
     background-repeat: no-repeat;
     background-size: contain;
 }

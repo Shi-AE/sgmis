@@ -18,7 +18,7 @@ const verifyData = (fun, message) => {
     addLoading(message)
     if (typeof fun !== "function") {
         clearLoading()
-        throw new Error("第二个参数类型不是函数")
+        throw new Error("第一个参数类型不是函数")
     }
     const res = fun()
     clearLoading()

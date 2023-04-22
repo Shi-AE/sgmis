@@ -6,17 +6,6 @@ import store from "@/store"
 
 const logoResourcePath = "http://localhost/logo"
 
-function resetLogo(model) {
-    if (model.$store.state.logoName.length > 0) {
-        model.file = {
-            url: `${logoResourcePath}/${model.$store.state.logoName}`,
-            name: model.$store.state.logoName
-        }
-    } else {
-        model.file = {}
-    }
-}
-
 export default {
     components: { IconPlus, IconEdit },
     data() {
@@ -70,17 +59,27 @@ export default {
                     store.commit("setLogoName", res.data.data)
                 } else {
                     onError(res)
-                    resetLogo(this)
+                    this.resetLogo(this)
                     Notification.error(res.data.message)
                 }
             }).catch(res => {
                 onError(res)
-                resetLogo(this)
+                this.resetLogo(this)
                 Notification.error("服务器发生错误，上传超时")
             })
+        },
+        resetLogo() {
+            if (this.$store.state.logoName.length > 0) {
+                this.file = {
+                    url: `${logoResourcePath}/${this.$store.state.logoName}`,
+                    name: this.$store.state.logoName
+                }
+            } else {
+                this.file = {}
+            }
         }
     },
-    created() {
+    mounted() {
         axiosx({
             method: "GET",
             url: "xtspz",

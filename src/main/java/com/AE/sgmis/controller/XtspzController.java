@@ -16,12 +16,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.IOException;
-import java.nio.file.FileAlreadyExistsException;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -35,12 +31,14 @@ public class XtspzController {
     private FileUtil fileUtil;
     @Value("${file.logo.path}")
     private String basePath;
+    @Value("${file.logo.type}")
+    private String[] typeArray;
     @Autowired
     private XtspzService xtspzService;
     /**
      * 图片类型
      */
-    private final List<String> type = Arrays.asList("image/jpeg", "image/png", "image/gif", "image/tiff");
+    private List<String> type;
     private Path path;
 
     /**
@@ -48,14 +46,11 @@ public class XtspzController {
      */
     @PostConstruct
     public void init() {
+        //初始化资源
         path = Paths.get(basePath);
-
-        try {
-            Files.createDirectory(path);
-        } catch (FileAlreadyExistsException ignored) {
-        } catch (IOException e) {
-            log.error("初始化bean发生错误，logo存储文件夹创建失败");
-        }
+        type = List.of(typeArray);
+        //初始化文件夹
+        fileUtil.initDirectory(path);
     }
 
     /**
@@ -64,16 +59,16 @@ public class XtspzController {
     @PostMapping("logo")
     public Result uploadLogo(MultipartFile file, HttpServletRequest request) {
         //检查文件类型
-        boolean checked = fileUtil.checkFileType(file, type);
-        if (!checked) {
-            throw new FileSaveException("文件类型错误，请上传图片");
-        }
+        fileUtil.checkFileType(file, type);
+
         //从请求域中获取用户信息
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
+
         //条件 gid = gid
         QueryWrapper<Xtspz> wrapper = new QueryWrapper<>();
         wrapper.eq("gid", gid);
+
         //判断原来是否存在图片
         Xtspz exist = xtspzService.getOne(wrapper);
         if (exist != null && exist.getLogoUrl() != null) {

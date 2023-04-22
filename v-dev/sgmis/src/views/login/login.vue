@@ -42,7 +42,7 @@ import loginForm from "./components/loginForm.vue"
 }
 
 .bird {
-    background-image: url(@/assets/img/bird-cells-new.svg);
+    background-image: url(/img/bird-cells-new.svg);
     background-size: auto 100%;
     width: 88px;
     height: 125px;
