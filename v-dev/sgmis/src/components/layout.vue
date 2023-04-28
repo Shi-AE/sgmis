@@ -309,7 +309,6 @@ export default defineComponent({
     white-space: nowrap;
     text-overflow: ellipsis;
     font-weight: 600;
-    /* font-size: 1.3vw; */
     color: #E865DF;
 }
 </style>

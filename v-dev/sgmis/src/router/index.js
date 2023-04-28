@@ -49,7 +49,7 @@ const router = createRouter({
                     }
                 },
                 {
-                    path: "gzk",
+                    path: "gzk/:name?",
                     name: "gzk",
                     component: () => import("@/views/gzk/gzk.vue"),
                     meta: {

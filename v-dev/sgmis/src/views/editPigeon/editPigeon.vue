@@ -1,4 +1,3 @@
-<!--suppress JSFileReferences -->
 <script>
 import * as echarts from "echarts"
 import axiosx from "@/assets/js/axiosx.js"
@@ -9,7 +8,7 @@ import {IconSearch, IconPlus, IconEdit} from '@arco-design/web-vue/es/icon'
 const height = [400, 400, 280, 120]
 const offset = [0, 70, 0, -27]
 const tree = 0
-const pigeonResourcePath = "http://localhost/pigeon"
+const pigeonResourcePath = `${window.location.protocol}//${window.location.hostname}/pigeon`
 const sexJudge = {
     "父": 0,
     "我": 0,
@@ -83,7 +82,8 @@ export default {
                     },
                     label: {
                         height: height[index],
-                        offset: [0, name === "母" ? -offset[index] : offset[index]]
+                        offset: [0, name === "母" ? -offset[index] : offset[index]],
+                        backgroundColor: id ? "#FFE8FB" : "#ffffff"
                     },
                     children: []
                 }
@@ -206,7 +206,7 @@ export default {
                 //查看父级是否有数据
                 if (n > 2 && !e.treeAncestors[n - 2].value.pigeon.id) {
                     //无数据
-                    Notification.error("子代暂无数据，无法编辑")
+                    Notification.warning("子代暂无数据，无法编辑")
                     return
                 }
                 //模态表单初始化
@@ -408,6 +408,8 @@ export default {
                     this.handleUpdateTree(this.data, 1, id)
                     this.resetForm()
                     return true
+                } else if (res.data.code === 414) {
+                    Notification.warning(`足环${res.data.message}，如需添加血亲关系请使用“搜索”`)
                 }
             })
         }
@@ -476,7 +478,7 @@ export default {
             </a-form-item>
             <a-form-item label="性别" field="sex" required>
                 <a-select v-model.lazy="form.sex" :options="['雄', '雌']" placeholder="-性别-"
-                          :disabled="!isMe || form.id"/>
+                          :disabled="!isMe || !!form.id"/>
             </a-form-item>
             <a-form-item label="羽色" field="ys">
                 <a-select v-model.lazy="form.ys" :options="options.yspzOptions" placeholder="-羽色-" allow-search/>
@@ -488,7 +490,7 @@ export default {
                 <a-select v-model.lazy="form.lx" :options="options.lxpzOptions" placeholder="-类型-" allow-search/>
             </a-form-item>
             <a-form-item label="赛绩鸽" field="isGrade">
-                <a-select v-model.lazy="form.isGrade" :options="['是', '否']" placeholder="-赛绩鸽-"/>
+                <a-select v-model.lazy="form.isGrade" :options="['否', '是']" placeholder="-赛绩鸽-"/>
             </a-form-item>
             <a-form-item label="鸽子照片" field="pictureUrl">
                 <a-upload action="pigeon/picture" :fileList="file ? [file] : []" :show-file-list="false"
@@ -498,7 +500,7 @@ export default {
                         <div :class="`arco-upload-list-item${file && file.status === 'error' ? ' arco-upload-list-item-error' : ''
                             }`">
                             <div class="arco-upload-list-picture custom-upload-avatar" v-if="file && file.url">
-                                <img :src="file.url"/>
+                                <img :src="file.url" alt="鸽子照片"/>
                                 <div class="arco-upload-list-picture-mask">
                                     <IconEdit/>
                                 </div>

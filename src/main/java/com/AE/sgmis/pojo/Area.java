@@ -7,7 +7,6 @@ import lombok.Data;
 
 @Data
 @TableName("t_area")
-// todo 修改名字为area
 public class Area {
     @TableId(type = IdType.NONE)
     private Long id;

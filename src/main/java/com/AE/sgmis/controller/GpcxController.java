@@ -57,6 +57,26 @@ public class GpcxController {
     }
 
     /**
+     * 获取鸽棚巢箱名称和id基本信息
+     * 用于添加鸽子
+     */
+    @GetMapping("base")
+    public Result getBaseGpcx(HttpServletRequest request) {
+        //获取gid
+        Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
+        Long gid = (Long) info.get("gid");
+        //查询鸽棚巢箱
+        //条件 gid = gid
+        QueryWrapper<Gpcx> wrapper = new QueryWrapper<>();
+        wrapper.eq("gid", gid);
+        //查询
+        wrapper.select("id", "name");
+        //执行
+        List<Gpcx> list = gpcxService.list(wrapper);
+        return new Result(list, SuccessCode.Success.code, "查询成功");
+    }
+
+    /**
      * 添加鸽棚巢箱
      */
     @PostMapping
@@ -72,6 +92,21 @@ public class GpcxController {
         }
         gpcx.setPigeonPopulation(0);
         return new Result(gpcx, SuccessCode.Success.code, "保存成功");
+    }
+
+    /**
+     * 将鸽子添加到鸽棚巢箱
+     * 记录日志
+     */
+    @PostMapping("{gpcxId}")
+    public Result addPigeonToGpcx(@RequestBody List<Long> ids, @PathVariable Long gpcxId, HttpServletRequest request) {
+        //检查权限
+        String name = check(gpcxId, request);
+
+        //更新或添加
+        int update = pigeonGpcxService.addPigeonToGpcx(ids, gpcxId, name);
+
+        return new Result(SuccessCode.Success.code, "全部保存成功，发生" + update + "个更新，" + (ids.size() - update) + "个新增");
     }
 
     /**
@@ -129,7 +164,7 @@ public class GpcxController {
     /**
      * 检查权限
      */
-    private void check(Long gpcxId, HttpServletRequest request) {
+    private String check(Long gpcxId, HttpServletRequest request) {
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
@@ -137,12 +172,13 @@ public class GpcxController {
         QueryWrapper<Gpcx> wrapper = new QueryWrapper<>();
         wrapper.eq("id", gpcxId);
         //字段 gid
-        wrapper.select("gid");
+        wrapper.select("gid", "name");
         //执行
         Gpcx gpcx = gpcxService.getOne(wrapper);
         //检查
         if (!gid.equals(gpcx.getGid())) {
             throw new MaliciousSqlInjectionException("非法查询");
         }
+        return gpcx.getName();
     }
 }

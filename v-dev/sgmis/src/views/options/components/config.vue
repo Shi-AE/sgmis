@@ -77,7 +77,7 @@ export default {
             this.batchDeleteModal = true
         },
         //编辑
-        handlUpdateModal(record) {
+        handleUpdateModal(record) {
             if (record.gid === 0) {
                 Notification.error("无法修改系统选项")
                 return
@@ -202,7 +202,7 @@ export default {
             })
         },
         //更新
-        async handlUpdate() {
+        async handleUpdate() {
             await axiosx({
                 method: "PUT",
                 url: "xxpz",
@@ -280,7 +280,7 @@ export default {
             <!-- 每条记录控制按钮插槽 -->
             <template #operation="{ record }">
                 <a-space>
-                    <a-button type="primary" @click="handlUpdateModal(record)">编辑</a-button>
+                    <a-button type="primary" @click="handleUpdateModal(record)">编辑</a-button>
                     <a-button type="primary" status="danger" @click="handleDelete(record)">删除</a-button>
                 </a-space>
             </template>
@@ -295,7 +295,7 @@ export default {
             </a-form>
         </a-modal>
         <!-- 修改提交信息框 -->
-        <a-modal v-model:visible="updateModal" width="calc(300px + 0.1 * 100vw)" title="编辑配置选项" @before-ok="handlUpdate"
+        <a-modal v-model:visible="updateModal" width="calc(300px + 0.1 * 100vw)" title="编辑配置选项" @before-ok="handleUpdate"
             @cancel="handleCancel">
             <a-form :model="form">
                 <a-form-item field="name" label="选项名称">

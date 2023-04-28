@@ -1,14 +1,14 @@
 import store from "@/store"
 
 const addLoading = message => {
-    store.commit("setLoding", {
+    store.commit("setLoading", {
         loading: true,
         tip: message
     })
 }
 
 const clearLoading = () => {
-    store.commit("setLoding", {
+    store.commit("setLoading", {
         loading: false
     })
 }

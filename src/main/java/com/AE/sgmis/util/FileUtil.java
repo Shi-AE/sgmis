@@ -1,6 +1,7 @@
 package com.AE.sgmis.util;
 
 import com.AE.sgmis.exceptions.FileSaveException;
+import com.baomidou.mybatisplus.core.toolkit.IdWorker;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.tika.Tika;
 import org.springframework.stereotype.Component;
@@ -39,7 +40,7 @@ public class FileUtil {
      */
     public String storeFile(MultipartFile file, Path path) {
         try {
-            String uniqueFileName = UUID.randomUUID() + "-" + file.getOriginalFilename();
+            String uniqueFileName = IdWorker.get32UUID() + "-" + file.getOriginalFilename();
             Files.copy(file.getInputStream(), path.resolve(uniqueFileName));
             return uniqueFileName;
         } catch (IOException e) {

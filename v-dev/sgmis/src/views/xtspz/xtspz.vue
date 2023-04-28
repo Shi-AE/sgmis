@@ -4,7 +4,7 @@ import axiosx from "@/assets/js/axiosx.js"
 import { Notification } from '@arco-design/web-vue'
 import store from "@/store"
 
-const logoResourcePath = "http://localhost/logo"
+const logoResourcePath = `${window.location.protocol}//${window.location.hostname}/logo`
 
 export default {
     components: { IconPlus, IconEdit },

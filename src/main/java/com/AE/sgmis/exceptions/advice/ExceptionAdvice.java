@@ -19,7 +19,8 @@ public class ExceptionAdvice {
     @ExceptionHandler({NotFindUserException.class, PasswordErrorException.class,
             ConfirmPasswordInconsistencyException.class, UnchangedPasswordException.class,
             DeleteFailException.class, SaveFailException.class, FieldsDuplicateException.class,
-            PasswordUpdateFailException.class, AccessException.class, FileSaveException.class})
+            PasswordUpdateFailException.class, AccessException.class, FileSaveException.class,
+            UserInformationException.class, NotFoundException.class})
     private Result doCommonException(ProjectException exception) {
         return new Result(exception.getCode(), exception.getMessage());
     }
@@ -54,7 +55,7 @@ public class ExceptionAdvice {
      */
     @ExceptionHandler(DuplicateKeyException.class)
     private Result doDuplicateKeyException() {
-        return new Result(ExceptionCode.SaveFailException.code, "内容重复");
+        return new Result(ExceptionCode.DuplicateKeyException.code, "信息已存在");
     }
 
     /**

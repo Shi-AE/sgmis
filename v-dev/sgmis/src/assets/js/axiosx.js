@@ -5,6 +5,7 @@ import store from "@/store"
 import { Notification } from '@arco-design/web-vue'
 import JSONbigint from "json-bigint"
 
+//定义键盘事件
 function preventKeyDown(event) {
     event.preventDefault();
     event.stopPropagation();
@@ -14,7 +15,7 @@ const axiosx = axios.create({
     baseURL: "/api",
     timeout: 10000,
     transformResponse: [function (data) {
-        // 使用json-bigint解析响应数据
+        // 使用json-bigint解析Long型响应数据
         try {
             return JSONbigint.parse(data)
         } catch (error) {
@@ -33,7 +34,9 @@ axiosx.interceptors.request.use(config => {
     store.commit("setPending", true)
     return {
         ...config,
+        //添加请求头
         headers: {
+            ...config.headers,
             Authorization: store.getters.doneToken
         }
     }

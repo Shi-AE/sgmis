@@ -41,6 +41,26 @@ public class JwtUtil {
     }
 
     /**
+     * 获取token
+     * 自定义时间
+     *
+     * @return token值
+     */
+    public String getToken(Map<String, Object> claim, int expires) {
+
+        Calendar instance = Calendar.getInstance();
+        instance.add(Calendar.SECOND, expires);
+
+        JWTCreator.Builder builder = JWT.create();
+
+        //填充用户信息
+        builder.withClaim("info", claim);
+
+        return builder.withExpiresAt(instance.getTime())
+                .sign(Algorithm.HMAC256(secretKey));
+    }
+
+    /**
      * 验证token
      *
      * @return 验证信息

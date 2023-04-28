@@ -17,7 +17,7 @@ const store = createStore({
                 loading: false,
                 tip: ""
             },
-            token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2ODkzODY3MTEsImFjY291bnQiOiJyb290In0.Aase1fm80R-A7Efjhy1bExtXsuSjPRudUWMaUikB4T0",
+            token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3MTE2ODc3NjAsImluZm8iOnsiZ2lkIjoxNjQwNTQ2MjE0ODg3NjQ1MTg1LCJpcCI6IjEyNy4wLjAuMSIsImFkbWluIjp0cnVlLCJpZCI6MTYzOTI0NzcwMzIyNzM0Njk0NiwiYWNjb3VudCI6InJvb3QifX0.qY5KJrhuU_NwOwyRUDtacgesAjQGSSxXPR-9HWSfFD4",
             account: "root",
             admin: false,
             isPending: false,
@@ -25,7 +25,7 @@ const store = createStore({
         }
     },
     mutations: {
-        setLoding(state, payload) {
+        setLoading(state, payload) {
             state.spin = payload
         },
         setToken(state, payload) {

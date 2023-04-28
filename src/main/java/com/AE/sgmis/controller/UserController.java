@@ -60,6 +60,29 @@ public class UserController implements InitializingBean {
     }
 
     /**
+     * 获取管理员的账号名和gid用于血统分享
+     */
+    @GetMapping("admin")
+    public Result getAdmin(HttpServletRequest request) {
+        //获取gid
+        Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
+        Long gid = (Long) info.get("gid");
+
+        //条件 gid <> gid and admin = true
+        QueryWrapper<User> wrapper = new QueryWrapper<>();
+        wrapper.eq("admin", true).notIn("gid", gid);
+
+        //字段
+        wrapper.select("account", "gid");
+
+        List<User> list = userService.list(wrapper);
+
+        System.out.println(list);
+
+        return new Result(list, SuccessCode.Success.code, "查询成功");
+    }
+
+    /**
      * 重置成员密码
      */
     @PutMapping

@@ -13,7 +13,9 @@ public enum ExceptionCode {
     FieldsDuplicateException(410),
     MaliciousSqlInjectionException(411),
     PasswordUpdateFailException(412),
-    FileSaveException(413);
+    FileSaveException(413),
+    DuplicateKeyException(414),
+    UserInformationException(415);
 
     public final int code;
     ExceptionCode(int code) {

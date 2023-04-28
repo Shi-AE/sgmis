@@ -1,8 +1,8 @@
 <script>
 import axiosx from "@/assets/js/axiosx.js"
-import { Modal, Notification } from '@arco-design/web-vue'
-import { verifyData } from '@/assets/js/loading.js'
-import { h } from "vue"
+import {Modal, Notification} from '@arco-design/web-vue'
+import {verifyData} from '@/assets/js/loading.js'
+import {h} from "vue"
 
 export default {
     data() {
@@ -67,7 +67,7 @@ export default {
         //验证数据
         checkData() {
             const res = !verifyData(() => {
-                const { name, cxNumber } = this.form
+                const {name, cxNumber} = this.form
                 if (!name || name.length === 0) {
                     Notification.error("请填写完整鸽棚名称")
                     return false
@@ -207,9 +207,12 @@ export default {
         //触发模态框处理
         //修改
         UpdateClick(record) {
-            const { key, pigeonPopulation, ...info } = record
+            const {key, pigeonPopulation, ...info} = record
             this.form = info
             this.updateModal = true;
+        },
+        checkPigeon(record) {
+            this.$router.push({name: "gzk", params: {name: record.name}})
         }
     },
     mounted() {
@@ -241,26 +244,28 @@ export default {
     <a-table :columns="columns" :data="data" :pagination="false">
         <template #empty>
             <a-empty>
-                数据发生异常，请重试
+                还没有数据哦
             </a-empty>
         </template>
         <!-- 每条记录控制按钮 -->
         <template #operation="{ record }">
             <a-space>
-                <a-button type="primary" @click="UpdateClick(record)">修改信息</a-button>
-                <a-button type="primary" status="danger" @click="DeleteUserClick(record)">删除巢箱</a-button>
+                <a-button type="outline" @click="UpdateClick(record)">修改信息</a-button>
+                <a-button type="outline" status="danger" @click="DeleteUserClick(record)">删除巢箱</a-button>
+                <a-button type="outline" status="success" @click="checkPigeon(record)">查看鸽子</a-button>
             </a-space>
         </template>
     </a-table>
-    <!-- 添加提交信息框 -->
-    <a-modal v-model:visible="inputModal" width="calc(300px + 0.1 * 100vw)" title="新建鸽棚巢箱" @before-ok="handleInput"
-        @cancel="handleCancel">
+  <!-- 添加提交信息框 -->
+    <a-modal v-model:visible="inputModal" width="calc(300px + 0.1 * 100vw)" title="新建鸽棚巢箱"
+             @before-ok="handleInput"
+             @cancel="handleCancel">
         <a-form :model="form">
             <a-form-item field="name" label="鸽棚名称">
-                <a-input v-model.lazy="form.name" placeholder="鸽棚名称" />
+                <a-input v-model.lazy="form.name" placeholder="鸽棚名称"/>
             </a-form-item>
             <a-form-item field="cxNumber" label="巢箱数量">
-                <a-input-number v-model.lazy="form.cxNumber" :min="0" :max="1000000000" placeholder="巢箱数量" />
+                <a-input-number v-model.lazy="form.cxNumber" :min="0" :max="1000000000" placeholder="巢箱数量"/>
             </a-form-item>
         </a-form>
         <div class="tip">
@@ -268,15 +273,16 @@ export default {
             <div>视为大棚无巢箱</div>
         </div>
     </a-modal>
-    <!-- 修改信息模态框 -->
-    <a-modal v-model:visible="updateModal" width="calc(300px + 0.1 * 100vw)" title="修改鸽棚巢箱" @before-ok="handleUpdate"
-        @cancel="handleCancel">
+  <!-- 修改信息模态框 -->
+    <a-modal v-model:visible="updateModal" width="calc(300px + 0.1 * 100vw)" title="修改鸽棚巢箱"
+             @before-ok="handleUpdate"
+             @cancel="handleCancel">
         <a-form :model="form">
             <a-form-item field="name" label="鸽棚名称">
-                <a-input v-model.lazy="form.name" placeholder="鸽棚名称" />
+                <a-input v-model.lazy="form.name" placeholder="鸽棚名称"/>
             </a-form-item>
             <a-form-item field="cxNumber" label="巢箱数量">
-                <a-input-number v-model.lazy="form.cxNumber" :min="0" :max="1000000000" placeholder="巢箱数量" />
+                <a-input-number v-model.lazy="form.cxNumber" :min="0" :max="1000000000" placeholder="巢箱数量"/>
             </a-form-item>
         </a-form>
         <div class="tip">

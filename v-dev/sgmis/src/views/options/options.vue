@@ -1,5 +1,5 @@
 <script setup>
-import config from "./components/config.vue"
+import Config from "./components/config.vue";
 </script>
 <template>
     <a-tabs default-active-key="1" lazy-load>
@@ -23,6 +23,9 @@ import config from "./components/config.vue"
         </a-tab-pane>
         <a-tab-pane key="7" title="作育者">
             <config api="breeder" head="姓名"></config>
+        </a-tab-pane>
+        <a-tab-pane key="8" title="鸽子状态">
+            <config api="state" head="鸽子状态"></config>
         </a-tab-pane>
     </a-tabs>
 </template>
