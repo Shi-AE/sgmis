@@ -1,6 +1,5 @@
 package com.AE.sgmis;
 
-import com.AE.sgmis.controller.PigeonController;
 import com.AE.sgmis.mapper.UserMapper;
 import com.AE.sgmis.pojo.Pigeon;
 import com.AE.sgmis.pojo.User;
@@ -10,13 +9,9 @@ import com.AE.sgmis.util.JwtUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.IdWorker;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import jakarta.servlet.http.HttpServletRequest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @SpringBootTest
 class SgmisApplicationTests {

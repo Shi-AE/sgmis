@@ -45,7 +45,7 @@ public class PigeonController {
      */
     private List<String> type;
     private Path path;
-    private Set<String> fields = Set.of("ys", "yan", "lx", "state", "jb");
+    private final Set<String> fields = Set.of("ys", "yan", "lx", "state", "jb");
 
     @PostConstruct
     public void init() {
@@ -168,8 +168,8 @@ public class PigeonController {
         Long gid = (Long) info.get("gid");
 
         //获取页面信息
-        Long current = (Long) pageInfo.get("current");
-        Long pageSize = (Long) pageInfo.get("pageSize");
+        Long current = pageInfo.get("current");
+        Long pageSize = pageInfo.get("pageSize");
 
         //检查
         if (current == null || pageSize == null) {
