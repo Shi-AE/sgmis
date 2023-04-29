@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -29,6 +30,8 @@ public class PigeonGpcxServiceImpl extends ServiceImpl<PigeonGpcxMapper, PigeonG
     public int addPigeonToGpcx(List<Long> ids, Long gpcxId, String name) {
 
         AtomicReference<Integer> updateNumber = new AtomicReference<>(0);
+        //获取更新时间
+        LocalDate now = LocalDate.now();
 
         ids.forEach(id -> {
             UpdateWrapper<PigeonGpcx> updateWrapper = new UpdateWrapper<>();
@@ -54,17 +57,18 @@ public class PigeonGpcxServiceImpl extends ServiceImpl<PigeonGpcxMapper, PigeonG
 
                 // TODO 记录更新日志
             }
-
-            //更新鸽子信息
-            UpdateWrapper<Pigeon> pigeonUpdateWrapper = new UpdateWrapper<>();
-            pigeonUpdateWrapper.eq("id", id).set("gpcx", name);
-
-            int updatePigeon= pigeonMapper.update(null, pigeonUpdateWrapper);
-
-            if (!SqlHelper.retBool(updatePigeon)) {
-                throw new SaveFailException("更新鸽子信息时发生错误");
-            }
         });
+
+        //更新鸽子信息
+        //条件 id = ids 设置 更新 时间 和 鸽棚名
+        UpdateWrapper<Pigeon> wrapper = new UpdateWrapper<>();
+        wrapper.in("id", ids)
+                .set("gpcx", name)
+                .set("update_data", now);
+        int update = pigeonMapper.update(null, wrapper);
+        if (!SqlHelper.retBool(update)) {
+            throw new SaveFailException("更新鸽子信息失败，请重试");
+        }
 
         return updateNumber.get();
     }

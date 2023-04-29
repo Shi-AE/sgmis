@@ -282,4 +282,33 @@ public class PigeonServiceImpl extends ServiceImpl<PigeonMapper, Pigeon> impleme
             // TODO 记录日志
         }
     }
+
+    @Override
+    @Transactional
+    public void relatePigeon(Long id, String sex, Long oid, Long gid) {
+        //获取更新日期
+        LocalDate now = LocalDate.now();
+
+        //条件
+        UpdateWrapper<Pigeon> wrapper = new UpdateWrapper<>();
+        wrapper.eq("id", oid)
+                .eq("gid", gid)
+                .set("update_data", now);
+        if (sex.equals("雄")) {
+            wrapper.set("fid", id);
+        } else if (sex.equals("雌")) {
+            wrapper.set("mid", id);
+        } else {
+            throw new SaveFailException("性别信息错误，请重试");
+        }
+
+        int update = pigeonMapper.update(null, wrapper);
+
+        if (!SqlHelper.retBool(update)) {
+            log.error("关联 id = {}, oid = {} 时发生错误", id, oid);
+            throw new SaveFailException("关联失败");
+        }
+
+        // TODO 记录日志
+    }
 }

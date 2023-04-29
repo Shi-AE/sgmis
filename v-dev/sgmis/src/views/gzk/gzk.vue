@@ -3,7 +3,7 @@ import axiosx from "@/assets/js/axiosx.js"
 import {verifyData} from "@/assets/js/loading.js"
 import {Modal, Notification} from '@arco-design/web-vue'
 import {h} from "vue"
-import {IconSearch, IconRefresh} from "@arco-design/web-vue/es/icon";
+import {IconSearch, IconRefresh, IconFilter} from "@arco-design/web-vue/es/icon";
 
 export default {
     mounted() {
@@ -27,9 +27,9 @@ export default {
                 },
                 {
                     title: "操作",
-                    slotName: "operation",
+                    slotName: "front-operation",
                     align: "center",
-                    width: 230
+                    width: 165
                 },
                 {
                     title: "更新日期",
@@ -37,9 +37,20 @@ export default {
                     align: "center",
                     ellipsis: true,
                     tooltip: true,
-                    width: 120,
+                    width: 140,
                     sortable: {
                         sortDirections: ['ascend', 'descend']
+                    },
+                    filterable: {
+                        filter: (value, record) => {
+                            if (!record.updateData) {
+                                return false
+                            }
+                            const date = new Date(`${record.updateData} 00:00:00`)
+                            return value[0][0] <= date && date <= value[0][1]
+                        },
+                        slotName: 'updateData-filter',
+                        icon: () => h(IconFilter)
                     }
                 },
                 {
@@ -197,7 +208,13 @@ export default {
                         slotName: 'remark-filter',
                         icon: () => h(IconSearch)
                     }
-                }
+                },
+                {
+                    title: "操作",
+                    slotName: "end-operation",
+                    align: "center",
+                    width: 190
+                },
             ],
             type: {
                 yspz: {
@@ -386,7 +403,6 @@ export default {
                 message: "正在获取更新信息"
             }).then(res => {
                 if (res.data.code === 200) {
-                    console.log(res.data.data)
                     const data = res.data.data
                     const father = this.data.find(item => JSON.stringify(item.id) === JSON.stringify(data.fid))
                     const mather = this.data.find(item => JSON.stringify(item.id) === JSON.stringify(data.mid))
@@ -411,6 +427,9 @@ export default {
         toEditPigeon() {
             this.$router.push({name: "editPigeon"})
         },
+        toEditPigeonById(record) {
+            this.$router.push({name: "editPigeon", params: {id: record.id}})
+        },
         pageSizeChange(size) {
             if (size === "所有") {
                 this.paginationProps.pageSize = this.getTotal()
@@ -428,11 +447,7 @@ export default {
         resetTable() {
             this.$refs.table.clearSorters()
             this.$refs.table.clearFilters()
-            console.log(this.$refs)
-        },
-        //设置鸽棚巢箱的筛选
-        async setGpcxFilter() {
-
+            Notification.success("已清空筛选")
         },
         //处理关闭模态框
         handleCancel() {
@@ -904,15 +919,23 @@ export default {
         }" v-model:selectedKeys="selectedKeys" :pagination="paginationProps" @page-size-change="pageSizeChange"
              @page-change="pageChange">
         <!-- 操作插槽 -->
-        <template #operation="{ record }">
+        <template #front-operation="{ record }">
             <a-space wrap>
                 <a-button type="outline" status="success"
                           @click="handleCheckModalOpen(record)">
                     查看
                 </a-button>
-                <a-button type="outline" status="warning"
+                <a-button type="outline" status="normal"
                           @click="handleEditModalOpen(record)">
                     编辑
+                </a-button>
+            </a-space>
+        </template>
+        <template #end-operation="{ record }">
+            <a-space wrap>
+                <a-button type="outline" status="warning"
+                          @click="toEditPigeonById(record)">
+                    编辑血统
                 </a-button>
                 <a-button type="outline" status="danger"
                           @click="handleDeleteModalOpen(record)">
@@ -927,21 +950,45 @@ export default {
         </template>
         <!-- 足环插槽 -->
         <template #ringNumber="{ record }">
-            <div>{{ record.ringNumber }}</div>
+            <routerLink :to="{name: 'editPigeon', params: {id: record.id}}" :style="{color: '#D91AD9'}">
+                <a-tooltip content="点击查看鸽子详情" :mini="true" background-color="#FDC2DB">
+                    <div>{{ record.ringNumber }}</div>
+                </a-tooltip>
+            </routerLink>
             <div>{{ record.name }}</div>
             <div>{{ record.bloodline }}</div>
         </template>
         <!-- 父足环插槽 -->
         <template #fatherRingNumber="{ record }">
-            <div>{{ record.father?.ringNumber }}</div>
+            <routerLink :to="{name: 'editPigeon', params: {id: record.fid}}" :style="{color: '#D91AD9'}">
+                <a-tooltip content="点击查看鸽子详情" :mini="true" background-color="#F7BAEF">
+                    <div>{{ record.father?.ringNumber }}</div>
+                </a-tooltip>
+            </routerLink>
             <div>{{ record.father?.name }}</div>
             <div>{{ record.father?.bloodline }}</div>
         </template>
         <!-- 母足环插槽 -->
         <template #motherRingNumber="{ record }">
-            <div>{{ record.mather?.ringNumber }}</div>
+            <routerLink :to="{name: 'editPigeon', params: {id: record.mid}}" :style="{color: '#D91AD9'}">
+                <a-tooltip content="点击查看鸽子详情" :mini="true" background-color="#DDBEF6">
+                    <div>{{ record.mather?.ringNumber }}</div>
+                </a-tooltip>
+            </routerLink>
             <div>{{ record.mather?.name }}</div>
             <div>{{ record.mather?.bloodline }}</div>
+        </template>
+        <!-- updateData搜索 -->
+        <template #updateData-filter="{ filterValue, setFilterValue, handleFilterConfirm, handleFilterReset}">
+            <div class="custom-filter">
+                <a-space direction="vertical">
+                    <a-range-picker value-format="Date" v-model="filterValue[0]"/>
+                    <div class="custom-filter-footer">
+                        <a-button @click="handleFilterConfirm">搜索</a-button>
+                        <a-button @click="handleFilterReset">重置</a-button>
+                    </div>
+                </a-space>
+            </div>
         </template>
         <!-- gpcx搜索 -->
         <template #gpcx-filter="{ filterValue, setFilterValue, handleFilterConfirm, handleFilterReset}">

@@ -3,11 +3,11 @@ import * as echarts from "echarts"
 import axiosx from "@/assets/js/axiosx.js"
 import {verifyData} from "@/assets/js/loading.js"
 import {Notification} from '@arco-design/web-vue'
-import {IconSearch, IconPlus, IconEdit} from '@arco-design/web-vue/es/icon'
+import {IconSearch, IconPlus, IconEdit, IconRefresh} from '@arco-design/web-vue/es/icon'
+import {h} from "vue";
 
 const height = [400, 400, 280, 120]
 const offset = [0, 70, 0, -27]
-const tree = 0
 const pigeonResourcePath = `${window.location.protocol}//${window.location.hostname}/pigeon`
 const sexJudge = {
     "父": 0,
@@ -16,7 +16,7 @@ const sexJudge = {
 }
 
 export default {
-    components: {IconSearch, IconPlus, IconEdit},
+    components: {IconSearch, IconPlus, IconEdit, IconRefresh},
     data() {
         return {
             data: null,
@@ -59,6 +59,48 @@ export default {
             },
             //图片上传变量
             file: {},
+            //搜索模态框控制变量
+            searchModal: {
+                visible: false,
+                columns: [
+                    {
+                        title: "足环",
+                        dataIndex: "ringNumber",
+                        align: "center",
+                        filterable: {
+                            filter: (value, record) => record.ringNumber?.includes(value),
+                            slotName: 'ringNumber-filter',
+                            icon: () => h(IconSearch)
+                        }
+                    },
+                    {
+                        title: "名称",
+                        dataIndex: "name",
+                        align: "center",
+                        filterable: {
+                            filter: (value, record) => record.name?.includes(value),
+                            slotName: 'name-filter',
+                            icon: () => h(IconSearch)
+                        }
+                    },
+                    {
+                        title: "血统",
+                        dataIndex: "bloodline",
+                        align: "center",
+                        filterable: {
+                            filter: (value, record) => record.bloodline?.includes(value),
+                            slotName: 'bloodline-filter',
+                            icon: () => h(IconSearch)
+                        }
+                    },
+                    {
+                        title: "操作",
+                        slotName: "operation",
+                        align: "center"
+                    }
+                ],
+                data: null
+            }
         }
     },
     async mounted() {
@@ -291,6 +333,14 @@ export default {
             }
             this.resetForm()
         },
+        handleSearchCancel() {
+            //判断请求是否发送
+            if (this.$store.state.isPending) {
+                Notification.error("请求已发送，取消失败")
+            } else {
+                Notification.info("已取消")
+            }
+        },
         //获取选项信息
         handleBeforeOpen() {
             //判断是否读取过数据库
@@ -320,6 +370,11 @@ export default {
                     }
                 })
             }
+        },
+        resetTable() {
+            this.$refs.table.clearSorters()
+            this.$refs.table.clearFilters()
+            Notification.success("已清空筛选")
         },
         onChange(_, currentFile) {
             this.file = currentFile
@@ -360,15 +415,15 @@ export default {
             if (!verifyData(() => {
                 //必填参数检查
                 if (!form.country || !form.year || !form.province || !form.code || !form.sex) {
-                    Notification.error("必填信息为空")
+                    Notification.warning("必填信息为空")
                     return false
                 }
                 if (form.source === "引进" && !form.breeder) {
-                    Notification.error("引进选项未找到作育者")
+                    Notification.warning("引进选项未找到作育者")
                     return false
                 }
             }, "正在验证数据")) {
-                return true
+                return false
             }
             const formWrapper = {
                 pigeon: {
@@ -395,7 +450,7 @@ export default {
                 },
                 oid: this.form.oid
             }
-            await axiosx({
+            return await axiosx({
                 method: "POST",
                 url: "pigeon",
                 data: formWrapper,
@@ -410,8 +465,71 @@ export default {
                     return true
                 } else if (res.data.code === 414) {
                     Notification.warning(`足环${res.data.message}，如需添加血亲关系请使用“搜索”`)
+                    return false
                 }
             })
+        },
+        //处理搜索模态框开启
+        handleSearchModalOpen() {
+            //获取要排除的id
+            const excludeIds = []
+            this.treeAncestors.forEach(item => {
+                const id = item.value?.pigeon?.id
+                if (id) {
+                    excludeIds.push(id)
+                }
+            })
+            //获取合理父代
+            axiosx({
+                method: "POST",
+                url: `pigeon/parent/${this.form.sex}`,
+                data: excludeIds,
+                message: "正在获取父代信息"
+            }).then(res => {
+                if (res.data.code === 200) {
+                    this.searchModal = {
+                        ...this.searchModal,
+                        visible: true,
+                        data: res.data.data
+                    }
+                }
+            })
+        },
+        //处理搜索选择
+        handleSelect(record) {
+            //无子代
+            if (!this.form.oid) {
+                this.handleUpdateTree(this.data, 1, record.id)
+                //关闭窗口
+                this.closeModal()
+            } else {
+                console.log(record)
+                //关联血亲关系
+                axiosx({
+                    method: "PATCH",
+                    url: "pigeon/relate",
+                    data: {
+                        id: record.id,
+                        sex: record.sex,
+                        oid: this.form.oid
+                    }
+                }).then(res => {
+                    if (res.data.code === 200) {
+                        this.handleUpdateTree(this.data, 1, record.id)
+                        this.closeModal()
+                        Notification.success(res.data.message)
+                    } else {
+                        Notification.error(res.data.message)
+                    }
+                })
+            }
+        },
+        //搜索后模态框关闭
+        closeModal() {
+            this.searchModal.visible = false
+            this.searchModal.data = null
+            this.editModal = false
+            this.resetForm()
         }
     }
 }
@@ -425,7 +543,7 @@ export default {
              @before-open="handleBeforeOpen">
         <a-form :model="form">
             <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">通过搜索输入</a-divider>
-            <a-button type="primary">
+            <a-button type="primary" @click="handleSearchModalOpen">
                 <IconSearch/>
                 搜索
             </a-button>
@@ -525,6 +643,60 @@ export default {
             </a-form-item>
         </a-form>
     </a-modal>
+    <a-modal v-model:visible="searchModal.visible" title="选择鸽子并绑定血亲关系" :width="800" :footer="false"
+             @cancel="handleSearchCancel">
+        <a-button type="primary" status="success" @click="resetTable()">
+            <IconRefresh :style="{color: '#ffffff'}"/>
+            清空筛选
+        </a-button>
+        <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">鸽子信息</a-divider>
+        <a-table ref="table" :columns="searchModal.columns" :data="searchModal.data" size="small"
+                 :scroll="{y: 400}">
+            <!-- 操作插槽 -->
+            <template #operation="{ record }">
+                <a-button type="outline" status="success"
+                          @click="handleSelect(record)">
+                    选择
+                </a-button>
+            </template>
+            <!-- ringNumber搜索 -->
+            <template #ringNumber-filter="{ filterValue, setFilterValue, handleFilterConfirm, handleFilterReset}">
+                <div class="custom-filter">
+                    <a-space direction="vertical">
+                        <a-input :model-value="filterValue[0]" @input="(value)=>setFilterValue([value])"/>
+                        <div class="custom-filter-footer">
+                            <a-button @click="handleFilterConfirm">搜索</a-button>
+                            <a-button @click="handleFilterReset">重置</a-button>
+                        </div>
+                    </a-space>
+                </div>
+            </template>
+            <!-- name搜索 -->
+            <template #name-filter="{ filterValue, setFilterValue, handleFilterConfirm, handleFilterReset}">
+                <div class="custom-filter">
+                    <a-space direction="vertical">
+                        <a-input :model-value="filterValue[0]" @input="(value)=>setFilterValue([value])"/>
+                        <div class="custom-filter-footer">
+                            <a-button @click="handleFilterConfirm">搜索</a-button>
+                            <a-button @click="handleFilterReset">重置</a-button>
+                        </div>
+                    </a-space>
+                </div>
+            </template>
+            <!-- bloodline搜索 -->
+            <template #bloodline-filter="{ filterValue, setFilterValue, handleFilterConfirm, handleFilterReset}">
+                <div class="custom-filter">
+                    <a-space direction="vertical">
+                        <a-input :model-value="filterValue[0]" @input="(value)=>setFilterValue([value])"/>
+                        <div class="custom-filter-footer">
+                            <a-button @click="handleFilterConfirm">搜索</a-button>
+                            <a-button @click="handleFilterReset">重置</a-button>
+                        </div>
+                    </a-space>
+                </div>
+            </template>
+        </a-table>
+    </a-modal>
 </template>
 
 <style scoped>
@@ -534,5 +706,18 @@ export default {
     width: 1080px;
     border-radius: 10px;
     box-shadow: 0 0 5px 5px #00000015;
+}
+
+.custom-filter {
+    padding: 20px;
+    background: var(--color-bg-5);
+    border: 1px solid var(--color-neutral-3);
+    border-radius: var(--border-radius-medium);
+    box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
+}
+
+.custom-filter-footer {
+    display: flex;
+    justify-content: space-between;
 }
 </style>

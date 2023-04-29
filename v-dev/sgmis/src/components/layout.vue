@@ -1,5 +1,5 @@
 <script>
-import { defineComponent, ref } from 'vue';
+import {defineComponent, ref} from 'vue';
 import {
     IconApps,
     IconBook,
@@ -22,7 +22,7 @@ import axiosx from "@/assets/js/axiosx.js"
 export default defineComponent({
     components: {
         IconCaretRight, IconCaretLeft, IconHome, IconCalendar, IconBranch, IconStorage, IconNav, IconSettings,
-        IconApps, IconSearch, IconBook, IconUser, IconQuestionCircle, IconCustomerService,IconSubscribeAdd
+        IconApps, IconSearch, IconBook, IconUser, IconQuestionCircle, IconCustomerService, IconSubscribeAdd
     },
     setup() {
         const collapsed = ref(false)
@@ -59,7 +59,7 @@ export default defineComponent({
                 return path
             },
             toSetting() {
-                this.$router.push({ name: "user" })
+                this.$router.push({name: "user"})
                 this.$forceUpdate()
             },
             exit() {
@@ -70,11 +70,11 @@ export default defineComponent({
                     this.$store.commit("setToken", "")
                     this.$store.commit("setAccount", "")
                     this.$store.commit("setAdmin", false)
-                    this.$router.push({ name: "login" })
+                    this.$router.push({name: "login"})
                 })
             },
             toAdmin() {
-                this.$router.push({ name: "admin" })
+                this.$router.push({name: "admin"})
                 this.$forceUpdate()
             }
         }
@@ -88,101 +88,102 @@ export default defineComponent({
         const titleObserver = new MutationObserver(() => {
             this.title = document.title
         })
-        titleObserver.observe(document.querySelector('title'), { childList: true })
+        titleObserver.observe(document.querySelector('title'), {childList: true})
     }
 })
 </script>
 
 <template>
     <a-layout class="layout-main">
-        <a-layout-sider hide-trigger collapsible :collapsed="collapsed" breakpoint="lg" :width="220" @collapse="onCollapse">
+        <a-layout-sider hide-trigger collapsible :collapsed="collapsed" breakpoint="lg" :width="220"
+                        @collapse="onCollapse">
             <div class="logo"></div>
             <a-menu :default-open-keys="getOpenKeys()" :selected-keys="[getSelectedKeys()]" :style="{ width: '100%' }">
                 <RouterLink :to="{ name: 'home' }">
                     <a-menu-item key="home">
-                        <IconHome />
+                        <IconHome/>
                         首页
                     </a-menu-item>
                 </RouterLink>
-                <a-divider margin="0 0 5px" />
+                <a-divider margin="0 0 5px"/>
                 <RouterLink :to="{ name: 'gzk' }">
                     <a-menu-item key="gzk">
-                        <IconStorage />
+                        <IconStorage/>
                         鸽子库
                     </a-menu-item>
                 </RouterLink>
-                <a-divider margin="0 0 5px" />
+                <a-divider margin="0 0 5px"/>
                 <RouterLink :to="{ name: 'editPigeon' }">
                     <a-menu-item key="editPigeon">
-                        <IconSubscribeAdd />
+                        <IconSubscribeAdd/>
                         新增鸽子
                     </a-menu-item>
                 </RouterLink>
-                <a-divider margin="0 0 5px" />
+                <a-divider margin="0 0 5px"/>
                 <RouterLink :to="{ name: 'gpcx' }">
                     <a-menu-item key="gpcx">
-                        <IconNav />
+                        <IconNav/>
                         鸽棚巢箱
                     </a-menu-item>
                 </RouterLink>
-                <a-divider margin="0 0 5px" />
+                <a-divider margin="0 0 5px"/>
 
                 <a-sub-menu key="system">
                     <template #title>
                         <span>
-                            <IconSettings />
+                            <IconSettings/>
                             系统配置
                         </span>
                     </template>
-                    <a-divider margin="0 0 5px" />
+                    <a-divider margin="0 0 5px"/>
                     <RouterLink :to="{ name: 'options' }">
                         <a-menu-item key="options">
-                            <IconApps />
+                            <IconApps/>
                             选项设置
                         </a-menu-item>
                     </RouterLink>
-                    <a-divider margin="0 0 5px" />
+                    <a-divider margin="0 0 5px"/>
                     <RouterLink :to="{ name: 'gsxx' }">
                         <a-menu-item key="gsxx">
-                            <IconSearch />
+                            <IconSearch/>
                             鸽舍信息
                         </a-menu-item>
                     </RouterLink>
-                    <a-divider margin="0 0 5px" />
+                    <a-divider margin="0 0 5px"/>
                     <RouterLink :to="{ name: 'xtspz' }">
                         <a-menu-item key="xtspz">
-                            <IconBook />
+                            <IconBook/>
                             血统书配置
                         </a-menu-item>
                     </RouterLink>
-                    <a-divider margin="0 0 5px" />
+                    <a-divider margin="0 0 5px"/>
                     <RouterLink :to="{ name: 'user' }">
                         <a-menu-item key="user">
-                            <IconUser />
+                            <IconUser/>
                             用户设置
                         </a-menu-item>
                     </RouterLink>
                     <div v-if="$store.state.admin">
-                        <a-divider margin="0 0 5px" />
+                        <a-divider margin="0 0 5px"/>
                         <RouterLink :to="{ name: 'admin' }">
                             <a-menu-item key="admin">
-                                <IconUser />
+                                <IconUser/>
                                 管理员设置
                             </a-menu-item>
                         </RouterLink>
                     </div>
                 </a-sub-menu>
-                <a-divider margin="0 0 5px" />
+                <a-divider margin="0 0 5px"/>
                 <RouterLink :to="{ name: 'help' }">
                     <a-menu-item key="help">
-                        <IconQuestionCircle />
+                        <IconQuestionCircle/>
                         帮助中心
                     </a-menu-item>
                 </RouterLink>
-                <a-divider margin="0 0 5px" />
+                <a-divider margin="0 0 5px"/>
                 <RouterLink :to="{ name: 'feedback' }">
                     <a-menu-item key="feedback">
-                        <IconCustomerService />
+                        <IconCustomerService/>
                         反馈中心
                     </a-menu-item>
                 </RouterLink>
@@ -191,15 +192,18 @@ export default defineComponent({
         <a-layout>
             <a-layout-header style="padding-left: 20px;">
                 <a-button shape="round" @click="onCollapse">
-                    <IconCaretRight v-if="collapsed" />
-                    <IconCaretLeft v-else />
+                    <IconCaretRight v-if="collapsed"/>
+                    <IconCaretLeft v-else/>
                 </a-button>
                 <div class="header-title .container-sm">{{ title }}</div>
                 <div class="user d-flex align-items-center">
-                    <div class="header-title .container-sm" style="margin-right: 5px;">{{ this.$store.state.account }}</div>
+                    <div class="header-title .container-sm" style="margin-right: 5px;">{{
+                        this.$store.state.account
+                        }}
+                    </div>
                     <a-dropdown>
                         <a-button>
-                            <IconUser />
+                            <IconUser/>
                         </a-button>
                         <template #content>
                             <a-doption @click="toSetting()">用户设置</a-doption>
@@ -273,6 +277,7 @@ export default defineComponent({
     font-size: 14px;
     background: var(--color-bg-3);
     padding: 5px;
+    overflow: auto;
 }
 
 .layout-main :deep(.arco-layout-footer),

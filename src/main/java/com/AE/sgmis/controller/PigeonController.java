@@ -161,7 +161,7 @@ public class PigeonController {
     /**
      * 根据页面信息获取鸽子信息
      */
-    @PatchMapping()
+    @PatchMapping
     public Result listPagePigeon(@RequestBody Map<String, Long> pageInfo, HttpServletRequest request) {
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
@@ -194,7 +194,7 @@ public class PigeonController {
 
     /**
      * 新增或更新鸽子
-     * 添加日志
+     * 记录日志
      */
     @PostMapping
     public Result addOrUpdatePigeon(@RequestBody PigeonWrapper pigeonWrapper, HttpServletRequest request) {
@@ -222,7 +222,7 @@ public class PigeonController {
     }
 
     /**
-     * 根据id,整体更新鸽子数据
+     * 根据id,整体更新一只鸽子数据
      * 记录日志
      */
     @PutMapping
@@ -328,5 +328,61 @@ public class PigeonController {
         pigeonService.sharePigeon(ids, receiveGid, gid);
 
         return new Result(SuccessCode.Success.code, "共享成功");
+    }
+
+    /**
+     * 根据性别并排除子代id获取鸽子
+     */
+    @PostMapping("parent/{sex}")
+    public Result getPigeonParent(@RequestBody List<Long> ids, @PathVariable String sex, HttpServletRequest request) {
+        //获取gid
+        Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
+        Long gid = (Long) info.get("gid");
+
+        if (sex == null) {
+            throw new NotFoundException("信息有误，请重试");
+        }
+
+        //条件 id notin ids and sex = sex and gid = gid
+        QueryWrapper<Pigeon> wrapper = new QueryWrapper<>();
+        if (ids.size() > 0) {
+            wrapper.notIn("id", ids);
+        }
+        wrapper.eq("sex", sex)
+                .eq("gid", gid);
+
+
+        //字段
+        wrapper.select("id", "ring_number", "name", "bloodline", "sex");
+
+        //获取
+        List<Pigeon> list = pigeonService.list(wrapper);
+
+        return new Result(list, SuccessCode.Success.code, "获取成功");
+    }
+
+    /**
+     * 关联血亲关系
+     * 记录日志
+     */
+    @PatchMapping("relate")
+    public Result relatePigeon(@RequestBody Map<String, Object> body, HttpServletRequest request) {
+        //解析body
+        Long id = Long.valueOf((String) body.get("id"));
+        String sex = (String) body.get("sex");
+        Long oid = Long.valueOf((String) body.get("oid"));
+
+        //检查信息完整
+        if (sex == null) {
+            throw new SaveFailException("信息不完整，请重试");
+        }
+
+        //获取gid
+        Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
+        Long gid = (Long) info.get("gid");
+
+        pigeonService.relatePigeon(id, sex, oid, gid);
+
+        return new Result(SuccessCode.Success.code, "关联成功");
     }
 }

@@ -58,7 +58,7 @@ public class GpcxController {
 
     /**
      * 获取鸽棚巢箱名称和id基本信息
-     * 用于添加鸽子
+     * 用于为鸽棚巢箱添加鸽子
      */
     @GetMapping("base")
     public Result getBaseGpcx(HttpServletRequest request) {
@@ -86,11 +86,14 @@ public class GpcxController {
         Long gid = (Long) info.get("gid");
         //装填
         gpcx.setGid(gid);
+
         boolean success = gpcxService.save(gpcx);
         if (!success) {
             throw new SaveFailException("服务错误，保存失败");
         }
+
         gpcx.setPigeonPopulation(0);
+
         return new Result(gpcx, SuccessCode.Success.code, "保存成功");
     }
 

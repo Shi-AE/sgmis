@@ -50,4 +50,11 @@ public interface PigeonService extends IService<Pigeon> {
      * 接收者记录日志
      */
     void sharePigeon(List<Long> ids, Long receiveGid, Long gid);
+
+    /**
+     * 关联血亲关系
+     * 根据id、sex、oid
+     * 子代记录日志
+     */
+    void relatePigeon(Long id, String sex, Long oid, Long gid);
 }
