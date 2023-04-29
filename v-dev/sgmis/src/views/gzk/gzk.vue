@@ -3,14 +3,14 @@ import axiosx from "@/assets/js/axiosx.js"
 import {verifyData} from "@/assets/js/loading.js"
 import {Modal, Notification} from '@arco-design/web-vue'
 import {h} from "vue"
-import {IconSearch, IconRefresh, IconFilter} from "@arco-design/web-vue/es/icon";
+import {IconSearch, IconRefresh, IconFilter, IconWoman, IconMan} from "@arco-design/web-vue/es/icon";
 
 export default {
     mounted() {
         this.updateAllData()
     },
     components: {
-        IconRefresh
+        IconRefresh, IconWoman, IconMan
     },
     data() {
         return {
@@ -426,6 +426,15 @@ export default {
         },
         toEditPigeon() {
             this.$router.push({name: "editPigeon"})
+        },
+        toRapid() {
+            this.$router.push({name: "rapid"})
+        },
+        toBatch() {
+            this.$router.push({name: "batch"})
+        },
+        toLog() {
+            this.$router.push({name: "log"})
         },
         toEditPigeonById(record) {
             this.$router.push({name: "editPigeon", params: {id: record.id}})
@@ -885,7 +894,7 @@ export default {
                 <a-divider direction="vertical"/>
             </template>
             <a-button type="primary" status="success" @click="toEditPigeon()">新增鸽子</a-button>
-            <a-button type="primary" status="success">鸽子快速入库</a-button>
+            <a-button type="primary" status="success" @click="toRapid()">鸽子快速入库</a-button>
             <a-button type="primary" status="success">文件批量导入</a-button>
         </a-space>
     </div>
@@ -896,8 +905,8 @@ export default {
                 <template #split>
                     <a-divider direction="vertical"/>
                 </template>
-                <a-button type="primary" status="warning">高级批量操作</a-button>
-                <a-button type="primary" status="warning">查看操作记录</a-button>
+                <a-button type="primary" status="warning" @click="toBatch()">高级批量操作</a-button>
+                <a-button type="primary" status="warning" @click="toLog()">查看操作记录</a-button>
                 <a-button type="primary" status="danger">打印血统</a-button>
                 <a-button type="primary" status="danger">导出血统书展示链接</a-button>
             </a-space>
@@ -918,6 +927,16 @@ export default {
             onlyCurrent: true
         }" v-model:selectedKeys="selectedKeys" :pagination="paginationProps" @page-size-change="pageSizeChange"
              @page-change="pageChange">
+        <!-- 父足环表头插槽 -->
+        <template #father>
+            <IconMan />
+            父足环
+        </template>
+        <!-- 母足环表头插槽 -->
+        <template #mother>
+            <IconWoman />
+            母足环
+        </template>
         <!-- 操作插槽 -->
         <template #front-operation="{ record }">
             <a-space wrap>

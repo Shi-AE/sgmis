@@ -293,14 +293,9 @@ public class PigeonServiceImpl extends ServiceImpl<PigeonMapper, Pigeon> impleme
         UpdateWrapper<Pigeon> wrapper = new UpdateWrapper<>();
         wrapper.eq("id", oid)
                 .eq("gid", gid)
-                .set("update_data", now);
-        if (sex.equals("雄")) {
-            wrapper.set("fid", id);
-        } else if (sex.equals("雌")) {
-            wrapper.set("mid", id);
-        } else {
-            throw new SaveFailException("性别信息错误，请重试");
-        }
+                .set("update_data", now)
+                .set(sex.equals("雄"), "fid", id)
+                .set(sex.equals("雌"), "mid", id);
 
         int update = pigeonMapper.update(null, wrapper);
 
@@ -308,6 +303,38 @@ public class PigeonServiceImpl extends ServiceImpl<PigeonMapper, Pigeon> impleme
             log.error("关联 id = {}, oid = {} 时发生错误", id, oid);
             throw new SaveFailException("关联失败");
         }
+
+        // TODO 记录日志
+    }
+
+    @Override
+    @Transactional
+    public void rapidBatchAddPigeon(List<Pigeon> pigeons, List<PigeonInfo> pigeonInfos) {
+
+        for (int i = 0, pigeonsSize = pigeons.size(); i < pigeonsSize; i++) {
+            Pigeon pigeon = pigeons.get(i);
+
+            //新增
+            int insert = pigeonMapper.insert(pigeon);
+
+            //检查
+            if (!SqlHelper.retBool(insert)) {
+                throw new SaveFailException("保存鸽子基础信息失败");
+            }
+
+            //装填pid
+            pigeonInfos.get(i).setPid(pigeon.getId());
+        }
+
+        pigeonInfos.forEach(pigeonInfo -> {
+            int insert = pigeonInfoMapper.insert(pigeonInfo);
+
+            //检查
+            if (!SqlHelper.retBool(insert)) {
+                throw new SaveFailException("保存鸽子额外信息失败");
+            }
+        });
+
 
         // TODO 记录日志
     }

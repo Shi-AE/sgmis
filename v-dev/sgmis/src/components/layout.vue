@@ -1,28 +1,17 @@
 <script>
 import {defineComponent, ref} from 'vue';
 import {
-    IconApps,
-    IconBook,
-    IconBranch,
-    IconCalendar,
-    IconCaretLeft,
-    IconCaretRight,
-    IconCustomerService,
-    IconHome,
-    IconNav,
-    IconQuestionCircle,
-    IconSearch,
-    IconSettings,
-    IconStorage,
-    IconUser,
-    IconSubscribeAdd
+    IconApps, IconBook, IconBranch, IconCalendar, IconCaretLeft, IconCaretRight,
+    IconCustomerService, IconHome, IconNav, IconQuestionCircle, IconSearch, IconSettings, IconStorage,
+    IconUser, IconSubscribeAdd, IconEdit, IconExport, IconSelectAll, IconTool, IconIdcard
 } from '@arco-design/web-vue/es/icon'
 import axiosx from "@/assets/js/axiosx.js"
 
 export default defineComponent({
     components: {
-        IconCaretRight, IconCaretLeft, IconHome, IconCalendar, IconBranch, IconStorage, IconNav, IconSettings,
-        IconApps, IconSearch, IconBook, IconUser, IconQuestionCircle, IconCustomerService, IconSubscribeAdd
+        IconApps, IconBook, IconBranch, IconCalendar, IconCaretLeft, IconCaretRight,
+        IconCustomerService, IconHome, IconNav, IconQuestionCircle, IconSearch, IconSettings, IconStorage,
+        IconUser, IconSubscribeAdd, IconEdit, IconExport, IconSelectAll, IconTool, IconIdcard
     },
     setup() {
         const collapsed = ref(false)
@@ -106,6 +95,7 @@ export default defineComponent({
                     </a-menu-item>
                 </RouterLink>
                 <a-divider margin="0 0 5px"/>
+
                 <RouterLink :to="{ name: 'gzk' }">
                     <a-menu-item key="gzk">
                         <IconStorage/>
@@ -113,13 +103,49 @@ export default defineComponent({
                     </a-menu-item>
                 </RouterLink>
                 <a-divider margin="0 0 5px"/>
-                <RouterLink :to="{ name: 'editPigeon' }">
-                    <a-menu-item key="editPigeon">
-                        <IconSubscribeAdd/>
-                        新增鸽子
-                    </a-menu-item>
-                </RouterLink>
+
+                <a-sub-menu key="pigeon">
+                    <template #title>
+                        <span>
+                            <IconTool/>
+                            鸽子操作
+                        </span>
+                    </template>
+                    <a-divider margin="0 0 5px"/>
+
+                    <RouterLink :to="{ name: 'editPigeon' }">
+                        <a-menu-item key="editPigeon">
+                            <IconEdit/>
+                            编辑血统
+                        </a-menu-item>
+                    </RouterLink>
+                    <a-divider margin="0 0 5px"/>
+
+                    <RouterLink :to="{ name: 'rapid' }">
+                        <a-menu-item key="rapid">
+                            <IconExport/>
+                            快速入库
+                        </a-menu-item>
+                    </RouterLink>
+                    <a-divider margin="0 0 5px"/>
+
+                    <RouterLink :to="{ name: 'batch' }">
+                        <a-menu-item key="batch">
+                            <IconSelectAll/>
+                            高级批量操作
+                        </a-menu-item>
+                    </RouterLink>
+                    <a-divider margin="0 0 5px"/>
+
+                    <RouterLink :to="{ name: 'log' }">
+                        <a-menu-item key="log">
+                            <IconBranch/>
+                            操作日志
+                        </a-menu-item>
+                    </RouterLink>
+                </a-sub-menu>
                 <a-divider margin="0 0 5px"/>
+
                 <RouterLink :to="{ name: 'gpcx' }">
                     <a-menu-item key="gpcx">
                         <IconNav/>
@@ -136,6 +162,7 @@ export default defineComponent({
                         </span>
                     </template>
                     <a-divider margin="0 0 5px"/>
+
                     <RouterLink :to="{ name: 'options' }">
                         <a-menu-item key="options">
                             <IconApps/>
@@ -143,6 +170,7 @@ export default defineComponent({
                         </a-menu-item>
                     </RouterLink>
                     <a-divider margin="0 0 5px"/>
+
                     <RouterLink :to="{ name: 'gsxx' }">
                         <a-menu-item key="gsxx">
                             <IconSearch/>
@@ -150,6 +178,7 @@ export default defineComponent({
                         </a-menu-item>
                     </RouterLink>
                     <a-divider margin="0 0 5px"/>
+
                     <RouterLink :to="{ name: 'xtspz' }">
                         <a-menu-item key="xtspz">
                             <IconBook/>
@@ -157,23 +186,27 @@ export default defineComponent({
                         </a-menu-item>
                     </RouterLink>
                     <a-divider margin="0 0 5px"/>
+
                     <RouterLink :to="{ name: 'user' }">
                         <a-menu-item key="user">
                             <IconUser/>
                             用户设置
                         </a-menu-item>
                     </RouterLink>
+
                     <div v-if="$store.state.admin">
                         <a-divider margin="0 0 5px"/>
                         <RouterLink :to="{ name: 'admin' }">
                             <a-menu-item key="admin">
-                                <IconUser/>
+                                <IconIdcard/>
                                 管理员设置
                             </a-menu-item>
                         </RouterLink>
                     </div>
+
                 </a-sub-menu>
                 <a-divider margin="0 0 5px"/>
+
                 <RouterLink :to="{ name: 'help' }">
                     <a-menu-item key="help">
                         <IconQuestionCircle/>
@@ -181,12 +214,14 @@ export default defineComponent({
                     </a-menu-item>
                 </RouterLink>
                 <a-divider margin="0 0 5px"/>
+
                 <RouterLink :to="{ name: 'feedback' }">
                     <a-menu-item key="feedback">
                         <IconCustomerService/>
                         反馈中心
                     </a-menu-item>
                 </RouterLink>
+
             </a-menu>
         </a-layout-sider>
         <a-layout>
@@ -240,6 +275,10 @@ export default defineComponent({
     background: rgba(255, 255, 255, 0.2);
     border-bottom: #D91AD950 1px solid;
     border-right: #D91AD950 1px solid;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: white;
 }
 
 .layout-main :deep(.arco-layout-sider-light) .logo {
@@ -286,8 +325,9 @@ export default defineComponent({
 }
 
 .layout-main :deep(.arco-menu-item),
-.layout-main :deep(.arco-icon) {
-    font-weight: 600;
+.layout-main :deep(.arco-icon),
+.layout-main :deep(.arco-menu-inline-header) {
+    font-weight: 550;
     color: var(--color-text-1);
 }
 

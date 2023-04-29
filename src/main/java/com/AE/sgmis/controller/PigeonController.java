@@ -345,10 +345,8 @@ public class PigeonController {
 
         //条件 id notin ids and sex = sex and gid = gid
         QueryWrapper<Pigeon> wrapper = new QueryWrapper<>();
-        if (ids.size() > 0) {
-            wrapper.notIn("id", ids);
-        }
-        wrapper.eq("sex", sex)
+        wrapper.notIn(ids.size() > 0, "id", ids)
+                .eq("sex", sex)
                 .eq("gid", gid);
 
 

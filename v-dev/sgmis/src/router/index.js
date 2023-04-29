@@ -57,11 +57,35 @@ const router = createRouter({
                     }
                 },
                 {
-                    path: "editPigeon/:id(\\d+)?",
+                    path: "pigeon/editPigeon/:id(\\d+)?",
                     name: "editPigeon",
                     component: () => import("@/views/editPigeon/editPigeon.vue"),
                     meta: {
-                        title: "编辑鸽子"
+                        title: "编辑血统"
+                    }
+                },
+                {
+                    path: "pigeon/rapid",
+                    name: "rapid",
+                    component: () => import("@/views/rapid/rapid.vue"),
+                    meta: {
+                        title: "快速入库"
+                    }
+                },
+                {
+                    path: "pigeon/batch",
+                    name: "batch",
+                    component: () => import("@/views/batch/batch.vue"),
+                    meta: {
+                        title: "高级批量操作"
+                    }
+                },
+                {
+                    path: "pigeon/log",
+                    name: "log",
+                    component: () => import("@/views/log/log.vue"),
+                    meta: {
+                        title: "操作日志"
                     }
                 },
                 {

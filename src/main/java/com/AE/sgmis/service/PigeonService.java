@@ -57,4 +57,10 @@ public interface PigeonService extends IService<Pigeon> {
      * 子代记录日志
      */
     void relatePigeon(Long id, String sex, Long oid, Long gid);
+
+    /**
+     * 快速批量入库子代
+     * 记录日志
+     */
+    void rapidBatchAddPigeon(List<Pigeon> pigeons, List<PigeonInfo> pigeonInfos);
 }
