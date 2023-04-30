@@ -261,8 +261,12 @@ public class PigeonController {
         Long gid = (Long) info.get("gid");
 
         //检查数据完整
-        if (field == null || data == null || ids == null) {
+        if (field == null || data == null || ids == null || data.equals("null")) {
             throw new SaveFailException("提交信息错误");
+        }
+
+        if (ids.size() == 0) {
+            throw new SaveFailException("请选择至少一只鸽子");
         }
 
         //field字段 防止sql注入

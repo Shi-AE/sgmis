@@ -613,6 +613,15 @@ export default {
             const ids = this.selectedKeys.map(key => {
                 return this.data[key - 1].id
             })
+            //检查数据
+            if (!verifyData(() => {
+                if (!this.batchEditModal.data) {
+                    Notification.error("属性设置值错误")
+                    return false
+                }
+            })) {
+                return false
+            }
             await axiosx({
                 method: "PUT",
                 url: `pigeon/${this.batchEditModal.field}/${this.batchEditModal.data}`,

@@ -1,7 +1,7 @@
 <script>
 
-import axiosx from "@/assets/js/axiosx.js";
-import {verifyData} from "@/assets/js/loading.js";
+import axiosx from "@/assets/js/axiosx.js"
+import {verifyData} from "@/assets/js/loading.js"
 import {Notification} from '@arco-design/web-vue'
 
 export default {
