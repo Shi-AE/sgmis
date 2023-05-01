@@ -58,6 +58,11 @@ public class XtspzController {
      */
     @PostMapping("logo")
     public Result uploadLogo(MultipartFile file, HttpServletRequest request) {
+
+        if (Objects.isNull(file) || file.isEmpty()) {
+            throw new FileSaveException("不能上传空文件");
+        }
+
         //检查文件类型
         fileUtil.checkFileType(file, type);
 
@@ -76,9 +81,6 @@ public class XtspzController {
         }
 
         //文保存到服务器
-        if (Objects.isNull(file) || file.isEmpty()) {
-            throw new FileSaveException("不能上传空文件");
-        }
         String fileName = fileUtil.storeFile(file, path);
 
         //装填实体类

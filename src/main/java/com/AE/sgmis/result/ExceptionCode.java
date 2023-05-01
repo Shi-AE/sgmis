@@ -15,7 +15,8 @@ public enum ExceptionCode {
     PasswordUpdateFailException(412),
     FileSaveException(413),
     DuplicateKeyException(414),
-    UserInformationException(415);
+    UserInformationException(415),
+    FileParseException(416);
 
     public final int code;
     ExceptionCode(int code) {

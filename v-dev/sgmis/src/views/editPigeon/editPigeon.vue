@@ -613,7 +613,7 @@ export default {
             <a-form-item label="鸽子照片" field="pictureUrl">
                 <a-upload action="pigeon/picture" :fileList="file ? [file] : []" :show-file-list="false"
                           @change="onChange"
-                          :custom-request="customRequest">
+                          :custom-request="customRequest" accept="image/jpeg, image/png, image/gif, image/tiff">
                     <template #upload-button>
                         <div :class="`arco-upload-list-item${file && file.status === 'error' ? ' arco-upload-list-item-error' : ''
                             }`">

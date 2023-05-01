@@ -115,12 +115,12 @@ export default {
                 <a-space size="large">
                     <div>LOGO</div>
                     <a-upload action="/xtspz/logo" :fileList="file ? [file] : []" :show-file-list="false" @change="onChange"
-                        :custom-request="customRequest">
+                        :custom-request="customRequest" accept="image/jpeg, image/png, image/gif, image/tiff">
                         <template #upload-button>
                             <div :class="`arco-upload-list-item${file && file.status === 'error' ? ' arco-upload-list-item-error' : ''
                                 }`">
                                 <div class="arco-upload-list-picture custom-upload-avatar" v-if="file && file.url">
-                                    <img :src="file.url" />
+                                    <img :src="file.url"  alt=""/>
                                     <div class="arco-upload-list-picture-mask">
                                         <IconEdit />
                                     </div>

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.io.Reader;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -68,18 +69,36 @@ public class FileUtil {
         try {
             return tika.detect(file.getInputStream());
         } catch (IOException e) {
-            log.error("检查文件 {} 时发生错误", file);
+            log.error("检查文件 {} 时文件流发生错误", file, e);
             throw new FileSaveException("文件保存失败");
         }
     }
 
     /**
+     * 通过文件类型列表
      * 检查文件类型是否匹配
      */
-    public void checkFileType(MultipartFile file, List<String> typeList) {
-        boolean checked = typeList.contains(getFileType(file));
+    @SuppressWarnings("UnusedReturnValue")
+    public String checkFileType(MultipartFile file, List<String> typeList) {
+        String fileType = getFileType(file);
+        boolean checked = typeList.contains(fileType);
         if (!checked) {
-            throw new FileSaveException("文件类型错误，请上传图片类型");
+            throw new FileSaveException("文件类型错误，请上传正确类型");
         }
+        return fileType;
+    }
+
+    /**
+     * 通过多字符串
+     * 检查文件类型是否匹配
+     */
+    public String checkFileType(MultipartFile file, String... types) {
+        List<String> typeList = List.of(types);
+        String fileType = getFileType(file);
+        boolean checked = typeList.contains(fileType);
+        if (!checked) {
+            throw new FileSaveException("文件类型错误，请上传正确类型");
+        }
+        return fileType;
     }
 }

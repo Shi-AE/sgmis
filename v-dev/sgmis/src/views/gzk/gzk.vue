@@ -312,6 +312,10 @@ export default {
                 visible: false,
                 options: [],
                 id: null,
+            },
+            //文件导入模态框控制变量
+            fileModal: {
+                visible: false
             }
         }
     },
@@ -438,6 +442,9 @@ export default {
         },
         toEditPigeonById(record) {
             this.$router.push({name: "editPigeon", params: {id: record.id}})
+        },
+        openFileModal() {
+            this.fileModal.visible = true
         },
         pageSizeChange(size) {
             if (size === "所有") {
@@ -872,6 +879,34 @@ export default {
                     })
                 }
             })
+        },
+        handleFileUpload(option) {
+            const {onProgress, onError, onSuccess, fileItem, name} = option
+            const file = new FormData();
+            file.append(name || 'file', fileItem.file);
+            axiosx({
+                method: "POST",
+                url: "pigeon/file",
+                data: file,
+                message: "正在上传并解析文件",
+                onUploadProgress: progressEvent => {
+                    const percent = progressEvent.loaded / progressEvent.total
+                    onProgress(percent, progressEvent)
+                }
+            }).then(res => {
+                if (res.data.code === 200) {
+                    onSuccess(res)
+                    this.updateAllData()
+                    Notification.success(res.data.message)
+                    this.fileModal.visible = false
+                } else {
+                    onError(res)
+                    Notification.error(res.data.message)
+                }
+            }).catch(res => {
+                onError(res)
+                Notification.error("服务器发生错误，上传超时")
+            })
         }
     }
 }
@@ -904,7 +939,7 @@ export default {
             </template>
             <a-button type="primary" status="success" @click="toEditPigeon()">新增鸽子</a-button>
             <a-button type="primary" status="success" @click="toRapid()">鸽子快速入库</a-button>
-            <a-button type="primary" status="success">文件批量导入</a-button>
+            <a-button type="primary" status="success" @click="openFileModal()">文件批量导入</a-button>
         </a-space>
     </div>
     <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">其它操作</a-divider>
@@ -938,12 +973,12 @@ export default {
              @page-change="pageChange">
         <!-- 父足环表头插槽 -->
         <template #father>
-            <IconMan />
+            <IconMan/>
             父足环
         </template>
         <!-- 母足环表头插槽 -->
         <template #mother>
-            <IconWoman />
+            <IconWoman/>
             母足环
         </template>
         <!-- 操作插槽 -->
@@ -1198,6 +1233,7 @@ export default {
             </a-form-item>
         </a-form>
     </a-modal>
+  <!--批量编辑模态框-->
     <a-modal v-model:visible="batchEditModal.visible" :title="batchEditModal.title" width="calc(300px + 0.12 * 100vw)"
              @before-ok="handleEditBatch" @cancel="handleCancel">
         <a-form :model="batchEditModal">
@@ -1207,6 +1243,7 @@ export default {
             </a-form-item>
         </a-form>
     </a-modal>
+  <!--批量分享血统-->
     <a-modal v-model:visible="batchShareModal.visible" title="批量分享血统" width="calc(300px + 0.12 * 100vw)"
              @before-ok="handleShareBatch" @cancel="handleCancel">
         <a-form :model="batchShareModal">
@@ -1217,6 +1254,7 @@ export default {
         </a-form>
         <div>共享后对方数据中不保留父代信息</div>
     </a-modal>
+  <!--批量加入鸽棚巢箱-->
     <a-modal v-model:visible="batchGpcxModal.visible" title="批量加入鸽棚巢箱" width="calc(300px + 0.12 * 100vw)"
              @before-ok="handleGpcxBatch" @cancel="handleCancel">
         <a-form :model="batchGpcxModal">
@@ -1225,6 +1263,12 @@ export default {
                           placeholder="选择鸽棚巢箱" allow-search/>
             </a-form-item>
         </a-form>
+    </a-modal>
+  <!--通过文件导入模态框-->
+    <a-modal v-model:visible="fileModal.visible" title="文件快速导入" top="10" :align-center="false" draggable
+             @cancel="handleCancel" :footer="false">
+        <a-upload draggable :custom-request="handleFileUpload" tip="上传.xls\.xlsx文件"
+                  accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
     </a-modal>
 </template>
 

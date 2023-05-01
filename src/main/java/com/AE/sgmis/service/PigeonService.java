@@ -2,9 +2,11 @@ package com.AE.sgmis.service;
 
 import com.AE.sgmis.pojo.Pigeon;
 import com.AE.sgmis.pojo.PigeonInfo;
+import com.AE.sgmis.pojo.PigeonWrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
+import java.util.Map;
 
 public interface PigeonService extends IService<Pigeon> {
 
@@ -63,4 +65,10 @@ public interface PigeonService extends IService<Pigeon> {
      * 记录日志
      */
     void rapidBatchAddPigeon(List<Pigeon> pigeons, List<PigeonInfo> pigeonInfos);
+
+    /**
+     * 根据文件解析结果保存鸽子
+     * 记录日志
+     */
+    void savePigeonByFile(List<Map<String, PigeonWrapper>> pigeonWrappers, Long gid);
 }

@@ -6,6 +6,7 @@ import com.AE.sgmis.mapper.PigeonInfoMapper;
 import com.AE.sgmis.mapper.PigeonMapper;
 import com.AE.sgmis.pojo.Pigeon;
 import com.AE.sgmis.pojo.PigeonInfo;
+import com.AE.sgmis.pojo.PigeonWrapper;
 import com.AE.sgmis.service.PigeonService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
@@ -19,6 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Slf4j
 @Service
@@ -337,5 +339,82 @@ public class PigeonServiceImpl extends ServiceImpl<PigeonMapper, Pigeon> impleme
 
 
         // TODO 记录日志
+    }
+
+    @Override
+    @Transactional
+    public void savePigeonByFile(List<Map<String, PigeonWrapper>> pigeonWrappers, Long gid) {
+        //获取时间
+        LocalDate now = LocalDate.now();
+
+        //保存父代
+        pigeonWrappers.forEach(pigeonMap -> {
+            PigeonWrapper pigeonWrapper = pigeonMap.get("pigeon");
+            //父
+            PigeonWrapper father = pigeonMap.get("father");
+            if (father != null) {
+                //父fatherPigeon
+                Pigeon fatherPigeon = father.getPigeon();
+                fatherPigeon.setUpdateData(now);
+                fatherPigeon.setGid(gid);
+                int fatherPigeonInsert = pigeonMapper.insert(fatherPigeon);
+                if (!SqlHelper.retBool(fatherPigeonInsert)) {
+                    throw new SaveFailException("父鸽基础信息保存失败");
+                }
+                //父fatherPigeonInfo
+                PigeonInfo fatherPigeonInfo = new PigeonInfo();
+                fatherPigeonInfo.setCreateTime(now);
+                fatherPigeonInfo.setPid(fatherPigeon.getId());
+                int fatherPigeonInfoInsert = pigeonInfoMapper.insert(fatherPigeonInfo);
+                if (!SqlHelper.retBool(fatherPigeonInfoInsert)) {
+                    throw new SaveFailException("父鸽额外信息保存失败");
+                }
+                //给子代装填fid
+                pigeonWrapper.getPigeon().setFid(fatherPigeon.getId());
+            }
+
+            //母
+            PigeonWrapper mother = pigeonMap.get("mother");
+            if (mother != null) {
+                //母motherPigeon
+                Pigeon motherPigeon = mother.getPigeon();
+                motherPigeon.setUpdateData(now);
+                motherPigeon.setGid(gid);
+                int fatherPigeonInsert = pigeonMapper.insert(motherPigeon);
+                if (!SqlHelper.retBool(fatherPigeonInsert)) {
+                    throw new SaveFailException("母鸽基础信息保存失败");
+                }
+                //母motherPigeonInfo
+                PigeonInfo motherPigeonInfo = new PigeonInfo();
+                motherPigeonInfo.setCreateTime(now);
+                motherPigeonInfo.setPid(motherPigeon.getId());
+                int motherPigeonInfoInsert = pigeonInfoMapper.insert(motherPigeonInfo);
+                if (!SqlHelper.retBool(motherPigeonInfoInsert)) {
+                    throw new SaveFailException("母鸽额外信息保存失败");
+                }
+                //给子代装填mid
+                pigeonWrapper.getPigeon().setMid(motherPigeon.getId());
+            }
+
+            //保存子代信息
+            //pigeon
+            Pigeon pigeon = pigeonWrapper.getPigeon();
+            pigeon.setUpdateData(now);
+            pigeon.setGid(gid);
+            int pigeonInsert = pigeonMapper.insert(pigeon);
+            if (!SqlHelper.retBool(pigeonInsert)) {
+                throw new SaveFailException("子代鸽基础信息保存失败");
+            }
+            //pigeonInfo
+            PigeonInfo pigeonInfo = pigeonWrapper.getPigeonInfo();
+            pigeonInfo.setCreateTime(now);
+            pigeonInfo.setPid(pigeon.getId());
+            int pigeonInfoInsert = pigeonInfoMapper.insert(pigeonInfo);
+            if (!SqlHelper.retBool(pigeonInfoInsert)) {
+                throw new SaveFailException("子代鸽额外信息保存失败");
+            }
+
+            // TODO 保存日志
+        });
     }
 }

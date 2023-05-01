@@ -4,11 +4,14 @@ import com.AE.sgmis.exceptions.*;
 import com.AE.sgmis.pojo.Pigeon;
 import com.AE.sgmis.pojo.PigeonInfo;
 import com.AE.sgmis.pojo.PigeonWrapper;
+import com.AE.sgmis.pojo.Xxpz;
 import com.AE.sgmis.result.Result;
 import com.AE.sgmis.result.SuccessCode;
 import com.AE.sgmis.service.PigeonInfoService;
 import com.AE.sgmis.service.PigeonService;
+import com.AE.sgmis.service.XxpzService;
 import com.AE.sgmis.util.FileUtil;
+import com.AE.sgmis.util.PigeonFileUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import jakarta.annotation.PostConstruct;
@@ -21,10 +24,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDate;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 @RestController
 @RequestMapping("api/pigeon")
@@ -33,9 +33,15 @@ public class PigeonController {
     @Autowired
     private FileUtil fileUtil;
     @Autowired
+    private PigeonFileUtil pigeonFileUtil;
+    @Autowired
     private PigeonService pigeonService;
     @Autowired
     private PigeonInfoService pigeonInfoService;
+    @Value("${xxpz.systemGid}")
+    private Integer systemGid;
+    @Autowired
+    private XxpzService xxpzService;
     @Value("${file.pigeon.path}")
     private String basePath;
     @Value("${file.pigeon.type}")
@@ -61,13 +67,14 @@ public class PigeonController {
      */
     @PostMapping("picture")
     public Result uploadPigeonPicture(MultipartFile file) {
+        if (Objects.isNull(file) || file.isEmpty()) {
+            throw new FileSaveException("不能上传空文件");
+        }
+
         //检查文件类型
         fileUtil.checkFileType(file, type);
 
         //文保存到服务器
-        if (Objects.isNull(file) || file.isEmpty()) {
-            throw new FileSaveException("不能上传空文件");
-        }
         String fileName = fileUtil.storeFile(file, path);
 
         return new Result(fileName, SuccessCode.Success.code, "保存成功");
@@ -386,5 +393,71 @@ public class PigeonController {
         pigeonService.relatePigeon(id, sex, oid, gid);
 
         return new Result(SuccessCode.Success.code, "关联成功");
+    }
+
+    /**
+     * 上传文件并解析
+     * 保存鸽子
+     * 记录日志
+     */
+    @PostMapping("file")
+    public Result savePigeonByFile(MultipartFile file, HttpServletRequest request) {
+        if (Objects.isNull(file) || file.isEmpty()) {
+            throw new FileSaveException("不能上传空文件");
+        }
+
+        //检出文件格式
+        String fileType = fileUtil.checkFileType(file, "application/vnd.ms-excel", "application/x-tika-ooxml", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+
+        // 获取gid
+        Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
+        Long gid = (Long) info.get("gid");
+
+        //获取检验数据
+        //添加条件 gid or gid = systemGid
+        QueryWrapper<Xxpz> wrapper = new QueryWrapper<>();
+        wrapper.eq("gid", gid).or().eq("gid", systemGid);
+        //字段
+        wrapper.select("name", "type");
+        //查询
+        List<Xxpz> list = xxpzService.list(wrapper);
+
+        //封装检验数据
+        Map<String, Set<String>> xxpzMap = new HashMap<>();
+        xxpzMap.put("yspz", new HashSet<>());
+        xxpzMap.put("yanpz", new HashSet<>());
+        xxpzMap.put("lxpz", new HashSet<>());
+        xxpzMap.put("province", new HashSet<>());
+        xxpzMap.put("country", new HashSet<>());
+        xxpzMap.put("state", new HashSet<>());
+        list.forEach(item -> {
+            String type = item.getType();
+            Set<String> names = xxpzMap.get(type);
+            if (names != null) {
+                if (type.equals("province") || type.equals("country")) {
+                    names.add(item.getName().split("/")[1]);
+                } else {
+                    names.add(item.getName());
+                }
+            }
+        });
+
+        List<Map<String, PigeonWrapper>> pigeonWrappers;
+
+        if (fileType.equals("application/vnd.ms-excel")) {
+            //旧版
+            pigeonWrappers = pigeonFileUtil.getPigeonByXls(file, xxpzMap);
+        } else {
+            //新版
+            pigeonWrappers = pigeonFileUtil.getPigeonByXlsx(file, xxpzMap);
+        }
+
+        if (pigeonWrappers == null) {
+            throw new FileParseException("解析失败");
+        }
+
+        pigeonService.savePigeonByFile(pigeonWrappers, gid);
+
+        return new Result(SuccessCode.Success.code, "入库成功");
     }
 }
