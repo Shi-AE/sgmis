@@ -128,6 +128,14 @@ const router = createRouter({
                     meta: {
                         title: "用户设置"
                     }
+                },
+                {
+                    path: "detail/:id(\\d+)?",
+                    name: "detail",
+                    component: () => import("@/views/detail/detail.vue"),
+                    meta: {
+                        title: "详情"
+                    }
                 }
             ],
             meta: {
@@ -172,14 +180,6 @@ const router = createRouter({
         {
             path: "/:undefined(.*)",
             redirect: { name: "404" }
-        },
-        {
-            path: "/detail",
-            name: "detail",
-            component: () => import("@/views/detail/detail.vue"),
-            meta: {
-                title: "详情"
-            }
         }
     ]
 })

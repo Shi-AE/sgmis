@@ -1013,7 +1013,7 @@ export default {
         </template>
         <!-- 足环插槽 -->
         <template #ringNumber="{ record }">
-            <routerLink :to="{name: 'editPigeon', params: {id: record.id}}" :style="{color: '#D91AD9'}">
+            <routerLink :to="{name: 'detail', params: {id: record.id}}" :style="{color: '#D91AD9'}">
                 <a-tooltip content="点击查看鸽子详情" :mini="true" background-color="#FDC2DB">
                     <div>{{ record.ringNumber }}</div>
                 </a-tooltip>
@@ -1023,7 +1023,7 @@ export default {
         </template>
         <!-- 父足环插槽 -->
         <template #fatherRingNumber="{ record }">
-            <routerLink :to="{name: 'editPigeon', params: {id: record.fid}}" :style="{color: '#D91AD9'}">
+            <routerLink :to="{name: 'detail', params: {id: record.fid}}" :style="{color: '#D91AD9'}">
                 <a-tooltip content="点击查看鸽子详情" :mini="true" background-color="#F7BAEF">
                     <div>{{ record.father?.ringNumber }}</div>
                 </a-tooltip>
@@ -1033,7 +1033,7 @@ export default {
         </template>
         <!-- 母足环插槽 -->
         <template #motherRingNumber="{ record }">
-            <routerLink :to="{name: 'editPigeon', params: {id: record.mid}}" :style="{color: '#D91AD9'}">
+            <routerLink :to="{name: 'detail', params: {id: record.mid}}" :style="{color: '#D91AD9'}">
                 <a-tooltip content="点击查看鸽子详情" :mini="true" background-color="#DDBEF6">
                     <div>{{ record.mather?.ringNumber }}</div>
                 </a-tooltip>
@@ -1078,7 +1078,7 @@ export default {
             </div>
         </template>
         <!-- father搜索 -->
-        <template #father-filter="{ filterValue, setFilterValue, handleFilterConfirm, handleFilterReset}">
+        <template #fatherRingNumber-filter="{ filterValue, setFilterValue, handleFilterConfirm, handleFilterReset}">
             <div class="custom-filter">
                 <a-space direction="vertical">
                     <a-input :model-value="filterValue[0]" @input="(value)=>setFilterValue([value])"/>
@@ -1090,7 +1090,7 @@ export default {
             </div>
         </template>
         <!-- mather搜索 -->
-        <template #mather-filter="{ filterValue, setFilterValue, handleFilterConfirm, handleFilterReset}">
+        <template #motherRingNumber-filter="{ filterValue, setFilterValue, handleFilterConfirm, handleFilterReset}">
             <div class="custom-filter">
                 <a-space direction="vertical">
                     <a-input :model-value="filterValue[0]" @input="(value)=>setFilterValue([value])"/>

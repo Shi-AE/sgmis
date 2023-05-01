@@ -235,7 +235,7 @@ export default {
         initBloodline() {
 
             const opts = {
-                renderer: "svg",
+                renderer: "canvas",
                 useDirtyRect: true,
                 locale: "ZH"
             }

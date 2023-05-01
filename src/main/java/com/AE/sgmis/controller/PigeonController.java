@@ -93,12 +93,6 @@ public class PigeonController {
         QueryWrapper<Pigeon> pigeonQueryWrapper = new QueryWrapper<>();
         pigeonQueryWrapper.eq("id", id).eq("gid", gid);
 
-        //字段
-        pigeonQueryWrapper.select(
-                "id", "picture_url", "ring_number", "name", "bloodline",
-                "sex", "fid", "mid", "yan", "ys", "lx", "is_grade"
-        );
-
         Pigeon pigeon = pigeonService.getOne(pigeonQueryWrapper);
 
         if (pigeon == null) {
@@ -111,9 +105,6 @@ public class PigeonController {
         //条件 pid = pid
         QueryWrapper<PigeonInfo> pigeonInfoQueryWrapper = new QueryWrapper<>();
         pigeonInfoQueryWrapper.eq("pid", pid);
-
-        //字段
-        pigeonInfoQueryWrapper.select("source", "sub_ring_number", "detail");
 
         PigeonInfo pigeonInfo = pigeonInfoService.getOne(pigeonInfoQueryWrapper);
 

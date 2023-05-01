@@ -40,3 +40,7 @@ file:
   pigeon:
     path: pigeon
     type: image/jpeg, image/png, image/gif, image/tiff
+
+pigeon:
+  generation:
+    limit: 7
