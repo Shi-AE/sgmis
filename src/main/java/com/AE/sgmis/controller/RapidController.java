@@ -59,14 +59,27 @@ public class RapidController {
         Long mid = map.get("mid") == null ? null : Long.valueOf((String) map.get("mid"));
         List<Map<String, Object>> pigeonMaps = (List<Map<String, Object>>) map.get("pigeons");
 
+        String fr = null;
+        String mr = null;
+        //获取父代足环
+        if (fid != null) {
+            Pigeon fp = pigeonService.getById(fid);
+            fr = fp.getRingNumber();
+        }
+        if (mid != null) {
+            Pigeon mp = pigeonService.getById(mid);
+            mr = mp.getRingNumber();
+        }
+
         //检查
-        if (fid == null && mid == null) {
+        if (fr == null && mr == null) {
             throw new SaveFailException("信息不完整");
         }
 
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
+        String account = (String) info.get("account");
 
         //获取日期
         LocalDate now = LocalDate.now();
@@ -90,7 +103,8 @@ public class RapidController {
             pigeonInfos.add(pigeonInfo);
         });
 
-        pigeonService.rapidBatchAddPigeon(pigeons, pigeonInfos);
+
+        pigeonService.rapidBatchAddPigeon(pigeons, pigeonInfos, gid, account, fr, mr);
 
         return new Result(SuccessCode.Success.code, "入库成功");
     }

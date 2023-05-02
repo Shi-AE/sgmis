@@ -12,5 +12,5 @@ public interface PigeonGpcxService extends IService<PigeonGpcx> {
      * 返回更新数量
      * 记录日志
      */
-    int addPigeonToGpcx(List<Long> ids, Long gpcxId, String name);
+    int addPigeonToGpcx(List<Long> ids, Long gpcxId, String name, String account, Long gid);
 }

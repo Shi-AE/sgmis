@@ -91,7 +91,7 @@ export default {
                 const map = res.data.data
                 const list = []
                 //同父异母
-                if (map.fatherHalf.length > 0) {
+                if (map.fatherHalf?.length > 0) {
                     map.fatherHalf.forEach(item => {
                         list.push({
                             ...item,
@@ -101,7 +101,7 @@ export default {
                     })
                 }
                 //同母异父
-                if (map.motherHalf.length > 0) {
+                if (map.motherHalf?.length > 0) {
                     map.motherHalf.forEach(item => {
                         list.push({
                             ...item,
@@ -111,7 +111,7 @@ export default {
                     })
                 }
                 //同父同母
-                if (map.full.length > 0) {
+                if (map.full?.length > 0) {
                     map.full.forEach(item => {
                         list.push({
                             ...item,

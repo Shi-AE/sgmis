@@ -91,6 +91,7 @@ public class DetailController {
 
         Pigeon pigeon = pigeonService.getOne(wrapper);
 
+        //没有找到父代
         if (pigeon == null) {
             return new Result(SuccessCode.Success.code, "查询成功");
         }

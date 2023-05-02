@@ -3,7 +3,7 @@ import axiosx from "@/assets/js/axiosx.js"
 import {verifyData} from "@/assets/js/loading.js"
 import {Modal, Notification} from '@arco-design/web-vue'
 import {h} from "vue"
-import {IconSearch, IconRefresh, IconFilter, IconWoman, IconMan} from "@arco-design/web-vue/es/icon";
+import {IconFilter, IconMan, IconRefresh, IconSearch, IconWoman} from "@arco-design/web-vue/es/icon";
 
 export default {
     mounted() {
@@ -871,6 +871,7 @@ export default {
                             //须进行全局更新
                             this.updateAllData()
                             Notification.success(res.data.message)
+                            this.selectedKeys = []
                             modal.close()
                         } else {
                             Notification.error(res.data.message)
@@ -926,7 +927,10 @@ export default {
             <a-button type="primary" status="normal" @click="handleBatchEditModalOpen('jbpz')">设置级别</a-button>
             <a-button type="primary" status="normal" @click="handleBatchEditModalOpen('ylhl')">医疗护理</a-button>
             <a-button type="primary" status="warning" @click="handleBatchLogModalOpen()">填写日志</a-button>
-            <a-button type="primary" status="warning" @click="handleBatchShareModalOpen()">共享血统</a-button>
+            <!--共享血统只有管理员可以操作-->
+            <a-button :disabled="!$store.state.admin" type="primary" status="warning" @click="handleBatchShareModalOpen()">
+                共享血统
+            </a-button>
             <a-button type="primary" status="success" @click="handleBatchGpcxModalOpen()">加入鸽棚巢箱</a-button>
             <a-button type="primary" status="danger" @click="handleBatchDeleteModalOpen()">批量删除</a-button>
         </a-space>

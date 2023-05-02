@@ -15,7 +15,7 @@ export default {
                 shortName: "",
                 phone: "",
                 mail: "",
-                url: "",
+                logoUrl: "",
                 address: ""
             },
             file: {}
@@ -56,6 +56,7 @@ export default {
                 if (res.data.code === 200) {
                     onSuccess(res)
                     Notification.success(res.data.message)
+                    this.info.logoUrl = res.data.data
                     store.commit("setLogoName", res.data.data)
                 } else {
                     onError(res)
@@ -85,11 +86,11 @@ export default {
             url: "xtspz",
             message: "正在获取用户信息"
         }).then(res => {
-            const { logoUrl, ...data } = res.data.data
             if (res.data.code === 200) {
+                const data = res.data.data
                 //显示图片
-                if (logoUrl !== null && logoUrl.length > 0) {
-                    store.commit("setLogoName", res.data.data.logoUrl)
+                if (data.logoUrl !== null) {
+                    store.commit("setLogoName", data.logoUrl)
                     this.file = {
                         url: `${logoResourcePath}/${this.$store.state.logoName}`,
                         name: this.$store.state.logoName

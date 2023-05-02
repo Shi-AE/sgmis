@@ -105,9 +105,13 @@ public class GpcxController {
     public Result addPigeonToGpcx(@RequestBody List<Long> ids, @PathVariable Long gpcxId, HttpServletRequest request) {
         //检查权限
         String name = check(gpcxId, request);
+        //获取账号名
+        Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
+        Long gid = (Long) info.get("gid");
+        String account = (String) info.get("account");
 
         //更新或添加
-        int update = pigeonGpcxService.addPigeonToGpcx(ids, gpcxId, name);
+        int update = pigeonGpcxService.addPigeonToGpcx(ids, gpcxId, name, account, gid);
 
         return new Result(SuccessCode.Success.code, "全部保存成功，发生" + update + "个更新，" + (ids.size() - update) + "个新增");
     }

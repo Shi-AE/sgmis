@@ -66,35 +66,9 @@ public class XtspzController {
         //检查文件类型
         fileUtil.checkFileType(file, type);
 
-        //从请求域中获取用户信息
-        Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
-        Long gid = (Long) info.get("gid");
-
-        //条件 gid = gid
-        QueryWrapper<Xtspz> wrapper = new QueryWrapper<>();
-        wrapper.eq("gid", gid);
-
-        //判断原来是否存在图片
-        Xtspz exist = xtspzService.getOne(wrapper);
-        if (exist != null && exist.getLogoUrl() != null) {
-            fileUtil.deleteFile(exist.getLogoUrl(), path);
-        }
-
         //文保存到服务器
         String fileName = fileUtil.storeFile(file, path);
 
-        //装填实体类
-        Xtspz xtspz = new Xtspz();
-        xtspz.setLogoUrl(fileName);
-        xtspz.setGid(gid);
-
-        boolean success = xtspzService.saveOrUpdate(xtspz, wrapper);
-        if (!success) {
-            //删除文件
-            fileUtil.deleteFile(fileName, path);
-
-            throw new FileSaveException("文件同步失败");
-        }
         return new Result(fileName, SuccessCode.Success.code, "保存成功");
     }
 

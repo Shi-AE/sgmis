@@ -20,7 +20,8 @@ public class ExceptionAdvice {
             ConfirmPasswordInconsistencyException.class, UnchangedPasswordException.class,
             DeleteFailException.class, SaveFailException.class, FieldsDuplicateException.class,
             PasswordUpdateFailException.class, AccessException.class, FileSaveException.class,
-            UserInformationException.class, NotFoundException.class, FileParseException.class})
+            UserInformationException.class, NotFoundException.class, FileParseException.class,
+            LogException.class})
     private Result doCommonException(ProjectException exception) {
         return new Result(exception.getCode(), exception.getMessage());
     }

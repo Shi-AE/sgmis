@@ -5,6 +5,8 @@ import com.AE.sgmis.mapper.PigeonGpcxMapper;
 import com.AE.sgmis.mapper.PigeonMapper;
 import com.AE.sgmis.pojo.Pigeon;
 import com.AE.sgmis.pojo.PigeonGpcx;
+import com.AE.sgmis.result.LogType;
+import com.AE.sgmis.service.OplogService;
 import com.AE.sgmis.service.PigeonGpcxService;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -24,10 +26,12 @@ public class PigeonGpcxServiceImpl extends ServiceImpl<PigeonGpcxMapper, PigeonG
     private PigeonGpcxMapper pigeonGpcxMapper;
     @Autowired
     private PigeonMapper pigeonMapper;
+    @Autowired
+    private OplogService oplogService;
 
     @Override
     @Transactional
-    public int addPigeonToGpcx(List<Long> ids, Long gpcxId, String name) {
+    public int addPigeonToGpcx(List<Long> ids, Long gpcxId, String name, String account, Long gid) {
 
         AtomicReference<Integer> updateNumber = new AtomicReference<>(0);
         //获取更新时间
@@ -49,14 +53,12 @@ public class PigeonGpcxServiceImpl extends ServiceImpl<PigeonGpcxMapper, PigeonG
                 if (!SqlHelper.retBool(insert)) {
                     throw new SaveFailException("新增时发生错误");
                 }
-
-                // TODO 记录新增日志
             } else {
                 //记录更新数
                 updateNumber.getAndSet(updateNumber.get() + 1);
-
-                // TODO 记录更新日志
             }
+
+            oplogService.oplog(account, id, gid, name, LogType.TRANSFER);
         });
 
         //更新鸽子信息
@@ -66,7 +68,7 @@ public class PigeonGpcxServiceImpl extends ServiceImpl<PigeonGpcxMapper, PigeonG
                 .set("gpcx", name)
                 .set("update_data", now);
         int update = pigeonMapper.update(null, wrapper);
-        if (!SqlHelper.retBool(update)) {
+        if (!SqlHelper.retBool(update) || update != ids.size()) {
             throw new SaveFailException("更新鸽子信息失败，请重试");
         }
 

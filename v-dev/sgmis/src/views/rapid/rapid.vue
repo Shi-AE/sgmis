@@ -235,10 +235,10 @@ export default {
     </a-list>
     <div class="button-group">
         <a-space wrap>
-            <a-button type="primary" status="success" @click="addForm()">增加</a-button>
             <a-button type="primary" status="normal" @click="addSame()">同上</a-button>
         </a-space>
     </div>
+    <a-divider :size="2" style="border-bottom-style: dotted" orientation="left"></a-divider>
     <a-button type="primary" @click="commit()" size="large" long>保存</a-button>
 </template>
 

@@ -3,7 +3,7 @@ import * as echarts from "echarts"
 import axiosx from "@/assets/js/axiosx.js"
 import {verifyData} from "@/assets/js/loading.js"
 import {Notification} from '@arco-design/web-vue'
-import {IconSearch, IconPlus, IconEdit, IconRefresh} from '@arco-design/web-vue/es/icon'
+import {IconEdit, IconPlus, IconRefresh, IconSearch} from '@arco-design/web-vue/es/icon'
 import {h} from "vue";
 
 const height = [400, 400, 280, 120]
@@ -511,6 +511,7 @@ export default {
                     data: {
                         id: record.id,
                         sex: record.sex,
+                        ringNumber: record.ringNumber,
                         oid: this.form.oid
                     }
                 }).then(res => {

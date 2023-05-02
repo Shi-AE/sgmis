@@ -212,9 +212,11 @@ public class PigeonController {
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
+        //获取账号名
+        String account = (String) info.get("account");
 
         //执行保存
-        Long pid = pigeonService.savePigeon(pigeon, pigeonInfo, oid, gid);
+        Long pid = pigeonService.saveOrUpdatePigeonById(pigeon, pigeonInfo, oid, gid, account);
 
         return new Result(pid, SuccessCode.Success.code, "上传成功");
     }
@@ -228,21 +230,23 @@ public class PigeonController {
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
-
-        //更新，更新时间
-        pigeon.setUpdateData(LocalDate.now());
+        //获取账号名
+        String account = (String) info.get("account");
 
         //确保gid安全
         if (!gid.equals(pigeon.getGid())) {
             throw new UserInformationException("用户信息错误");
         }
 
-        //保证id存在
-        if (pigeon.getId() == null) {
+        //更新时间
+        pigeon.setUpdateData(LocalDate.now());
+
+        //保证id、足环存在
+        if (pigeon.getId() == null || pigeon.getRingNumber() == null) {
             throw new NotFoundException("鸽子信息错误");
         }
 
-        pigeonService.updatePigeon(pigeon);
+        pigeonService.updatePigeon(pigeon, account);
 
         return new Result(pigeon, SuccessCode.Success.code, "更新成功");
     }
@@ -257,6 +261,8 @@ public class PigeonController {
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
+        //获取账号名
+        String account = (String) info.get("account");
 
         //检查数据完整
         if (field == null || data == null || ids == null || data.equals("null")) {
@@ -272,7 +278,7 @@ public class PigeonController {
             throw new MaliciousSqlInjectionException("不合法的输入");
         }
 
-        pigeonService.updatePigeonByTypeAndIds(ids, field, data, gid);
+        pigeonService.updatePigeonByTypeAndIds(ids, field, data, gid, account);
 
         return new Result(SuccessCode.Success.code, "更新成功");
     }
@@ -286,13 +292,15 @@ public class PigeonController {
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
+        //获取账号名
+        String account = (String) info.get("account");
 
         //检查数据完整
-        if (id == null || sex == null) {
+        if (id == null || sex == null || !(sex.equals("雄") || sex.equals("雌"))) {
             throw new SaveFailException("提交信息错误");
         }
 
-        pigeonService.deletePigeonById(id, sex, gid);
+        pigeonService.deletePigeonById(id, sex, gid, account);
 
         return new Result(SuccessCode.Success.code, "删除成功");
     }
@@ -306,8 +314,10 @@ public class PigeonController {
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
+        //获取账号名
+        String account = (String) info.get("account");
 
-        pigeonService.deletePigeonByIds(pigeons, gid);
+        pigeonService.deletePigeonByIds(pigeons, gid, account);
 
         return new Result(SuccessCode.Success.code, "批量删除成功");
     }
@@ -322,12 +332,14 @@ public class PigeonController {
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
+        //获取账号名
+        String account = (String) info.get("account");
 
         if (ids == null || ids.size() == 0 || receiveGid == null) {
             throw new SaveFailException("提交信息错误");
         }
 
-        pigeonService.sharePigeon(ids, receiveGid, gid);
+        pigeonService.sharePigeon(ids, receiveGid, gid, account);
 
         return new Result(SuccessCode.Success.code, "共享成功");
     }
@@ -370,6 +382,7 @@ public class PigeonController {
         //解析body
         Long id = Long.valueOf((String) body.get("id"));
         String sex = (String) body.get("sex");
+        String ringNumber = (String) body.get("ringNumber");
         Long oid = Long.valueOf((String) body.get("oid"));
 
         //检查信息完整
@@ -380,8 +393,10 @@ public class PigeonController {
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
+        //获取账号名
+        String account = (String) info.get("account");
 
-        pigeonService.relatePigeon(id, sex, oid, gid);
+        pigeonService.relatePigeon(id, sex, ringNumber, oid, gid, account);
 
         return new Result(SuccessCode.Success.code, "关联成功");
     }
@@ -403,6 +418,8 @@ public class PigeonController {
         // 获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
+        //获取账号名
+        String account = (String) info.get("account");
 
         //获取检验数据
         //添加条件 gid or gid = systemGid
@@ -447,7 +464,7 @@ public class PigeonController {
             throw new FileParseException("解析失败");
         }
 
-        pigeonService.savePigeonByFile(pigeonWrappers, gid);
+        pigeonService.savePigeonByFile(pigeonWrappers, gid, account);
 
         return new Result(SuccessCode.Success.code, "入库成功");
     }
