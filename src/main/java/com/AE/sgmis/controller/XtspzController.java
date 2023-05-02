@@ -57,7 +57,7 @@ public class XtspzController {
      * 上传logo图片
      */
     @PostMapping("logo")
-    public Result uploadLogo(MultipartFile file, HttpServletRequest request) {
+    public Result uploadLogo(MultipartFile file) {
 
         if (Objects.isNull(file) || file.isEmpty()) {
             throw new FileSaveException("不能上传空文件");
