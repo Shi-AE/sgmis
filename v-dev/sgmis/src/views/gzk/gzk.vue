@@ -316,6 +316,10 @@ export default {
             //文件导入模态框控制变量
             fileModal: {
                 visible: false
+            },
+            batchLogModal: {
+                visible: false,
+                log: null
             }
         }
     },
@@ -725,7 +729,43 @@ export default {
             //清空多选框
             this.selectedKeys = []
         },
+        //填写日志
         handleBatchLogModalOpen() {
+            if (this.notSelectedKeys()) {
+                return
+            }
+            this.batchLogModal.visible = true
+            this.batchLogModal.log = null
+        },
+        async handleLogBatch() {
+            const log = this.batchLogModal.log;
+            if (log == null || log.length === 0) {
+                Notification.warning("请填写日志内容")
+                return false
+            }
+            //装填oplog
+            const logs = this.selectedKeys.map(key => {
+                const item = this.data[key - 1];
+                return {
+                    pid: item.id,
+                    ringNumber: item.ringNumber,
+                    tip: log
+                }
+            })
+            return await axiosx({
+                method: "PUT",
+                url: "oplog",
+                data: logs,
+                message: "正在添加日志"
+            }).then(res => {
+                if (res.data.code === 200) {
+                    Notification.success(res.data.message)
+                    return true
+                } else {
+                    Notification.error(res.data.message)
+                    return false
+                }
+            })
         },
         //处理批量分享模态框开启
         handleBatchShareModalOpen() {
@@ -928,7 +968,8 @@ export default {
             <a-button type="primary" status="normal" @click="handleBatchEditModalOpen('ylhl')">医疗护理</a-button>
             <a-button type="primary" status="warning" @click="handleBatchLogModalOpen()">填写日志</a-button>
             <!--共享血统只有管理员可以操作-->
-            <a-button :disabled="!$store.state.admin" type="primary" status="warning" @click="handleBatchShareModalOpen()">
+            <a-button :disabled="!$store.state.admin" type="primary" status="warning"
+                      @click="handleBatchShareModalOpen()">
                 共享血统
             </a-button>
             <a-button type="primary" status="success" @click="handleBatchGpcxModalOpen()">加入鸽棚巢箱</a-button>
@@ -1273,6 +1314,15 @@ export default {
              @cancel="handleCancel" :footer="false">
         <a-upload draggable :custom-request="handleFileUpload" tip="上传.xls\.xlsx文件"
                   accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+    </a-modal>
+  <!--填写日志模态框-->
+    <a-modal v-model:visible="batchLogModal.visible" title="填写日志" width="calc(300px + 0.12 * 100vw)"
+             @before-ok="handleLogBatch" @cancel="handleCancel">
+        <a-form :model="batchLogModal">
+            <a-form-item label="日志内容">
+                <a-textarea v-model.lazy="batchLogModal.log"></a-textarea>
+            </a-form-item>
+        </a-form>
     </a-modal>
 </template>
 

@@ -8,7 +8,7 @@ spring:
     username: root
     password: 799823
   jackson:
-    date-format: yyyy-MM-dd hh:mm:ss
+    date-format: yyyy-MM-dd HH:mm:ss
     time-zone: Asia/Shanghai
   servlet:
     multipart:
@@ -44,3 +44,6 @@ file:
 pigeon:
   generation:
     limit: 7
+
+page:
+  maxLimit: 10000

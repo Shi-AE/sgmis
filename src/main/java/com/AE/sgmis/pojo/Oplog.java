@@ -1,6 +1,7 @@
 package com.AE.sgmis.pojo;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -42,6 +43,10 @@ public class Oplog {
      * 组id
      */
     private Long gid;
+
+    @SuppressWarnings("unused")
+    public Oplog() {
+    }
 
     public Oplog(String author, String ringNumber, Integer content, String tip, LocalDateTime time, Long pid, Long gid) {
         this.author = author;

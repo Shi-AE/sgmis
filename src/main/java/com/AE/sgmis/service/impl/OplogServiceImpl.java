@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Slf4j
 @Service
@@ -90,5 +91,25 @@ public class OplogServiceImpl extends ServiceImpl<OplogMapper, Oplog> implements
             log.error("{} 日志记录失败", oplog);
             throw new LogException("日志保存失败");
         }
+    }
+
+    @Override
+    @Transactional
+    public void batchAddLog(List<Oplog> oplogs, Long gid, String account) {
+
+        //获取时间
+        LocalDateTime now = LocalDateTime.now();
+
+        oplogs.forEach(oplog -> {
+            oplog.setGid(gid);
+            oplog.setAuthor(account);
+            oplog.setTime(now);
+            oplog.setContent(LogType.OTHER.getIndex());
+            int insert = oplogMapper.insert(oplog);
+            if (!SqlHelper.retBool(insert)) {
+                log.error("{} 日志记录失败", oplog);
+                throw new LogException("日志保存失败");
+            }
+        });
     }
 }

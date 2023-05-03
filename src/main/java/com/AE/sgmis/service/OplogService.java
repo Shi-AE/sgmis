@@ -4,6 +4,8 @@ import com.AE.sgmis.pojo.Oplog;
 import com.AE.sgmis.result.LogType;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 public interface OplogService extends IService<Oplog> {
 
     /**
@@ -66,4 +68,9 @@ public interface OplogService extends IService<Oplog> {
      * @param type       类型
      */
     void oplog(String account, String ringNumber, Long gid, LogType type);
+
+    /**
+     * 批量插入自定义日志
+     */
+    void batchAddLog(List<Oplog> oplogs, Long gid, String account);
 }

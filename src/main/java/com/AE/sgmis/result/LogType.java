@@ -8,7 +8,7 @@ public enum LogType {
     /**
      * 修改
      */
-    UPDATE(1, "修改鸽子"),
+    UPDATE(1, "修改信息"),
     /**
      * 删除
      */
@@ -28,11 +28,15 @@ public enum LogType {
     /**
      * 解除血亲关系
      */
-    UNPARENT(6, "解除血亲关系"),
+    UNPARENT(6, "解除血亲"),
     /**
      * 转移鸽棚巢箱
      */
-    TRANSFER(7, "转移鸽棚巢箱");
+    TRANSFER(7, "转移鸽棚巢箱"),
+    /**
+     * 其他
+     */
+    OTHER(8, "其他");
 
 
     private final int index;

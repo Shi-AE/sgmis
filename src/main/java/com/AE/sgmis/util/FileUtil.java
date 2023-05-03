@@ -12,6 +12,7 @@ import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.stream.Stream;
 
 /**
  * 文件工具类
@@ -43,7 +44,19 @@ public class FileUtil {
             Files.copy(file.getInputStream(), path.resolve(uniqueFileName));
             return uniqueFileName;
         } catch (IOException e) {
-            log.error("保存文件 {} 时发生错误", file);
+            log.error("保存文件 {} 时发生错误", file, e);
+            throw new FileSaveException("文件保存失败");
+        }
+    }
+
+    /**
+     * 根据文件目录获取一级子文件
+     */
+    public Stream<Path> getFileListByDirectory(Path dirPath) {
+        try {
+            return Files.list(dirPath);
+        } catch (IOException e) {
+            log.error("查询文件目录 {} 时发生错误", dirPath, e);
             throw new FileSaveException("文件保存失败");
         }
     }
