@@ -2,6 +2,7 @@ package com.AE.sgmis.controller;
 
 import com.AE.sgmis.exceptions.AccessException;
 import com.AE.sgmis.exceptions.ConfirmPasswordInconsistencyException;
+import com.AE.sgmis.exceptions.SaveFailException;
 import com.AE.sgmis.exceptions.UnchangedPasswordException;
 import com.AE.sgmis.pojo.LoginMsg;
 import com.AE.sgmis.pojo.ParamUser;
@@ -9,18 +10,26 @@ import com.AE.sgmis.pojo.UpdateUserInfo;
 import com.AE.sgmis.pojo.User;
 import com.AE.sgmis.result.Result;
 import com.AE.sgmis.result.SuccessCode;
+import com.AE.sgmis.service.LoginMsgService;
 import com.AE.sgmis.service.LoginService;
+import com.AE.sgmis.util.IpUtil;
 import com.AE.sgmis.util.JwtUtil;
+import eu.bitwalker.useragentutils.Browser;
+import eu.bitwalker.useragentutils.OperatingSystem;
+import eu.bitwalker.useragentutils.UserAgent;
+import eu.bitwalker.useragentutils.Version;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
+@Slf4j
 @RestController
 @RequestMapping("api/login")
 public class LoginController {
@@ -28,7 +37,11 @@ public class LoginController {
     @Autowired
     private LoginService loginService;
     @Autowired
+    private LoginMsgService loginMsgService;
+    @Autowired
     private JwtUtil jwtUtil;
+    @Autowired
+    private IpUtil ipUtil;
 
     /**
      * 验证登录
@@ -47,12 +60,20 @@ public class LoginController {
         user = loginService.loginVerify(user);
         loginService.updateEncrypt(user);
 
-        //把用户信息集合成map
-        String ip = request.getRemoteAddr();
+        //拿取用户信息
+        String ip = ipUtil.getIp(request);
+        //解析请求头中User-Agent
+        String userAgent = request.getHeader("User-Agent");
+        UserAgent parseUserAgent = UserAgent.parseUserAgentString(userAgent);
+        //获取用户设备信息
+        Browser browser = parseUserAgent.getBrowser();
+        Version browserVersion = parseUserAgent.getBrowserVersion();
+        OperatingSystem os = parseUserAgent.getOperatingSystem();
         Long id = user.getId();
         Long gid = user.getGid();
         Boolean admin = user.getAdmin();
 
+        //把用户信息集合成map
         Map<String, Object> claim = new HashMap<>();
 
         claim.put("id", id);
@@ -67,6 +88,21 @@ public class LoginController {
         Map<String, Object> map = new HashMap<>();
         map.put("token", token);
         map.put("admin", admin);
+
+        //记录登录日志
+        LoginMsg loginMsg = new LoginMsg();
+        loginMsg.setIp(ip);
+        loginMsg.setGid(gid);
+        loginMsg.setTime(LocalDateTime.now());
+        loginMsg.setAccount(account);
+        loginMsg.setBrowser(browser.getName() + browserVersion.getVersion());
+        loginMsg.setOs(os.getName());
+        loginMsg.setDevice(os.getDeviceType().getName());
+        boolean success = loginMsgService.save(loginMsg);
+        if (!success) {
+            log.error("记录登录信息 {} 出错", loginMsg);
+            throw new SaveFailException("登录出错");
+        }
 
         return new Result(map, SuccessCode.LoginSuccess.code, "登录成功");
     }
@@ -140,15 +176,5 @@ public class LoginController {
         loginService.updateEncrypt(user);
 
         return new Result(SuccessCode.ModifyPasswordSuccess.code, "修改密码成功");
-    }
-
-    /**
-     * 获取历史登录信息
-     */
-    @GetMapping("/getLoginMsg")
-    public Result getLoginMsg() {
-        List<LoginMsg> loginMsgList = loginService.getLoginMsgList();
-        System.out.println(loginMsgList);
-        return new Result(loginMsgList, SuccessCode.Success.code, "查询成功");
     }
 }

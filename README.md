@@ -6,3 +6,4 @@
 - // TODO gzk 页参数
 - <router-view :key="$route.fullPath"></router-view> 同路由不同参刷新页面
 - SqlInjectionUtils
+- 更新token防止活跃用户过期

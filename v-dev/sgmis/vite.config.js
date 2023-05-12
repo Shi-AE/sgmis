@@ -1,20 +1,43 @@
-import { defineConfig } from 'vite'
+import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
 
+//dev
 export default defineConfig({
-  plugins: [vue()],
-  resolve: {
-    alias: {
-      "@": "/src"
+    plugins: [vue()],
+    resolve: {
+        alias: {
+            "@": "/src"
+        }
+    },
+    server: {
+        host: "0.0.0.0",
+        proxy: {
+            "/api": {
+                target: "http://localhost:8080",
+                changeOrigin: true
+            },
+            "/pigeon": {
+                target: "http://localhost:8080",
+                changeOrigin: true
+            },
+            "/logo": {
+                target: "http://localhost:8080",
+                changeOrigin: true
+            }
+        }
     }
-  },
-  server: {
-    host: "0.0.0.0",
-    proxy: {
-      "/api": {
-        target: "http://localhost",
-        changeOrigin: true
-      }
-    }
-  }
 })
+
+//build
+// export default defineConfig({
+//     plugins: [vue()],
+//     base: '/',
+//     resolve: {
+//         alias: {
+//             "@": "/src"
+//         }
+//     },
+//     build: {
+//         host: "0.0.0.0",
+//     }
+// })

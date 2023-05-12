@@ -1,5 +1,5 @@
 server:
-  port: 80
+  port: 8080
 
 spring:
   datasource:
@@ -22,8 +22,11 @@ encrypt:
   hashLength: 512
 
 jwt:
-  expires: 86400
+  #秒
+  expires: 21600
   secret-key: S&h(i(to*A@E#
+  #分钟
+  update-gap: 30
 
 # 配置信息的表名，防止sql注入
 xxpz:
@@ -47,3 +50,12 @@ pigeon:
 
 page:
   maxLimit: 10000
+
+carousel:
+  limit: 10
+
+# 月
+recent:
+  create: 1
+  delete: 1
+  oplog: 1

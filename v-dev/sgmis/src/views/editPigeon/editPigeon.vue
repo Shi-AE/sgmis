@@ -8,7 +8,6 @@ import {h} from "vue";
 
 const height = [400, 400, 280, 120]
 const offset = [0, 70, 0, -27]
-const pigeonResourcePath = `${window.location.protocol}//${window.location.hostname}/pigeon`
 const sexJudge = {
     "父": 0,
     "我": 0,
@@ -277,7 +276,7 @@ export default {
                         pictureUrl: pigeon?.pictureUrl ?? null,
                     }
                     this.file = {
-                        url: pigeon?.pictureUrl ? `${pigeonResourcePath}/${pigeon.pictureUrl}` : null,
+                        url: pigeon?.pictureUrl ? `${this.$store.state.pigeonResourcePath}/${pigeon.pictureUrl}` : null,
                         name: pigeon?.pictureUrl ?? null
                     }
                 }

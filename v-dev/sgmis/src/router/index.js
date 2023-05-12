@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router"
 import axiosx from "@/assets/js/axiosx.js"
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory('/'),
     routes: [
         {
             path: "/login",

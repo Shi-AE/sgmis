@@ -263,7 +263,7 @@ export default {
             </a-space>
         </div>
         <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">基础选项</a-divider>
-        <a-table :columns="columns" :data="data" :scroll="{ minWidth: 540 }" :pagination="false"
+        <a-table :columns="columns" :data="data" :scroll="{ minWidth: 540 }"
             :row-selection="rowSelection" v-model:selectedKeys="selectedKeys" :filter-icon-align-left="true">
             <!-- 筛选器 -->
             <template #head-filter="{ filterValue, setFilterValue, handleFilterConfirm, handleFilterReset }">

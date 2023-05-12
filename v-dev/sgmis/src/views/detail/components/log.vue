@@ -34,7 +34,7 @@ export default {
 
 <template>
     <div class="log">
-        <a-timeline>
+        <a-timeline label-position="relative">
             <div v-for="(item, index) in log" :key="index">
                 <a-timeline-item dot-type="hollow" :dot-color="color[index]" :label="item.time">
                     {{ item.tip }}

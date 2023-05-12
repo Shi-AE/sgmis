@@ -1,5 +1,6 @@
 <script>
 import axiosx from "../../assets/js/axiosx.js";
+import {Notification} from '@arco-design/web-vue'
 
 export default {
     data() {
@@ -13,7 +14,9 @@ export default {
                 {
                     title: "信息",
                     dataIndex: "tip",
-                    align: "center"
+                    align: "center",
+                    ellipsis: true,
+                    tooltip: true
                 },
                 {
                     title: "足环",

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Map;
 
 /**
@@ -37,6 +38,7 @@ public class JwtUtil {
         builder.withClaim("info", claim);
 
         return builder.withExpiresAt(instance.getTime())
+                .withIssuedAt(new Date())
                 .sign(Algorithm.HMAC256(secretKey));
     }
 

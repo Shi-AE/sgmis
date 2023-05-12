@@ -1,4 +1,4 @@
-import { createStore } from 'vuex'
+import {createStore} from 'vuex'
 import createPersistedState from "vuex-persistedstate";
 
 const store = createStore({
@@ -21,7 +21,9 @@ const store = createStore({
             account: "root",
             admin: false,
             isPending: false,
-            logoName: ""
+            logoName: "",
+            pigeonResourcePath: `/pigeon`,
+            logoResourcePath: `/logo`
         }
     },
     mutations: {

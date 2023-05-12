@@ -1,5 +1,6 @@
 package com.AE.sgmis.controller;
 
+import com.AE.sgmis.exceptions.MaliciousSqlInjectionException;
 import com.AE.sgmis.exceptions.NotFoundException;
 import com.AE.sgmis.pojo.Oplog;
 import com.AE.sgmis.pojo.PagingCondition;
@@ -38,6 +39,10 @@ public class OplogController {
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
+
+        if (!(0 < limit && limit < maxLimit)) {
+            throw new MaliciousSqlInjectionException(" limit异常");
+        }
 
         //条件
         QueryWrapper<Oplog> wrapper = new QueryWrapper<>();

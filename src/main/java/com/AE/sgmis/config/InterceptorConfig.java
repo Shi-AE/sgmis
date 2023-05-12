@@ -16,10 +16,12 @@ public class InterceptorConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
+        //接收所有api
         registry.addInterceptor(loginInterceptor)
                 .addPathPatterns("/api/**")
                 .excludePathPatterns("/api/login/authority")
                 .order(1);
+
         registry.addInterceptor(adminInterceptor)
                 .addPathPatterns("/api/user/**")
                 .order(2);

@@ -14,7 +14,6 @@ export default {
     },
     data() {
         return {
-            pigeonResourcePath: `${window.location.protocol}//${window.location.hostname}/pigeon`,
             columns: [
                 {
                     title: "序号",
@@ -1053,7 +1052,8 @@ export default {
         </template>
         <!-- 图片插槽 -->
         <template #picture="{ record }">
-            <a-image :src="`${pigeonResourcePath}/${record.pictureUrl}`" width="100%" height="100%" fit="cover"
+            <a-image :src="`${$store.state.pigeonResourcePath}/${record.pictureUrl}`" width="100%" height="100%"
+                     fit="cover"
                      v-if="record.pictureUrl"/>
         </template>
         <!-- 足环插槽 -->

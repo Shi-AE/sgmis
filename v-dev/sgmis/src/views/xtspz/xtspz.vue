@@ -4,8 +4,6 @@ import axiosx from "@/assets/js/axiosx.js"
 import { Notification } from '@arco-design/web-vue'
 import store from "@/store"
 
-const logoResourcePath = `${window.location.protocol}//${window.location.hostname}/logo`
-
 export default {
     components: { IconPlus, IconEdit },
     data() {
@@ -92,7 +90,7 @@ export default {
                 if (data.logoUrl !== null) {
                     store.commit("setLogoName", data.logoUrl)
                     this.file = {
-                        url: `${logoResourcePath}/${this.$store.state.logoName}`,
+                        url: `${this.$store.state.logoResourcePath}/${this.$store.state.logoName}`,
                         name: this.$store.state.logoName
                     }
                 } else {

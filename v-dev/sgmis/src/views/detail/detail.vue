@@ -11,7 +11,6 @@ export default {
     components: {Picture, Content, Stats},
     data() {
         return {
-            pigeonResourcePath: `${window.location.protocol}//${window.location.hostname}/pigeon`,
             data: null
         }
     },
@@ -68,21 +67,21 @@ export default {
                 const s = this.data[0]
                 if (s?.value?.pigeon?.pictureUrl) {
                     pictures.push(
-                        `${this.pigeonResourcePath}/${s.value.pigeon.pictureUrl}`
+                        `${this.$store.state.pigeonResourcePath}/${s.value.pigeon.pictureUrl}`
                     )
                 }
                 //父
                 const f = s.children[0]
                 if (f?.value?.pigeon?.pictureUrl) {
                     pictures.push(
-                        `${this.pigeonResourcePath}/${f.value.pigeon.pictureUrl}`
+                        `${this.$store.state.pigeonResourcePath}/${f.value.pigeon.pictureUrl}`
                     )
                 }
                 //母
                 const m = s.children[1]
                 if (m?.value?.pigeon?.pictureUrl) {
                     pictures.push(
-                        `${this.pigeonResourcePath}/${m.value.pigeon.pictureUrl}`
+                        `${this.$store.state.pigeonResourcePath}/${m.value.pigeon.pictureUrl}`
                     )
                 }
             }

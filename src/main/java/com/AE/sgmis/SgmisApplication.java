@@ -9,7 +9,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
 @EnableScheduling
-@ServletComponentScan("com.AE.sgmis.filter")
 @MapperScan("com.AE.sgmis.mapper")
 public class SgmisApplication implements WebMvcConfigurer {
     public static void main(String[] args) {

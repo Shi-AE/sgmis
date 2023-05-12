@@ -1,8 +1,8 @@
 import axios from "axios"
-import { addLoading, clearLoading } from "@/assets/js/loading.js"
+import {addLoading, clearLoading} from "@/assets/js/loading.js"
 import router from "@/router"
 import store from "@/store"
-import { Notification } from '@arco-design/web-vue'
+import {Notification} from '@arco-design/web-vue'
 import JSONbigint from "json-bigint"
 
 //定义键盘事件
@@ -37,6 +37,7 @@ axiosx.interceptors.request.use(config => {
         //添加请求头
         headers: {
             ...config.headers,
+
             Authorization: store.getters.doneToken
         }
     }
@@ -56,12 +57,16 @@ axiosx.interceptors.response.use(response => {
     if (response.data.code === 411) {
         Notification.error(response.data.message)
         store.commit("setToken", "")
-        router.push({ name: "403" })
+        router.push({name: "403"})
     }
     //访问权限异常
     if (response.data.code === 403) {
         Notification.error(response.data.message)
-        router.push({ name: "403" })
+        router.push({name: "403"})
+    }
+    //更新token防止活跃用户过期
+    if (response.headers.authorization) {
+        store.commit("setToken", response.headers.authorization)
     }
     store.commit("setPending", false)
     return response;
