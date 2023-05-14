@@ -5,8 +5,10 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/sgmis
+#    url: jdbc:mysql://42.193.192.61:3306/sgmis
     username: root
     password: 799823
+#    password: guatdev
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: Asia/Shanghai

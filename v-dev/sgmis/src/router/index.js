@@ -25,6 +25,14 @@ const router = createRouter({
                     }
                 },
                 {
+                    path: "loginMsg",
+                    name: "loginMsg",
+                    component: () => import("@/views/loginMsg/loginMsg.vue"),
+                    meta: {
+                        title: "登录信息"
+                    }
+                },
+                {
                     path: "feedback",
                     name: "feedback",
                     component: () => import("@/views/feedback/feedback.vue"),

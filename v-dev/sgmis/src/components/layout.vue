@@ -1,15 +1,15 @@
 <script>
 import {defineComponent, ref} from 'vue';
+import axiosx from "@/assets/js/axiosx.js"
 import {
-    IconApps, IconBook, IconBranch, IconCalendar, IconCaretLeft, IconCaretRight,
+    IconApps, IconBook, IconBranch, IconCalendar, IconCaretLeft, IconCaretRight, IconFindReplace,
     IconCustomerService, IconHome, IconNav, IconQuestionCircle, IconSearch, IconSettings, IconStorage,
     IconUser, IconSubscribeAdd, IconEdit, IconExport, IconSelectAll, IconTool, IconIdcard
 } from '@arco-design/web-vue/es/icon'
-import axiosx from "@/assets/js/axiosx.js"
 
 export default defineComponent({
     components: {
-        IconApps, IconBook, IconBranch, IconCalendar, IconCaretLeft, IconCaretRight,
+        IconApps, IconBook, IconBranch, IconCalendar, IconCaretLeft, IconCaretRight, IconFindReplace,
         IconCustomerService, IconHome, IconNav, IconQuestionCircle, IconSearch, IconSettings, IconStorage,
         IconUser, IconSubscribeAdd, IconEdit, IconExport, IconSelectAll, IconTool, IconIdcard
     },
@@ -205,6 +205,14 @@ export default defineComponent({
                     </div>
 
                 </a-sub-menu>
+                <a-divider margin="0 0 5px"/>
+
+                <RouterLink :to="{ name: 'loginMsg' }">
+                    <a-menu-item key="loginMsg">
+                        <IconFindReplace/>
+                        登录信息
+                    </a-menu-item>
+                </RouterLink>
                 <a-divider margin="0 0 5px"/>
 
                 <RouterLink :to="{ name: 'help' }">

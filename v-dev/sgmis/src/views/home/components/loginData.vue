@@ -138,7 +138,7 @@ export default {
                         </a-timeline-item>
                     </div>
                 </a-timeline>
-                <a-button size="mini" shape="round" type="outline" @click="$router.push({name: 'log'})">更多</a-button>
+                <a-button size="mini" shape="round" type="outline" @click="$router.push({name: 'loginMsg'})">更多</a-button>
             </div>
         </a-grid-item>
     </a-grid>

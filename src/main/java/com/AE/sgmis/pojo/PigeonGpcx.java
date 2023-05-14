@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 @Data
-@TableName("t_pigeon_Gpcx")
+@TableName("t_pigeon_gpcx")
 public class PigeonGpcx {
     /**
      * 自然主键

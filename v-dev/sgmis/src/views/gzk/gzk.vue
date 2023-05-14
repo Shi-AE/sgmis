@@ -995,8 +995,8 @@ export default {
                 </template>
                 <a-button type="primary" status="warning" @click="toBatch()">高级批量操作</a-button>
                 <a-button type="primary" status="warning" @click="toLog()">查看操作记录</a-button>
-                <a-button type="primary" status="danger">打印血统</a-button>
-                <a-button type="primary" status="danger">导出血统书展示链接</a-button>
+                <!--<a-button type="primary" status="danger">打印血统</a-button>-->
+                <!--<a-button type="primary" status="danger">导出血统书展示链接</a-button>-->
             </a-space>
             <a-space>
                 <a-button type="primary" status="success" @click="resetTable()">

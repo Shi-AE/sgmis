@@ -14,6 +14,7 @@ import com.AE.sgmis.service.LoginMsgService;
 import com.AE.sgmis.service.LoginService;
 import com.AE.sgmis.util.IpUtil;
 import com.AE.sgmis.util.JwtUtil;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import eu.bitwalker.useragentutils.Browser;
 import eu.bitwalker.useragentutils.OperatingSystem;
 import eu.bitwalker.useragentutils.UserAgent;
@@ -22,6 +23,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -42,6 +44,8 @@ public class LoginController {
     private JwtUtil jwtUtil;
     @Autowired
     private IpUtil ipUtil;
+    @Value("${page.maxLimit}")
+    private Integer limit;
 
     /**
      * 验证登录
@@ -176,5 +180,26 @@ public class LoginController {
         loginService.updateEncrypt(user);
 
         return new Result(SuccessCode.ModifyPasswordSuccess.code, "修改密码成功");
+    }
+
+    /**
+     * 获取所有登录信息
+     * 避免过多查询设置限制
+     */
+    @GetMapping("message")
+    public Result getLoginMessage(HttpServletRequest request) {
+        //获取gid
+        Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
+        Long gid = (Long) info.get("gid");
+
+        //限制一下总数
+        QueryWrapper<LoginMsg> wrapper = new QueryWrapper<>();
+        wrapper.eq("gid", gid)
+                .orderByDesc("time")
+                .last("LIMIT " + limit);
+
+        List<LoginMsg> list = loginMsgService.list(wrapper);
+
+        return new Result(list, SuccessCode.Success.code, "查询成功");
     }
 }
