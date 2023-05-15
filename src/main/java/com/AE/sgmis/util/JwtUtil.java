@@ -28,18 +28,7 @@ public class JwtUtil {
      * @return token值
      */
     public String getToken(Map<String, Object> claim) {
-
-        Calendar instance = Calendar.getInstance();
-        instance.add(Calendar.SECOND, expires);
-
-        JWTCreator.Builder builder = JWT.create();
-
-        //填充用户信息
-        builder.withClaim("info", claim);
-
-        return builder.withExpiresAt(instance.getTime())
-                .withIssuedAt(new Date())
-                .sign(Algorithm.HMAC256(secretKey));
+        return getToken(claim, expires);
     }
 
     /**
@@ -50,6 +39,7 @@ public class JwtUtil {
      */
     public String getToken(Map<String, Object> claim, int expires) {
 
+        //过期时间
         Calendar instance = Calendar.getInstance();
         instance.add(Calendar.SECOND, expires);
 
@@ -59,6 +49,7 @@ public class JwtUtil {
         builder.withClaim("info", claim);
 
         return builder.withExpiresAt(instance.getTime())
+                .withIssuedAt(new Date())
                 .sign(Algorithm.HMAC256(secretKey));
     }
 

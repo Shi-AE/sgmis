@@ -49,7 +49,7 @@ public class PigeonController {
     /**
      * 图片类型
      */
-    private List<String> type;
+    private Set<String> type;
     private Path path;
     private final Set<String> fields = Set.of("ys", "yan", "lx", "state", "jb");
 
@@ -57,7 +57,7 @@ public class PigeonController {
     public void init() {
         //初始化资源
         path = Paths.get(basePath);
-        type = List.of(typeArray);
+        type = Set.of(typeArray);
         //初始化文件夹
         fileUtil.initDirectory(path);
     }

@@ -8,9 +8,9 @@ import com.AE.sgmis.result.SuccessCode;
 import com.AE.sgmis.service.UserService;
 import com.AE.sgmis.util.EncryptUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import jakarta.annotation.PostConstruct;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +21,7 @@ import java.util.Map;
 @Slf4j
 @RestController
 @RequestMapping("api/user")
-public class UserController implements InitializingBean {
+public class UserController {
 
     @Autowired
     private UserService userService;
@@ -35,10 +35,10 @@ public class UserController implements InitializingBean {
      * 一次性初始化为字节数组
      * 减少服务器资源消耗
      */
-    @Override
-    public void afterPropertiesSet() {
+    @PostConstruct
+    public void init() {
         defaultPasswordBin = defaultPassword.getBytes();
-        log.info("{} 初始化 defaultPassword 化为字节数组完成", UserController.class);
+        log.info("初始化 defaultPassword 化为字节数组完成 {}", defaultPasswordBin);
     }
 
     /**

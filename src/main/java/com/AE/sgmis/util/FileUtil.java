@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.List;
+import java.util.Set;
 import java.util.stream.Stream;
 
 /**
@@ -91,7 +91,7 @@ public class FileUtil {
      * 检查文件类型是否匹配
      */
     @SuppressWarnings("UnusedReturnValue")
-    public String checkFileType(MultipartFile file, List<String> typeList) {
+    public String checkFileType(MultipartFile file, Set<String> typeList) {
         String fileType = getFileType(file);
         boolean checked = typeList.contains(fileType);
         if (!checked) {
@@ -105,7 +105,8 @@ public class FileUtil {
      * 检查文件类型是否匹配
      */
     public String checkFileType(MultipartFile file, String... types) {
-        List<String> typeList = List.of(types);
+//        List<String> typeList = List.of(types);
+        Set<String> typeList = Set.of(types);
         String fileType = getFileType(file);
         boolean checked = typeList.contains(fileType);
         if (!checked) {

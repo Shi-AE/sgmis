@@ -1,12 +1,14 @@
 package com.AE.sgmis.controller;
 
 import com.AE.sgmis.exceptions.DeleteFailException;
+import com.AE.sgmis.exceptions.MaliciousSqlInjectionException;
 import com.AE.sgmis.exceptions.SaveFailException;
 import com.AE.sgmis.pojo.Xxpz;
 import com.AE.sgmis.result.Result;
 import com.AE.sgmis.result.SuccessCode;
 import com.AE.sgmis.service.XxpzService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import jakarta.annotation.PostConstruct;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,16 +18,26 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 @Slf4j
 @RestController
 @RequestMapping("api/xxpz")
 public class XxpzController {
 
-    @Value("${xxpz.systemGid}")
-    private Integer systemGid;
     @Autowired
     private XxpzService xxpzService;
+    @Value("${xxpz.systemGid}")
+    private Integer systemGid;
+    @Value("${xxpz.tableNames}")
+    private String[] names;
+    private Set<String> tableNames;
+
+    @PostConstruct
+    public void init() {
+        tableNames = Set.of(names);
+        log.info("选项配置类型防注入set初始化完成");
+    }
 
     /**
      * 获取所有类型的所有数据
@@ -53,6 +65,11 @@ public class XxpzController {
      */
     @GetMapping("{type}")
     public Result getAllByType(@PathVariable String type, HttpServletRequest request) {
+        //判断是否异常type注入
+        if (!tableNames.contains(type)) {
+            throw new MaliciousSqlInjectionException("配置类型异常注入");
+        }
+
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
@@ -115,6 +132,11 @@ public class XxpzController {
     // TODO 数据库控制输入数据
     @PostMapping("{type}")
     public Result add(@RequestBody Xxpz xxpz, @PathVariable String type, HttpServletRequest request) {
+        //判断是否异常type注入
+        if (!tableNames.contains(type)) {
+            throw new MaliciousSqlInjectionException("配置类型异常注入");
+        }
+
         //从请求域中获取用户信息
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         xxpz.setAuthor((String) info.get("account"));
@@ -131,7 +153,7 @@ public class XxpzController {
     }
 
     /**
-     * 更新数据
+     * 根据id更新数据
      */
     @PutMapping
     public Result update(@RequestBody Xxpz xxpz, HttpServletRequest request) {
@@ -140,7 +162,7 @@ public class XxpzController {
         Long gid = (Long) info.get("gid");
 
         //安全检查
-        if (!xxpz.getGid().equals(gid)) {
+        if (xxpz.getGid() == null || !xxpz.getGid().equals(gid)) {
             throw new SaveFailException("用户信息不匹配，请重试");
         }
 

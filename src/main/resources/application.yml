@@ -32,7 +32,7 @@ jwt:
 
 # 配置信息的表名，防止sql注入
 xxpz:
-  tableNames: yspz, lxpz, yanpz, jbpz, ylhl, gdcgzt
+  tableNames: yspz, lxpz, yanpz, jbpz, ylhl, gdcgzt, breeder, country, province, state
   systemGid: 0
 
 user:
@@ -61,3 +61,7 @@ recent:
   create: 1
   delete: 1
   oplog: 1
+
+#day
+log:
+  maxHistory: 180
