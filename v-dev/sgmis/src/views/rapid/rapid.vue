@@ -113,6 +113,21 @@ export default {
             const item = JSON.parse(JSON.stringify(this.form.pigeon[index]))
             this.form.pigeon.splice(index, 0, item)
         },
+        resetForm() {
+            this.form = {
+                fid: null,
+                mid: null,
+                pigeon: [
+                    {
+                        country: null,
+                        year: null,
+                        province: null,
+                        code: null,
+                        sex: null
+                    }
+                ]
+            }
+        },
         commit() {
             const pigeons = []
             if (!verifyData(() => {
@@ -159,6 +174,7 @@ export default {
                 message: "正在快速入库"
             }).then(res => {
                 if (res.data.code === 200) {
+                    this.resetForm()
                     Notification.success(res.data.message)
                 } else {
                     Notification.error(`${res.data.message}，如需添加血亲关系，请移步血统编辑`)

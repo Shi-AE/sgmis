@@ -37,11 +37,11 @@ export default {
         onChange(_, currentFile) {
             this.file = currentFile
         },
-        customRequest(option) {
+        async customRequest(option) {
             const { onProgress, onError, onSuccess, fileItem, name } = option
             const formData = new FormData();
             formData.append(name || 'file', fileItem.file);
-            axiosx({
+            return await axiosx({
                 method: "POST",
                 url: "xtspz/logo",
                 data: formData,

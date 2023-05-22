@@ -280,8 +280,8 @@ export default {
             <!-- 每条记录控制按钮插槽 -->
             <template #operation="{ record }">
                 <a-space>
-                    <a-button type="primary" @click="handleUpdateModal(record)">编辑</a-button>
-                    <a-button type="primary" status="danger" @click="handleDelete(record)">删除</a-button>
+                    <a-button type="outline" @click="handleUpdateModal(record)">编辑</a-button>
+                    <a-button type="outline" status="danger" @click="handleDelete(record)">删除</a-button>
                 </a-space>
             </template>
         </a-table>

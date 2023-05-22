@@ -204,8 +204,8 @@ export default {
         <!-- 每条记录控制按钮 -->
         <template #operation="{ record }">
             <a-space>
-                <a-button type="primary" @click="resetPasswordClick(record)">重置密码</a-button>
-                <a-button type="primary" status="danger" @click="DeleteUserClick(record)">删除成员</a-button>
+                <a-button type="outline" @click="resetPasswordClick(record)">重置密码</a-button>
+                <a-button type="outline" status="danger" @click="DeleteUserClick(record)">删除成员</a-button>
             </a-space>
         </template>
     </a-table>
