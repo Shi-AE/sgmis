@@ -36,3 +36,5 @@ build/
 /pigeon/
 /src/main/resources/static/
 /v-dev/sgmis/public/img/
+/system/
+/README.html

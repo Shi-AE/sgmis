@@ -65,3 +65,20 @@ recent:
 #day
 log:
   maxHistory: 180
+
+QR:
+  width: 168
+  height: 168
+  image-format: png
+  charset: utf-8
+  base64-image: data:image/png;base64,%s
+  logo-url: system/logo/logo.jpg
+  background: 0xFFFFFF
+  foreground: 0x000000
+  logo-width: 36
+  logo-height: 36
+
+feedback:
+  githubUrl: https://github.com/Shi-AE/sgmis
+  guatUrl: https://www.guat.edu.cn
+  mailUrl: mailto:2021070030101@guat.edu.cn
