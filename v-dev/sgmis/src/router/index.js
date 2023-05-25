@@ -9,7 +9,8 @@ const router = createRouter({
             name: "login",
             component: () => import('@/views/login/login.vue'),
             meta: {
-                title: "登录"
+                title: "登录",
+                free: true
             }
         },
         {
@@ -193,6 +194,19 @@ const router = createRouter({
 })
 
 router.beforeEach(async (to) => {
+    //免密登录
+    if (to.meta.free) {
+        await axiosx({
+            method: "GET",
+            url: "login",
+            message: "登录验证"
+        }).then(res => {
+            if (res.data.code === 203) {
+                router.push({name: "home"})
+            }
+        })
+    }
+    //验证访问
     if (to.meta.requiresAuth) {
         await axiosx({
             method: "GET",
@@ -200,6 +214,7 @@ router.beforeEach(async (to) => {
             message: "登录验证"
         })
     }
+    //验证管理员访问
     if(to.meta.requiresAdminAuth) {
         await axiosx({
             method: "GET",
@@ -207,6 +222,7 @@ router.beforeEach(async (to) => {
             message: "验证管理员信息"
         })
     }
+    //动态标题
     if (to.meta.title) {
         document.title = `赛鸽云库 -- ${to.meta.title}`
     }
