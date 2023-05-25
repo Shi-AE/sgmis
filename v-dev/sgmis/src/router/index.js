@@ -205,7 +205,7 @@ router.beforeEach(async (to) => {
                 router.push({name: "home"})
             }
         })
-    }
+    } else
     //验证访问
     if (to.meta.requiresAuth) {
         await axiosx({
