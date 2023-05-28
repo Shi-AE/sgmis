@@ -20,7 +20,7 @@ export default {
                 },
                 {
                     title: "足环",
-                    dataIndex: "ringNumber",
+                    slotName: "ringNumber",
                     align: "center"
                 },
                 {
@@ -125,6 +125,27 @@ export default {
                 author: null
             }
             this.getPage()
+        },
+        handleCheckPigeon(pid) {
+            if (!pid) {
+                Notification.warning("此鸽子已删除，或存在")
+                return
+            }
+            axiosx({
+                method: "GET",
+                url: `pigeon/exist/${pid}`,
+                message: "检查鸽子是否存在"
+            }).then(res => {
+                if (res.data.code === 200) {
+                    if (res.data.data) {
+                        this.$router.push({name: 'detail', params: {id: pid}})
+                    } else {
+                        Notification.warning("此鸽子已删除，或存在")
+                    }
+                } else {
+                    Notification.error(res.data.message)
+                }
+            })
         }
     },
     mounted() {
@@ -167,6 +188,11 @@ export default {
     <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">日志数据</a-divider>
     <a-table :columns="columns" :data="data" :bordered="{ cell: true }" :pagination="paginationProps"
              @page-size-change="pageSizeChange" @page-change="pageChange">
+        <template #ringNumber="{ record }">
+            <a-tooltip content="点击查看鸽子详情" :mini="true" background-color="#F7BAEF" @click="handleCheckPigeon(record.pid)">
+                <div :style="{color: '#D91AD9', cursor: 'pointer'}">{{ record.ringNumber }}</div>
+            </a-tooltip>
+        </template>
     </a-table>
 </template>
 

@@ -86,6 +86,30 @@ public class PigeonController {
     }
 
     /**
+     * 根据pid检查鸽子是否存在
+     */
+    @GetMapping("exist/{pid}")
+    public Result checkPigeonExist(@PathVariable Long pid, HttpServletRequest request) {
+        //获取gid
+        Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
+        Long gid = (Long) info.get("gid");
+
+        //条件count(id) id gid
+        QueryWrapper<Pigeon> wrapper = new QueryWrapper<>();
+        wrapper.select("COUNT(id) count")
+                .eq("gid", gid)
+                .eq("id", pid);
+
+        //获取计数
+        Map<String, Object> countMap = pigeonService.getMap(wrapper);
+
+        //判断结果
+        boolean exist = (long) countMap.get("count") > 0;
+
+        return new Result(exist, SuccessCode.Success.code, "查询成功");
+    }
+
+    /**
      * 根据id获取鸽子血统书信息
      */
     @GetMapping("{id}")
