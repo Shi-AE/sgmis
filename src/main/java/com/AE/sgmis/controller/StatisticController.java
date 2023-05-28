@@ -203,6 +203,9 @@ public class StatisticController {
         return new Result(maps, SuccessCode.Success.code, "查询成功");
     }
 
+    /**
+     * 根据gid获取作育者的统计数据
+     */
     @GetMapping("source")
     public Result getSourceData(HttpServletRequest request) {
         //获取gid

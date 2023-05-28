@@ -16,6 +16,8 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import jakarta.annotation.PostConstruct;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
@@ -26,6 +28,7 @@ import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.*;
 
+@Slf4j
 @RestController
 @RequestMapping("api/pigeon")
 public class PigeonController {
@@ -38,12 +41,14 @@ public class PigeonController {
     private PigeonService pigeonService;
     @Autowired
     private PigeonInfoService pigeonInfoService;
-    @Value("${xxpz.systemGid}")
-    private Integer systemGid;
     @Autowired
     private XxpzService xxpzService;
+    @Value("${xxpz.systemGid}")
+    private Integer systemGid;
     @Value("${file.pigeon.path}")
     private String basePath;
+    @Value("${template.pigeon}")
+    private String pigeonTemplatePath;
     @Value("${file.pigeon.type}")
     private String[] typeArray;
     /**
@@ -412,10 +417,10 @@ public class PigeonController {
             throw new FileSaveException("不能上传空文件");
         }
 
-        //检出文件格式
+        //检查文件格式
         String fileType = fileUtil.checkFileType(file, "application/vnd.ms-excel", "application/x-tika-ooxml", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
 
-        // 获取gid
+        //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
         //获取账号名
@@ -467,5 +472,16 @@ public class PigeonController {
         pigeonService.savePigeonByFile(pigeonWrappers, gid, account);
 
         return new Result(SuccessCode.Success.code, "入库成功");
+    }
+
+    /**
+     * 读取模板返回给前端
+     */
+    @GetMapping("template")
+    public void getFileTemplate(HttpServletResponse response) {
+        // 设置响应正文的MIME类型
+        response.setContentType("application/vnd.ms-excel");
+        //返回文件
+        fileUtil.responseFileByRelativePath(pigeonTemplatePath, response);
     }
 }

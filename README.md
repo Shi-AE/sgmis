@@ -6,31 +6,25 @@
 
 - 用 POST 伪装 DELETE
 
-- // TODO 在axios的await加return
-
-- // TODO  看看数据库能否设置禁止存储null字符串
-
-- // TODO gzk 页参数
-
 - ```html
   <router-view :key="$route.fullPath"></router-view> 
   ```
 
   同路由不同参刷新页面
 
-- SqlInjectionUtils
-
-- 更新token防止活跃用户过期
+- 更新token防止活跃用户过期 t
 
 - 引入redis管理用户
 
-- 鸽子数据分析页面
+- 鸽子数据分析页面 t
 
-- 统计图标随窗口变化，防抖
+- 统计图标随窗口变化，防抖 t
 
-- 血统树查询时能否同时差父母
+- 血统树查询时能否同时查父母 f
 
-- 鸽子血统下载功能
+- 鸽子血统下载功能 t
+
+- 导入excel模板
 
 ### 数据展示规划
 

@@ -13,7 +13,7 @@ function preventKeyDown(event) {
 
 const axiosx = axios.create({
     baseURL: "/api",
-    timeout: 10000,
+    timeout: 30000,
     transformResponse: [function (data) {
         // 使用json-bigint解析Long型响应数据
         try {

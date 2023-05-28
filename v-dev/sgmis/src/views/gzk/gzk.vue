@@ -947,6 +947,32 @@ export default {
                 onError(res)
                 Notification.error("服务器发生错误，上传超时")
             })
+        },
+        //下载模板
+        downloadTemplate() {
+            axiosx({
+                method: "GET",
+                url: "pigeon/template",
+                responseType: "blob",
+                message: "获取上传文件模板"
+            }).then(res => {
+                //检测浏览器支持
+                if ("download" in document.createElement("a")) {
+                    const blob = new Blob([res.data], {
+                        type: "application/vnd.ms-excel;charset=utf-8",
+                    });
+                    const a = document.createElement("a");
+                    const href = window.URL.createObjectURL(blob);
+                    a.href = href;
+                    a.download = "文件快速入库模板.xlsx";
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    window.URL.revokeObjectURL(href);
+                } else {
+                    Notification.warning("您的浏览器暂不支持下载功能，请您升级或更换浏览器后重试")
+                }
+            })
         }
     }
 }
@@ -995,7 +1021,6 @@ export default {
                 </template>
                 <a-button type="primary" status="warning" @click="toBatch()">高级批量操作</a-button>
                 <a-button type="primary" status="warning" @click="toLog()">查看操作记录</a-button>
-                <!--<a-button type="primary" status="danger">打印血统</a-button>-->
                 <!--<a-button type="primary" status="danger">导出血统书展示链接</a-button>-->
             </a-space>
             <a-space>
@@ -1312,6 +1337,13 @@ export default {
   <!--通过文件导入模态框-->
     <a-modal v-model:visible="fileModal.visible" title="文件快速导入" top="10" :align-center="false" draggable
              @cancel="handleCancel" :footer="false">
+        <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">上传模板</a-divider>
+        <div class="button-group">
+            <a-space wrap>
+                <a-button type="outline" status="normal" @click="downloadTemplate()">下载模板</a-button>
+            </a-space>
+        </div>
+        <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">上传文件</a-divider>
         <a-upload draggable :custom-request="handleFileUpload" tip="上传.xls\.xlsx文件"
                   accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
     </a-modal>

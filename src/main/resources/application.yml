@@ -82,3 +82,6 @@ feedback:
   githubUrl: https://github.com/Shi-AE/sgmis
   guatUrl: https://www.guat.edu.cn
   mailUrl: mailto:2021070030101@guat.edu.cn
+
+template:
+  pigeon: template/pigeonTemplate.xlsx

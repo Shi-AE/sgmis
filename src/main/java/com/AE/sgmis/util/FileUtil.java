@@ -2,11 +2,16 @@ package com.AE.sgmis.util;
 
 import com.AE.sgmis.exceptions.FileSaveException;
 import com.baomidou.mybatisplus.core.toolkit.IdWorker;
+import jakarta.servlet.ServletOutputStream;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.io.FileUtils;
 import org.apache.tika.Tika;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
@@ -105,7 +110,6 @@ public class FileUtil {
      * 检查文件类型是否匹配
      */
     public String checkFileType(MultipartFile file, String... types) {
-//        List<String> typeList = List.of(types);
         Set<String> typeList = Set.of(types);
         String fileType = getFileType(file);
         boolean checked = typeList.contains(fileType);
@@ -113,5 +117,23 @@ public class FileUtil {
             throw new FileSaveException("文件类型错误，请上传正确类型");
         }
         return fileType;
+    }
+
+    /**
+     * 根据相对路径获取文件
+     * 将文件装入响应
+     */
+    public void responseFileByRelativePath(String path, HttpServletResponse response) {
+        //获取文件
+        File file = new File(path);
+        try {
+            ServletOutputStream out = response.getOutputStream();
+            byte[] fileBytes = FileUtils.readFileToByteArray(file);
+            out.write(fileBytes);
+        } catch (FileNotFoundException e) {
+            log.error("鸽子入库文件模板发生文件未找到错误，路径：{}", "");
+        } catch (IOException e) {
+            log.error("鸽子入库文件模板发生IO错误，路径：{}", "");
+        }
     }
 }

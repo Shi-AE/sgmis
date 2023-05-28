@@ -102,9 +102,11 @@ export default {
             }
         }
     },
-    async mounted() {
-        await this.initData()
-        this.updatedBloodline = this.initBloodline()
+    mounted() {
+        this.$nextTick(async () => {
+            await this.initData()
+            this.updatedBloodline = this.initBloodline()
+        })
     },
     methods: {
         //初始化数据树
@@ -171,6 +173,21 @@ export default {
                 tooltip: {
                     trigger: "none",
                     triggerOn: "none"
+                },
+                toolbox: {
+                    show: true,
+                    orient: "vertical",
+                    left: "left",
+                    top: "100",
+                    feature: {
+                        //保存为图片
+                        saveAsImage: {
+                            title: "下载血统",
+                            name: "鸽子血统",
+                            type: "png",
+                            pixelRatio: 5
+                        }
+                    }
                 },
                 series: [{
                     type: "tree",
@@ -537,7 +554,7 @@ export default {
 
 <template>
     <div ref="bloodline" class="bloodline"></div>
-  <!-- 新编辑子模态框 -->
+    <!-- 新编辑子模态框 -->
     <a-modal v-model:visible="editModal" title="编辑鸽子" :width="800" @before-ok="handleEditPigeon"
              @cancel="handleCancel"
              @before-open="handleBeforeOpen">

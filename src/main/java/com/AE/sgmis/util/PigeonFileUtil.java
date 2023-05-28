@@ -74,55 +74,58 @@ public class PigeonFileUtil {
     private List<Map<String, PigeonWrapper>> parsePojo(Sheet sheet, Map<String, Set<String>> xxpzMap) {
         List<Map<String, PigeonWrapper>> pigeonWrapperList = new ArrayList<>();
         sheet.forEach(row -> {
-            if (row.getRowNum() != 0) {
-                HashMap<String, PigeonWrapper> pigeonMap = new HashMap<>();
-                //子代pigeon
-                Pigeon pigeon = new Pigeon();
-                pigeon.setRingNumber(getRingNumber(row, xxpzMap));
-                pigeon.setName(getName(row));
-                pigeon.setBloodline(getBloodline(row));
-                pigeon.setSex(getSex(row));
-                pigeon.setYan(getYan(row, xxpzMap));
-                pigeon.setYs(getYs(row, xxpzMap));
-                pigeon.setLx(getLx(row, xxpzMap));
-                pigeon.setState(getState(row, xxpzMap));
-                //子代pigeonInfo
-                PigeonInfo pigeonInfo = new PigeonInfo();
-                pigeonInfo.setSubRingNumber(getSubRingNumber(row));
-                pigeonInfo.setDetail(getDetail(row));
-                //子代pigeonWrapper
-                PigeonWrapper pigeonWrapper = new PigeonWrapper();
-                pigeonWrapper.setPigeon(pigeon);
-                pigeonWrapper.setPigeonInfo(pigeonInfo);
-                pigeonMap.put("pigeon", pigeonWrapper);
-                //父亲
-                String fatherRingNumber = getFatherRingNumber(row, xxpzMap);
-                if (fatherRingNumber != null) {
-                    //父亲pigeon
-                    Pigeon fatherPigeon = new Pigeon();
-                    fatherPigeon.setRingNumber(fatherRingNumber);
-                    fatherPigeon.setSex("雄");
-                    fatherPigeon.setName(getFatherName(row));
-                    //父亲pigeonWrapper
-                    PigeonWrapper fatherPigeonWrapper = new PigeonWrapper();
-                    fatherPigeonWrapper.setPigeon(fatherPigeon);
-                    pigeonMap.put("father", fatherPigeonWrapper);
-                }
-                //母亲
-                String motherRingNumber = getMotherRingNumber(row, xxpzMap);
-                if (motherRingNumber != null) {
-                    //母亲pigeon
-                    Pigeon motherPigeon = new Pigeon();
-                    motherPigeon.setRingNumber(motherRingNumber);
-                    motherPigeon.setSex("雌");
-                    motherPigeon.setName(getMotherName(row));
-                    //母亲pigeonWrapper
-                    PigeonWrapper motherPigeonWrapper = new PigeonWrapper();
-                    motherPigeonWrapper.setPigeon(motherPigeon);
-                    pigeonMap.put("mother", motherPigeonWrapper);
-                }
-                pigeonWrapperList.add(pigeonMap);
+            //跳过0行
+            if (row.getRowNum() == 0) {
+                return;
             }
+
+            HashMap<String, PigeonWrapper> pigeonMap = new HashMap<>();
+            //子代pigeon
+            Pigeon pigeon = new Pigeon();
+            pigeon.setRingNumber(getRingNumber(row, xxpzMap));
+            pigeon.setName(getName(row));
+            pigeon.setBloodline(getBloodline(row));
+            pigeon.setSex(getSex(row));
+            pigeon.setYan(getYan(row, xxpzMap));
+            pigeon.setYs(getYs(row, xxpzMap));
+            pigeon.setLx(getLx(row, xxpzMap));
+            pigeon.setState(getState(row, xxpzMap));
+            //子代pigeonInfo
+            PigeonInfo pigeonInfo = new PigeonInfo();
+            pigeonInfo.setSubRingNumber(getSubRingNumber(row));
+            pigeonInfo.setDetail(getDetail(row));
+            //子代pigeonWrapper
+            PigeonWrapper pigeonWrapper = new PigeonWrapper();
+            pigeonWrapper.setPigeon(pigeon);
+            pigeonWrapper.setPigeonInfo(pigeonInfo);
+            pigeonMap.put("pigeon", pigeonWrapper);
+            //父亲
+            String fatherRingNumber = getFatherRingNumber(row, xxpzMap);
+            if (fatherRingNumber != null) {
+                //父亲pigeon
+                Pigeon fatherPigeon = new Pigeon();
+                fatherPigeon.setRingNumber(fatherRingNumber);
+                fatherPigeon.setSex("雄");
+                fatherPigeon.setName(getFatherName(row));
+                //父亲pigeonWrapper
+                PigeonWrapper fatherPigeonWrapper = new PigeonWrapper();
+                fatherPigeonWrapper.setPigeon(fatherPigeon);
+                pigeonMap.put("father", fatherPigeonWrapper);
+            }
+            //母亲
+            String motherRingNumber = getMotherRingNumber(row, xxpzMap);
+            if (motherRingNumber != null) {
+                //母亲pigeon
+                Pigeon motherPigeon = new Pigeon();
+                motherPigeon.setRingNumber(motherRingNumber);
+                motherPigeon.setSex("雌");
+                motherPigeon.setName(getMotherName(row));
+                //母亲pigeonWrapper
+                PigeonWrapper motherPigeonWrapper = new PigeonWrapper();
+                motherPigeonWrapper.setPigeon(motherPigeon);
+                pigeonMap.put("mother", motherPigeonWrapper);
+            }
+            pigeonWrapperList.add(pigeonMap);
         });
         return pigeonWrapperList;
     }

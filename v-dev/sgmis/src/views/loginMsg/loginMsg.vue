@@ -110,12 +110,12 @@ export default {
 </script>
 
 <template>
-    <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">登录信息</a-divider>
-    <a-button type="primary" status="success" @click="resetTable()">
+    <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">筛选操作</a-divider>
+    <a-button :style="{margin: '0 20px'}" type="primary" status="success" @click="resetTable()">
         <IconRefresh :style="{color: '#ffffff'}"/>
         清空筛选
     </a-button>
-    <a-divider :size="2" style="border-bottom-style: dotted" orientation="left"></a-divider>
+    <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">登录信息</a-divider>
     <a-table :columns="columns" :data="data" :bordered="{ cell: true }">
         <!-- jb搜索 -->
         <template #account-filter="{ filterValue, setFilterValue, handleFilterConfirm, handleFilterReset}">

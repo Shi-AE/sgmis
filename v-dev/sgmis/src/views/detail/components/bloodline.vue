@@ -7,7 +7,7 @@ export default {
     },
     beforeUpdate() {
         const opts = {
-            renderer: "svg",
+            renderer: "canvas",
             useDirtyRect: true,
             locale: "ZH"
         }
@@ -25,6 +25,21 @@ export default {
                 tooltip: {
                     trigger: "none",
                     triggerOn: "none"
+                },
+                toolbox: {
+                    show: true,
+                    orient: "vertical",
+                    left: "left",
+                    top: "100",
+                    feature: {
+                        //保存为图片
+                        saveAsImage: {
+                            title: "下载血统",
+                            name: "鸽子血统",
+                            type: "png",
+                            pixelRatio: 5
+                        }
+                    }
                 },
                 series: [{
                     type: "tree",
