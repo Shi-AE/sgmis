@@ -2,6 +2,7 @@
 import * as echarts from "echarts";
 import axiosx from "../../../assets/js/axiosx.js";
 import {Notification} from "@arco-design/web-vue";
+import {toDebounceFunction} from "../../../assets/js/debounce.js";
 
 export default {
     data() {
@@ -152,6 +153,11 @@ export default {
             }
 
             oplogLine.setOption(option)
+
+            //绑定重置图标大小
+            window.addEventListener("resize", toDebounceFunction(() => {
+                oplogLine.resize()
+            }))
         },
         //创建oplogTotal图
         async createOplogTotal() {
@@ -222,6 +228,11 @@ export default {
 
             oplogTotalBar.setOption(option)
 
+            //绑定重置图标大小
+            window.addEventListener("resize", toDebounceFunction(() => {
+                oplogTotalBar.resize()
+            }))
+
 
             const oplogTotalPie = await echarts.init(this.$refs.oplogTotalPie, "light", opts)
 
@@ -266,6 +277,11 @@ export default {
             }
 
             oplogTotalPie.setOption(optionPie)
+
+            //绑定重置图标大小
+            window.addEventListener("resize", toDebounceFunction(() => {
+                oplogTotalPie.resize()
+            }))
         },
         createOplogData() {
             axiosx({
@@ -281,9 +297,11 @@ export default {
         }
     },
     mounted() {
-        this.createOplogLine()
-        this.createOplogTotal()
-        this.createOplogData()
+        this.$nextTick(() => {
+            this.createOplogLine()
+            this.createOplogTotal()
+            this.createOplogData()
+        })
     }
 }
 </script>

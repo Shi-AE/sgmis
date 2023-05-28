@@ -2,6 +2,7 @@
 import * as echarts from "echarts"
 import axiosx from "../../../assets/js/axiosx.js";
 import {Notification} from "@arco-design/web-vue";
+import {toDebounceFunction} from "../../../assets/js/debounce.js";
 
 export default {
     data() {
@@ -99,6 +100,11 @@ export default {
         }
 
         pigeonLine.setOption(option)
+
+        //绑定重置图标大小
+        window.addEventListener("resize", toDebounceFunction(() => {
+            pigeonLine.resize()
+        }))
 
         //获取鸽子总数
         axiosx({

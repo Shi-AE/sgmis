@@ -10,7 +10,7 @@ const router = createRouter({
             component: () => import('@/views/login/login.vue'),
             meta: {
                 title: "登录",
-                free: true
+                // free: true
             }
         },
         {
@@ -39,6 +39,14 @@ const router = createRouter({
                     component: () => import("@/views/feedback/feedback.vue"),
                     meta: {
                         title: "反馈中心"
+                    }
+                },
+                {
+                    path: "statistic",
+                    name: "statistic",
+                    component: () => import("@/views/statistic/statistic.vue"),
+                    meta: {
+                        title: "统计中心"
                     }
                 },
                 {
@@ -127,7 +135,7 @@ const router = createRouter({
                     component: () => import("@/views/admin/admin.vue"),
                     meta: {
                         title: "管理员设置",
-                        // requiresAdminAuth: true
+                        requiresAdminAuth: true
                     }
                 },
                 {
@@ -205,7 +213,7 @@ router.beforeEach(async (to) => {
                 router.push({name: "home"})
             }
         })
-    } else
+    }
     //验证访问
     if (to.meta.requiresAuth) {
         await axiosx({

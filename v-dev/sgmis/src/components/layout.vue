@@ -4,14 +4,14 @@ import axiosx from "@/assets/js/axiosx.js"
 import {
     IconApps, IconBook, IconBranch, IconCalendar, IconCaretLeft, IconCaretRight, IconFindReplace,
     IconCustomerService, IconHome, IconNav, IconQuestionCircle, IconSearch, IconSettings, IconStorage,
-    IconUser, IconSubscribeAdd, IconEdit, IconExport, IconSelectAll, IconTool, IconIdcard
+    IconUser, IconSubscribeAdd, IconEdit, IconExport, IconSelectAll, IconTool, IconIdcard, IconBarChart
 } from '@arco-design/web-vue/es/icon'
 
 export default defineComponent({
     components: {
         IconApps, IconBook, IconBranch, IconCalendar, IconCaretLeft, IconCaretRight, IconFindReplace,
         IconCustomerService, IconHome, IconNav, IconQuestionCircle, IconSearch, IconSettings, IconStorage,
-        IconUser, IconSubscribeAdd, IconEdit, IconExport, IconSelectAll, IconTool, IconIdcard
+        IconUser, IconSubscribeAdd, IconEdit, IconExport, IconSelectAll, IconTool, IconIdcard, IconBarChart
     },
     setup() {
         const collapsed = ref(false)
@@ -144,6 +144,14 @@ export default defineComponent({
                         </a-menu-item>
                     </RouterLink>
                 </a-sub-menu>
+                <a-divider margin="0 0 5px"/>
+
+                <RouterLink :to="{ name: 'statistic' }">
+                    <a-menu-item key="statistic">
+                        <iconBarChart />
+                        统计中心
+                    </a-menu-item>
+                </RouterLink>
                 <a-divider margin="0 0 5px"/>
 
                 <RouterLink :to="{ name: 'gpcx' }">

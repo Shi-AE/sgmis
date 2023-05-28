@@ -1,6 +1,5 @@
 package com.AE.sgmis.controller;
 
-import com.AE.sgmis.exceptions.AccessException;
 import com.AE.sgmis.exceptions.ConfirmPasswordInconsistencyException;
 import com.AE.sgmis.exceptions.SaveFailException;
 import com.AE.sgmis.exceptions.UnchangedPasswordException;
@@ -121,20 +120,8 @@ public class LoginController {
     }
 
     @GetMapping("admin")
-    public Result verifyAdmin(HttpServletRequest request) {
-        //获取用户信息
-        Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
-        Long id = (Long) info.get("id");
-        //请求头判断
-        Boolean admin = (Boolean) info.get("admin");
-        if (!admin) {
-            throw new AccessException("你无权访问该页面，请联系管理员开通权限");
-        }
-        //数据库检索防止信息篡改
-        User user = loginService.getById(id);
-        if (!user.getAdmin()) {
-            throw new AccessException("请求头信息异常");
-        }
+    public Result verifyAdmin() {
+        //管理员请求由管理员请求头控制
         return new Result(SuccessCode.AccessSuccess.code, "访问通过");
     }
 

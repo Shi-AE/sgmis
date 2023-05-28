@@ -2,6 +2,7 @@
 import axiosx from "../../../assets/js/axiosx.js";
 import {Notification} from "@arco-design/web-vue";
 import * as echarts from "echarts";
+import {toDebounceFunction} from "../../../assets/js/debounce.js";
 
 export default {
     data() {
@@ -45,20 +46,23 @@ export default {
         async createLoginLine() {
             //获取登录数据
             const legendData = []
-            const countMap = {}
             const seriesList = []
+            //临时计数map
+            const countMap = {}
             await axiosx({
                 method: "GET",
                 url: "data/login/count"
             }).then(res => {
                 if (res.data.code === 200) {
                     res.data.data.forEach(item => {
+                        //出现新用户，设置图例信息
                         if (!countMap[item.account]) {
                             legendData.push(item.account)
                             countMap[item.account] = {
                                 name: item.account,
                                 type: 'line',
                                 itemStyle: {
+                                    //调色
                                     color: legendData.length <= this.lineColor.length ? this.lineColor[legendData.length - 1] : null
                                 },
                                 data: []
@@ -113,11 +117,18 @@ export default {
             }
 
             oplogTotalBar.setOption(option)
+
+            //绑定重置图标大小
+            window.addEventListener("resize", toDebounceFunction(() => {
+                oplogTotalBar.resize()
+            }))
         }
     },
     mounted() {
-        this.getLoginMsgData()
-        this.createLoginLine()
+        this.$nextTick(() => {
+            this.getLoginMsgData()
+            this.createLoginLine()
+        })
     }
 }
 </script>

@@ -30,7 +30,7 @@ public class AdminInterceptor implements HandlerInterceptor {
         //数据库管理员验证
         User user = userService.getById(id);
         if (!user.getAdmin()) {
-            throw new AccessException("您没有管理员权限，请联系管理员获得权限");
+            throw new AccessException("请求头信息异常");
         }
         return true;
     }
