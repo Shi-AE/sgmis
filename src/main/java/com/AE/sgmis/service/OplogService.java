@@ -73,4 +73,10 @@ public interface OplogService extends IService<Oplog> {
      * 批量插入自定义日志
      */
     void batchAddLog(List<Oplog> oplogs, Long gid, String account);
+
+    /**
+     * 根据pid更新ringNumber
+     * 并返回更新数
+     */
+     int updateRingNUmber(Long pid, String ringNumber);
 }

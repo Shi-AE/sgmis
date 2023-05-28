@@ -5,6 +5,7 @@ import com.AE.sgmis.mapper.OplogMapper;
 import com.AE.sgmis.pojo.Oplog;
 import com.AE.sgmis.result.LogType;
 import com.AE.sgmis.service.OplogService;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.baomidou.mybatisplus.extension.toolkit.SqlHelper;
 import lombok.extern.slf4j.Slf4j;
@@ -111,5 +112,14 @@ public class OplogServiceImpl extends ServiceImpl<OplogMapper, Oplog> implements
                 throw new LogException("日志保存失败");
             }
         });
+    }
+
+    @Override
+    public int updateRingNUmber(Long pid, String ringNumber) {
+        UpdateWrapper<Oplog> wrapper = new UpdateWrapper<>();
+        wrapper.eq("pid", pid)
+                .set("ring_number", ringNumber);
+
+        return oplogMapper.update(null, wrapper);
     }
 }
