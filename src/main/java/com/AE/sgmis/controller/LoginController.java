@@ -1,6 +1,7 @@
 package com.AE.sgmis.controller;
 
 import com.AE.sgmis.exceptions.ConfirmPasswordInconsistencyException;
+import com.AE.sgmis.exceptions.FreePassException;
 import com.AE.sgmis.exceptions.SaveFailException;
 import com.AE.sgmis.exceptions.UnchangedPasswordException;
 import com.AE.sgmis.pojo.LoginMsg;
@@ -14,6 +15,8 @@ import com.AE.sgmis.service.LoginService;
 import com.AE.sgmis.util.IpUtil;
 import com.AE.sgmis.util.JwtUtil;
 import com.AE.sgmis.util.WhitelistUtil;
+import com.auth0.jwt.exceptions.JWTVerificationException;
+import com.auth0.jwt.interfaces.DecodedJWT;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import eu.bitwalker.useragentutils.Browser;
 import eu.bitwalker.useragentutils.OperatingSystem;
@@ -24,6 +27,7 @@ import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.expression.AccessException;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -132,6 +136,35 @@ public class LoginController {
     public Result verifyAdmin() {
         //管理员请求由管理员请求头控制
         return new Result(SuccessCode.AccessSuccess.code, "访问通过");
+    }
+
+    /**
+     * 免登录验证
+     */
+    @GetMapping("free")
+    public Result freePass(HttpServletRequest request) {
+        try {
+            //获取请求头证书
+            String token = request.getHeader("Authorization");
+
+            //验证证书
+            DecodedJWT decoded = jwtUtil.verifyToken(token);
+
+            //获取token中的信息
+            Map<String, Object> claim = decoded.getClaim("info").asMap();
+
+            //在redis中验证证书
+            Long id = (Long) claim.get("id");
+            String ip = (String) claim.get("ip");
+            boolean verified = whitelistUtil.verifyToken(id, ip, token);
+            if (!verified) {
+                throw new AccessException("登录过期");
+            }
+        } catch (AccessException | JWTVerificationException e) {
+            throw new FreePassException("免登录失败");
+        }
+
+        return new Result(SuccessCode.Success.code, "登录成功");
     }
 
     /**

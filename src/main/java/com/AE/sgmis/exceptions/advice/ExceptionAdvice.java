@@ -21,7 +21,7 @@ public class ExceptionAdvice {
             DeleteFailException.class, SaveFailException.class, FieldsDuplicateException.class,
             PasswordUpdateFailException.class, AccessException.class, FileSaveException.class,
             UserInformationException.class, NotFoundException.class, FileParseException.class,
-            LogException.class})
+            LogException.class, FreePassException.class})
     private Result doCommonException(ProjectException exception) {
         return new Result(exception.getCode(), exception.getMessage());
     }

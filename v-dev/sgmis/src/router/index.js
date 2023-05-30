@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router"
 import axiosx from "@/assets/js/axiosx.js"
+import {Notification} from "@arco-design/web-vue";
 
 const router = createRouter({
     history: createWebHistory('/'),
@@ -10,7 +11,7 @@ const router = createRouter({
             component: () => import('@/views/login/login.vue'),
             meta: {
                 title: "登录",
-                // free: true
+                free: true
             }
         },
         {
@@ -206,11 +207,12 @@ router.beforeEach(async (to) => {
     if (to.meta.free) {
         await axiosx({
             method: "GET",
-            url: "login",
-            message: "登录验证"
+            url: "login/free",
+            message: "验证信息"
         }).then(res => {
-            if (res.data.code === 203) {
-                router.push({name: "home"})
+            if (res.data.code === 200) {
+                router.push({ name: "home" })
+                Notification.success(res.data.message)
             }
         })
     }
