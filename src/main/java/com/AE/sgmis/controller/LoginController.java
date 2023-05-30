@@ -4,7 +4,7 @@ import com.AE.sgmis.exceptions.ConfirmPasswordInconsistencyException;
 import com.AE.sgmis.exceptions.SaveFailException;
 import com.AE.sgmis.exceptions.UnchangedPasswordException;
 import com.AE.sgmis.pojo.LoginMsg;
-import com.AE.sgmis.pojo.ParamUser;
+import com.AE.sgmis.pojo.UserVo;
 import com.AE.sgmis.pojo.UpdateUserInfo;
 import com.AE.sgmis.pojo.User;
 import com.AE.sgmis.result.Result;
@@ -13,6 +13,7 @@ import com.AE.sgmis.service.LoginMsgService;
 import com.AE.sgmis.service.LoginService;
 import com.AE.sgmis.util.IpUtil;
 import com.AE.sgmis.util.JwtUtil;
+import com.AE.sgmis.util.WhitelistUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import eu.bitwalker.useragentutils.Browser;
 import eu.bitwalker.useragentutils.OperatingSystem;
@@ -43,6 +44,8 @@ public class LoginController {
     private JwtUtil jwtUtil;
     @Autowired
     private IpUtil ipUtil;
+    @Autowired
+    private WhitelistUtil whitelistUtil;
     @Value("${page.maxLimit}")
     private Integer limit;
 
@@ -50,9 +53,9 @@ public class LoginController {
      * 验证登录
      */
     @PostMapping("authority")
-    public Result login(@RequestBody ParamUser paramUser, HttpServletRequest request) {
-        String account = paramUser.getAccount();
-        String password = paramUser.getPassword();
+    public Result login(@RequestBody UserVo userVo, HttpServletRequest request) {
+        String account = userVo.getAccount();
+        String password = userVo.getPassword();
 
         //装配为二进制
         User user = new User();
@@ -78,7 +81,6 @@ public class LoginController {
 
         //把用户信息集合成map
         Map<String, Object> claim = new HashMap<>();
-
         claim.put("id", id);
         claim.put("account", account);
         claim.put("gid", gid);
@@ -86,11 +88,13 @@ public class LoginController {
         claim.put("ip", ip);
 
         //传入用户信息map，为用户生成token
-        String token = jwtUtil.getToken(claim);
+        String token = jwtUtil.getLimitlessToken(claim);
 
-        Map<String, Object> map = new HashMap<>();
-        map.put("token", token);
-        map.put("admin", admin);
+        //将token存入redis
+        whitelistUtil.setToken(id, ip, token);
+
+        //根据uid最大限制剔除多余的ip下的token
+        whitelistUtil.limitToken(id);
 
         //记录登录日志
         LoginMsg loginMsg = new LoginMsg();
@@ -107,7 +111,12 @@ public class LoginController {
             throw new SaveFailException("登录出错");
         }
 
-        return new Result(map, SuccessCode.LoginSuccess.code, "登录成功");
+        //返回给前端token
+        Map<String, Object> resultMap = new HashMap<>();
+        resultMap.put("token", token);
+        resultMap.put("admin", admin);
+
+        return new Result(resultMap, SuccessCode.LoginSuccess.code, "登录成功");
     }
 
     /**

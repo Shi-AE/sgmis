@@ -5,10 +5,10 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/sgmis
-#    url: jdbc:mysql://42.193.192.61:3306/sgmis
+    #    url: jdbc:mysql://42.193.192.61:3306/sgmis
     username: root
     password: 799823
-#    password: guatdev
+  #    password: guatdev
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: Asia/Shanghai
@@ -16,6 +16,12 @@ spring:
     multipart:
       max-file-size: 10GB
       max-request-size: 10MB
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password:
+      database: 0
 
 encrypt:
   memoryPowOfTwo: 13
@@ -26,9 +32,9 @@ encrypt:
 jwt:
   #秒
   expires: 21600
+  update-gap: 1800
   secret-key: S&h(i(to*A@E#
-  #分钟
-  update-gap: 30
+  ipLimit: 3
 
 # 配置信息的表名，防止sql注入
 xxpz:

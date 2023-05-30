@@ -64,10 +64,10 @@ axiosx.interceptors.response.use(response => {
         Notification.error(response.data.message)
         router.push({name: "403"})
     }
-    //更新token防止活跃用户过期
-    if (response.headers.authorization) {
-        store.commit("setToken", response.headers.authorization)
-    }
+    //更新token防止活跃用户过期（已弃用）
+    // if (response.headers.authorization) {
+    //     store.commit("setToken", response.headers.authorization)
+    // }
     store.commit("setPending", false)
     return response;
 }, error => {

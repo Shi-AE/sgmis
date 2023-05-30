@@ -20,6 +20,9 @@ import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 二维码工具
+ */
 @Slf4j
 @Component
 public class QRCodeUtil {

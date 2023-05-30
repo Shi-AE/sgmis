@@ -54,6 +54,15 @@ public class JwtUtil {
     }
 
     /**
+     * 获取无时间限制token
+     */
+    public String getLimitlessToken(Map<String, Object> claim) {
+        return JWT.create()
+                .withClaim("info", claim)
+                .sign(Algorithm.HMAC256(secretKey));
+    }
+
+    /**
      * 验证token
      *
      * @return 验证信息

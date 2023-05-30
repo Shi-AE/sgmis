@@ -3,7 +3,7 @@ package com.AE.sgmis.pojo;
 import lombok.Data;
 
 @Data
-public class ParamUser {
+public class UserVo {
     private String account;
     private String password;
 }

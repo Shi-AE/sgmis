@@ -11,6 +11,9 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
+/**
+ * LDT配置
+ */
 @Configuration
 public class LocalDateTimeSerializerConfig {
 

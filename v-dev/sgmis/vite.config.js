@@ -14,7 +14,10 @@ export default defineConfig({
         proxy: {
             "/api": {
                 target: "http://localhost:8080",
-                changeOrigin: true
+                changeOrigin: true,
+                headers: {
+                    'X-Forwarded-For': '1.1.1.1',
+                },
             },
             "/pigeon": {
                 target: "http://localhost:8080",

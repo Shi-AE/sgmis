@@ -10,6 +10,9 @@ import org.springframework.web.context.support.StandardServletEnvironment;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+/**
+ * 资源配置
+ */
 @Slf4j
 @Configuration
 public class ResourceConfig implements WebMvcConfigurer {
