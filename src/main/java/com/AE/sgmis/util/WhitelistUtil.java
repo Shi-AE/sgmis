@@ -115,6 +115,35 @@ public class WhitelistUtil {
      */
     public void deleteToken(Long id) {
         Set<String> keys = redisUtil.keys(RedisNamespace.Whitelist, id + ":");
+        //删除所有设备
         keys.forEach(key -> redisUtil.del(key));
+    }
+
+    /**
+     * 查看用户的活跃状态
+     */
+    public int getState(RedisNamespace namespace, String key) {
+        //根据获取包含key的key
+        Set<String> keys = redisUtil.keys(namespace, key);
+
+        int state = 0;
+
+        //查看每个设备的活跃状态
+        for (String k : keys) {
+            Long tokenExpires = redisUtil.getExpire(k);
+
+            //如果满足条件，将状态设为最高在线状态
+            if (expires - tokenExpires < updateGap) {
+                state = 2;
+                break;
+            }
+
+            //如果满足条件设置此状态
+            if (state < 1 && tokenExpires > 0) {
+                state = 1;
+            }
+        }
+
+        return state;
     }
 }

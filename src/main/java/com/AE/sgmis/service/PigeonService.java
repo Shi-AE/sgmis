@@ -2,7 +2,7 @@ package com.AE.sgmis.service;
 
 import com.AE.sgmis.pojo.Pigeon;
 import com.AE.sgmis.pojo.PigeonInfo;
-import com.AE.sgmis.pojo.PigeonWrapper;
+import com.AE.sgmis.pojo.vo.PigeonWrapperVo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
@@ -74,5 +74,5 @@ public interface PigeonService extends IService<Pigeon> {
      * 记录日志
      * 父代以足环为主导
      */
-    void savePigeonByFile(List<Map<String, PigeonWrapper>> pigeonWrappers, Long gid, String account);
+    void savePigeonByFile(List<Map<String, PigeonWrapperVo>> pigeonWrappers, Long gid, String account);
 }

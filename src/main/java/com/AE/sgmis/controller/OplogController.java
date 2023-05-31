@@ -3,7 +3,7 @@ package com.AE.sgmis.controller;
 import com.AE.sgmis.exceptions.MaliciousSqlInjectionException;
 import com.AE.sgmis.exceptions.NotFoundException;
 import com.AE.sgmis.pojo.Oplog;
-import com.AE.sgmis.pojo.PagingCondition;
+import com.AE.sgmis.pojo.vo.PagingConditionVo;
 import com.AE.sgmis.result.Result;
 import com.AE.sgmis.result.SeverityLevel;
 import com.AE.sgmis.result.SuccessCode;
@@ -61,7 +61,7 @@ public class OplogController {
      * 根据分页条件获取页面信息
      */
     @PostMapping
-    public Result getConditionPage(@RequestBody @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") PagingCondition condition, HttpServletRequest request) {
+    public Result getConditionPage(@RequestBody @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") PagingConditionVo condition, HttpServletRequest request) {
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");

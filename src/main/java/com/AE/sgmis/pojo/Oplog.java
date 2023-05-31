@@ -1,11 +1,16 @@
 package com.AE.sgmis.pojo;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 import java.time.LocalDateTime;
 
+
 @Data
+@Builder
+@AllArgsConstructor
 @TableName("t_oplog")
 public class Oplog {
     /**

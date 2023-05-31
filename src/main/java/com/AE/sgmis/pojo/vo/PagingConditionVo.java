@@ -1,12 +1,18 @@
-package com.AE.sgmis.pojo;
+package com.AE.sgmis.pojo.vo;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
-public class PagingCondition {
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class PagingConditionVo {
     private Integer content;
     private String tip;
     private String ringNumber;

@@ -4,7 +4,7 @@ import com.AE.sgmis.exceptions.FileParseException;
 import com.AE.sgmis.exceptions.FileSaveException;
 import com.AE.sgmis.pojo.Pigeon;
 import com.AE.sgmis.pojo.PigeonInfo;
-import com.AE.sgmis.pojo.PigeonWrapper;
+import com.AE.sgmis.pojo.vo.PigeonWrapperVo;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -31,8 +31,8 @@ public class PigeonFileUtil {
      * 旧版.xls解析工具
      * Office 2007- XML
      */
-    public List<Map<String, PigeonWrapper>> getPigeonByXls(MultipartFile file, Map<String, Set<String>> xxpzMap) {
-        List<Map<String, PigeonWrapper>> pigeonWrappers;
+    public List<Map<String, PigeonWrapperVo>> getPigeonByXls(MultipartFile file, Map<String, Set<String>> xxpzMap) {
+        List<Map<String, PigeonWrapperVo>> pigeonWrappers;
 
         try {
             HSSFWorkbook sheets = new HSSFWorkbook(file.getInputStream());
@@ -51,8 +51,8 @@ public class PigeonFileUtil {
      * 新版.xlsx解析工具
      * Office 2007+ XML
      */
-    public List<Map<String, PigeonWrapper>> getPigeonByXlsx(MultipartFile file, Map<String, Set<String>> xxpzMap) {
-        List<Map<String, PigeonWrapper>> pigeonWrappers;
+    public List<Map<String, PigeonWrapperVo>> getPigeonByXlsx(MultipartFile file, Map<String, Set<String>> xxpzMap) {
+        List<Map<String, PigeonWrapperVo>> pigeonWrappers;
 
         try {
             XSSFWorkbook sheets = new XSSFWorkbook(file.getInputStream());
@@ -71,15 +71,15 @@ public class PigeonFileUtil {
      * 解析表格
      * 足环号 副环号 鸽子名称 血统 性别 眼砂 羽色 类型 赛绩描述 父名字 父足环号 母名字 母足环号 状态
      */
-    private List<Map<String, PigeonWrapper>> parsePojo(Sheet sheet, Map<String, Set<String>> xxpzMap) {
-        List<Map<String, PigeonWrapper>> pigeonWrapperList = new ArrayList<>();
+    private List<Map<String, PigeonWrapperVo>> parsePojo(Sheet sheet, Map<String, Set<String>> xxpzMap) {
+        List<Map<String, PigeonWrapperVo>> pigeonWrapperList = new ArrayList<>();
         sheet.forEach(row -> {
             //跳过0行
             if (row.getRowNum() == 0) {
                 return;
             }
 
-            HashMap<String, PigeonWrapper> pigeonMap = new HashMap<>();
+            HashMap<String, PigeonWrapperVo> pigeonMap = new HashMap<>();
             //子代pigeon
             Pigeon pigeon = new Pigeon();
             pigeon.setRingNumber(getRingNumber(row, xxpzMap));
@@ -95,10 +95,10 @@ public class PigeonFileUtil {
             pigeonInfo.setSubRingNumber(getSubRingNumber(row));
             pigeonInfo.setDetail(getDetail(row));
             //子代pigeonWrapper
-            PigeonWrapper pigeonWrapper = new PigeonWrapper();
-            pigeonWrapper.setPigeon(pigeon);
-            pigeonWrapper.setPigeonInfo(pigeonInfo);
-            pigeonMap.put("pigeon", pigeonWrapper);
+            PigeonWrapperVo pigeonWrapperVo = new PigeonWrapperVo();
+            pigeonWrapperVo.setPigeon(pigeon);
+            pigeonWrapperVo.setPigeonInfo(pigeonInfo);
+            pigeonMap.put("pigeon", pigeonWrapperVo);
             //父亲
             String fatherRingNumber = getFatherRingNumber(row, xxpzMap);
             if (fatherRingNumber != null) {
@@ -108,9 +108,9 @@ public class PigeonFileUtil {
                 fatherPigeon.setSex("雄");
                 fatherPigeon.setName(getFatherName(row));
                 //父亲pigeonWrapper
-                PigeonWrapper fatherPigeonWrapper = new PigeonWrapper();
-                fatherPigeonWrapper.setPigeon(fatherPigeon);
-                pigeonMap.put("father", fatherPigeonWrapper);
+                PigeonWrapperVo fatherPigeonWrapperVo = new PigeonWrapperVo();
+                fatherPigeonWrapperVo.setPigeon(fatherPigeon);
+                pigeonMap.put("father", fatherPigeonWrapperVo);
             }
             //母亲
             String motherRingNumber = getMotherRingNumber(row, xxpzMap);
@@ -121,9 +121,9 @@ public class PigeonFileUtil {
                 motherPigeon.setSex("雌");
                 motherPigeon.setName(getMotherName(row));
                 //母亲pigeonWrapper
-                PigeonWrapper motherPigeonWrapper = new PigeonWrapper();
-                motherPigeonWrapper.setPigeon(motherPigeon);
-                pigeonMap.put("mother", motherPigeonWrapper);
+                PigeonWrapperVo motherPigeonWrapperVo = new PigeonWrapperVo();
+                motherPigeonWrapperVo.setPigeon(motherPigeon);
+                pigeonMap.put("mother", motherPigeonWrapperVo);
             }
             pigeonWrapperList.add(pigeonMap);
         });

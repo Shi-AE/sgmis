@@ -1,7 +1,7 @@
 <script>
 import axiosx from "@/assets/js/axiosx.js"
-import { Modal, Notification } from '@arco-design/web-vue'
-import { h } from "vue"
+import {Modal, Notification} from '@arco-design/web-vue'
+import {h} from "vue"
 
 export default {
     data() {
@@ -9,7 +9,8 @@ export default {
             columns: [
                 {
                     title: "序号",
-                    dataIndex: "key"
+                    dataIndex: "key",
+                    align: "center"
                 },
                 {
                     title: "成员用户名",
@@ -17,14 +18,19 @@ export default {
                     align: "center"
                 },
                 {
+                    title: "在线情况",
+                    slotName: "state",
+                    align: "center"
+                },
+                {
                     title: "管理员权限",
                     dataIndex: "admin",
-                    align: "right"
+                    align: "center"
                 },
                 {
                     title: "操作",
                     slotName: "operation",
-                    align: "right"
+                    align: "center"
                 }
             ],
             data: [],
@@ -33,7 +39,22 @@ export default {
                 id: null,
                 account: ""
             },
-            inputModal: false
+            inputModal: false,
+            //0为离线，1为离开，2为活跃
+            stateMap: {
+                0: {
+                    value: "离线",
+                    color: "#86909c"
+                },
+                1: {
+                    value: "离开",
+                    color: "#3491FA"
+                },
+                2: {
+                    value: "活跃",
+                    color: "#00B42A"
+                }
+            }
         }
     },
     methods: {
@@ -177,7 +198,8 @@ export default {
                         id: item.id,
                         gid: item.gid,
                         admin: item.admin ? "管理员" : "成员",
-                        isAdmin: item.admin
+                        isAdmin: item.admin,
+                        state: item.state
                     }
                 })
             } else {
@@ -201,6 +223,17 @@ export default {
                 数据发生异常，请重试
             </a-empty>
         </template>
+        <!--状态插槽-->
+        <template #state="{ record }">
+            <a-space>
+                <div>
+                    <a-badge :color="stateMap[record.state].color"/>
+                </div>
+                <div>
+                    {{ stateMap[record.state].value }}
+                </div>
+            </a-space>
+        </template>
         <!-- 每条记录控制按钮 -->
         <template #operation="{ record }">
             <a-space>
@@ -210,11 +243,12 @@ export default {
         </template>
     </a-table>
     <!-- 添加提交信息框 -->
-    <a-modal v-model:visible="inputModal" width="calc(300px + 0.1 * 100vw)" title="新建成员账号" @before-ok="handleInput"
-        @cancel="handleCancel">
+    <a-modal v-model:visible="inputModal" width="calc(300px + 0.1 * 100vw)" title="新建成员账号"
+             @before-ok="handleInput"
+             @cancel="handleCancel">
         <a-form :model="form">
             <a-form-item field="account" label="成员用户名">
-                <a-input v-model.lazy="form.account" />
+                <a-input v-model.lazy="form.account"/>
             </a-form-item>
         </a-form>
         <div class="tip">

@@ -3,6 +3,8 @@ package com.AE.sgmis.controller;
 import com.AE.sgmis.exceptions.DeleteFailException;
 import com.AE.sgmis.exceptions.SaveFailException;
 import com.AE.sgmis.pojo.User;
+import com.AE.sgmis.pojo.vo.AdminUserVo;
+import com.AE.sgmis.result.RedisNamespace;
 import com.AE.sgmis.result.Result;
 import com.AE.sgmis.result.SuccessCode;
 import com.AE.sgmis.service.UserService;
@@ -16,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -52,14 +55,36 @@ public class UserController {
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
+
         //gid = gid
         QueryWrapper<User> wrapper = new QueryWrapper<>();
         wrapper.eq("gid", gid);
+
         //设置查询字段 id gid account admin
         wrapper.select("id", "gid", "account", "admin");
+
         //执行
         List<User> list = userService.list(wrapper);
-        return new Result(list, SuccessCode.Success.code, "查询成功");
+
+        //查看在线状态并将所有信息装入vo
+        List<AdminUserVo> adminUserList = new ArrayList<>();
+        list.forEach(user -> {
+            //获取id
+            Long id = user.getId();
+            //获取状态
+            int state = whitelistUtil.getState(RedisNamespace.Whitelist, id + ":");
+            //加入返回列表
+            AdminUserVo adminUser = AdminUserVo.builder()
+                    .state(state)
+                    .account(user.getAccount())
+                    .admin(user.getAdmin())
+                    .gid(user.getGid())
+                    .id(id)
+                    .build();
+            adminUserList.add(adminUser);
+        });
+
+        return new Result(adminUserList, SuccessCode.Success.code, "查询成功");
     }
 
     /**

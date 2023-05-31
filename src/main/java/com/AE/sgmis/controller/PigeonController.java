@@ -3,7 +3,7 @@ package com.AE.sgmis.controller;
 import com.AE.sgmis.exceptions.*;
 import com.AE.sgmis.pojo.Pigeon;
 import com.AE.sgmis.pojo.PigeonInfo;
-import com.AE.sgmis.pojo.PigeonWrapper;
+import com.AE.sgmis.pojo.vo.PigeonWrapperVo;
 import com.AE.sgmis.pojo.Xxpz;
 import com.AE.sgmis.result.Result;
 import com.AE.sgmis.result.SeverityLevel;
@@ -139,10 +139,10 @@ public class PigeonController {
         PigeonInfo pigeonInfo = pigeonInfoService.getOne(pigeonInfoQueryWrapper);
 
         //包装
-        PigeonWrapper pigeonWrapper = new PigeonWrapper();
-        pigeonWrapper.setPigeon(pigeon);
-        pigeonWrapper.setPigeonInfo(pigeonInfo);
-        return new Result(pigeonWrapper, SuccessCode.Success.code, "查询成功");
+        PigeonWrapperVo pigeonWrapperVo = new PigeonWrapperVo();
+        pigeonWrapperVo.setPigeon(pigeon);
+        pigeonWrapperVo.setPigeonInfo(pigeonInfo);
+        return new Result(pigeonWrapperVo, SuccessCode.Success.code, "查询成功");
     }
 
     /**
@@ -225,11 +225,11 @@ public class PigeonController {
      * 记录日志
      */
     @PostMapping
-    public Result addOrUpdatePigeon(@RequestBody PigeonWrapper pigeonWrapper, HttpServletRequest request) {
+    public Result addOrUpdatePigeon(@RequestBody PigeonWrapperVo pigeonWrapperVo, HttpServletRequest request) {
         //解析包装
-        Pigeon pigeon = pigeonWrapper.getPigeon();
-        PigeonInfo pigeonInfo = pigeonWrapper.getPigeonInfo();
-        Long oid = pigeonWrapper.getOid();
+        Pigeon pigeon = pigeonWrapperVo.getPigeon();
+        PigeonInfo pigeonInfo = pigeonWrapperVo.getPigeonInfo();
+        Long oid = pigeonWrapperVo.getOid();
 
         //检查必填参数
         if (pigeon.getRingNumber() == null) {
@@ -481,7 +481,7 @@ public class PigeonController {
             }
         });
 
-        List<Map<String, PigeonWrapper>> pigeonWrappers;
+        List<Map<String, PigeonWrapperVo>> pigeonWrappers;
 
         if (fileType.equals("application/vnd.ms-excel")) {
             //旧版

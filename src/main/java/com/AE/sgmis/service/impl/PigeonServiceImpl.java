@@ -7,7 +7,7 @@ import com.AE.sgmis.mapper.PigeonInfoMapper;
 import com.AE.sgmis.mapper.PigeonMapper;
 import com.AE.sgmis.pojo.Pigeon;
 import com.AE.sgmis.pojo.PigeonInfo;
-import com.AE.sgmis.pojo.PigeonWrapper;
+import com.AE.sgmis.pojo.vo.PigeonWrapperVo;
 import com.AE.sgmis.result.LogType;
 import com.AE.sgmis.service.OplogService;
 import com.AE.sgmis.service.PigeonService;
@@ -402,15 +402,15 @@ public class PigeonServiceImpl extends ServiceImpl<PigeonMapper, Pigeon> impleme
 
     @Override
     @Transactional
-    public void savePigeonByFile(List<Map<String, PigeonWrapper>> pigeonWrappers, Long gid, String account) {
+    public void savePigeonByFile(List<Map<String, PigeonWrapperVo>> pigeonWrappers, Long gid, String account) {
         //获取时间
         LocalDate now = LocalDate.now();
 
         //保存父代
         pigeonWrappers.forEach(pigeonMap -> {
-            PigeonWrapper pigeonWrapper = pigeonMap.get("pigeon");
+            PigeonWrapperVo pigeonWrapperVo = pigeonMap.get("pigeon");
             //父
-            PigeonWrapper father = pigeonMap.get("father");
+            PigeonWrapperVo father = pigeonMap.get("father");
             if (father != null) {
                 //父fatherPigeon
                 Pigeon fatherPigeon = father.getPigeon();
@@ -441,18 +441,18 @@ public class PigeonServiceImpl extends ServiceImpl<PigeonMapper, Pigeon> impleme
                     }
 
                     //给子代装填fid
-                    pigeonWrapper.getPigeon().setFid(fatherPigeon.getId());
+                    pigeonWrapperVo.getPigeon().setFid(fatherPigeon.getId());
 
                     //记录日志
                     oplogService.oplog(account, fatherPigeon.getRingNumber(), fatherPigeon.getId(), gid, LogType.INSERT);
                 } else {
                     //给子代装填fid
-                    pigeonWrapper.getPigeon().setFid(selectPigeon.getId());
+                    pigeonWrapperVo.getPigeon().setFid(selectPigeon.getId());
                 }
             }
 
             //母
-            PigeonWrapper mother = pigeonMap.get("mother");
+            PigeonWrapperVo mother = pigeonMap.get("mother");
             if (mother != null) {
                 //母motherPigeon
                 Pigeon motherPigeon = mother.getPigeon();
@@ -481,19 +481,19 @@ public class PigeonServiceImpl extends ServiceImpl<PigeonMapper, Pigeon> impleme
                         throw new SaveFailException("母鸽额外信息保存失败");
                     }
                     //给子代装填mid
-                    pigeonWrapper.getPigeon().setMid(motherPigeon.getId());
+                    pigeonWrapperVo.getPigeon().setMid(motherPigeon.getId());
 
                     //记录日志
                     oplogService.oplog(account, motherPigeon.getRingNumber(), motherPigeon.getId(), gid, LogType.INSERT);
                 } else {
                     //给子代装填mid
-                    pigeonWrapper.getPigeon().setMid(selectPigeon.getId());
+                    pigeonWrapperVo.getPigeon().setMid(selectPigeon.getId());
                 }
             }
 
             //保存子代信息
             //pigeon
-            Pigeon pigeon = pigeonWrapper.getPigeon();
+            Pigeon pigeon = pigeonWrapperVo.getPigeon();
             pigeon.setUpdateData(now);
             pigeon.setGid(gid);
             int pigeonInsert = pigeonMapper.insert(pigeon);
@@ -501,7 +501,7 @@ public class PigeonServiceImpl extends ServiceImpl<PigeonMapper, Pigeon> impleme
                 throw new SaveFailException("子代鸽基础信息保存失败");
             }
             //pigeonInfo
-            PigeonInfo pigeonInfo = pigeonWrapper.getPigeonInfo();
+            PigeonInfo pigeonInfo = pigeonWrapperVo.getPigeonInfo();
             pigeonInfo.setCreateTime(now);
             pigeonInfo.setPid(pigeon.getId());
             int pigeonInfoInsert = pigeonInfoMapper.insert(pigeonInfo);

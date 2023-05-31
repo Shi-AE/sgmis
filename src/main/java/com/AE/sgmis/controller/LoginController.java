@@ -5,9 +5,9 @@ import com.AE.sgmis.exceptions.FreePassException;
 import com.AE.sgmis.exceptions.SaveFailException;
 import com.AE.sgmis.exceptions.UnchangedPasswordException;
 import com.AE.sgmis.pojo.LoginMsg;
-import com.AE.sgmis.pojo.UpdateUserVo;
+import com.AE.sgmis.pojo.vo.UpdateUserVo;
 import com.AE.sgmis.pojo.User;
-import com.AE.sgmis.pojo.UserVo;
+import com.AE.sgmis.pojo.vo.UserVo;
 import com.AE.sgmis.result.Result;
 import com.AE.sgmis.result.SuccessCode;
 import com.AE.sgmis.service.LoginMsgService;
@@ -171,9 +171,17 @@ public class LoginController {
      * 退出登录
      */
     @DeleteMapping
-    public Result exit(HttpSession session) {
+    public Result exit(HttpSession session, HttpServletRequest request) {//添加id
+        //获取id
+        Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
+        Long id = (Long) info.get("id");
+
+        //剔除线上token
+        whitelistUtil.deleteToken(id);
+
         //销毁session
         session.invalidate();
+
         return new Result(SuccessCode.ExitSuccess.code, "退出成功");
     }
 
