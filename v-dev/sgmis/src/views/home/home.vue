@@ -12,7 +12,7 @@ export default {
 <template>
     <a-divider :size="2" style="border-bottom-style: dotted" orientation="right">鸽子展示</a-divider>
     <PigeonPicture/>
-    <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">鸽子数据</a-divider>
+    <a-divider :size="2" style="border-bottom-style: dotted" orientation="left">基本数据</a-divider>
     <PigeonData/>
     <a-divider :size="2" style="border-bottom-style: dotted" orientation="right">操作数据</a-divider>
     <OplogData/>

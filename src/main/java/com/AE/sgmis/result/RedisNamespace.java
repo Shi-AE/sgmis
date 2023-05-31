@@ -7,7 +7,9 @@ public enum RedisNamespace {
 
     Ancestor(null, ""),
     Whitelist(Ancestor, "whitelist:"),
-    Blacklist(Ancestor, "blacklist:");
+    Blacklist(Ancestor, "blacklist:"),
+    Statistic(Ancestor, "statistic:"),
+    Online(Statistic, "online:");
 
     RedisNamespace(RedisNamespace parent, String value) {
         this.value = parent == null ? "" : parent.value + value;

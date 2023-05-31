@@ -1,18 +1,11 @@
 package com.AE.sgmis.controller;
 
 import com.AE.sgmis.exceptions.MaliciousSqlInjectionException;
-import com.AE.sgmis.pojo.LoginMsg;
-import com.AE.sgmis.pojo.Oplog;
-import com.AE.sgmis.pojo.Pigeon;
-import com.AE.sgmis.pojo.PigeonInfo;
-import com.AE.sgmis.result.LogType;
-import com.AE.sgmis.result.Result;
-import com.AE.sgmis.result.SeverityLevel;
-import com.AE.sgmis.result.SuccessCode;
-import com.AE.sgmis.service.LoginMsgService;
-import com.AE.sgmis.service.OplogService;
-import com.AE.sgmis.service.PigeonInfoService;
-import com.AE.sgmis.service.PigeonService;
+import com.AE.sgmis.pojo.*;
+import com.AE.sgmis.result.*;
+import com.AE.sgmis.service.*;
+import com.AE.sgmis.util.RedisUtil;
+import com.AE.sgmis.util.WhitelistUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +20,7 @@ import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
 @RequestMapping("api/data")
@@ -40,6 +34,12 @@ public class DataController {
     private OplogService oplogService;
     @Autowired
     private LoginMsgService loginMsgService;
+    @Autowired
+    private RedisUtil redisUtil;
+    @Autowired
+    private WhitelistUtil whitelistUtil;
+    @Autowired
+    private UserService userService;
     @Value("${carousel.limit}")
     private Integer carouselLimit;
     @Value("${recent.create}")
@@ -274,6 +274,9 @@ public class DataController {
         return new Result(list, SuccessCode.Success.code, "查询成功");
     }
 
+    /**
+     * 统计登录人员数据
+     */
     @GetMapping("login/count")
     public Result getLoginCount(HttpServletRequest request) {
         //获取gid
@@ -299,5 +302,41 @@ public class DataController {
         List<Map<String, Object>> countMap = loginMsgService.listMaps(wrapper);
 
         return new Result(countMap, SuccessCode.Success.code, "查询成功");
+    }
+
+    /**
+     * 从缓存中获取在线人数
+     */
+    @GetMapping("online")
+    public Result getOnline() {
+        Object online = redisUtil.get(RedisNamespace.Online, "");
+        return new Result(online, SuccessCode.Success.code, "查询成功");
+    }
+
+    /**
+     * 获取组员在线人数
+     */
+    @GetMapping("online/group")
+    public Result getOnlineGroup(HttpServletRequest request) {
+        //获取gid
+        Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
+        Long gid = (Long) info.get("gid");
+
+        //根据gid获取组内人员的id
+        QueryWrapper<User> wrapper = new QueryWrapper<>();
+        wrapper.select("id")
+                .eq("gid", gid);
+
+        List<User> userList = userService.list(wrapper);
+
+        AtomicLong count = new AtomicLong();
+
+        userList.forEach(user -> {
+            Long id = user.getId();
+            long active = whitelistUtil.getActive(RedisNamespace.Whitelist, id + ":");
+            count.addAndGet(active);
+        });
+
+        return new Result(count, SuccessCode.Success.code, "查询成功");
     }
 }

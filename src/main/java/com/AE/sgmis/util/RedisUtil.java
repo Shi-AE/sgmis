@@ -72,7 +72,15 @@ public class RedisUtil {
      * 获取命名空间下的所有key
      */
     public Set<String> keys(RedisNamespace redisNamespace, Object namespace) {
-        return redisTemplate.keys(redisNamespace.getValue() + namespace + ":*");
+        return redisTemplate.keys(redisNamespace.getValue() + namespace + "*");
+    }
+
+    /**
+     * 带父级命名空间
+     * 获取命名空间下的所有key
+     */
+    public Set<String> keys(RedisNamespace redisNamespace) {
+        return redisTemplate.keys(redisNamespace.getValue() + "*");
     }
 
     /**

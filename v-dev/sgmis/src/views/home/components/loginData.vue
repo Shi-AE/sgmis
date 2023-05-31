@@ -139,7 +139,7 @@ export default {
             <div ref="loginLine" class="table"></div>
         </a-grid-item>
         <a-grid-item>
-            <div class="oplogData">
+            <div class="longinData">
                 <a-timeline label-position="relative">
                     <div v-for="(item, index) in loginMsg" :key="index">
                         <a-timeline-item dot-type="hollow" :dot-color="color[index]" :label="item.time">
@@ -156,10 +156,11 @@ export default {
 </template>
 
 <style scoped>
-.oplogData {
+.longinData {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
     padding: 20px;
 }
 

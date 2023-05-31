@@ -5,7 +5,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import java.util.*;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.Set;
+import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * 白名单工具类
@@ -41,7 +45,7 @@ public class WhitelistUtil {
      */
     public void limitToken(Long id) {
         //获取此id下的所有key
-        Set<String> keys = redisUtil.keys(RedisNamespace.Whitelist, id);
+        Set<String> keys = redisUtil.keys(RedisNamespace.Whitelist, id + ":");
 
         //如果key个数小于限制则放行
         if (keys.size() <= ipLimit) {
@@ -82,5 +86,26 @@ public class WhitelistUtil {
         if (expires - redisExpires > updateGap) {
             redisUtil.expire(RedisNamespace.Whitelist, id + ":" + ip, expires);
         }
+    }
+
+    /**
+     * 统计活跃人数
+     */
+    public long getActive(RedisNamespace namespace, String key) {
+        //根据获取包含key的key
+        Set<String> keys = redisUtil.keys(namespace, key);
+
+        AtomicLong count = new AtomicLong();
+
+        //筛选并统计最近活跃的人数
+        keys.forEach(k -> {
+            Long tokenExpires = redisUtil.getExpire(k);
+
+            if (expires - tokenExpires < updateGap) {
+                count.getAndIncrement();
+            }
+        });
+
+        return count.get();
     }
 }

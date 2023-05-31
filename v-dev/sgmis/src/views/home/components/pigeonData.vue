@@ -8,7 +8,9 @@ export default {
     data() {
         return {
             totalPigeon: 0,
-            totalOplog: 0
+            totalOplog: 0,
+            online: 0,
+            onlineGroup: 0,
         }
     },
     async mounted() {
@@ -84,7 +86,7 @@ export default {
                     name: '创建',
                     type: 'line',
                     itemStyle: {
-                        color: "#00B42A"
+                        color: "#14C9C9"
                     },
                     data: createData
                 },
@@ -128,6 +130,28 @@ export default {
                 Notification.error(res.data.message)
             }
         })
+        //获取当前系统在线人数
+        axiosx({
+            method: "GET",
+            url: "data/online"
+        }).then(res => {
+            if (res.data.code === 200) {
+                this.online = res.data.data
+            } else {
+                Notification.error(res.data.message)
+            }
+        })
+        //获取团队在线人数
+        axiosx({
+            method: "GET",
+            url: "data/online/group"
+        }).then(res => {
+            if (res.data.code === 200) {
+                this.onlineGroup = res.data.data
+            } else {
+                Notification.error(res.data.message)
+            }
+        })
     }
 }
 </script>
@@ -137,8 +161,14 @@ export default {
         <a-grid-item>
             <div class="statistic">
                 <a-space size="large">
+                    <!--在线总数-->
+                    <a-statistic title="在线设备总数" :value="online" :value-style="{ color: '#0fbf60' }" animation/>
+                    <!--组员在线数-->
+                    <a-statistic extra="组员在线设备数" :value="onlineGroup" :value-style="{ color: '#F77234' }" animation/>
+                </a-space>
+                <a-space size="large">
                     <!--鸽子总数-->
-                    <a-statistic title="库中鸽子总数" :value="totalPigeon" :value-style="{ color: '#0fbf60' }"
+                    <a-statistic title="库中鸽子总数" :value="totalPigeon" :value-style="{ color: '#14C9C9' }"
                                  animation/>
                     <!--操作总数-->
                     <a-statistic extra="操作总数" :value="totalOplog" :value-style="{ color: '#D91AD9' }" animation/>
@@ -160,8 +190,9 @@ export default {
 
 .statistic {
     display: flex;
-    justify-content: center;
-    justify-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     height: 100%;
 }
 </style>
