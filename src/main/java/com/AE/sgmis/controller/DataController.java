@@ -7,6 +7,7 @@ import com.AE.sgmis.pojo.Pigeon;
 import com.AE.sgmis.pojo.PigeonInfo;
 import com.AE.sgmis.result.LogType;
 import com.AE.sgmis.result.Result;
+import com.AE.sgmis.result.SeverityLevel;
 import com.AE.sgmis.result.SuccessCode;
 import com.AE.sgmis.service.LoginMsgService;
 import com.AE.sgmis.service.OplogService;
@@ -236,7 +237,7 @@ public class DataController {
         Long gid = (Long) info.get("gid");
 
         if (!(0 < limit && limit < maxLimit)) {
-            throw new MaliciousSqlInjectionException(" limit异常");
+            throw new MaliciousSqlInjectionException(" limit异常", SeverityLevel.Major);
         }
 
         //条件 gid limit
@@ -260,7 +261,7 @@ public class DataController {
         Long gid = (Long) info.get("gid");
 
         if (!(0 < limit && limit < maxLimit)) {
-            throw new MaliciousSqlInjectionException(" limit异常");
+            throw new MaliciousSqlInjectionException(" limit异常", SeverityLevel.Major);
         }
 
         QueryWrapper<LoginMsg> wrapper = new QueryWrapper<>();

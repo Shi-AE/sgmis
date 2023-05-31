@@ -5,6 +5,7 @@ import com.AE.sgmis.exceptions.SaveFailException;
 import com.AE.sgmis.pojo.Gpcx;
 import com.AE.sgmis.pojo.PigeonGpcx;
 import com.AE.sgmis.result.Result;
+import com.AE.sgmis.result.SeverityLevel;
 import com.AE.sgmis.result.SuccessCode;
 import com.AE.sgmis.service.GpcxService;
 import com.AE.sgmis.service.PigeonGpcxService;
@@ -170,22 +171,29 @@ public class GpcxController {
 
     /**
      * 检查权限
+     * 检查是否gpcxId被用户修改
+     * 用以查询非本团队的gpcx信息
      */
     private String check(Long gpcxId, HttpServletRequest request) {
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
+
         //条件 id = gpcxId
         QueryWrapper<Gpcx> wrapper = new QueryWrapper<>();
         wrapper.eq("id", gpcxId);
+
         //字段 gid
         wrapper.select("gid", "name");
+
         //执行
         Gpcx gpcx = gpcxService.getOne(wrapper);
+
         //检查
         if (!gid.equals(gpcx.getGid())) {
-            throw new MaliciousSqlInjectionException("非法查询");
+            throw new MaliciousSqlInjectionException("非法查询", SeverityLevel.Critical);
         }
+
         return gpcx.getName();
     }
 }

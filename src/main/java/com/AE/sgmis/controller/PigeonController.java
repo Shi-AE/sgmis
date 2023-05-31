@@ -6,6 +6,7 @@ import com.AE.sgmis.pojo.PigeonInfo;
 import com.AE.sgmis.pojo.PigeonWrapper;
 import com.AE.sgmis.pojo.Xxpz;
 import com.AE.sgmis.result.Result;
+import com.AE.sgmis.result.SeverityLevel;
 import com.AE.sgmis.result.SuccessCode;
 import com.AE.sgmis.service.PigeonInfoService;
 import com.AE.sgmis.service.PigeonService;
@@ -304,7 +305,8 @@ public class PigeonController {
 
         //field字段 防止sql注入
         if (!fields.contains(field)) {
-            throw new MaliciousSqlInjectionException("不合法的输入");
+            //严重者可发生sql注入
+            throw new MaliciousSqlInjectionException("不合法的输入", SeverityLevel.Blocker);
         }
 
         pigeonService.updatePigeonByTypeAndIds(ids, field, data, gid, account);

@@ -5,6 +5,7 @@ import com.AE.sgmis.exceptions.MaliciousSqlInjectionException;
 import com.AE.sgmis.exceptions.SaveFailException;
 import com.AE.sgmis.pojo.Xxpz;
 import com.AE.sgmis.result.Result;
+import com.AE.sgmis.result.SeverityLevel;
 import com.AE.sgmis.result.SuccessCode;
 import com.AE.sgmis.service.XxpzService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -67,7 +68,8 @@ public class XxpzController {
     public Result getAllByType(@PathVariable String type, HttpServletRequest request) {
         //判断是否异常type注入
         if (!tableNames.contains(type)) {
-            throw new MaliciousSqlInjectionException("配置类型异常注入");
+            //中级不会发生sql注入
+            throw new MaliciousSqlInjectionException("配置类型异常注入", SeverityLevel.Critical);
         }
 
         //获取gid
@@ -129,12 +131,12 @@ public class XxpzController {
     /**
      * 新增选项配置
      */
-    // TODO 数据库控制输入数据
     @PostMapping("{type}")
     public Result add(@RequestBody Xxpz xxpz, @PathVariable String type, HttpServletRequest request) {
         //判断是否异常type注入
         if (!tableNames.contains(type)) {
-            throw new MaliciousSqlInjectionException("配置类型异常注入");
+            //中级修改请求，但不会发生sql注入
+            throw new MaliciousSqlInjectionException("配置类型异常注入", SeverityLevel.Critical);
         }
 
         //从请求域中获取用户信息

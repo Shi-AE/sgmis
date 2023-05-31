@@ -1,5 +1,6 @@
 package com.AE.sgmis.interceptor;
 
+import com.AE.sgmis.exceptions.AccessException;
 import com.AE.sgmis.util.JwtUtil;
 import com.AE.sgmis.util.WhitelistUtil;
 import com.auth0.jwt.interfaces.DecodedJWT;
@@ -7,7 +8,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.expression.AccessException;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 

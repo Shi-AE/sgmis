@@ -5,6 +5,7 @@ import com.AE.sgmis.exceptions.NotFoundException;
 import com.AE.sgmis.pojo.Oplog;
 import com.AE.sgmis.pojo.PagingCondition;
 import com.AE.sgmis.result.Result;
+import com.AE.sgmis.result.SeverityLevel;
 import com.AE.sgmis.result.SuccessCode;
 import com.AE.sgmis.service.OplogService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -41,7 +42,7 @@ public class OplogController {
         Long gid = (Long) info.get("gid");
 
         if (!(0 < limit && limit < maxLimit)) {
-            throw new MaliciousSqlInjectionException(" limit异常");
+            throw new MaliciousSqlInjectionException(" limit异常", SeverityLevel.Major);
         }
 
         //条件

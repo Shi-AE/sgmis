@@ -68,6 +68,9 @@ public class WhitelistUtil {
     public boolean verifyToken(Long id, String ip, String token) {
         //获取token
         Object redisToken = redisUtil.get(RedisNamespace.Whitelist, id + ":" + ip);
+        if (redisToken == null) {
+            return false;
+        }
         return redisToken.equals(token);
     }
 
