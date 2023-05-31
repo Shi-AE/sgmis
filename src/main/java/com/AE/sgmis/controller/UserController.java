@@ -7,6 +7,7 @@ import com.AE.sgmis.result.Result;
 import com.AE.sgmis.result.SuccessCode;
 import com.AE.sgmis.service.UserService;
 import com.AE.sgmis.util.EncryptUtil;
+import com.AE.sgmis.util.WhitelistUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import jakarta.annotation.PostConstruct;
 import jakarta.servlet.http.HttpServletRequest;
@@ -27,6 +28,8 @@ public class UserController {
     private UserService userService;
     @Autowired
     private EncryptUtil encryptUtil;
+    @Autowired
+    private WhitelistUtil whitelistUtil;
     @Value("${user.defaultPassword}")
     private String defaultPassword;
     private byte[] defaultPasswordBin;
@@ -77,8 +80,6 @@ public class UserController {
 
         List<User> list = userService.list(wrapper);
 
-        System.out.println(list);
-
         return new Result(list, SuccessCode.Success.code, "查询成功");
     }
 
@@ -90,15 +91,22 @@ public class UserController {
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
+
         //检查gid安全
         if (!user.getGid().equals(gid)) {
             throw new SaveFailException("用户信息不匹配，请重试");
         }
+
+        //获取传入的id
+        Long id = user.getId();
+
         //id = id and gid = gid
         QueryWrapper<User> wrapper = new QueryWrapper<>();
-        wrapper.eq("id", user.getId()).eq("gid", gid);
+        wrapper.eq("id", id).eq("gid", gid);
+
         //设置字段 admin
         wrapper.select("admin");
+
         //检测操作对象是否为管理员
         user = userService.getOne(wrapper);
         if (user == null) {
@@ -107,16 +115,23 @@ public class UserController {
         if (user.getAdmin()) {
             throw new SaveFailException("无法操作管理员信息");
         }
+
         //重置密码
         user.setPassword(defaultPasswordBin);
+
         //密码加密
         encryptUtil.passwordEncrypt(user);
+
         //执行
         boolean success = userService.update(user, wrapper);
         if (!success) {
             log.error("重置密码传入 {} 发生服务器错误", user);
             throw new SaveFailException("保存失败，请重试");
         }
+
+        //如果该成员在线，将其token剔除
+        whitelistUtil.deleteToken(id);
+
         return new Result(SuccessCode.Success.code, "用户密码重置成功");
     }
 
@@ -148,18 +163,23 @@ public class UserController {
      */
     @DeleteMapping("{id}")
     public Result deleteUser(HttpServletRequest request, @PathVariable Long id) {
-        System.out.println(id);
         //获取gid
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
+
         //id = id and gid = gid
         QueryWrapper<User> wrapper = new QueryWrapper<>();
         wrapper.eq("id", id).eq("gid", gid);
+
         //执行
         boolean success = userService.remove(wrapper);
         if (!success) {
             throw new DeleteFailException("用户不存在，请重试");
         }
+
+        //如果该成员在线，将其token剔除
+        whitelistUtil.deleteToken(id);
+
         return new Result(SuccessCode.Success.code, "成员删除成功");
     }
 }

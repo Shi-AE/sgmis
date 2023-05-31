@@ -5,7 +5,7 @@ import com.AE.sgmis.exceptions.FreePassException;
 import com.AE.sgmis.exceptions.SaveFailException;
 import com.AE.sgmis.exceptions.UnchangedPasswordException;
 import com.AE.sgmis.pojo.LoginMsg;
-import com.AE.sgmis.pojo.UpdateUserInfo;
+import com.AE.sgmis.pojo.UpdateUserVo;
 import com.AE.sgmis.pojo.User;
 import com.AE.sgmis.pojo.UserVo;
 import com.AE.sgmis.result.Result;
@@ -181,24 +181,24 @@ public class LoginController {
      * 修改密码
      */
     @PutMapping
-    public Result updatePassword(@RequestBody UpdateUserInfo userInfo, HttpServletRequest request) {
-        if (!userInfo.getNewPassword().equals(userInfo.getConfirmPassword())) {
+    public Result updatePassword(@RequestBody UpdateUserVo userVo, HttpServletRequest request) {
+        if (!userVo.getNewPassword().equals(userVo.getConfirmPassword())) {
             throw new ConfirmPasswordInconsistencyException("新密码和确认密码不一致");
         }
-        if (userInfo.getOldPassword().equals(userInfo.getNewPassword())) {
+        if (userVo.getOldPassword().equals(userVo.getNewPassword())) {
             throw new UnchangedPasswordException("密码未变更");
         }
 
         //装配为二进制
         User user = new User();
-        user.setAccount(userInfo.getAccount());
-        user.setPassword(userInfo.getOldPassword().getBytes());
+        user.setAccount(userVo.getAccount());
+        user.setPassword(userVo.getOldPassword().getBytes());
 
         //验证原密码
         loginService.loginVerify(user);
 
         //装配为现密码
-        user.setPassword(userInfo.getNewPassword().getBytes());
+        user.setPassword(userVo.getNewPassword().getBytes());
 
         //添加id
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
@@ -207,6 +207,9 @@ public class LoginController {
 
         //更新密码，并加密
         loginService.updateEncrypt(user);
+
+        //剔除线上token
+        whitelistUtil.deleteToken(id);
 
         return new Result(SuccessCode.ModifyPasswordSuccess.code, "修改密码成功");
     }

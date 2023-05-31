@@ -108,4 +108,13 @@ public class WhitelistUtil {
 
         return count.get();
     }
+
+    /**
+     * 将用户的所有设备
+     * 从白名单中剔除
+     */
+    public void deleteToken(Long id) {
+        Set<String> keys = redisUtil.keys(RedisNamespace.Whitelist, id + ":");
+        keys.forEach(key -> redisUtil.del(key));
+    }
 }
