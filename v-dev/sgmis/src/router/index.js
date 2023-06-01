@@ -157,7 +157,7 @@ const router = createRouter({
                 }
             ],
             meta: {
-                // requiresAuth: true
+                requiresAuth: true
             },
             redirect: { name: "home" }
         },

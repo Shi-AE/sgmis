@@ -39,12 +39,12 @@ export default {
     <div class="login-form">
         <form @submit.prevent="submit">
             <div class="form-floating mb-3">
-                <input type="text" class="form-control" placeholder="name@example.com" v-model.lazy="formMess.account"
+                <input type="text" class="form-control" placeholder="账号" v-model.lazy="formMess.account"
                     required>
                 <label for="account">账号</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="password" class="form-control" placeholder="name@example.com" v-model.lazy="formMess.password"
+                <input type="password" class="form-control" placeholder="密码" v-model.lazy="formMess.password"
                     required>
                 <label for="password">密码</label>
             </div>

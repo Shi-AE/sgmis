@@ -74,7 +74,7 @@ axiosx.interceptors.response.use(response => {
     clearLoading()
     //解除键盘事件
     document.removeEventListener('keydown', preventKeyDown, false);
-    // router.push({ name: "500" })
+    router.push({ name: "500" })
     Notification.error(`${error.message} ${error.code}`)
     store.commit("setPending", false)
     return Promise.reject(error)

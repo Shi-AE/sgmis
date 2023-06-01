@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-    <a-grid :cols="{xs: 1, sm: 1, md: 2, xxl: 3}" :col-gap="16" :row-gap="16">
+    <a-grid :cols="{xs: 1, sm: 1, md: 2}" :col-gap="16" :row-gap="16">
         <a-grid-item>
             <a-card title="库中鸽子雌雄比例图">
                 <div class="chart">
