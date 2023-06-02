@@ -23,7 +23,8 @@ const store = createStore({
             isPending: false,
             logoName: "",
             pigeonResourcePath: `/pigeon`,
-            logoResourcePath: `/logo`
+            logoResourcePath: `/logo`,
+            recent: 30
         }
     },
     mutations: {

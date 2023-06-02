@@ -92,7 +92,7 @@ public class DataController {
         //哈希计数map
         Map<String, Integer> countMap = new HashMap<>();
         //获取一个月前时间
-        LocalDate recent = LocalDate.now().minusMonths(createRecent);
+        LocalDate recent = LocalDate.now().minusDays(createRecent);
         pigeonList.forEach(pigeon -> {
             //根据id获取时间
             Long id = pigeon.getId();
@@ -124,7 +124,7 @@ public class DataController {
         Long gid = (Long) info.get("gid");
 
         //获取最近时间
-        LocalDateTime recent = LocalDateTime.now().minusMonths(deleteRecent);
+        LocalDateTime recent = LocalDateTime.now().minusDays(deleteRecent);
 
         //条件语句
         //select DATE(time), count(0)
@@ -188,7 +188,7 @@ public class DataController {
         Long gid = (Long) info.get("gid");
 
         //获取最近时间
-        LocalDateTime recent = LocalDateTime.now().minusMonths(oplogRecent);
+        LocalDateTime recent = LocalDateTime.now().minusDays(oplogRecent);
 
         //select DATE(time), count(0), content
         //from t_oplog
@@ -284,7 +284,7 @@ public class DataController {
         Long gid = (Long) info.get("gid");
 
         //获取最近时间
-        LocalDateTime recent = LocalDateTime.now().minusMonths(oplogRecent);
+        LocalDateTime recent = LocalDateTime.now().minusDays(oplogRecent);
 
         //select account, count(0), DATE(time)
         //from t_login_msg

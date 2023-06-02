@@ -3,6 +3,7 @@ import axiosx from "../../../assets/js/axiosx.js";
 import {Notification} from "@arco-design/web-vue";
 import * as echarts from "echarts";
 import {toDebounceFunction} from "../../../assets/js/debounce.js";
+import dayjs from "dayjs";
 
 export default {
     data() {
@@ -54,12 +55,19 @@ export default {
                 url: "data/login/count"
             }).then(res => {
                 if (res.data.code === 200) {
+                    const data = res.data.data
+                    console.log(data)
+                    //数据转化为map
+                    const dataMap = {}
                     res.data.data.forEach(item => {
+                        const account = item.account
                         //出现新用户，设置图例信息
-                        if (!countMap[item.account]) {
-                            legendData.push(item.account)
-                            countMap[item.account] = {
-                                name: item.account,
+                        if (!countMap[account]) {
+                            //设置图例
+                            legendData.push(account)
+                            //设置线条
+                            countMap[account] = {
+                                name: account,
                                 type: 'line',
                                 itemStyle: {
                                     //调色
@@ -67,9 +75,26 @@ export default {
                                 },
                                 data: []
                             }
+                            //设置数据map
+                            dataMap[account] = {}
                         }
-                        countMap[item.account].data.push([item.time, item.count])
+                        dataMap[account][item.time] = item.count
                     })
+
+                    console.log(legendData)
+
+                    //从当前日期开始向前设定（30）天数创建时间表
+                    const recent = this.$store.state.recent
+                    let time = dayjs()
+                    for (let i = 0; i < recent; i++) {
+                        const format = time.format("YYYY-MM-DD");
+                        for (const j in legendData) {
+                            const account = legendData[j];
+                            countMap[account].data.push([format, dataMap[account][format] || 0])
+                        }
+                        time = time.subtract(1, 'day')
+                    }
+
                     for (const key in countMap) {
                         seriesList.push(countMap[key])
                     }

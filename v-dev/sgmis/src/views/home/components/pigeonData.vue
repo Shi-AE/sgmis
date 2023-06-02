@@ -2,9 +2,15 @@
 import * as echarts from "echarts"
 import axiosx from "../../../assets/js/axiosx.js";
 import {Notification} from "@arco-design/web-vue";
-import {toDebounceFunction} from "../../../assets/js/debounce.js";
+import {toDebounceFunction} from "../../../assets/js/debounce.js"
+import dayjs from "dayjs";
 
 export default {
+    computed: {
+        dayjs() {
+            return dayjs
+        }
+    },
     data() {
         return {
             totalPigeon: 0,
@@ -22,25 +28,40 @@ export default {
         }).then(res => {
             if (res.data.code === 200) {
                 const data = res.data.data
-                for (const key in data) {
-                    createData.push([key, data[key]])
+                //从当前日期开始向前设定（30）天数创建时间表
+                const recent = this.$store.state.recent
+                let time = dayjs()
+                for (let i = 0; i < recent; i++) {
+                    const format = time.format("YYYY-MM-DD");
+                    createData.push([format, data[format] || 0])
+                    time = time.subtract(1, 'day')
                 }
-                createData.sort((a, b) => {
-                    return a[0] > b[0] ? 1 : -1
-                })
             } else {
                 Notification.error(res.data.message)
             }
         })
         //获取删除量
-        const deleteData = await axiosx({
+        const deleteData = [];
+        await axiosx({
             method: "GET",
             url: "data/delete"
         }).then(res => {
             if (res.data.code === 200) {
-                return res.data.data.map(item => {
-                    return [item.time, item.count]
+                const data = res.data.data
+                //转化成map
+                const dataMap = {}
+                data.forEach(item => {
+                    dataMap[item.time] = item.count
                 })
+
+                //从当前日期开始向前设定（30）天数创建时间表
+                const recent = this.$store.state.recent
+                let time = dayjs()
+                for (let i = 0; i < recent; i++) {
+                    const format = time.format("YYYY-MM-DD");
+                    deleteData.push([format, dataMap[format] || 0])
+                    time = time.subtract(1, 'day')
+                }
             } else {
                 Notification.error(res.data.message)
             }

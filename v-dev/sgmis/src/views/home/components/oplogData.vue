@@ -3,6 +3,7 @@ import * as echarts from "echarts";
 import axiosx from "../../../assets/js/axiosx.js";
 import {Notification} from "@arco-design/web-vue";
 import {toDebounceFunction} from "../../../assets/js/debounce.js";
+import dayjs from "dayjs";
 
 export default {
     data() {
@@ -23,19 +24,33 @@ export default {
         //创建oplogLine图
         async createOplogLine() {
             //获取数据
-            const contentMap = {
-                0: [], 1: [], 2: [], 3: [], 4: [], 5: [], 6: [], 7: [], 8: []
-            }
+            const opNum = 9
+            const contentMap = Array.from({length: opNum}, () => [])
             await axiosx({
                 method: "GET",
                 url: "data/oplog/line"
             }).then(res => {
                 if (res.data.code === 200) {
-                    res.data.data.forEach(item => {
-                        contentMap[item.content].push([
-                            item.time, item.count
-                        ])
+                    const data = res.data.data
+                    //转化成map
+                    const dataMap = {}
+                    for (let i = 0; i < opNum; i++) {
+                        dataMap[i] = {}
+                    }
+                    data.forEach(item => {
+                        dataMap[item.content][item.time] = item.count
                     })
+
+                    //从当前日期开始向前设定（30）天数创建时间表
+                    const recent = this.$store.state.recent
+                    let time = dayjs()
+                    for (let i = 0; i < recent; i++) {
+                        const format = time.format("YYYY-MM-DD");
+                        for (let j = 0; j < opNum; j++) {
+                            contentMap[j].push([format, dataMap[j][format] || 0])
+                        }
+                        time = time.subtract(1, 'day')
+                    }
                 } else {
                     Notification.error(res.data.message)
                 }

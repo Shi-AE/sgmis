@@ -6,4 +6,8 @@ import Router from "./router"
 import '@/assets/css/style.css'
 import store from './store'
 
-createApp(App).use(ArcoVue).use(Router).use(store).mount('#app')
+createApp(App)
+    .use(ArcoVue)
+    .use(Router)
+    .use(store)
+    .mount('#app')

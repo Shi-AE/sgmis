@@ -62,11 +62,11 @@ page:
 carousel:
   limit: 10
 
-# 月
+# 天
 recent:
-  create: 1
-  delete: 1
-  oplog: 1
+  create: 30
+  delete: 30
+  oplog: 30
 
 #day
 log:
