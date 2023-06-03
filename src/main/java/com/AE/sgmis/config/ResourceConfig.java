@@ -31,7 +31,7 @@ public class ResourceConfig implements WebMvcConfigurer {
                     if (name.matches("^file\\.(.*)+\\.path$")) {
                         String basePath = environment.getProperty(name);
                         registry.addResourceHandler("/" + basePath + "/**")
-                                .addResourceLocations("file:" + basePath + "\\");
+                                .addResourceLocations("file:" + basePath + "/");
                         log.info("成功加载 {} 资源路径", name);
                     }
                 }
