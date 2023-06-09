@@ -59,20 +59,4 @@ public class LoginServiceImpl extends ServiceImpl<UserMapper, User> implements L
             throw new PasswordUpdateFailException("密码更新发生错误");
         }
     }
-
-    @Autowired
-    private LoginMsgMapper loginMsgMapper;
-
-    @Override
-    public void addLoginMsg(LoginMsg loginMsg) {
-        loginMsgMapper.insert(loginMsg);
-    }
-
-    @Override
-    public List<LoginMsg> getLoginMsgList() {
-        QueryWrapper<LoginMsg> list = new QueryWrapper<LoginMsg>()
-                .orderByDesc("date")
-                .last("limit 5");
-        return loginMsgMapper.selectList(list);
-    }
 }

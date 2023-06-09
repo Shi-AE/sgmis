@@ -171,7 +171,7 @@ public class LoginController {
      * 退出登录
      */
     @DeleteMapping
-    public Result exit(HttpSession session, HttpServletRequest request) {//添加id
+    public Result exit(HttpSession session, HttpServletRequest request) {
         //获取id
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long id = (Long) info.get("id");

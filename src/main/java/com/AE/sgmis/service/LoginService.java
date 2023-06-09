@@ -21,15 +21,4 @@ public interface LoginService extends IService<User> {
      * 更新加密结果
      */
     void updateEncrypt(User user);
-
-    /**
-     * 添加登录信息
-     */
-    void addLoginMsg(LoginMsg loginMsg);
-
-    /**
-     * 获取多条登录信息
-     * @return 查询结果
-     */
-    List<LoginMsg> getLoginMsgList();
 }

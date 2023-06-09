@@ -5,6 +5,9 @@ import com.AE.sgmis.result.SeverityLevel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * 黑名单工具
+ */
 @Component
 public class BlacklistUtil {
 

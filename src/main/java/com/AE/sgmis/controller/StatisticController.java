@@ -116,7 +116,11 @@ public class StatisticController {
         Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
         Long gid = (Long) info.get("gid");
 
-        //
+        //select count(is_grade), is_grade
+        //from is_grade
+        //where is_grade is not null
+        //and gid = 1640546214887645185
+        //group by is_grade;
         QueryWrapper<Pigeon> wrapper = new QueryWrapper<>();
         wrapper.select("is_grade isGrade", "COUNT(is_grade) count")
                 .eq("gid", gid)

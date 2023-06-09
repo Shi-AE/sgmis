@@ -127,6 +127,9 @@ public class QRCodeUtil {
         return String.format(base64Image, new String(Base64.encode(output.toByteArray())));
     }
 
+    /**
+     * 插入logo
+     */
     private void insertLogo(BufferedImage source,
                             int width, int height,
                             String logoUrl,
