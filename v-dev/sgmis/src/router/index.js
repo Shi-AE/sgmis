@@ -11,7 +11,7 @@ const router = createRouter({
             component: () => import('@/views/login/login.vue'),
             meta: {
                 title: "登录",
-                // free: true
+                free: true
             }
         },
         {
@@ -136,7 +136,7 @@ const router = createRouter({
                     component: () => import("@/views/admin/admin.vue"),
                     meta: {
                         title: "管理员设置",
-                        // requiresAdminAuth: true
+                        requiresAdminAuth: true
                     }
                 },
                 {
@@ -157,7 +157,7 @@ const router = createRouter({
                 }
             ],
             meta: {
-                // requiresAuth: true
+                requiresAuth: true
             },
             redirect: { name: "home" }
         },
