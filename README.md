@@ -27,7 +27,7 @@
 
 本系统基于 B/S 架构，用户端通过瘦客户端浏览器通过 URL 访问与服务端建立服务连接
 
-![image-20230607152247388](README\image-20230607152247388.png)
+![image-20230607152247388](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230607152247388.png)
 
 服务端环境，客户端环境要求如下： 
 
@@ -81,7 +81,7 @@
 
 ### 2.1 数据表设计
 
-![表设计](表设计.png)
+![表设计](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/表设计.png)
 
 ### 2.2 后端设计
 
@@ -4134,7 +4134,7 @@ public class FeedBackController {
 
 - 柱状分析图
 
-![image-20230608201923566](README\image-20230608201923566.png)
+![image-20230608201923566](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608201923566.png)
 
 - 总结
 
@@ -4161,105 +4161,105 @@ public class FeedBackController {
 
 #### 2.3.1 登录界面
 
-![image-20230608202850022](README\image-20230608202850022.png)
+![image-20230608202850022](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608202850022.png)
 
 #### 2.3.2 首页
 
 - 轮播图
 
-  ![image-20230608203100298](README\image-20230608203100298.png)
+  ![image-20230608203100298](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608203100298.png)
 
 - 数据分析图表
 
-  ![image-20230608203148795](README\image-20230608203148795.png)
+  ![image-20230608203148795](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608203148795.png)
 
 #### 2.3.3 鸽子库
 
 - 主要信息界面
 
-![image-20230608203434860](README\image-20230608203434860.png)
+![image-20230608203434860](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608203434860.png)
 
-![image-20230608203246770](README\image-20230608203246770.png)
+![image-20230608203246770](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608203246770.png)
 
 - 弹窗
 
-  ![image-20230608210747662](README\image-20230608210747662.png)
+  ![image-20230608210747662](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608210747662.png)
 
-  ![image-20230608210810077](README\image-20230608210810077.png)
+  ![image-20230608210810077](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608210810077.png)
 
   
 
-  ![image-20230608210832704](README\image-20230608210832704.png)
+  ![image-20230608210832704](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608210832704.png)
 
-  ![image-20230608210853911](README\image-20230608210853911.png)
+  ![image-20230608210853911](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608210853911.png)
 
 #### 2.3.4 编辑血统
 
-![image-20230608211007461](README\image-20230608211007461.png)
+![image-20230608211007461](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608211007461.png)
 
-![image-20230608211121290](README\image-20230608211121290.png)
+![image-20230608211121290](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608211121290.png)
 
-![image-20230608211029615](README\image-20230608211029615.png)
+![image-20230608211029615](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608211029615.png)
 
-![image-20230608211046662](README\image-20230608211046662.png)
+![image-20230608211046662](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608211046662.png)
 
 #### 2.3.5 快速入库
 
-![image-20230608211248677](README\image-20230608211248677.png)
+![image-20230608211248677](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608211248677.png)
 
 #### 2.3.6 高级批量操作
 
-![image-20230608211351932](README\image-20230608211351932.png)
+![image-20230608211351932](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608211351932.png)
 
 #### 2.3.7 操作日志
 
-![image-20230608211534296](README\image-20230608211534296.png)
+![image-20230608211534296](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608211534296.png)
 
 #### 2.3.8 统计中心
 
-![image-20230608211604815](README\image-20230608211604815.png)
+![image-20230608211604815](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608211604815.png)
 
 #### 2.3.9 鸽棚巢箱
 
-![image-20230608211711405](README\image-20230608211711405.png)
+![image-20230608211711405](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608211711405.png)
 
-![image-20230608211648668](README\image-20230608211648668.png)
+![image-20230608211648668](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608211648668.png)
 
-![image-20230608211733245](README\image-20230608211733245.png)
+![image-20230608211733245](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608211733245.png)
 
 #### 2.3.10 选项设置
 
-![image-20230608211849462](README\image-20230608211849462.png)
+![image-20230608211849462](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608211849462.png)
 
-![image-20230608211911349](README\image-20230608211911349.png)
+![image-20230608211911349](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608211911349.png)
 
 #### 2.3.11 鸽舍信息
 
-![image-20230608211935810](README\image-20230608211935810.png)
+![image-20230608211935810](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608211935810.png)
 
 #### 2.3.12 血统书配置
 
-![image-20230608212003602](README\image-20230608212003602.png)
+![image-20230608212003602](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608212003602.png)
 
 #### 2.3.13 用户设置
 
-![image-20230608212057499](README\image-20230608212057499.png)
+![image-20230608212057499](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608212057499.png)
 
 #### 2.3.14 管理员设置
 
-![image-20230608212133891](README\image-20230608212133891.png)
+![image-20230608212133891](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608212133891.png)
 
-![image-20230608212146924](README\image-20230608212146924.png)
+![image-20230608212146924](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608212146924.png)
 
-![image-20230608212203883](README\image-20230608212203883.png)
+![image-20230608212203883](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608212203883.png)
 
 #### 2.3.15 登录信息
 
-![image-20230608212321792](README\image-20230608212321792.png)
+![image-20230608212321792](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608212321792.png)
 
 #### 2.3.16 反馈中心
 
-![image-20230608212357639](README\image-20230608212357639.png)
+![image-20230608212357639](https://raw.githubusercontent.com/Shi-AE/sgmis/main/README/image-20230608212357639.png)
 
 #### 2.3.17 全局配置
 
