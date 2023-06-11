@@ -72,7 +72,7 @@ export default {
                 <a-grid-item>
                     <a-card title="咨询、合作" hoverable>
                         <div>
-                            <a target="_blank" href="https://github.com/Shi-AE">
+                            <a target="_blank" href="https://github.com/Shi-AE/sgmis">
                                 <iconGithub size="30"/>
                             </a>
                         </div>
