@@ -1,99 +1,99 @@
-# sgmis ¸ë×ÓÊı¾İ¹ÜÀíÏµÍ³
+# sgmis é¸½å­æ•°æ®ç®¡ç†ç³»ç»Ÿ
 
-## 1 ÏîÄ¿·ÖÎö
+## 1 é¡¹ç›®åˆ†æ
 
-### 1.1 ÏîÄ¿¸ÅÊö
+### 1.1 é¡¹ç›®æ¦‚è¿°
 
-»¥ÁªÍøÊ±´ú¶Ô¸ëÉáÊı¾İ¹ÜÀíÌá³öÁËĞÂµÄÈÎÎñºÍÒªÇó£¬½èÖú¼ÆËã»úÍøÂçºÍIT¼¼ÊõµÈÊÖ¶Î¿ÉÒÔÍÆ½øºÍÌáÉı¸ëÉáÊı¾İ¹ÜÀíµÄÖÊÁ¿ºÍ³ÉĞ§¡£»ùÓÚÍøÂç¼¼ÊõµÄÖÇ»Û¸ëÉáÊı¾İ¹ÜÀíÏµÍ³ÊÇÒ»Ì×ÍêÕûµÄ´´ĞÂ¸ëÉáÊı¾İ¹ÜÀíÄ£Ê½£¬Ìá¹©Êı×Ö»¯½â¾ö·½°¸£¬ÄÜ¹»Ê¹¸ëÉáÊı¾İµÄÊÕ¼¯¡¢´æ´¢ºÍ·ÖÎö¸ü¼Ó±ã½İ¡¢¸ßĞ§¡¢¹æ·¶ºÍ¸»ÓĞ³ÉĞ§¡£¸ÃÏµÍ³Í¨¹ıÀûÓÃ¼ÆËã»úÍøÂçºÍIT¼¼Êõ£¬ÊµÏÖ¸ëÉáÊı¾İµÄ×Ô¶¯»¯Â¼Èë¡¢ÊµÊ±¸üĞÂºÍÍ³¼Æ·ÖÎö£¬°ïÖú¸ëÉá¹ÜÀíÔ±¸üºÃµØ¹ÜÀíºÍ¼à¿Ø¸ëÉáÊı¾İ¡£Í¬Ê±£¬ÏµÍ³»¹Ìá¹©¿ÉÊÓ»¯µÄÊı¾İÕ¹Ê¾ºÍ±¨¸æÉú³É¹¦ÄÜ£¬Ê¹ÓÃ»§ÄÜ¹»Ö±¹ÛµØÁË½â¸ëÉáµÄÔËÓªÇé¿öºÍ¸ë×ÓµÄ½¡¿µ×´¿ö¡£Í¨¹ıÊ¹ÓÃÖÇ»Û¸ëÉáÊı¾İ¹ÜÀíÏµÍ³£¬¸ëÉá¹ÜÀí¹¤×÷½«¸ü¼Ó±ã½İ¸ßĞ§£¬ÌáÉı¸ëÉáÊı¾İ¹ÜÀíµÄÖÊÁ¿ºÍ³ÉĞ§¡£
+äº’è”ç½‘æ—¶ä»£å¯¹é¸½èˆæ•°æ®ç®¡ç†æå‡ºäº†æ–°çš„ä»»åŠ¡å’Œè¦æ±‚ï¼Œå€ŸåŠ©è®¡ç®—æœºç½‘ç»œå’ŒITæŠ€æœ¯ç­‰æ‰‹æ®µå¯ä»¥æ¨è¿›å’Œæå‡é¸½èˆæ•°æ®ç®¡ç†çš„è´¨é‡å’Œæˆæ•ˆã€‚åŸºäºç½‘ç»œæŠ€æœ¯çš„æ™ºæ…§é¸½èˆæ•°æ®ç®¡ç†ç³»ç»Ÿæ˜¯ä¸€å¥—å®Œæ•´çš„åˆ›æ–°é¸½èˆæ•°æ®ç®¡ç†æ¨¡å¼ï¼Œæä¾›æ•°å­—åŒ–è§£å†³æ–¹æ¡ˆï¼Œèƒ½å¤Ÿä½¿é¸½èˆæ•°æ®çš„æ”¶é›†ã€å­˜å‚¨å’Œåˆ†ææ›´åŠ ä¾¿æ·ã€é«˜æ•ˆã€è§„èŒƒå’Œå¯Œæœ‰æˆæ•ˆã€‚è¯¥ç³»ç»Ÿé€šè¿‡åˆ©ç”¨è®¡ç®—æœºç½‘ç»œå’ŒITæŠ€æœ¯ï¼Œå®ç°é¸½èˆæ•°æ®çš„è‡ªåŠ¨åŒ–å½•å…¥ã€å®æ—¶æ›´æ–°å’Œç»Ÿè®¡åˆ†æï¼Œå¸®åŠ©é¸½èˆç®¡ç†å‘˜æ›´å¥½åœ°ç®¡ç†å’Œç›‘æ§é¸½èˆæ•°æ®ã€‚åŒæ—¶ï¼Œç³»ç»Ÿè¿˜æä¾›å¯è§†åŒ–çš„æ•°æ®å±•ç¤ºå’ŒæŠ¥å‘Šç”ŸæˆåŠŸèƒ½ï¼Œä½¿ç”¨æˆ·èƒ½å¤Ÿç›´è§‚åœ°äº†è§£é¸½èˆçš„è¿è¥æƒ…å†µå’Œé¸½å­çš„å¥åº·çŠ¶å†µã€‚é€šè¿‡ä½¿ç”¨æ™ºæ…§é¸½èˆæ•°æ®ç®¡ç†ç³»ç»Ÿï¼Œé¸½èˆç®¡ç†å·¥ä½œå°†æ›´åŠ ä¾¿æ·é«˜æ•ˆï¼Œæå‡é¸½èˆæ•°æ®ç®¡ç†çš„è´¨é‡å’Œæˆæ•ˆã€‚
 
-### 1.2 ÏîÄ¿ÈÎÎñ
+### 1.2 é¡¹ç›®ä»»åŠ¡
 
-Éè¼ÆÒ»¸ö¶à¹¦ÄÜÏµÍ³£¬ÓÃÓÚÍÅ¶ÓĞ­×÷¹ÜÀí¸ë×ÓÊı¾İ¡£¸ÃÏµÍ³½«Ìá¹©ÒÔÏÂ¹¦ÄÜ£º
+è®¾è®¡ä¸€ä¸ªå¤šåŠŸèƒ½ç³»ç»Ÿï¼Œç”¨äºå›¢é˜Ÿåä½œç®¡ç†é¸½å­æ•°æ®ã€‚è¯¥ç³»ç»Ÿå°†æä¾›ä»¥ä¸‹åŠŸèƒ½ï¼š
 
-1. ¸ë×ÓÊı¾İÂ¼Èë¡¢±à¼­ºÍÕ¹Ê¾£ºÓÃ»§¿ÉÒÔÂ¼ÈëºÍ±à¼­¸ë×ÓµÄÏà¹ØÊı¾İ£¬°üÀ¨¸ë×ÓµÄ»ù±¾ĞÅÏ¢¡¢ÑªÍ³ĞÅÏ¢µÈ¡£ÏµÍ³½«Ìá¹©½çÃæÕ¹Ê¾¸ë×ÓÊı¾İ£¬ÒÔ±ãÍÅ¶Ó³ÉÔ±²é¿´ºÍ¹ÜÀí¡£
-2. ¸ë×ÓÊı¾İÕ¹Ê¾£ºÏµÍ³½«Ìá¹©¶àÖÖÕ¹Ê¾·½Ê½£¬°üÀ¨ÒÔÑªÍ³ÊéĞÎÊ½Õ¹Ê¾¸ë×ÓµÄ¼ÒÆ×¹ØÏµ£¬ÒÔ¼°Õ¹Ê¾¸ë×ÓµÄÆ½±²ĞÅÏ¢ºÍ×Ó´úĞÅÏ¢µÈ¡£
-3. ÑªÍ³ÊéĞÎÊ½Â¼ÈëºÍ¿ìËÙÈë¿â£ºÓÃ»§¿ÉÒÔÊ¹ÓÃÑªÍ³ÊéĞÎÊ½Â¼Èë¸ë×ÓµÄ¼ÒÆ×ĞÅÏ¢£¬²¢½«Æä¿ìËÙ´æÈëÊı¾İ¿âÖĞ¡£´ËÍâ£¬ÏµÍ³»¹Ö§³ÖÍ¨¹ıÎÄ¼şµ¼ÈëµÄ·½Ê½ÅúÁ¿Â¼Èë¸ë×ÓÊı¾İ¡£
-4. ÅúÁ¿±àĞ´ºÍ¸ß¼¶ÅúÁ¿²Ù×÷£ºÏµÍ³Ìá¹©ÅúÁ¿±àĞ´¹¦ÄÜ£¬·½±ãÓÃ»§Í¬Ê±±à¼­¶à¸ö¸ë×ÓµÄĞÅÏ¢¡£´ËÍâ£¬»¹Ìá¹©¸ß¼¶ÅúÁ¿²Ù×÷¹¦ÄÜ£¬ÀıÈçÅúÁ¿ĞŞ¸ÄÌØ¶¨ÊôĞÔ¡¢ÅúÁ¿É¾³ıµÈ¡£
-5. ¶àÍÅ¶Ó¹²Ïí¸ë×ÓÑªÍ³£ºÏµÍ³Ö§³Ö¶àÍÅ¶Ó¹²Ïí¸ë×ÓµÄÑªÍ³ĞÅÏ¢¡£
-6. ¸ëÅï³²Ïä¹ÜÀí¸ë×Ó£ºÏµÍ³Ìá¹©¸ëÅïºÍ³²Ïä¹ÜÀí¹¦ÄÜ£¬ÓÃ»§¿ÉÒÔ¼ÇÂ¼ºÍ¹ÜÀí¸ë×ÓµÄÆÜÏ¢µØĞÅÏ¢£¬·½±ãÍÅ¶Ó³ÉÔ±¶Ô¸ë×ÓµÄ¶¨Î»ºÍ¹ÜÀí¡£
-7. ¼ÇÂ¼²Ù×÷ÈÕÖ¾£ºÏµÍ³½«¼ÇÂ¼ÓÃ»§µÄ²Ù×÷ÈÕÖ¾£¬°üÀ¨Êı¾İÂ¼Èë¡¢±à¼­¡¢É¾³ıµÈ²Ù×÷£¬ÒÔ±ãÍÅ¶Ó³ÉÔ±×·ËİºÍÉó²é²Ù×÷ÀúÊ·¡£
-8. ĞÅÏ¢Ñ¡Ïî×Öµä£ºÏµÍ³Ìá¹©ĞÅÏ¢Ñ¡Ïî×Öµä£¬°üÀ¨¸ë×ÓÊôĞÔ¡¢ÑªÍ³Êé¸ñÊ½µÈÑ¡Ïî£¬ÒÔÈ·±£Êı¾İµÄÒ»ÖÂĞÔºÍ×¼È·ĞÔ¡£
-9. ¸ëÉáĞÅÏ¢±à¼­£ºÓÃ»§¿ÉÒÔ±à¼­¸ëÉáµÄÏà¹ØĞÅÏ¢£¬°üÀ¨¸ëÉáµÄÃû³Æ¡¢µØÖ·µÈ£¬ÒÔ±ã¸üºÃµØ¹ÜÀí¸ë×ÓµÄÆÜÏ¢»·¾³¡£
-10. ÑªÍ³ÊéÕ¹Ê¾ĞÅÏ¢±à¼­£ºÏµÍ³Ìá¹©ÑªÍ³ÊéÕ¹Ê¾ĞÅÏ¢µÄ±à¼­¹¦ÄÜ£¬ÓÃ»§¿ÉÒÔ×Ô¶¨ÒåÕ¹Ê¾ÑªÍ³ÊéÊ±ËùÏÔÊ¾µÄ×Ö¶ÎºÍ¸ñÊ½¡£
-11. ÓÃ»§ĞÅÏ¢¹ÜÀí£ºÏµÍ³Ìá¹©ÓÃ»§ĞÅÏ¢¹ÜÀí¹¦ÄÜ£¬°üÀ¨ÓÃ»§ÕË»§°²È«ºÍÓÃ»§×¢Ïú¡£
-12. ÍÅ¶ÓĞÅÏ¢¹ÜÀí£º¹ÜÀíÔ±¿ÉÒÔ¹ÜÀíÍÅ¶Ó³ÉÔ±Ìí¼Ó¡¢É¾³ı¡¢È¨ÏŞ¹ÜÀí¡¢ÁË½âÍÅ¶Ó³ÉÔ±ÔÚÏßÇé¿ö¡£
-13. µÇÂ¼ĞÅÏ¢¼ÇÂ¼£ºÏµÍ³½«¼ÇÂ¼ÓÃ»§µÄµÇÂ¼ĞÅÏ¢£¬°üÀ¨µÇÂ¼Ê±¼ä¡¢IPµØÖ·µÈ£¬ÒÔÈ·±£ÕË»§°²È«ºÍ×·×ÙµÇÂ¼ÀúÊ·¡£
-14. ĞÅÏ¢Í³¼ÆÕ¹Ê¾£ºÏµÍ³½«Ìá¹©¸ë×ÓÊı¾İµÄÍ³¼ÆÕ¹Ê¾Óë·ÖÎö¹¦ÄÜ£¬°ïÖúÓÃ»§ÁË½âÍÅ¶ÓµÄÕûÌåÇé¿ö¡£
+1. é¸½å­æ•°æ®å½•å…¥ã€ç¼–è¾‘å’Œå±•ç¤ºï¼šç”¨æˆ·å¯ä»¥å½•å…¥å’Œç¼–è¾‘é¸½å­çš„ç›¸å…³æ•°æ®ï¼ŒåŒ…æ‹¬é¸½å­çš„åŸºæœ¬ä¿¡æ¯ã€è¡€ç»Ÿä¿¡æ¯ç­‰ã€‚ç³»ç»Ÿå°†æä¾›ç•Œé¢å±•ç¤ºé¸½å­æ•°æ®ï¼Œä»¥ä¾¿å›¢é˜Ÿæˆå‘˜æŸ¥çœ‹å’Œç®¡ç†ã€‚
+2. é¸½å­æ•°æ®å±•ç¤ºï¼šç³»ç»Ÿå°†æä¾›å¤šç§å±•ç¤ºæ–¹å¼ï¼ŒåŒ…æ‹¬ä»¥è¡€ç»Ÿä¹¦å½¢å¼å±•ç¤ºé¸½å­çš„å®¶è°±å…³ç³»ï¼Œä»¥åŠå±•ç¤ºé¸½å­çš„å¹³è¾ˆä¿¡æ¯å’Œå­ä»£ä¿¡æ¯ç­‰ã€‚
+3. è¡€ç»Ÿä¹¦å½¢å¼å½•å…¥å’Œå¿«é€Ÿå…¥åº“ï¼šç”¨æˆ·å¯ä»¥ä½¿ç”¨è¡€ç»Ÿä¹¦å½¢å¼å½•å…¥é¸½å­çš„å®¶è°±ä¿¡æ¯ï¼Œå¹¶å°†å…¶å¿«é€Ÿå­˜å…¥æ•°æ®åº“ä¸­ã€‚æ­¤å¤–ï¼Œç³»ç»Ÿè¿˜æ”¯æŒé€šè¿‡æ–‡ä»¶å¯¼å…¥çš„æ–¹å¼æ‰¹é‡å½•å…¥é¸½å­æ•°æ®ã€‚
+4. æ‰¹é‡ç¼–å†™å’Œé«˜çº§æ‰¹é‡æ“ä½œï¼šç³»ç»Ÿæä¾›æ‰¹é‡ç¼–å†™åŠŸèƒ½ï¼Œæ–¹ä¾¿ç”¨æˆ·åŒæ—¶ç¼–è¾‘å¤šä¸ªé¸½å­çš„ä¿¡æ¯ã€‚æ­¤å¤–ï¼Œè¿˜æä¾›é«˜çº§æ‰¹é‡æ“ä½œåŠŸèƒ½ï¼Œä¾‹å¦‚æ‰¹é‡ä¿®æ”¹ç‰¹å®šå±æ€§ã€æ‰¹é‡åˆ é™¤ç­‰ã€‚
+5. å¤šå›¢é˜Ÿå…±äº«é¸½å­è¡€ç»Ÿï¼šç³»ç»Ÿæ”¯æŒå¤šå›¢é˜Ÿå…±äº«é¸½å­çš„è¡€ç»Ÿä¿¡æ¯ã€‚
+6. é¸½æ£šå·¢ç®±ç®¡ç†é¸½å­ï¼šç³»ç»Ÿæä¾›é¸½æ£šå’Œå·¢ç®±ç®¡ç†åŠŸèƒ½ï¼Œç”¨æˆ·å¯ä»¥è®°å½•å’Œç®¡ç†é¸½å­çš„æ –æ¯åœ°ä¿¡æ¯ï¼Œæ–¹ä¾¿å›¢é˜Ÿæˆå‘˜å¯¹é¸½å­çš„å®šä½å’Œç®¡ç†ã€‚
+7. è®°å½•æ“ä½œæ—¥å¿—ï¼šç³»ç»Ÿå°†è®°å½•ç”¨æˆ·çš„æ“ä½œæ—¥å¿—ï¼ŒåŒ…æ‹¬æ•°æ®å½•å…¥ã€ç¼–è¾‘ã€åˆ é™¤ç­‰æ“ä½œï¼Œä»¥ä¾¿å›¢é˜Ÿæˆå‘˜è¿½æº¯å’Œå®¡æŸ¥æ“ä½œå†å²ã€‚
+8. ä¿¡æ¯é€‰é¡¹å­—å…¸ï¼šç³»ç»Ÿæä¾›ä¿¡æ¯é€‰é¡¹å­—å…¸ï¼ŒåŒ…æ‹¬é¸½å­å±æ€§ã€è¡€ç»Ÿä¹¦æ ¼å¼ç­‰é€‰é¡¹ï¼Œä»¥ç¡®ä¿æ•°æ®çš„ä¸€è‡´æ€§å’Œå‡†ç¡®æ€§ã€‚
+9. é¸½èˆä¿¡æ¯ç¼–è¾‘ï¼šç”¨æˆ·å¯ä»¥ç¼–è¾‘é¸½èˆçš„ç›¸å…³ä¿¡æ¯ï¼ŒåŒ…æ‹¬é¸½èˆçš„åç§°ã€åœ°å€ç­‰ï¼Œä»¥ä¾¿æ›´å¥½åœ°ç®¡ç†é¸½å­çš„æ –æ¯ç¯å¢ƒã€‚
+10. è¡€ç»Ÿä¹¦å±•ç¤ºä¿¡æ¯ç¼–è¾‘ï¼šç³»ç»Ÿæä¾›è¡€ç»Ÿä¹¦å±•ç¤ºä¿¡æ¯çš„ç¼–è¾‘åŠŸèƒ½ï¼Œç”¨æˆ·å¯ä»¥è‡ªå®šä¹‰å±•ç¤ºè¡€ç»Ÿä¹¦æ—¶æ‰€æ˜¾ç¤ºçš„å­—æ®µå’Œæ ¼å¼ã€‚
+11. ç”¨æˆ·ä¿¡æ¯ç®¡ç†ï¼šç³»ç»Ÿæä¾›ç”¨æˆ·ä¿¡æ¯ç®¡ç†åŠŸèƒ½ï¼ŒåŒ…æ‹¬ç”¨æˆ·è´¦æˆ·å®‰å…¨å’Œç”¨æˆ·æ³¨é”€ã€‚
+12. å›¢é˜Ÿä¿¡æ¯ç®¡ç†ï¼šç®¡ç†å‘˜å¯ä»¥ç®¡ç†å›¢é˜Ÿæˆå‘˜æ·»åŠ ã€åˆ é™¤ã€æƒé™ç®¡ç†ã€äº†è§£å›¢é˜Ÿæˆå‘˜åœ¨çº¿æƒ…å†µã€‚
+13. ç™»å½•ä¿¡æ¯è®°å½•ï¼šç³»ç»Ÿå°†è®°å½•ç”¨æˆ·çš„ç™»å½•ä¿¡æ¯ï¼ŒåŒ…æ‹¬ç™»å½•æ—¶é—´ã€IPåœ°å€ç­‰ï¼Œä»¥ç¡®ä¿è´¦æˆ·å®‰å…¨å’Œè¿½è¸ªç™»å½•å†å²ã€‚
+14. ä¿¡æ¯ç»Ÿè®¡å±•ç¤ºï¼šç³»ç»Ÿå°†æä¾›é¸½å­æ•°æ®çš„ç»Ÿè®¡å±•ç¤ºä¸åˆ†æåŠŸèƒ½ï¼Œå¸®åŠ©ç”¨æˆ·äº†è§£å›¢é˜Ÿçš„æ•´ä½“æƒ…å†µã€‚
 
-### 1.3 ÏµÍ³ÒÀÀµ
+### 1.3 ç³»ç»Ÿä¾èµ–
 
-#### 1.2.1 ÔËĞĞÊ±»·¾³
+#### 1.2.1 è¿è¡Œæ—¶ç¯å¢ƒ
 
-±¾ÏµÍ³»ùÓÚ B/S ¼Ü¹¹£¬ÓÃ»§¶ËÍ¨¹ıÊİ¿Í»§¶Ëä¯ÀÀÆ÷Í¨¹ı URL ·ÃÎÊÓë·şÎñ¶Ë½¨Á¢·şÎñÁ¬½Ó
+æœ¬ç³»ç»ŸåŸºäº B/S æ¶æ„ï¼Œç”¨æˆ·ç«¯é€šè¿‡ç˜¦å®¢æˆ·ç«¯æµè§ˆå™¨é€šè¿‡ URL è®¿é—®ä¸æœåŠ¡ç«¯å»ºç«‹æœåŠ¡è¿æ¥
 
 ![image-20230607152247388](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230607152247388.png?raw=true)
 
-·şÎñ¶Ë»·¾³£¬¿Í»§¶Ë»·¾³ÒªÇóÈçÏÂ£º 
+æœåŠ¡ç«¯ç¯å¢ƒï¼Œå®¢æˆ·ç«¯ç¯å¢ƒè¦æ±‚å¦‚ä¸‹ï¼š 
 
-1. ·şÎñ¶ËÏµÍ³»·¾³£º CentOS 7.9 x86 »ò Linux¡¢Unix ÄÚºË½Ô¿É£¬ÔÚ jvm µÄ Xms64m,Xmx128m Ô¼ÊøÏÂ£¬ÏµÍ³Ó²¼şÒªÇó×îµÍÄÚ´æ 2G£¬´ÅÅÌ 40G£¬4vCPU ·½ÄÜ Õı³£ÔËĞĞ¡£ 
-2.  ¿Í»§¶Ë»·¾³£ºÍÆ¼öÊ¹ÓÃ¹È¸è Chrome ä¯ÀÀÆ÷»òÖ§³Ö Chrome ÄÚºËµÄä¯ÀÀÆ÷£¬²»ÍÆ¼ö IE8 ¼°ÒÔÏÂä¯ÀÀÆ÷·ÃÎÊ¡£
+1. æœåŠ¡ç«¯ç³»ç»Ÿç¯å¢ƒï¼š CentOS 7.9 x86 æˆ– Linuxã€Unix å†…æ ¸çš†å¯ï¼Œåœ¨ jvm çš„ Xms64m,Xmx128m çº¦æŸä¸‹ï¼Œç³»ç»Ÿç¡¬ä»¶è¦æ±‚æœ€ä½å†…å­˜ 2Gï¼Œç£ç›˜ 40Gï¼Œ4vCPU æ–¹èƒ½ æ­£å¸¸è¿è¡Œã€‚ 
+2.  å®¢æˆ·ç«¯ç¯å¢ƒï¼šæ¨èä½¿ç”¨è°·æ­Œ Chrome æµè§ˆå™¨æˆ–æ”¯æŒ Chrome å†…æ ¸çš„æµè§ˆå™¨ï¼Œä¸æ¨è IE8 åŠä»¥ä¸‹æµè§ˆå™¨è®¿é—®ã€‚
 
-#### 1.2.2 ÔËĞĞÊ±»ù±¾Èí¼ş»·¾³
+#### 1.2.2 è¿è¡Œæ—¶åŸºæœ¬è½¯ä»¶ç¯å¢ƒ
 
-1. JRE17£¬Java Runtime Environment£¬´ËÈí¼şÎª Java ÏîÄ¿ÔËĞĞÊ±»·¾³¡£JRE17ÊÇÖ§³Öspring boot3.xµÄ×îµÍÔËĞĞ»·¾³ÒªÇó
-2. Mysql ·şÎñ£¬ÏµÍ³Ê¹ÓÃ Mysql8.30 ×÷ÎªÏîÄ¿Êı¾İ¿â£¬Òò´ËÎñ±Ø±£Ö¤ Mysql ·şÎñÕı ³£ÔËĞĞ£¬Ä¬ÈÏ¿ª·Å 3306 ¶Ë¿Ú¶ÔÍâÌá¹©·şÎñ£¬ÔËĞĞÊ§°ÜÊ±£¬¿ÉÊ¹ÓÃ lsof -i:3306 Ö¸ ÁîÅÅ²é¶Ë¿ÚÕ¼ÓÃÇé¿ö£¬²¢½áºÏ ps aux | grep [pid]½øĞĞÅÅ²é¶Ë¿ÚÕ¼ÓÃÓ¦ÓÃ¡£
-3. Redis ·şÎñ£¬ÏµÍ³Ä¬ÈÏÊ¹ÓÃµ¥Ìå Redis Ä£Ê½ÎªÆ½Ì¨Ìá¹©»º´æ·şÎñ£¬ÓÃÓÚ´æ´¢È¨ÏŞ£¬ ÁÙÊ±²úÉúµÄÊı¾İµÈ£¬Ä¬ÈÏ¶Ë¿Ú 6379¡£
-4. Nginx ·şÎñ£¬ÎªÇ°¶ËÒ³ÃæÌá¹©¾²Ì¬×ÊÔ´·ÃÎÊ·şÎñ£¬ÒÔ¼°Îªºó¶Ë·şÎñÌá¹©·´Ïò´úÀíÄÜÁ¦¡£
+1. JRE17ï¼ŒJava Runtime Environmentï¼Œæ­¤è½¯ä»¶ä¸º Java é¡¹ç›®è¿è¡Œæ—¶ç¯å¢ƒã€‚JRE17æ˜¯æ”¯æŒspring boot3.xçš„æœ€ä½è¿è¡Œç¯å¢ƒè¦æ±‚
+2. Mysql æœåŠ¡ï¼Œç³»ç»Ÿä½¿ç”¨ Mysql8.30 ä½œä¸ºé¡¹ç›®æ•°æ®åº“ï¼Œå› æ­¤åŠ¡å¿…ä¿è¯ Mysql æœåŠ¡æ­£ å¸¸è¿è¡Œï¼Œé»˜è®¤å¼€æ”¾ 3306 ç«¯å£å¯¹å¤–æä¾›æœåŠ¡ï¼Œè¿è¡Œå¤±è´¥æ—¶ï¼Œå¯ä½¿ç”¨ lsof -i:3306 æŒ‡ ä»¤æ’æŸ¥ç«¯å£å ç”¨æƒ…å†µï¼Œå¹¶ç»“åˆ ps aux | grep [pid]è¿›è¡Œæ’æŸ¥ç«¯å£å ç”¨åº”ç”¨ã€‚
+3. Redis æœåŠ¡ï¼Œç³»ç»Ÿé»˜è®¤ä½¿ç”¨å•ä½“ Redis æ¨¡å¼ä¸ºå¹³å°æä¾›ç¼“å­˜æœåŠ¡ï¼Œç”¨äºå­˜å‚¨æƒé™ï¼Œ ä¸´æ—¶äº§ç”Ÿçš„æ•°æ®ç­‰ï¼Œé»˜è®¤ç«¯å£ 6379ã€‚
+4. Nginx æœåŠ¡ï¼Œä¸ºå‰ç«¯é¡µé¢æä¾›é™æ€èµ„æºè®¿é—®æœåŠ¡ï¼Œä»¥åŠä¸ºåç«¯æœåŠ¡æä¾›åå‘ä»£ç†èƒ½åŠ›ã€‚
 
-#### 1.2.3 ¿ª·¢»·¾³
+#### 1.2.3 å¼€å‘ç¯å¢ƒ
 
 1. IDEA 2023.3
-2. JDK20£¬Java ¿ª·¢¹¤¾ß°ü
-3. Maven 3.8.1£¬±¾ÏîÄ¿µÄ°ü¹ÜÀí¹¤¾ß£¬·½±ã×Ô¶¯µ¼Èë£¬°æ±¾¹ÜÀí£¬ÒÀÀµ´¦Àí£¬±ã ½İ´ò°ü·¢²¼£¬Ê¹ÓÃÇ°ÌáĞèÒªÁªÍø¡£
-4. datagrip 2023.3£¬Mysql ·şÎñ UI ¹ÜÀí¹¤¾ß¡£
-5. WebStorm 2023.3£¬Ç°¶Ë±àÂë¹¤¾ß¡£
-6. Git+Gihub£¬ÏîÄ¿°æ±¾¹ÜÀí¡£
+2. JDK20ï¼ŒJava å¼€å‘å·¥å…·åŒ…
+3. Maven 3.8.1ï¼Œæœ¬é¡¹ç›®çš„åŒ…ç®¡ç†å·¥å…·ï¼Œæ–¹ä¾¿è‡ªåŠ¨å¯¼å…¥ï¼Œç‰ˆæœ¬ç®¡ç†ï¼Œä¾èµ–å¤„ç†ï¼Œä¾¿ æ·æ‰“åŒ…å‘å¸ƒï¼Œä½¿ç”¨å‰æéœ€è¦è”ç½‘ã€‚
+4. datagrip 2023.3ï¼ŒMysql æœåŠ¡ UI ç®¡ç†å·¥å…·ã€‚
+5. WebStorm 2023.3ï¼Œå‰ç«¯ç¼–ç å·¥å…·ã€‚
+6. Git+Gihubï¼Œé¡¹ç›®ç‰ˆæœ¬ç®¡ç†ã€‚
 
-#### 1.2.4 ¿ª·¢¿ò¼Ü
+#### 1.2.4 å¼€å‘æ¡†æ¶
 
-1. ºó¶Ë£º
-   1. SpringBoot 3.1.0£¬¶Ô Spring ÒÔ¼° SpringMVC µÄ½øÒ»²½·â×°ÊµÏÖÁË×Ô ¶¯×°ÅäÄÜÁ¦¡£
-2. Ç°¶Ë£º
-   1. Vue3.js Ïà¹Ø¿ª·¢Ì×¼ş¡£
+1. åç«¯ï¼š
+   1. SpringBoot 3.1.0ï¼Œå¯¹ Spring ä»¥åŠ SpringMVC çš„è¿›ä¸€æ­¥å°è£…å®ç°äº†è‡ª åŠ¨è£…é…èƒ½åŠ›ã€‚
+2. å‰ç«¯ï¼š
+   1. Vue3.js ç›¸å…³å¼€å‘å¥—ä»¶ã€‚
 
-#### 1.2.5 ÖĞ¼ä¼ş¼°µÚÈı·½Ä£¿éÒÀÀµ
+#### 1.2.5 ä¸­é—´ä»¶åŠç¬¬ä¸‰æ–¹æ¨¡å—ä¾èµ–
 
-1. ºó¶Ë
-   1. Redis: Ò»¸ö¸ßĞÔÄÜµÄ»º´æ·şÎñ£¬¿ÉÓÃÓÚ»º´æÊı¾İ¡¢Ìá¸ßÏµÍ³ĞÔÄÜµÈ·½Ãæ¡£
-   2. MyBatis¡¢MyBatis plus: ÓÅĞãµÄ³Ö¾Ã²ã¿ò¼Ü£¬ÓÃÓÚÊı¾İ¿â²Ù×÷ºÍORM£¨¶ÔÏó¹ØÏµÓ³Éä£©¡£
-   3. bcprov-jdk15on: ÃÜÂë¼ÓÃÜ¹¤¾ß£¬Ìá¹©ÁËÃÜÂëÑ§Ëã·¨µÄÊµÏÖ£¬ÓÃÓÚÊı¾İ¼ÓÃÜºÍ½âÃÜ²Ù×÷¡£
-   4. lombok: Ò»¸öJava¿â£¬¿ÉÒÔÍ¨¹ı×¢½â¼ò»¯JavaÀàµÄ¿ª·¢£¬¼õÉÙÑù°å´úÂë¡£
-   5. jwt: JSON Web Token£¨JWT£©µÄJavaÊµÏÖ£¬ÓÃÓÚÉú³ÉºÍÑéÖ¤»ùÓÚÁîÅÆµÄÉí·İÑéÖ¤¡£
-   6. logback-classic: Ò»¸öÁé»îµÄÈÕÖ¾¿ò¼Ü£¬ÓÃÓÚ¼ÇÂ¼Ó¦ÓÃ³ÌĞòµÄÈÕÖ¾ĞÅÏ¢¡£
-   7. tika-core: Ò»¸ö¿ªÔ´µÄÄÚÈİ·ÖÎö¹¤¾ß£¬ÓÃÓÚ´Ó¸÷ÖÖÎÄµµÖĞÌáÈ¡ºÍ½âÎöÔªÊı¾İºÍÎÄ±¾ÄÚÈİ¡£
-   8. poi¡¢poi-ooxml: ÓÃÓÚ´¦ÀíMicrosoft OfficeÎÄµµ£¨ÈçExcel¡¢Word£©µÄJava¿â£¬Ìá¹©ÁË¶ÁĞ´ºÍ²Ù×÷ÕâĞ©ÎÄµµµÄ¹¦ÄÜ¡£
-   9. UserAgentUtils: ÓÃÓÚ½âÎöºÍÊ¶±ğÓÃ»§´úÀí×Ö·û´®£¨User-Agent£©µÄ¹¤¾ß£¬¿ÉÓÃÓÚ»ñÈ¡ÓÃ»§µÄä¯ÀÀÆ÷ºÍ²Ù×÷ÏµÍ³ĞÅÏ¢¡£
-   10. com.google.zxing:core: Google¿ª·¢µÄ¶şÎ¬ÂëÉú³ÉºÍ½âÎö¿â£¬¿ÉÓÃÓÚÉú³ÉºÍ½âÎö¶şÎ¬ÂëÍ¼Ïñ¡£
-2. Ç°¶Ë
-   1. axios: Ò»¸ö»ùÓÚPromiseµÄHTTP¿Í»§¶Ë£¬ÓÃÓÚÔÚä¯ÀÀÆ÷ºÍNode.jsÖĞ·¢ËÍHTTPÇëÇó¡£
-   2. dayjs: Ò»¸öÇáÁ¿¼¶µÄÈÕÆÚ´¦Àí¿â£¬ÓÃÓÚ½âÎö¡¢¸ñÊ½»¯ºÍ²Ù×÷ÈÕÆÚ¡£
-   3. echarts: Ò»¸öÇ¿´óµÄÊı¾İ¿ÉÊÓ»¯¿â£¬ÓÃÓÚ´´½¨¸÷ÖÖÍ¼±íºÍ¿ÉÊÓ»¯Ğ§¹û¡£
-   4. json-bigint: Ò»¸öÓÃÓÚ´¦Àí´óÕûÊıµÄJSON½âÎöºÍĞòÁĞ»¯¿â¡£
-   5. arco-design: Ìá¹©ÁËÒ»ÏµÁĞÏÖ´ú»¯µÄUI×é¼şºÍÑùÊ½£¬ÓÃÓÚ¹¹½¨ÓÃ»§½çÃæ¡£
+1. åç«¯
+   1. Redis: ä¸€ä¸ªé«˜æ€§èƒ½çš„ç¼“å­˜æœåŠ¡ï¼Œå¯ç”¨äºç¼“å­˜æ•°æ®ã€æé«˜ç³»ç»Ÿæ€§èƒ½ç­‰æ–¹é¢ã€‚
+   2. MyBatisã€MyBatis plus: ä¼˜ç§€çš„æŒä¹…å±‚æ¡†æ¶ï¼Œç”¨äºæ•°æ®åº“æ“ä½œå’ŒORMï¼ˆå¯¹è±¡å…³ç³»æ˜ å°„ï¼‰ã€‚
+   3. bcprov-jdk15on: å¯†ç åŠ å¯†å·¥å…·ï¼Œæä¾›äº†å¯†ç å­¦ç®—æ³•çš„å®ç°ï¼Œç”¨äºæ•°æ®åŠ å¯†å’Œè§£å¯†æ“ä½œã€‚
+   4. lombok: ä¸€ä¸ªJavaåº“ï¼Œå¯ä»¥é€šè¿‡æ³¨è§£ç®€åŒ–Javaç±»çš„å¼€å‘ï¼Œå‡å°‘æ ·æ¿ä»£ç ã€‚
+   5. jwt: JSON Web Tokenï¼ˆJWTï¼‰çš„Javaå®ç°ï¼Œç”¨äºç”Ÿæˆå’ŒéªŒè¯åŸºäºä»¤ç‰Œçš„èº«ä»½éªŒè¯ã€‚
+   6. logback-classic: ä¸€ä¸ªçµæ´»çš„æ—¥å¿—æ¡†æ¶ï¼Œç”¨äºè®°å½•åº”ç”¨ç¨‹åºçš„æ—¥å¿—ä¿¡æ¯ã€‚
+   7. tika-core: ä¸€ä¸ªå¼€æºçš„å†…å®¹åˆ†æå·¥å…·ï¼Œç”¨äºä»å„ç§æ–‡æ¡£ä¸­æå–å’Œè§£æå…ƒæ•°æ®å’Œæ–‡æœ¬å†…å®¹ã€‚
+   8. poiã€poi-ooxml: ç”¨äºå¤„ç†Microsoft Officeæ–‡æ¡£ï¼ˆå¦‚Excelã€Wordï¼‰çš„Javaåº“ï¼Œæä¾›äº†è¯»å†™å’Œæ“ä½œè¿™äº›æ–‡æ¡£çš„åŠŸèƒ½ã€‚
+   9. UserAgentUtils: ç”¨äºè§£æå’Œè¯†åˆ«ç”¨æˆ·ä»£ç†å­—ç¬¦ä¸²ï¼ˆUser-Agentï¼‰çš„å·¥å…·ï¼Œå¯ç”¨äºè·å–ç”¨æˆ·çš„æµè§ˆå™¨å’Œæ“ä½œç³»ç»Ÿä¿¡æ¯ã€‚
+   10. com.google.zxing:core: Googleå¼€å‘çš„äºŒç»´ç ç”Ÿæˆå’Œè§£æåº“ï¼Œå¯ç”¨äºç”Ÿæˆå’Œè§£æäºŒç»´ç å›¾åƒã€‚
+2. å‰ç«¯
+   1. axios: ä¸€ä¸ªåŸºäºPromiseçš„HTTPå®¢æˆ·ç«¯ï¼Œç”¨äºåœ¨æµè§ˆå™¨å’ŒNode.jsä¸­å‘é€HTTPè¯·æ±‚ã€‚
+   2. dayjs: ä¸€ä¸ªè½»é‡çº§çš„æ—¥æœŸå¤„ç†åº“ï¼Œç”¨äºè§£æã€æ ¼å¼åŒ–å’Œæ“ä½œæ—¥æœŸã€‚
+   3. echarts: ä¸€ä¸ªå¼ºå¤§çš„æ•°æ®å¯è§†åŒ–åº“ï¼Œç”¨äºåˆ›å»ºå„ç§å›¾è¡¨å’Œå¯è§†åŒ–æ•ˆæœã€‚
+   4. json-bigint: ä¸€ä¸ªç”¨äºå¤„ç†å¤§æ•´æ•°çš„JSONè§£æå’Œåºåˆ—åŒ–åº“ã€‚
+   5. arco-design: æä¾›äº†ä¸€ç³»åˆ—ç°ä»£åŒ–çš„UIç»„ä»¶å’Œæ ·å¼ï¼Œç”¨äºæ„å»ºç”¨æˆ·ç•Œé¢ã€‚
 
-## 2 ÏµÍ³Éè¼Æ·ÖÎö
+## 2 ç³»ç»Ÿè®¾è®¡åˆ†æ
 
-### 2.1 Êı¾İ±íÉè¼Æ
+### 2.1 æ•°æ®è¡¨è®¾è®¡
 
-![±íÉè¼Æ](https://github.com/Shi-AE/sgmis/blob/main/README/±íÉè¼Æ.png?raw=true)
+![è¡¨è®¾è®¡](https://github.com/Shi-AE/sgmis/blob/main/README/è¡¨è®¾è®¡.png?raw=true)
 
-### 2.2 ºó¶ËÉè¼Æ
+### 2.2 åç«¯è®¾è®¡
 
-#### 2.2.1 ÏµÍ³ÅäÖÃ
+#### 2.2.1 ç³»ç»Ÿé…ç½®
 
-##### 2.2.1.1 pom.xml mavenÒÀÀµÅäÖÃ
+##### 2.2.1.1 pom.xml mavenä¾èµ–é…ç½®
 
-- ÏîÄ¿Éè¶¨
+- é¡¹ç›®è®¾å®š
 
   ```xml
   <groupId>com.AE</groupId>
@@ -106,7 +106,7 @@
   </properties>
   ```
 
-- ºËĞÄÒÀÀµ¼°°æ±¾¿ØÖÆ
+- æ ¸å¿ƒä¾èµ–åŠç‰ˆæœ¬æ§åˆ¶
 
   ```xml
   <dependencies>
@@ -133,13 +133,13 @@
           <scope>test</scope>
       </dependency>
   
-      <!--¼ÓÃÜ¹¤¾ß-->
+      <!--åŠ å¯†å·¥å…·-->
       <dependency>
           <groupId>org.bouncycastle</groupId>
           <artifactId>bcprov-jdk15on</artifactId>
           <version>1.70</version>
       </dependency>
-      <!--mapperÀà×Ô¶¯-->
+      <!--mapperç±»è‡ªåŠ¨-->
       <dependency>
           <groupId>org.projectlombok</groupId>
           <artifactId>lombok</artifactId>
@@ -156,7 +156,7 @@
           <artifactId>java-jwt</artifactId>
           <version>4.3.0</version>
       </dependency>
-      <!--ÈÕÖ¾-->
+      <!--æ—¥å¿—-->
       <dependency>
           <groupId>ch.qos.logback</groupId>
           <artifactId>logback-classic</artifactId>
@@ -168,13 +168,13 @@
           <version>2.0.19</version>
           <scope>test</scope>
       </dependency>
-      <!--ÎÄ¼ş¼ì²é¹¤¾ß-->
+      <!--æ–‡ä»¶æ£€æŸ¥å·¥å…·-->
       <dependency>
           <groupId>org.apache.tika</groupId>
           <artifactId>tika-core</artifactId>
           <version>2.7.0</version>
       </dependency>
-      <!--½âÎöofficeÎÄ¼ş-->
+      <!--è§£æofficeæ–‡ä»¶-->
       <dependency>
           <groupId>org.apache.poi</groupId>
           <artifactId>poi</artifactId>
@@ -185,14 +185,14 @@
           <artifactId>poi-ooxml</artifactId>
           <version>5.2.3</version>
       </dependency>
-      <!--½âÎöÓÃ»§Éè±¸ĞÅÏ¢-->
+      <!--è§£æç”¨æˆ·è®¾å¤‡ä¿¡æ¯-->
       <dependency>
           <groupId>eu.bitwalker</groupId>
           <artifactId>UserAgentUtils</artifactId>
           <version>1.21</version>
       </dependency>
   
-      <!--¶şÎ¬ÂëÏà¹Ø-->
+      <!--äºŒç»´ç ç›¸å…³-->
       <dependency>
           <groupId>com.google.zxing</groupId>
           <artifactId>core</artifactId>
@@ -212,7 +212,7 @@
   </dependencies>
   ```
 
-- ²å¼ş
+- æ’ä»¶
 
   ```xml
   <plugins>
@@ -220,7 +220,7 @@
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
       </plugin>
-      <!--´ò°ü½×¶ÎºöÂÔtest-->
+      <!--æ‰“åŒ…é˜¶æ®µå¿½ç•¥test-->
       <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
@@ -231,13 +231,13 @@
   </plugins>
   ```
 
-##### 2.2.1.2 logback-spring.xml ÏµÍ³ÈÕÖ¾ÅäÖÃÎÄ¼ş
+##### 2.2.1.2 logback-spring.xml ç³»ç»Ÿæ—¥å¿—é…ç½®æ–‡ä»¶
 
 ```xml
 <configuration>
 
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <!-- ÉèÖÃÊ±¼äµÈĞÅÏ¢¸ñÊ½-->
+        <!-- è®¾ç½®æ—¶é—´ç­‰ä¿¡æ¯æ ¼å¼-->
         <encoder>
             <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
@@ -245,7 +245,7 @@
 
     <logger name="chapters.configuration" level="INFO"/>
 
-    <!--ÉèÖÃÈÕÖ¾¼¶±ğ£¬²¿Êğ½×¶ÎÉèÖÃÎªINFO-->
+    <!--è®¾ç½®æ—¥å¿—çº§åˆ«ï¼Œéƒ¨ç½²é˜¶æ®µè®¾ç½®ä¸ºINFO-->
     <root level="INFO">
         <appender-ref ref="STDOUT" />
     </root>
@@ -253,27 +253,27 @@
 </configuration>
 ```
 
-##### 2.2.1.3 application.yml ÏîÄ¿ÅäÖÃ
+##### 2.2.1.3 application.yml é¡¹ç›®é…ç½®
 
-×Ô¶¨ÒåÅäÖÃ·½±ãÈ«¾ÖĞŞ¸ÄÉè¶¨
+è‡ªå®šä¹‰é…ç½®æ–¹ä¾¿å…¨å±€ä¿®æ”¹è®¾å®š
 
 ```yml
-# ·şÎñ¶Ë¿Ú
+# æœåŠ¡ç«¯å£
 server:
   port: 8080
 
 spring:
-# Êı¾İÔ´
+# æ•°æ®æº
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://42.193.192.61:3306/sgmis
     username: root
     password: guatdev
-  # Ê±¼äĞòÁĞ»¯¸ñÊ½
+  # æ—¶é—´åºåˆ—åŒ–æ ¼å¼
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: Asia/Shanghai
-  # ÎÄ¼şÏŞÖÆ
+  # æ–‡ä»¶é™åˆ¶
   servlet:
     multipart:
       max-file-size: 10MB
@@ -286,33 +286,33 @@ spring:
       password:
       database: 0
 
-# ×Ô¶¨ÒåÅäÖÃ     
+# è‡ªå®šä¹‰é…ç½®     
 
-# ¼ÓÃÜËã·¨ÅäÖÃ
+# åŠ å¯†ç®—æ³•é…ç½®
 encrypt:
   memoryPowOfTwo: 13
   iterations: 9
   parallelism: 5
   hashLength: 512
 
-# kotenËã·¨ÅäÖÃ
+# kotenç®—æ³•é…ç½®
 jwt:
-  #Ãë
+  #ç§’
   expires: 21600
   update-gap: 1800
   secret-key: S&h(i(to*A@E#
   ipLimit: 10
 
-# ÅäÖÃĞÅÏ¢µÄ±íÃû£¬·ÀÖ¹sql×¢Èë
+# é…ç½®ä¿¡æ¯çš„è¡¨åï¼Œé˜²æ­¢sqlæ³¨å…¥
 xxpz:
   tableNames: yspz, lxpz, yanpz, jbpz, ylhl, gdcgzt, breeder, country, province, state
   systemGid: 0
 
-# Ä¬ÈÏÃÜÂë
+# é»˜è®¤å¯†ç 
 user:
   defaultPassword: 123456
 
-#ÏµÍ³ÎÄ¼ş±£´æÂ·¾¶
+#ç³»ç»Ÿæ–‡ä»¶ä¿å­˜è·¯å¾„
 file:
   logo:
     path: logo
@@ -321,32 +321,32 @@ file:
     path: pigeon
     type: image/jpeg, image/png, image/gif, image/tiff
 
-# ×Ó´úÑ°ÕÒµİ¹éÉî¶È
+# å­ä»£å¯»æ‰¾é€’å½’æ·±åº¦
 pigeon:
   generation:
     limit: 7
 
-#Ò»´ÎĞÔÄÜ²é³öµÄ×î´óÊı¾İÁ¿ÏŞÖÆ
+#ä¸€æ¬¡æ€§èƒ½æŸ¥å‡ºçš„æœ€å¤§æ•°æ®é‡é™åˆ¶
 page:
   maxLimit: 10000
 
-# ×î´ó»ñÈ¡Í¼Æ¬ÊıÁ¿
+# æœ€å¤§è·å–å›¾ç‰‡æ•°é‡
 carousel:
   limit: 10
 
-# »ñÈ¡×î½üÊı¾İÌìÊıÏŞÖÆ
-# Ìì
+# è·å–æœ€è¿‘æ•°æ®å¤©æ•°é™åˆ¶
+# å¤©
 recent:
   create: 30
   delete: 30
   oplog: 30
 
-#ÈÕÖ¾±£´æ×î´óÌìÊı
+#æ—¥å¿—ä¿å­˜æœ€å¤§å¤©æ•°
 #day
 log:
   maxHistory: 180
 
-# ÏµÍ³¶şÎ¬ÂëÉú³ÉÅäÖÃ
+# ç³»ç»ŸäºŒç»´ç ç”Ÿæˆé…ç½®
 QR:
   width: 168
   height: 168
@@ -359,24 +359,24 @@ QR:
   logo-width: 36
   logo-height: 36
 
-# ·´À¡ĞÅÏ¢¶şÎ¬ÂëµØÖ·
+# åé¦ˆä¿¡æ¯äºŒç»´ç åœ°å€
 feedback:
   githubUrl: https://github.com/Shi-AE/sgmis
   guatUrl: https://www.guat.edu.cn
   mailUrl: mailto:2021070030101@guat.edu.cn
   
-# Ä£°åÎÄ¼şµØÖ·Ãû³Æ
+# æ¨¡æ¿æ–‡ä»¶åœ°å€åç§°
 template:
   pigeon: template/pigeonTemplate.xlsx
 ```
 
-#### 2.2.2 ×¢½âÅäÖÃ
+#### 2.2.2 æ³¨è§£é…ç½®
 
-- LocalDateTimeSerializerConfig LDTĞòÁĞ»¯¸ñÊ½ÅäÖÃ
+- LocalDateTimeSerializerConfig LDTåºåˆ—åŒ–æ ¼å¼é…ç½®
 
   ```java
   /**
-   * LDTÅäÖÃ
+   * LDTé…ç½®
    */
   @Configuration
   public class LocalDateTimeSerializerConfig {
@@ -385,7 +385,7 @@ template:
       private String pattern;
   
       /**
-       * ĞòÁĞ»¯Æ÷
+       * åºåˆ—åŒ–å™¨
        */
       @Bean
       public LocalDateTimeSerializer localDateTimeSerializer() {
@@ -393,7 +393,7 @@ template:
       }
   
       /**
-       * ·´ĞòÁĞ»¯Æ÷
+       * ååºåˆ—åŒ–å™¨
        */
       @Bean
       public LocalDateTimeDeserializer localDateTimeDeserializer() {
@@ -410,16 +410,16 @@ template:
   }
   ```
 
-- MybatisPlusConfig MP·ÖÒ³²å¼şÅäÖÃ
+- MybatisPlusConfig MPåˆ†é¡µæ’ä»¶é…ç½®
 
   ```java
   /**
-   * mpÅäÖÃ
+   * mpé…ç½®
    */
   @Configuration
   public class MybatisPlusConfig {
       /**
-       * ·ÖÒ³²å¼ş
+       * åˆ†é¡µæ’ä»¶
        */
       @Bean
       public MybatisPlusInterceptor mybatisPlusInterceptor() {
@@ -430,11 +430,11 @@ template:
   }
   ```
 
-- RedisConfig redisÅäÖÃ
+- RedisConfig redisé…ç½®
 
   ```java
   /**
-   * redisÅäÖÃ
+   * redisé…ç½®
    */
   @Configuration
   public class RedisConfig {
@@ -449,11 +449,11 @@ template:
   }
   ```
 
-- ResourceConfig ÏµÍ³×ÊÔ´Â·¾¶ÅäÖÃ
+- ResourceConfig ç³»ç»Ÿèµ„æºè·¯å¾„é…ç½®
 
   ```java
   /**
-   * ×ÊÔ´ÅäÖÃ
+   * èµ„æºé…ç½®
    */
   @Slf4j
   @Configuration
@@ -464,7 +464,7 @@ template:
   
       @Override
       public void addResourceHandlers(ResourceHandlerRegistry registry) {
-          //±éÀúÅäÖÃÎÄ¼şÕÒµ½ËùÓĞÆ¥ÅäÏî
+          //éå†é…ç½®æ–‡ä»¶æ‰¾åˆ°æ‰€æœ‰åŒ¹é…é¡¹
           StandardServletEnvironment servletEnvironment = (StandardServletEnvironment) environment;
           MutablePropertySources propertySources = servletEnvironment.getPropertySources();
           propertySources.forEach(source -> {
@@ -474,7 +474,7 @@ template:
                           String basePath = environment.getProperty(name);
                           registry.addResourceHandler("/" + basePath + "/**")
                                   .addResourceLocations("file:" + basePath + "/");
-                          log.info("³É¹¦¼ÓÔØ {} ×ÊÔ´Â·¾¶", name);
+                          log.info("æˆåŠŸåŠ è½½ {} èµ„æºè·¯å¾„", name);
                       }
                   }
               }
@@ -483,11 +483,11 @@ template:
   }
   ```
 
-- InterceptorConfig ¹ıÂËÆ÷ÅäÖÃ
+- InterceptorConfig è¿‡æ»¤å™¨é…ç½®
 
   ```java
   /**
-   * ¹ıÂËÆ÷ÅäÖÃ
+   * è¿‡æ»¤å™¨é…ç½®
    */
   @Configuration
   public class InterceptorConfig implements WebMvcConfigurer {
@@ -500,19 +500,19 @@ template:
   
       @Override
       public void addInterceptors(InterceptorRegistry registry) {
-          //ipºÚÃûµ¥¼ì²âÀ¹½ØÆ÷
+          //ipé»‘åå•æ£€æµ‹æ‹¦æˆªå™¨
           registry.addInterceptor(blackInterceptor)
                   .addPathPatterns("/api/**")
                   .order(1);
   
-          //ÇëÇóµÇÂ¼ÑéÖ¤À¹½ØÆ÷
+          //è¯·æ±‚ç™»å½•éªŒè¯æ‹¦æˆªå™¨
           registry.addInterceptor(loginInterceptor)
                   .addPathPatterns("/api/**")
                   .excludePathPatterns("/api/login/authority")
                   .excludePathPatterns("/api/login/free")
                   .order(2);
   
-          //¹ÜÀíÔ±ÇëÇóÀ¹½ØÆ÷
+          //ç®¡ç†å‘˜è¯·æ±‚æ‹¦æˆªå™¨
           registry.addInterceptor(adminInterceptor)
                   .addPathPatterns("/api/user/**")
                   .addPathPatterns("/api/login/admin")
@@ -521,9 +521,9 @@ template:
   }
   ```
 
-#### 2.2.3 ¹ıÂËÆ÷Âß¼­
+#### 2.2.3 è¿‡æ»¤å™¨é€»è¾‘
 
-- LoginInterceptor µÇÂ¼¹ıÂËÆ÷£¬ÑéÖ¤ÊÇ·ñĞ¯´øµÇÂ¼ÁîÅÆ
+- LoginInterceptor ç™»å½•è¿‡æ»¤å™¨ï¼ŒéªŒè¯æ˜¯å¦æºå¸¦ç™»å½•ä»¤ç‰Œ
 
   ```java
   @Slf4j
@@ -537,27 +537,27 @@ template:
   
       @Override
       public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws AccessException {
-          //»ñÈ¡ÇëÇóÍ·Ö¤Êé
+          //è·å–è¯·æ±‚å¤´è¯ä¹¦
           String token = request.getHeader("Authorization");
   
-          //ÑéÖ¤Ö¤Êé
+          //éªŒè¯è¯ä¹¦
           DecodedJWT decoded = jwtUtil.verifyToken(token);
   
-          //»ñÈ¡tokenÖĞµÄĞÅÏ¢
+          //è·å–tokenä¸­çš„ä¿¡æ¯
           Map<String, Object> claim = decoded.getClaim("info").asMap();
   
-          //ÔÚredisÖĞÑéÖ¤Ö¤Êé
+          //åœ¨redisä¸­éªŒè¯è¯ä¹¦
           Long id = (Long) claim.get("id");
           String ip = (String) claim.get("ip");
           boolean verified = whitelistUtil.verifyToken(id, ip, token);
           if (!verified) {
-              throw new AccessException("µÇÂ¼¹ıÆÚ");
+              throw new AccessException("ç™»å½•è¿‡æœŸ");
           }
   
-          //Èç¹û¾àÀëredis¹ıÆÚÊ±¼ä´ïµ½Éè¶¨Ê±¼äÔòÖØÖÃredis¹ıÆÚÊ±¼ä
+          //å¦‚æœè·ç¦»redisè¿‡æœŸæ—¶é—´è¾¾åˆ°è®¾å®šæ—¶é—´åˆ™é‡ç½®redisè¿‡æœŸæ—¶é—´
           whitelistUtil.updateExpires(id, ip);
   
-          //ÏòÇëÇóÓòÖĞÌí¼ÓÓÃ»§ĞÅÏ¢
+          //å‘è¯·æ±‚åŸŸä¸­æ·»åŠ ç”¨æˆ·ä¿¡æ¯
           request.setAttribute("info", claim);
   
           return true;
@@ -565,7 +565,7 @@ template:
   }
   ```
 
-- AdminInterceptor ¹ÜÀíÔ±¹ıÂËÆ÷£¬ÑéÖ¤¹ÜÀíÔ±Éí·İ
+- AdminInterceptor ç®¡ç†å‘˜è¿‡æ»¤å™¨ï¼ŒéªŒè¯ç®¡ç†å‘˜èº«ä»½
 
   ```java
   @Component
@@ -576,25 +576,25 @@ template:
   
       @Override
       public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
-          //»ñÈ¡ id£¬admin
+          //è·å– idï¼Œadmin
           Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
           Long id = (Long) info.get("id");
           Boolean admin = (Boolean) info.get("admin");
-          //ÇëÇóÍ·¹ÜÀíÔ±ÑéÖ¤
+          //è¯·æ±‚å¤´ç®¡ç†å‘˜éªŒè¯
           if (!admin) {
-              throw new AccessException("ÄúÃ»ÓĞ¹ÜÀíÔ±È¨ÏŞ£¬ÇëÁªÏµ¹ÜÀíÔ±»ñµÃÈ¨ÏŞ");
+              throw new AccessException("æ‚¨æ²¡æœ‰ç®¡ç†å‘˜æƒé™ï¼Œè¯·è”ç³»ç®¡ç†å‘˜è·å¾—æƒé™");
           }
-          //Êı¾İ¿â¹ÜÀíÔ±ÑéÖ¤
+          //æ•°æ®åº“ç®¡ç†å‘˜éªŒè¯
           User user = userService.getById(id);
           if (!user.getAdmin()) {
-              throw new AccessException("ÇëÇóÍ·ĞÅÏ¢Òì³£");
+              throw new AccessException("è¯·æ±‚å¤´ä¿¡æ¯å¼‚å¸¸");
           }
           return true;
       }
   }
   ```
 
-- BlackInterceptor ºÚÃûµ¥¹ıÂËÆ÷£¬ÅĞ¶ÏIPÊÇ·ñ±»·â½û
+- BlackInterceptor é»‘åå•è¿‡æ»¤å™¨ï¼Œåˆ¤æ–­IPæ˜¯å¦è¢«å°ç¦
 
   ```java
   @Component
@@ -607,14 +607,14 @@ template:
   
       @Override
       public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws AccessException {
-          //»ñÈ¡Êµ¼Êip£¬±ÜÃâÊ¹ÓÃtokenÖĞµÄip
+          //è·å–å®é™…ipï¼Œé¿å…ä½¿ç”¨tokenä¸­çš„ip
           String ip = ipUtil.getIp(request);
   
-          //Í¨¹ıip»ñÈ¡ºÚÃûµ¥ÖĞµÄĞÅÏ¢
-          //Èç¹ûÎª¿Õ´ú±íºÚÃûµ¥ÖĞÃ»ÓĞ´Ëip
+          //é€šè¿‡ipè·å–é»‘åå•ä¸­çš„ä¿¡æ¯
+          //å¦‚æœä¸ºç©ºä»£è¡¨é»‘åå•ä¸­æ²¡æœ‰æ­¤ip
           Object info = blacklistUtil.getForbiddenInfo(ip);
           if (info != null) {
-              //´Ëip±»½ûÓÃ£¬·µ»Ø½ûÓÃĞÅÏ¢
+              //æ­¤ipè¢«ç¦ç”¨ï¼Œè¿”å›ç¦ç”¨ä¿¡æ¯
               throw new AccessException(info.toString());
           }
   
@@ -623,9 +623,9 @@ template:
   }
   ```
 
-#### 2.2.4 ÏµÍ³Æô¶¯×Ô¼ì
+#### 2.2.4 ç³»ç»Ÿå¯åŠ¨è‡ªæ£€
 
-- RedisConnectionRunner redisÁ¬½Ó×Ô¼ì
+- RedisConnectionRunner redisè¿æ¥è‡ªæ£€
 
   ```java
   @Slf4j
@@ -635,12 +635,12 @@ template:
       @Autowired
       private RedisUtil redisUtil;
       /**
-       * ×î´ó³¢ÊÔÁ¬½ÓÊı
+       * æœ€å¤§å°è¯•è¿æ¥æ•°
        */
       private final int max = 5;
   
       /**
-       * ²âÊÔredisÁ¬½Ó
+       * æµ‹è¯•redisè¿æ¥
        */
       @Override
       public void run(ApplicationArguments args) {
@@ -653,13 +653,13 @@ template:
               }
           }
           if (!connect) {
-              log.error("redisÁ¬½ÓÊ§°Ü");
+              log.error("redisè¿æ¥å¤±è´¥");
   
-              //Á¬½ÓÊ§°ÜÍË³ö³ÌĞò
+              //è¿æ¥å¤±è´¥é€€å‡ºç¨‹åº
               System.exit(1);
           }
   
-          log.info("redisÁ¬½Ó³É¹¦");
+          log.info("redisè¿æ¥æˆåŠŸ");
           System.out.println("""
                                                                    \s
                                                                    \s
@@ -681,9 +681,9 @@ template:
   }
   ```
 
-#### 2.2.6 ÏµÍ³Ã¶¾ÙÀà
+#### 2.2.6 ç³»ç»Ÿæšä¸¾ç±»
 
-- Òì³£×´Ì¬ÂëÃ¶¾Ù£¨²¿·Ö£©
+- å¼‚å¸¸çŠ¶æ€ç æšä¸¾ï¼ˆéƒ¨åˆ†ï¼‰
 
   ```java
   AccessException(403),
@@ -697,7 +697,7 @@ template:
   }
   ```
 
-- ³É¹¦×´Ì¬ÂëÃ¶¾Ù
+- æˆåŠŸçŠ¶æ€ç æšä¸¾
 
   ```java
   public enum SuccessCode {
@@ -716,46 +716,46 @@ template:
   }
   ```
 
-- ÈÕÖ¾ÀàĞÍÃ¶¾Ù
+- æ—¥å¿—ç±»å‹æšä¸¾
 
   ```java
   public enum LogType {
       /**
-       * ĞÂÔö
+       * æ–°å¢
        */
-      INSERT(0, "ĞÂÔö¸ë×Ó"),
+      INSERT(0, "æ–°å¢é¸½å­"),
       /**
-       * ĞŞ¸Ä
+       * ä¿®æ”¹
        */
-      UPDATE(1, "ĞŞ¸ÄĞÅÏ¢"),
+      UPDATE(1, "ä¿®æ”¹ä¿¡æ¯"),
       /**
-       * É¾³ı
+       * åˆ é™¤
        */
-      DELETE(2, "É¾³ı¸ë×Ó"),
+      DELETE(2, "åˆ é™¤é¸½å­"),
       /**
-       * ¹²Ïí
+       * å…±äº«
        */
-      SHARE(3, "¹²ÏíÑªÍ³"),
+      SHARE(3, "å…±äº«è¡€ç»Ÿ"),
       /**
-       * ½ÓÊÕÑªÍ³
+       * æ¥æ”¶è¡€ç»Ÿ
        */
-      RECEIVE(4, "½ÓÊÕÑªÍ³"),
+      RECEIVE(4, "æ¥æ”¶è¡€ç»Ÿ"),
       /**
-       * ¹ØÁªÑªÇ×
+       * å…³è”è¡€äº²
        */
-      RELATE(5, "¹ØÁªÑªÇ×"),
+      RELATE(5, "å…³è”è¡€äº²"),
       /**
-       * ½â³ıÑªÇ×¹ØÏµ
+       * è§£é™¤è¡€äº²å…³ç³»
        */
-      UNPARENT(6, "½â³ıÑªÇ×"),
+      UNPARENT(6, "è§£é™¤è¡€äº²"),
       /**
-       * ×ªÒÆ¸ëÅï³²Ïä
+       * è½¬ç§»é¸½æ£šå·¢ç®±
        */
-      TRANSFER(7, "×ªÒÆ¸ëÅï³²Ïä"),
+      TRANSFER(7, "è½¬ç§»é¸½æ£šå·¢ç®±"),
       /**
-       * ÆäËû
+       * å…¶ä»–
        */
-      OTHER(8, "ÆäËû");
+      OTHER(8, "å…¶ä»–");
   
   
       private final int index;
@@ -776,20 +776,20 @@ template:
   }
   ```
 
-- Î¥¹æµÈ¼¶Ã¶¾Ù
+- è¿è§„ç­‰çº§æšä¸¾
 
   ```java
   public enum SeverityLevel {
       /**
-       * ÑÏÖØ
+       * ä¸¥é‡
        */
       Blocker(3600),
       /**
-       * ÖĞ¼¶
+       * ä¸­çº§
        */
       Critical(1800),
       /**
-       * ³õ¼¶
+       * åˆçº§
        */
       Major(600);
   
@@ -805,7 +805,7 @@ template:
   }
   ```
 
-- redisÃüÃû¿Õ¼äÃ¶¾Ù
+- rediså‘½åç©ºé—´æšä¸¾
 
   ```java
   public enum RedisNamespace {
@@ -827,11 +827,11 @@ template:
   }
   ```
 
-#### 2.2.5 Í³Ò»·µ»Ø¸ñÊ½
+#### 2.2.5 ç»Ÿä¸€è¿”å›æ ¼å¼
 
-·µ»ØÇ°¶ËµÄÍ³Ò»json¸ñÊ½
+è¿”å›å‰ç«¯çš„ç»Ÿä¸€jsonæ ¼å¼
 
-{ "code": 200, "data": { },"message": "´¦Àí³É¹¦" }
+{ "code": 200, "data": { },"message": "å¤„ç†æˆåŠŸ" }
 
 ```java
 public class Result {
@@ -841,13 +841,13 @@ public class Result {
 }
 ```
 
-#### 2.2.6 ÏµÍ³¹¤¾ßÀà utils
+#### 2.2.6 ç³»ç»Ÿå·¥å…·ç±» utils
 
-- EncryptUtil ¼ÓÃÜ¹¤¾ß
+- EncryptUtil åŠ å¯†å·¥å…·
 
   ```java
   /**
-   * ¼ÓÃÜ¹¤¾ßÀà
+   * åŠ å¯†å·¥å…·ç±»
    */
   @Component
   public class EncryptUtil {
@@ -862,20 +862,20 @@ public class Result {
       private final SecureRandom secureRandom = new SecureRandom();
   
       /**
-       * ³õÊ¼»¯²¢¼ÓÔØ¼ÓÃÜ¹¤¾ß
+       * åˆå§‹åŒ–å¹¶åŠ è½½åŠ å¯†å·¥å…·
        *
-       * @param salt ÑÎÖµ
-       * @return ¼ÓÃÜ¹¤¾ß
+       * @param salt ç›å€¼
+       * @return åŠ å¯†å·¥å…·
        */
       private Argon2BytesGenerator getGenerator(byte[] salt) {
-          //¹¹ÔìArgon2³õÊ¼»¯¹¤¾ß
+          //æ„é€ Argon2åˆå§‹åŒ–å·¥å…·
           Argon2Parameters argonBuilder = new Argon2Parameters.Builder(Argon2Parameters.ARGON2_id)
                   .withSalt(salt)
                   .withMemoryPowOfTwo(memoryPowOfTwo)
                   .withIterations(iterations)
                   .withParallelism(parallelism)
                   .build();
-          //´´½¨Éú²ú¹¤¾ß²¢³õÊ¼»¯
+          //åˆ›å»ºç”Ÿäº§å·¥å…·å¹¶åˆå§‹åŒ–
           Argon2BytesGenerator generator = new Argon2BytesGenerator();
           generator.init(argonBuilder);
   
@@ -883,9 +883,9 @@ public class Result {
       }
   
       /**
-       * Éú³ÉËæ»úÑÎÖµ
+       * ç”Ÿæˆéšæœºç›å€¼
        *
-       * @return ÑÎÖµ¶ş½øÖÆÊı×é
+       * @return ç›å€¼äºŒè¿›åˆ¶æ•°ç»„
        */
       private byte[] getRandomSalt() {
           byte[] salt = new byte[hashLength];
@@ -894,9 +894,9 @@ public class Result {
       }
   
       /**
-       * ÃÜÂë¼ÓÃÜ
+       * å¯†ç åŠ å¯†
        *
-       * @param user ÓÃ»§ĞÅÏ¢
+       * @param user ç”¨æˆ·ä¿¡æ¯
        */
       public void passwordEncrypt(User user) {
           byte[] password = user.getPassword();
@@ -913,11 +913,11 @@ public class Result {
       }
   
       /**
-       * ÃÜÂëĞ£Ñé
+       * å¯†ç æ ¡éªŒ
        *
-       * @param password ÃÜÂë
-       * @param user     ÓÃ»§ĞÅÏ¢
-       * @return ÃÜÂëÊÇ·ñÕıÈ·
+       * @param password å¯†ç 
+       * @param user     ç”¨æˆ·ä¿¡æ¯
+       * @return å¯†ç æ˜¯å¦æ­£ç¡®
        */
       public boolean passwordVerify(byte[] password, User user) {
           byte[] result = new byte[hashLength];
@@ -933,10 +933,10 @@ public class Result {
   }
   ```
 
--  JwtUtil Éú³É½âÎötoken¹¤¾ß
+-  JwtUtil ç”Ÿæˆè§£ætokenå·¥å…·
 
   ```java
-  //»ñÈ¡ÅäÖÃ
+  //è·å–é…ç½®
   @Value("${jwt.secret-key}")
   private String secretKey;
   @Value("${jwt.expires}")
@@ -945,7 +945,7 @@ public class Result {
 
   ```java
   /**
-   * »ñÈ¡ÎŞÊ±¼äÏŞÖÆtoken
+   * è·å–æ— æ—¶é—´é™åˆ¶token
    */
   public String getLimitlessToken(Map<String, Object> claim) {
       return JWT.create()
@@ -956,9 +956,9 @@ public class Result {
 
   ```java
   /**
-   * ÑéÖ¤token
+   * éªŒè¯token
    *
-   * @return ÑéÖ¤ĞÅÏ¢
+   * @return éªŒè¯ä¿¡æ¯
    */
   public DecodedJWT verifyToken(String token) {
       JWTVerifier jwtVerifier = JWT.require(Algorithm.HMAC256(secretKey)).build();
@@ -966,11 +966,11 @@ public class Result {
   }
   ```
 
-- IpUtil »ñÈ¡ÕæÊµip¹¤¾ß
+- IpUtil è·å–çœŸå®ipå·¥å…·
 
   ```java
   /**
-   * ip¹¤¾ß
+   * ipå·¥å…·
    */
   @Component
   public class IpUtil {
@@ -991,11 +991,11 @@ public class Result {
   }
   ```
 
-- FileUtil ÎÄ¼ş¹¤¾ßÀà
+- FileUtil æ–‡ä»¶å·¥å…·ç±»
 
   ```java
   /**
-   * ÎÄ¼ş¹¤¾ßÀà
+   * æ–‡ä»¶å·¥å…·ç±»
    */
   @Slf4j
   @Component
@@ -1004,19 +1004,19 @@ public class Result {
       private final Tika tika = new Tika();
   
       /**
-       * ³õÊ¼»¯ÎÄ¼ş¼Ğ
+       * åˆå§‹åŒ–æ–‡ä»¶å¤¹
        */
       public void initDirectory(Path path) {
           try {
               Files.createDirectory(path);
           } catch (FileAlreadyExistsException ignored) {
           } catch (IOException e) {
-              log.error("³õÊ¼»¯bean·¢Éú´íÎó£¬{} ´æ´¢ÎÄ¼ş¼Ğ´´½¨Ê§°Ü", path.getFileName(), e);
+              log.error("åˆå§‹åŒ–beanå‘ç”Ÿé”™è¯¯ï¼Œ{} å­˜å‚¨æ–‡ä»¶å¤¹åˆ›å»ºå¤±è´¥", path.getFileName(), e);
           }
       }
   
       /**
-       * ½«ÎÄ¼ş±£´æÔÚ±¾µØ
+       * å°†æ–‡ä»¶ä¿å­˜åœ¨æœ¬åœ°
        */
       public String storeFile(MultipartFile file, Path path) {
           try {
@@ -1024,148 +1024,148 @@ public class Result {
               Files.copy(file.getInputStream(), path.resolve(uniqueFileName));
               return uniqueFileName;
           } catch (IOException e) {
-              log.error("±£´æÎÄ¼ş {} Ê±·¢Éú´íÎó", file, e);
-              throw new FileSaveException("ÎÄ¼ş±£´æÊ§°Ü");
+              log.error("ä¿å­˜æ–‡ä»¶ {} æ—¶å‘ç”Ÿé”™è¯¯", file, e);
+              throw new FileSaveException("æ–‡ä»¶ä¿å­˜å¤±è´¥");
           }
       }
   
       /**
-       * ¸ù¾İÎÄ¼şÄ¿Â¼»ñÈ¡Ò»¼¶×ÓÎÄ¼ş
+       * æ ¹æ®æ–‡ä»¶ç›®å½•è·å–ä¸€çº§å­æ–‡ä»¶
        */
       public Stream<Path> getFileListByDirectory(Path dirPath) {
           try {
               return Files.list(dirPath);
           } catch (IOException e) {
-              log.error("²éÑ¯ÎÄ¼şÄ¿Â¼ {} Ê±·¢Éú´íÎó", dirPath, e);
-              throw new FileSaveException("ÎÄ¼ş±£´æÊ§°Ü");
+              log.error("æŸ¥è¯¢æ–‡ä»¶ç›®å½• {} æ—¶å‘ç”Ÿé”™è¯¯", dirPath, e);
+              throw new FileSaveException("æ–‡ä»¶ä¿å­˜å¤±è´¥");
           }
       }
   
       /**
-       * É¾³ıÎÄ¼ş
+       * åˆ é™¤æ–‡ä»¶
        */
       public boolean deleteFile(String fileName, Path path) {
           try {
               Files.deleteIfExists(path.resolve(fileName));
               return true;
           } catch (IOException e) {
-              log.error("ÎÄ¼şÉ¾³ıÊ§°Ü£¬µ±ÎÄ¼şÃûÎª {}£¬pathÎª {}", fileName, path);
+              log.error("æ–‡ä»¶åˆ é™¤å¤±è´¥ï¼Œå½“æ–‡ä»¶åä¸º {}ï¼Œpathä¸º {}", fileName, path);
               return false;
           }
       }
   
       /**
-       * »ñµÃÎÄ¼şÀàĞÍ
+       * è·å¾—æ–‡ä»¶ç±»å‹
        */
       public String getFileType(MultipartFile file) {
           try {
               return tika.detect(file.getInputStream());
           } catch (IOException e) {
-              log.error("¼ì²éÎÄ¼ş {} Ê±ÎÄ¼şÁ÷·¢Éú´íÎó", file, e);
-              throw new FileSaveException("ÎÄ¼ş±£´æÊ§°Ü");
+              log.error("æ£€æŸ¥æ–‡ä»¶ {} æ—¶æ–‡ä»¶æµå‘ç”Ÿé”™è¯¯", file, e);
+              throw new FileSaveException("æ–‡ä»¶ä¿å­˜å¤±è´¥");
           }
       }
   
       /**
-       * Í¨¹ıÎÄ¼şÀàĞÍÁĞ±í
-       * ¼ì²éÎÄ¼şÀàĞÍÊÇ·ñÆ¥Åä
+       * é€šè¿‡æ–‡ä»¶ç±»å‹åˆ—è¡¨
+       * æ£€æŸ¥æ–‡ä»¶ç±»å‹æ˜¯å¦åŒ¹é…
        */
       @SuppressWarnings("UnusedReturnValue")
       public String checkFileType(MultipartFile file, Set<String> typeList) {
           String fileType = getFileType(file);
           boolean checked = typeList.contains(fileType);
           if (!checked) {
-              throw new FileSaveException("ÎÄ¼şÀàĞÍ´íÎó£¬ÇëÉÏ´«ÕıÈ·ÀàĞÍ");
+              throw new FileSaveException("æ–‡ä»¶ç±»å‹é”™è¯¯ï¼Œè¯·ä¸Šä¼ æ­£ç¡®ç±»å‹");
           }
           return fileType;
       }
   
       /**
-       * Í¨¹ı¶à×Ö·û´®
-       * ¼ì²éÎÄ¼şÀàĞÍÊÇ·ñÆ¥Åä
+       * é€šè¿‡å¤šå­—ç¬¦ä¸²
+       * æ£€æŸ¥æ–‡ä»¶ç±»å‹æ˜¯å¦åŒ¹é…
        */
       public String checkFileType(MultipartFile file, String... types) {
           Set<String> typeList = Set.of(types);
           String fileType = getFileType(file);
           boolean checked = typeList.contains(fileType);
           if (!checked) {
-              throw new FileSaveException("ÎÄ¼şÀàĞÍ´íÎó£¬ÇëÉÏ´«ÕıÈ·ÀàĞÍ");
+              throw new FileSaveException("æ–‡ä»¶ç±»å‹é”™è¯¯ï¼Œè¯·ä¸Šä¼ æ­£ç¡®ç±»å‹");
           }
           return fileType;
       }
   
       /**
-       * ¸ù¾İÏà¶ÔÂ·¾¶»ñÈ¡ÎÄ¼ş
-       * ½«ÎÄ¼ş×°ÈëÏìÓ¦
+       * æ ¹æ®ç›¸å¯¹è·¯å¾„è·å–æ–‡ä»¶
+       * å°†æ–‡ä»¶è£…å…¥å“åº”
        */
       public void responseFileByRelativePath(String path, HttpServletResponse response) {
-          //»ñÈ¡ÎÄ¼ş
+          //è·å–æ–‡ä»¶
           File file = new File(path);
           try {
               ServletOutputStream out = response.getOutputStream();
               byte[] fileBytes = FileUtils.readFileToByteArray(file);
               out.write(fileBytes);
           } catch (FileNotFoundException e) {
-              log.error("¸ë×ÓÈë¿âÎÄ¼şÄ£°å·¢ÉúÎÄ¼şÎ´ÕÒµ½´íÎó£¬Â·¾¶£º{}", "");
+              log.error("é¸½å­å…¥åº“æ–‡ä»¶æ¨¡æ¿å‘ç”Ÿæ–‡ä»¶æœªæ‰¾åˆ°é”™è¯¯ï¼Œè·¯å¾„ï¼š{}", "");
           } catch (IOException e) {
-              log.error("¸ë×ÓÈë¿âÎÄ¼şÄ£°å·¢ÉúIO´íÎó£¬Â·¾¶£º{}", "");
+              log.error("é¸½å­å…¥åº“æ–‡ä»¶æ¨¡æ¿å‘ç”ŸIOé”™è¯¯ï¼Œè·¯å¾„ï¼š{}", "");
           }
       }
   }
   ```
 
-- QRCodeUtil ¶şÎ¬Âë¹¤¾ß
+- QRCodeUtil äºŒç»´ç å·¥å…·
 
-  ¶ÁÈ¡ÅäÖÃ
+  è¯»å–é…ç½®
 
   ```java
   /**
-   * Ä¬ÈÏ¿í¶È
+   * é»˜è®¤å®½åº¦
    */
   @Value("${QR.width}")
   private int width;
   /**
-   * Ä¬ÈÏ¸ß¶È
+   * é»˜è®¤é«˜åº¦
    */
   @Value("${QR.height}")
   private int height;
   /**
-   * Í¼Æ¬¸ñÊ½
+   * å›¾ç‰‡æ ¼å¼
    */
   @Value("${QR.image-format}")
   private String imageFormat;
   /**
-   * ×Ö·û±àÂë
+   * å­—ç¬¦ç¼–ç 
    */
   @Value("${QR.charset}")
   private String charset;
   /**
-   * Ô­Éú×ªÂëÇ°ÃæÃ»ÓĞ data:image/png;base64 ÕâĞ©×Ö¶Î£¬·µ»Ø¸øÇ°¶ËÊÇÎŞ·¨±»½âÎö
+   * åŸç”Ÿè½¬ç å‰é¢æ²¡æœ‰ data:image/png;base64 è¿™äº›å­—æ®µï¼Œè¿”å›ç»™å‰ç«¯æ˜¯æ— æ³•è¢«è§£æ
    */
   @Value("${QR.base64-image}")
   private String base64Image;
   /**
-   * ÏµÍ³logoµØÖ·
+   * ç³»ç»Ÿlogoåœ°å€
    */
   @Value("${QR.logo-url}")
   private String logoUrl;
   /**
-   * logo¿í¶È
+   * logoå®½åº¦
    */
   @Value("${QR.logo-width}")
   private int logoWidth;
   /**
-   * logo¸ß¶È
+   * logoé«˜åº¦
    */
   @Value("${QR.logo-height}")
   private int logoHeight;
   /**
-   * ¶şÎ¬ÂëÇ°¾°É«
+   * äºŒç»´ç å‰æ™¯è‰²
    */
   @Value("${QR.foreground}")
   private int foreground;
   /**
-   * ¶şÎ¬Âë±³¾°É«
+   * äºŒç»´ç èƒŒæ™¯è‰²
    */
   @Value("${QR.background}")
   private int background;
@@ -1175,56 +1175,56 @@ public class Result {
   @PostConstruct
   private void init() {
       qrConfig = new HashMap<>();
-      //Ö¸¶¨×Ö·û¼¯
+      //æŒ‡å®šå­—ç¬¦é›†
       qrConfig.put(EncodeHintType.CHARACTER_SET, charset);
-      //Ö¸¶¨¶şÎ¬ÂëµÄ¾À´íµÈ¼¶ÎªÖĞ¼¶
+      //æŒ‡å®šäºŒç»´ç çš„çº é”™ç­‰çº§ä¸ºä¸­çº§
       qrConfig.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.H);
-      //ÉèÖÃÍ¼Æ¬µÄ±ß¾à
+      //è®¾ç½®å›¾ç‰‡çš„è¾¹è·
       qrConfig.put(EncodeHintType.MARGIN, 2);
-      log.info("QRCodeUtil qrConfig ³õÊ¼»¯Íê³É {}", qrConfig);
+      log.info("QRCodeUtil qrConfig åˆå§‹åŒ–å®Œæˆ {}", qrConfig);
   }
   ```
 
-  ºËĞÄ´úÂë
+  æ ¸å¿ƒä»£ç 
 
   ```java
   /**
-   * ¸ù¾İ¿í¸ßÉú³É¶şÎ¬Âë
+   * æ ¹æ®å®½é«˜ç”ŸæˆäºŒç»´ç 
    */
   public String createQrCode(String content, int width, int height) {
       ByteArrayOutputStream output = new ByteArrayOutputStream();
       try {
-          // ´´½¨ QRCodeWriter ¶ÔÏó
+          // åˆ›å»º QRCodeWriter å¯¹è±¡
           QRCodeWriter qrCodeWriter = new QRCodeWriter();
-          // Éú³É BitMatrix ¶ÔÏó
+          // ç”Ÿæˆ BitMatrix å¯¹è±¡
           BitMatrix bitMatrix = qrCodeWriter.encode(content, BarcodeFormat.QR_CODE, width, height, qrConfig);
-          // ´´½¨ BufferedImage ¶ÔÏó
+          // åˆ›å»º BufferedImage å¯¹è±¡
           BufferedImage bufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-          //ÉèÖÃÏñËØµãÑÕÉ«
+          //è®¾ç½®åƒç´ ç‚¹é¢œè‰²
           for (int x = 0; x < width; x++) {
               for (int y = 0; y < height; y++) {
                   bufferedImage.setRGB(x, y, bitMatrix.get(x, y) ? foreground : background);
               }
           }
-          //²åÈëlogo
+          //æ’å…¥logo
           insertLogo(bufferedImage, width, height, logoUrl, logoWidth, logoHeight);
-          //Êä³ö
+          //è¾“å‡º
           ImageIO.write(bufferedImage, imageFormat, output);
       } catch (Exception e) {
-          log.error("·şÎñ´íÎó£¬ Éú³É¶şÎ¬ÂëÊ§°Ü", e);
+          log.error("æœåŠ¡é”™è¯¯ï¼Œ ç”ŸæˆäºŒç»´ç å¤±è´¥", e);
       }
       return String.format(base64Image, new String(Base64.encode(output.toByteArray())));
   }
   
   /**
-   * ²åÈëlogo
+   * æ’å…¥logo
    */
   private void insertLogo(BufferedImage source,
                           int width, int height,
                           String logoUrl,
                           int logoWidth, int logoHeight) throws Exception {
       Image src = ImageIO.read(new File(logoUrl));
-      // ²åÈëLOGO
+      // æ’å…¥LOGO
       Graphics2D graph = source.createGraphics();
       int x = (width - logoWidth) / 2;
       int y = (height - logoHeight) / 2;
@@ -1236,13 +1236,13 @@ public class Result {
   }
   ```
 
-- redisÏà¹Ø
+- redisç›¸å…³
 
-  - RedisUtil redis¹¤¾ß
+  - RedisUtil rediså·¥å…·
 
     ```java
     /**
-     * redis¹¤¾ß
+     * rediså·¥å…·
      */
     @Slf4j
     @Component
@@ -1252,30 +1252,30 @@ public class Result {
         RedisTemplate<String, Object> redisTemplate;
     
         /**
-         * ·¢ËÍpingÃüÁî
-         * ¼ì²éÊı¾İ¿âÁ¬½Ó
+         * å‘é€pingå‘½ä»¤
+         * æ£€æŸ¥æ•°æ®åº“è¿æ¥
          */
         public boolean PING() {
             try {
                 String execute = redisTemplate.execute(RedisConnectionCommands::ping);
                 if (execute == null || !execute.equals("PONG")) {
-                    log.error("redis PING Ê§°Ü {}}", execute);
+                    log.error("redis PING å¤±è´¥ {}}", execute);
                     return false;
                 }
             } catch (RedisConnectionFailureException e) {
-                log.error("redisÁ¬½Ó´íÎó", e);
+                log.error("redisè¿æ¥é”™è¯¯", e);
                 return false;
             }
             return true;
         }
     
         /**
-         * ÆÕÍ¨»º´æ·ÅÈë²¢ÉèÖÃÊ±¼ä
+         * æ™®é€šç¼“å­˜æ”¾å…¥å¹¶è®¾ç½®æ—¶é—´
          *
-         * @param namespace ÃüÃû¿Õ¼ä
-         * @param key       ¼ü
-         * @param value     Öµ
-         * @param time      Ê±¼ä(Ãë) timeÒª´óÓÚ0 Èç¹ûtimeĞ¡ÓÚµÈÓÚ0 ½«ÉèÖÃÎŞÏŞÆÚ
+         * @param namespace å‘½åç©ºé—´
+         * @param key       é”®
+         * @param value     å€¼
+         * @param time      æ—¶é—´(ç§’) timeè¦å¤§äº0 å¦‚æœtimeå°äºç­‰äº0 å°†è®¾ç½®æ— é™æœŸ
          */
         public void set(RedisNamespace namespace, String key, Object value, long time) {
             if (time > 0) {
@@ -1286,80 +1286,80 @@ public class Result {
         }
     
         /**
-         * ÎŞÃüÃû¿Õ¼ä
-         * ÆÕÍ¨»º´æ·ÅÈë²¢ÉèÖÃÊ±¼ä
+         * æ— å‘½åç©ºé—´
+         * æ™®é€šç¼“å­˜æ”¾å…¥å¹¶è®¾ç½®æ—¶é—´
          *
-         * @param key   ¼ü
-         * @param value Öµ
-         * @param time  Ê±¼ä(Ãë) timeÒª´óÓÚ0 Èç¹ûtimeĞ¡ÓÚµÈÓÚ0 ½«ÉèÖÃÎŞÏŞÆÚ
+         * @param key   é”®
+         * @param value å€¼
+         * @param time  æ—¶é—´(ç§’) timeè¦å¤§äº0 å¦‚æœtimeå°äºç­‰äº0 å°†è®¾ç½®æ— é™æœŸ
          */
         public void set(String key, Object value, long time) {
             set(RedisNamespace.Ancestor, key, value, time);
         }
     
         /**
-         * ´ø¸¸¼¶ÃüÃû¿Õ¼ä
-         * »ñÈ¡ÃüÃû¿Õ¼äÏÂµÄËùÓĞkey
+         * å¸¦çˆ¶çº§å‘½åç©ºé—´
+         * è·å–å‘½åç©ºé—´ä¸‹çš„æ‰€æœ‰key
          */
         public Set<String> keys(RedisNamespace redisNamespace, Object namespace) {
             return redisTemplate.keys(redisNamespace.getValue() + namespace + "*");
         }
     
         /**
-         * ´ø¸¸¼¶ÃüÃû¿Õ¼ä
-         * »ñÈ¡ÃüÃû¿Õ¼äÏÂµÄËùÓĞkey
+         * å¸¦çˆ¶çº§å‘½åç©ºé—´
+         * è·å–å‘½åç©ºé—´ä¸‹çš„æ‰€æœ‰key
          */
         public Set<String> keys(RedisNamespace redisNamespace) {
             return redisTemplate.keys(redisNamespace.getValue() + "*");
         }
     
         /**
-         * ´øÃüÃû¿Õ¼ä
-         * ²éÑ¯¹ıÆÚÊ±¼ä
+         * å¸¦å‘½åç©ºé—´
+         * æŸ¥è¯¢è¿‡æœŸæ—¶é—´
          *
-         * @return Ê±¼ä(Ãë) ·µ»Ø0´ú±íÎªÓÀ¾ÃÓĞĞ§
+         * @return æ—¶é—´(ç§’) è¿”å›0ä»£è¡¨ä¸ºæ°¸ä¹…æœ‰æ•ˆ
          */
         public Long getExpire(RedisNamespace namespace, String key) {
             return redisTemplate.getExpire(namespace.getValue() + key);
         }
     
         /**
-         * ÎŞÃüÃû¿Õ¼ä
-         * ²éÑ¯¹ıÆÚÊ±¼ä
+         * æ— å‘½åç©ºé—´
+         * æŸ¥è¯¢è¿‡æœŸæ—¶é—´
          *
-         * @return Ê±¼ä(Ãë) ·µ»Ø0´ú±íÎªÓÀ¾ÃÓĞĞ§
+         * @return æ—¶é—´(ç§’) è¿”å›0ä»£è¡¨ä¸ºæ°¸ä¹…æœ‰æ•ˆ
          */
         public Long getExpire(String key) {
             return getExpire(RedisNamespace.Ancestor, key);
         }
     
         /**
-         * ´øÃüÃû¿Õ¼ä
-         * É¾³ı»º´æ
+         * å¸¦å‘½åç©ºé—´
+         * åˆ é™¤ç¼“å­˜
          */
         public void del(RedisNamespace namespace, String key) {
             redisTemplate.delete(namespace.getValue() + key);
         }
     
         /**
-         * ÎŞÃüÃû¿Õ¼ä
-         * É¾³ı»º´æ
+         * æ— å‘½åç©ºé—´
+         * åˆ é™¤ç¼“å­˜
          */
         public void del(String key) {
             del(RedisNamespace.Ancestor, key);
         }
     
         /**
-         * ´øÃüÃû¿Õ¼ä
-         * »ñÈ¡ÆÕÍ¨»º´æ
+         * å¸¦å‘½åç©ºé—´
+         * è·å–æ™®é€šç¼“å­˜
          */
         public Object get(RedisNamespace namespace, String key) {
             return key == null ? null : redisTemplate.opsForValue().get(namespace.getValue() + key);
         }
     
         /**
-         * ´øÃüÃû¿Õ¼ä
-         * Ö¸¶¨»º´æÊ§Ğ§Ê±¼ä
+         * å¸¦å‘½åç©ºé—´
+         * æŒ‡å®šç¼“å­˜å¤±æ•ˆæ—¶é—´
          */
         public void expire(RedisNamespace namespace, String key, long time) {
             if (time > 0) {
@@ -1369,11 +1369,11 @@ public class Result {
     }
     ```
 
-  - WhitelistUtil °×Ãûµ¥¹¤¾ß
+  - WhitelistUtil ç™½åå•å·¥å…·
 
     ```java
     /**
-     * °×Ãûµ¥¹¤¾ßÀà
+     * ç™½åå•å·¥å…·ç±»
      */
     @Component
     public class WhitelistUtil {
@@ -1388,7 +1388,7 @@ public class Result {
         private Integer updateGap;
     
         /**
-         * ½«token´æÈë°×Ãûµ¥
+         * å°†tokenå­˜å…¥ç™½åå•
          */
         public void setToken(Long id, String ip, String token) {
             redisUtil.set(
@@ -1400,23 +1400,23 @@ public class Result {
         }
     
         /**
-         * ÏŞÖÆµ¥ÓÃ»§idµÄÔÚÏßÉè±¸Êı
-         * Èç¹û´æÔÚ³¬³öÏŞÖÆµÄÉè±¸Êı
-         * Ôò½«ÆätokenÌßÏÂÏß
+         * é™åˆ¶å•ç”¨æˆ·idçš„åœ¨çº¿è®¾å¤‡æ•°
+         * å¦‚æœå­˜åœ¨è¶…å‡ºé™åˆ¶çš„è®¾å¤‡æ•°
+         * åˆ™å°†å…¶tokenè¸¢ä¸‹çº¿
          */
         public void limitToken(Long id) {
-            //»ñÈ¡´ËidÏÂµÄËùÓĞkey
+            //è·å–æ­¤idä¸‹çš„æ‰€æœ‰key
             Set<String> keys = redisUtil.keys(RedisNamespace.Whitelist, id + ":");
     
-            //Èç¹ûkey¸öÊıĞ¡ÓÚÏŞÖÆÔò·ÅĞĞ
+            //å¦‚æœkeyä¸ªæ•°å°äºé™åˆ¶åˆ™æ”¾è¡Œ
             if (keys.size() <= ipLimit) {
                 return;
             }
     
-            //É¾³ı¾àÀë¹ıÆÚÊ±¼ä¶ÌµÄtoken
+            //åˆ é™¤è·ç¦»è¿‡æœŸæ—¶é—´çŸ­çš„token
     
-            //²éÑ¯³ökey¶ÔÓ¦µÄ¹ıÆÚÊ±¼ä£¬·ÅÈëÓÅÏÈ¶ÓÁĞ
-            //QueueÔªËØÎªÊı×é£¬e[0]key£¬e[1]Îª¹ıÆÚÊ±¼ä
+            //æŸ¥è¯¢å‡ºkeyå¯¹åº”çš„è¿‡æœŸæ—¶é—´ï¼Œæ”¾å…¥ä¼˜å…ˆé˜Ÿåˆ—
+            //Queueå…ƒç´ ä¸ºæ•°ç»„ï¼Œe[0]keyï¼Œe[1]ä¸ºè¿‡æœŸæ—¶é—´
             Queue<Object[]> expiresQueue = new PriorityQueue<>(Comparator.comparingLong(e -> (Long) e[1]));
             keys.forEach(key -> expiresQueue.add(new Object[]{key, redisUtil.getExpire(key)}));
     
@@ -1428,10 +1428,10 @@ public class Result {
         }
     
         /**
-         * ÑéÖ¤°×Ãûµ¥ÖĞµÄtoken
+         * éªŒè¯ç™½åå•ä¸­çš„token
          */
         public boolean verifyToken(Long id, String ip, String token) {
-            //»ñÈ¡token
+            //è·å–token
             Object redisToken = redisUtil.get(RedisNamespace.Whitelist, id + ":" + ip);
             if (redisToken == null) {
                 return false;
@@ -1440,7 +1440,7 @@ public class Result {
         }
     
         /**
-         * ÖØÖÃredis¹ıÆÚÊ±¼ä
+         * é‡ç½®redisè¿‡æœŸæ—¶é—´
          */
         public void updateExpires(Long id, String ip) {
             Long redisExpires = redisUtil.getExpire(RedisNamespace.Whitelist, id + ":" + ip);
@@ -1450,15 +1450,15 @@ public class Result {
         }
     
         /**
-         * Í³¼Æ»îÔ¾ÈËÊı
+         * ç»Ÿè®¡æ´»è·ƒäººæ•°
          */
         public long getActive(RedisNamespace namespace, String key) {
-            //¸ù¾İ»ñÈ¡°üº¬keyµÄkey
+            //æ ¹æ®è·å–åŒ…å«keyçš„key
             Set<String> keys = redisUtil.keys(namespace, key);
     
             AtomicLong count = new AtomicLong();
     
-            //É¸Ñ¡²¢Í³¼Æ×î½ü»îÔ¾µÄÈËÊı
+            //ç­›é€‰å¹¶ç»Ÿè®¡æœ€è¿‘æ´»è·ƒçš„äººæ•°
             keys.forEach(k -> {
                 Long tokenExpires = redisUtil.getExpire(k);
     
@@ -1471,35 +1471,35 @@ public class Result {
         }
     
         /**
-         * ½«ÓÃ»§µÄËùÓĞÉè±¸
-         * ´Ó°×Ãûµ¥ÖĞÌŞ³ı
+         * å°†ç”¨æˆ·çš„æ‰€æœ‰è®¾å¤‡
+         * ä»ç™½åå•ä¸­å‰”é™¤
          */
         public void deleteToken(Long id) {
             Set<String> keys = redisUtil.keys(RedisNamespace.Whitelist, id + ":");
-            //É¾³ıËùÓĞÉè±¸
+            //åˆ é™¤æ‰€æœ‰è®¾å¤‡
             keys.forEach(key -> redisUtil.del(key));
         }
     
         /**
-         * ²é¿´ÓÃ»§µÄ»îÔ¾×´Ì¬
+         * æŸ¥çœ‹ç”¨æˆ·çš„æ´»è·ƒçŠ¶æ€
          */
         public int getState(RedisNamespace namespace, String key) {
-            //¸ù¾İ»ñÈ¡°üº¬keyµÄkey
+            //æ ¹æ®è·å–åŒ…å«keyçš„key
             Set<String> keys = redisUtil.keys(namespace, key);
     
             int state = 0;
     
-            //²é¿´Ã¿¸öÉè±¸µÄ»îÔ¾×´Ì¬
+            //æŸ¥çœ‹æ¯ä¸ªè®¾å¤‡çš„æ´»è·ƒçŠ¶æ€
             for (String k : keys) {
                 Long tokenExpires = redisUtil.getExpire(k);
     
-                //Èç¹ûÂú×ãÌõ¼ş£¬½«×´Ì¬ÉèÎª×î¸ßÔÚÏß×´Ì¬
+                //å¦‚æœæ»¡è¶³æ¡ä»¶ï¼Œå°†çŠ¶æ€è®¾ä¸ºæœ€é«˜åœ¨çº¿çŠ¶æ€
                 if (expires - tokenExpires < updateGap) {
                     state = 2;
                     break;
                 }
     
-                //Èç¹ûÂú×ãÌõ¼şÉèÖÃ´Ë×´Ì¬
+                //å¦‚æœæ»¡è¶³æ¡ä»¶è®¾ç½®æ­¤çŠ¶æ€
                 if (state < 1 && tokenExpires > 0) {
                     state = 1;
                 }
@@ -1510,11 +1510,11 @@ public class Result {
     }
     ```
 
-  - BlacklistUtil ºÚÃûµ¥¹¤¾ß
+  - BlacklistUtil é»‘åå•å·¥å…·
 
     ```java
     /**
-     * ºÚÃûµ¥¹¤¾ß
+     * é»‘åå•å·¥å…·
      */
     @Component
     public class BlacklistUtil {
@@ -1523,15 +1523,15 @@ public class Result {
         private RedisUtil redisUtil;
     
         /**
-         * ¸ù¾İ¼¶±ğÏòºÚÃûµ¥ÖĞÌí¼Óip
-         * ²¢ÉèÖÃ¹ıÆÚÊ±¼ä
+         * æ ¹æ®çº§åˆ«å‘é»‘åå•ä¸­æ·»åŠ ip
+         * å¹¶è®¾ç½®è¿‡æœŸæ—¶é—´
          */
         public void addForbiddenIp(String ip, Object message, SeverityLevel level) {
             redisUtil.set(RedisNamespace.Blacklist, ip, message, level.getExpire());
         }
     
         /**
-         * Í¨¹ıip»ñÈ¡ºÚÃûµ¥ÖĞµÄĞÅÏ¢
+         * é€šè¿‡ipè·å–é»‘åå•ä¸­çš„ä¿¡æ¯
          */
         public Object getForbiddenInfo(String ip) {
             return redisUtil.get(RedisNamespace.Blacklist, ip);
@@ -1539,9 +1539,9 @@ public class Result {
     }
     ```
 
-#### 2.2.7 Òì³£´¦ÀíÖĞĞÄ
+#### 2.2.7 å¼‚å¸¸å¤„ç†ä¸­å¿ƒ
 
-- ÏîÄ¿Òì³£¸¸Àà£¬ÎªÒì³£Ìí¼ÓÉèÖÃ×´Ì¬Âë·½·¨
+- é¡¹ç›®å¼‚å¸¸çˆ¶ç±»ï¼Œä¸ºå¼‚å¸¸æ·»åŠ è®¾ç½®çŠ¶æ€ç æ–¹æ³•
 
   ```java
   public class ProjectException extends RuntimeException{
@@ -1561,7 +1561,7 @@ public class Result {
   }
   ```
 
-- Òì³£Àà¾ÙÀı£¨Í¨ĞĞÖ¤Òì³££©
+- å¼‚å¸¸ç±»ä¸¾ä¾‹ï¼ˆé€šè¡Œè¯å¼‚å¸¸ï¼‰
 
   ```java
   public class AccessException extends ProjectException{
@@ -1572,9 +1572,9 @@ public class Result {
   }
   ```
 
-- Òì³£²¶»ñ´¦Àí
+- å¼‚å¸¸æ•è·å¤„ç†
 
-  - ÆÕÍ¨Òì³£´¦Àí
+  - æ™®é€šå¼‚å¸¸å¤„ç†
 
     ```java
     @ExceptionHandler({NotFindUserException.class, PasswordErrorException.class,
@@ -1588,74 +1588,74 @@ public class Result {
     }
     ```
 
-  - Í¨ĞĞÖ¤Òì³£´¦Àí
+  - é€šè¡Œè¯å¼‚å¸¸å¤„ç†
 
     ```java
     /**
-     * 403ÎŞ·ÃÎÊÈ¨ÏŞ
+     * 403æ— è®¿é—®æƒé™
      */
     @ExceptionHandler({JWTDecodeException.class, SignatureVerificationException.class})
     private Result doAccessException() {
-        return new Result(ExceptionCode.AccessException.code, "Í¨ĞĞÖ¤Ê§Ğ§");
+        return new Result(ExceptionCode.AccessException.code, "é€šè¡Œè¯å¤±æ•ˆ");
     }
     
     /**
-     * µÇÂ¼¹ıÆÚ
+     * ç™»å½•è¿‡æœŸ
      */
     @ExceptionHandler({TokenExpiredException.class})
     private Result doExpiredException() {
-        return new Result(ExceptionCode.ExpiredException.code, "Í¨ĞÅÖ¤¹ıÆÚ");
+        return new Result(ExceptionCode.ExpiredException.code, "é€šä¿¡è¯è¿‡æœŸ");
     }
     ```
 
-  - Êı¾İ¿âÒì³£
+  - æ•°æ®åº“å¼‚å¸¸
 
     ```java
     /**
-     * ¶ÔÊı¾İ¿â²Ù×÷µÄÊı¾İ¹ı´ó
+     * å¯¹æ•°æ®åº“æ“ä½œçš„æ•°æ®è¿‡å¤§
      */
     @ExceptionHandler(DataTruncation.class)
     private Result doDataTruncationException(DataTruncation exception) {
-        log.warn("ÓÃ»§ÉÏ´«µÄÊı¾İ³¬³öÊı¾İ¿âÔ¤ÆÚ {}", exception.getMessage());
-        return new Result(ExceptionCode.SaveFailException.code, "ÉÏ´«µÄÊı¾İ¹ı´ó£¬ÇëÁªÏµ¹ÜÀíÔ±»ñÈ¡Ö§³Ö");
+        log.warn("ç”¨æˆ·ä¸Šä¼ çš„æ•°æ®è¶…å‡ºæ•°æ®åº“é¢„æœŸ {}", exception.getMessage());
+        return new Result(ExceptionCode.SaveFailException.code, "ä¸Šä¼ çš„æ•°æ®è¿‡å¤§ï¼Œè¯·è”ç³»ç®¡ç†å‘˜è·å–æ”¯æŒ");
     }
     
     /**
-     * Êı¾İ¿âÎ¨Ò»×Ö¶Î·¢ÉúÖØ¸´
+     * æ•°æ®åº“å”¯ä¸€å­—æ®µå‘ç”Ÿé‡å¤
      */
     @ExceptionHandler(DuplicateKeyException.class)
     private Result doDuplicateKeyException() {
-        return new Result(ExceptionCode.DuplicateKeyException.code, "ĞÅÏ¢ÒÑ´æÔÚ");
+        return new Result(ExceptionCode.DuplicateKeyException.code, "ä¿¡æ¯å·²å­˜åœ¨");
     }
     ```
 
-  - sql×¢ÈëÒì³£ÌØÊâ´¦Àí
+  - sqlæ³¨å…¥å¼‚å¸¸ç‰¹æ®Šå¤„ç†
 
     ```java
     /**
-     * ·Ç·¨sql×¢Èë
+     * éæ³•sqlæ³¨å…¥
      */
     @ExceptionHandler(MaliciousSqlInjectionException.class)
     private Result doMaliciousSqlInjectionException(MaliciousSqlInjectionException exception, HttpServletRequest request) {
-        //»ñÈ¡Êµ¼Êip£¬±ÜÃâÊ¹ÓÃtokenÖĞµÄip
+        //è·å–å®é™…ipï¼Œé¿å…ä½¿ç”¨tokenä¸­çš„ip
         String ip = ipUtil.getIp(request);
     
-        //Ìí¼ÓĞÅÏ¢
+        //æ·»åŠ ä¿¡æ¯
         Map<String, Object> cause = new HashMap<>();
         cause.put("ip", ip);
         cause.put("message", exception.getMessage());
         cause.put("route", request.getServletPath());
     
-        //°´ÑÏÖØ³Ì¶È¼ÓÈëºÚÃûµ¥
+        //æŒ‰ä¸¥é‡ç¨‹åº¦åŠ å…¥é»‘åå•
         blacklistUtil.addForbiddenIp(ip, cause, exception.getSeverityLevel());
     
         return new Result(exception.getCode(), exception.getMessage());
     }
     ```
 
-#### 2.2.8 ÏµÍ³¶¨Ê±ÈÎÎñ
+#### 2.2.8 ç³»ç»Ÿå®šæ—¶ä»»åŠ¡
 
-- LogSchedule µÇÂ¼ĞÅÏ¢ÈÕÖ¾¶¨Ê±ÈÎÎñ
+- LogSchedule ç™»å½•ä¿¡æ¯æ—¥å¿—å®šæ—¶ä»»åŠ¡
 
   ```java
   @Slf4j
@@ -1666,19 +1666,19 @@ public class Result {
       private LoginMsgService loginMsgService;
   
       /**
-       * ¶¨Ê±ÇåÀíµÇÂ¼ÈÕÖ¾ĞÅÏ¢
+       * å®šæ—¶æ¸…ç†ç™»å½•æ—¥å¿—ä¿¡æ¯
        */
       @Scheduled(cron = "0 0 3 * * *")
       public void loginLogTask() {
   
           int remove = loginMsgService.removeForCountTask();
   
-          log.info("³É¹¦ÇåÀí {} Ìõ¹ıÆÚµÇÂ¼ĞÅÏ¢¼ÇÂ¼", remove);
+          log.info("æˆåŠŸæ¸…ç† {} æ¡è¿‡æœŸç™»å½•ä¿¡æ¯è®°å½•", remove);
       }
   }
   ```
 
-  ÒµÎñ²ã
+  ä¸šåŠ¡å±‚
 
   ```java
   @Autowired
@@ -1687,7 +1687,7 @@ public class Result {
   private Integer maxHistory;
   @Override
   public int removeForCountTask() {
-      //»ñÈ¡ÀúÊ·Ê±¼ä
+      //è·å–å†å²æ—¶é—´
       LocalDateTime historyTime = LocalDateTime.now().minusDays(maxHistory);
   
       QueryWrapper<LoginMsg> wrapper = new QueryWrapper<>();
@@ -1697,7 +1697,7 @@ public class Result {
   }
   ```
 
-- OnlineSchedule ÏßÉÏÈËÊı¼ÆÊı¶¨Ê±ÈÎÎñ
+- OnlineSchedule çº¿ä¸Šäººæ•°è®¡æ•°å®šæ—¶ä»»åŠ¡
 
   ```java
   @Slf4j
@@ -1710,24 +1710,24 @@ public class Result {
       private WhitelistUtil whitelistUtil;
   
       /**
-       * ¹Ì¶¨Ê±¼ä¼ä¸ô
-       * ´ÓÉÏ´ÎÖ´ĞĞÍêËãÆğ
-       * Ã¿¸öÊ®·ÖÖÓÍ³¼ÆÔÚÏßÈËÊı
+       * å›ºå®šæ—¶é—´é—´éš”
+       * ä»ä¸Šæ¬¡æ‰§è¡Œå®Œç®—èµ·
+       * æ¯ä¸ªååˆ†é’Ÿç»Ÿè®¡åœ¨çº¿äººæ•°
        */
       @Scheduled(fixedDelay = 600000, initialDelay = 1000)
       public void countOnline() {
-          //»ñÈ¡°×Ãûµ¥ÖĞµÄËùÓĞ»îÔ¾ÈËÊı
+          //è·å–ç™½åå•ä¸­çš„æ‰€æœ‰æ´»è·ƒäººæ•°
           long active = whitelistUtil.getActive(RedisNamespace.Whitelist, "");
   
-          //½«Í³¼ÆµÄÈËÊı´æÈë»º´æ£¬²»ÉèÖÃ¹ıÆÚ
+          //å°†ç»Ÿè®¡çš„äººæ•°å­˜å…¥ç¼“å­˜ï¼Œä¸è®¾ç½®è¿‡æœŸ
           redisUtil.set(RedisNamespace.Online, "", active, -1);
   
-          log.info("Í³¼Æµ±Ç°»îÔ¾ÈËÊı {}", active);
+          log.info("ç»Ÿè®¡å½“å‰æ´»è·ƒäººæ•° {}", active);
       }
   }
   ```
 
-- OplogSchedule ²Ù×÷ÈÕÖ¾¶¨Ê±ÈÎÎñ
+- OplogSchedule æ“ä½œæ—¥å¿—å®šæ—¶ä»»åŠ¡
 
   ```java
   @Slf4j
@@ -1740,7 +1740,7 @@ public class Result {
       private PigeonService pigeonService;
   
       /**
-       * ¶¨Ê±Îª²Ù×÷ÈÕÖ¾²¹³ä×ã»·
+       * å®šæ—¶ä¸ºæ“ä½œæ—¥å¿—è¡¥å……è¶³ç¯
        */
       @Scheduled(cron = "0 0 3,12,19 * * *")
       public void replenishRingNumber() {
@@ -1757,31 +1757,31 @@ public class Result {
   
           List<Oplog> oplogList = oplogService.list(oplogQueryWrapper);
   
-          //¼ÆÊı
+          //è®¡æ•°
           AtomicInteger count = new AtomicInteger();
   
           oplogList.forEach(oplog -> {
               Long pid = oplog.getPid();
   
-              //¸ù¾İpid²éÑ¯ringNumber
+              //æ ¹æ®pidæŸ¥è¯¢ringNumber
               Pigeon pigeon = pigeonService.getById(pid);
               if (pigeon == null) {
                   return;
               }
               String ringNumber = pigeon.getRingNumber();
   
-              //¸üĞÂoplogµÄringNumber
+              //æ›´æ–°oplogçš„ringNumber
               int update = oplogService.updateRingNUmber(pid, ringNumber);
   
               count.addAndGet(update);
           });
   
-          log.info("³É¹¦²¹³äÈÕÖ¾ringNumber {} Ìõ", count);
+          log.info("æˆåŠŸè¡¥å……æ—¥å¿—ringNumber {} æ¡", count);
       }
   }
   ```
 
-- PictureSchedule ´¦ÀíÍ¼Æ¬×ÊÔ´¹ÜÀí¶¨Ê±ÈÎÎñ
+- PictureSchedule å¤„ç†å›¾ç‰‡èµ„æºç®¡ç†å®šæ—¶ä»»åŠ¡
 
   ```java
   @Slf4j
@@ -1800,17 +1800,17 @@ public class Result {
       private String pigeonBasePath;
   
       /**
-       * É¾³ılogo¶àÓàÍ¼Æ¬
-       * Ã¿Ìì 3µã£¬12µã£¬19µã
+       * åˆ é™¤logoå¤šä½™å›¾ç‰‡
+       * æ¯å¤© 3ç‚¹ï¼Œ12ç‚¹ï¼Œ19ç‚¹
        */
       @Scheduled(cron = "0 0 3,12,19 * * *")
       public void deleteLogoPictureTask() {
-          //²é³öËùÓĞµÄÍ¼Æ¬´æ·Åµ½
+          //æŸ¥å‡ºæ‰€æœ‰çš„å›¾ç‰‡å­˜æ”¾åˆ°
           QueryWrapper<Xtspz> wrapper = new QueryWrapper<>();
           wrapper.select("logo_url");
           List<Xtspz> list = xtspzService.list(wrapper);
   
-          //×°Èëset·½±ã²éÑ¯
+          //è£…å…¥setæ–¹ä¾¿æŸ¥è¯¢
           Set<String> logoUrlSet = new HashSet<>();
           list.forEach(xtspz -> {
               if (xtspz != null) {
@@ -1818,39 +1818,39 @@ public class Result {
               }
           });
   
-          //Í³¼Æ
+          //ç»Ÿè®¡
           AtomicInteger count = new AtomicInteger();
   
           Path logoPath = Paths.get(logoBasePath);
           Stream<Path> fileList = fileUtil.getFileListByDirectory(logoPath);
           fileList.forEach(file -> {
               String fileName = file.getFileName().toString();
-              //ÅĞ¶ÏÊÇ·ñÔÚÊı¾İ¿âÖĞ
+              //åˆ¤æ–­æ˜¯å¦åœ¨æ•°æ®åº“ä¸­
               if (!logoUrlSet.contains(fileName)) {
-                  //É¾³ı
+                  //åˆ é™¤
                   boolean success = fileUtil.deleteFile(fileName, logoPath);
                   if (success) {
-                      log.info("³É¹¦É¾³ılogoÍ¼Æ¬ {}", fileName);
+                      log.info("æˆåŠŸåˆ é™¤logoå›¾ç‰‡ {}", fileName);
                       count.getAndIncrement();
                   }
               }
           });
   
-          log.info("´Ë´ÎÇå³ılogo¶àÓà×ÊÔ´Í¼Æ¬ {} ¸ö", count);
+          log.info("æ­¤æ¬¡æ¸…é™¤logoå¤šä½™èµ„æºå›¾ç‰‡ {} ä¸ª", count);
       }
   
       /**
-       * É¾³ıpigeon¶àÓàÍ¼Æ¬
-       * Ã¿Ìì 3µã£¬12µã£¬19µã
+       * åˆ é™¤pigeonå¤šä½™å›¾ç‰‡
+       * æ¯å¤© 3ç‚¹ï¼Œ12ç‚¹ï¼Œ19ç‚¹
        */
       @Scheduled(cron = "0 0 3,12,19 * * *")
       public void deletePigeonPictureTask() {
-          //²é³öËùÓĞµÄÍ¼Æ¬´æ·Åµ½
+          //æŸ¥å‡ºæ‰€æœ‰çš„å›¾ç‰‡å­˜æ”¾åˆ°
           QueryWrapper<Pigeon> wrapper = new QueryWrapper<>();
           wrapper.select("picture_url");
           List<Pigeon> list = pigeonService.list(wrapper);
   
-          //×°Èëset·½±ã²éÑ¯
+          //è£…å…¥setæ–¹ä¾¿æŸ¥è¯¢
           Set<String> pigeonUrlSet = new HashSet<>();
           list.forEach(pigeon -> {
               if (pigeon != null) {
@@ -1858,108 +1858,108 @@ public class Result {
               }
           });
   
-          //Í³¼Æ
+          //ç»Ÿè®¡
           AtomicInteger count = new AtomicInteger();
   
           Path pigeonPath = Paths.get(pigeonBasePath);
           Stream<Path> fileList = fileUtil.getFileListByDirectory(pigeonPath);
           fileList.forEach(file -> {
               String fileName = file.getFileName().toString();
-              //ÅĞ¶ÏÊÇ·ñÔÚÊı¾İ¿âÖĞ
+              //åˆ¤æ–­æ˜¯å¦åœ¨æ•°æ®åº“ä¸­
               if (!pigeonUrlSet.contains(fileName)) {
-                  //É¾³ı
+                  //åˆ é™¤
                   boolean success = fileUtil.deleteFile(fileName, pigeonPath);
                   if (success) {
-                      log.info("³É¹¦É¾³ıpigeon¶àÓàÍ¼Æ¬ {}", fileName);
+                      log.info("æˆåŠŸåˆ é™¤pigeonå¤šä½™å›¾ç‰‡ {}", fileName);
                       count.getAndIncrement();
                   }
               }
           });
   
-          log.info("´Ë´ÎÇå³ıpigeon¶àÓàÍ¼Æ¬×ÊÔ´ {} ¸ö", count);
+          log.info("æ­¤æ¬¡æ¸…é™¤pigeonå¤šä½™å›¾ç‰‡èµ„æº {} ä¸ª", count);
       }
   }
   ```
 
-#### 2.2.9 ÏµÍ³ÏêÏ¸Éè¼ÆÓëÊµÏÖ
+#### 2.2.9 ç³»ç»Ÿè¯¦ç»†è®¾è®¡ä¸å®ç°
 
-##### 2.2.9.1 µÇÂ¼·şÎñ
+##### 2.2.9.1 ç™»å½•æœåŠ¡
 
-- µÇÂ¼µÄÃÜÂëÑéÖ¤Éè¼Æ
+- ç™»å½•çš„å¯†ç éªŒè¯è®¾è®¡
 
-  Êı¾İ¿âÖĞ´æ´¢µÄĞÅÏ¢ÎªpasswordµÄ¼ÓÃÜ½á¹ûºÍ¼ÓÃÜµÄÑÎÖµ
+  æ•°æ®åº“ä¸­å­˜å‚¨çš„ä¿¡æ¯ä¸ºpasswordçš„åŠ å¯†ç»“æœå’ŒåŠ å¯†çš„ç›å€¼
 
   ```sql
   create table t_user
   (
-      id       bigint       not null comment '×ÔÈ»Ö÷¼ü'
+      id       bigint       not null comment 'è‡ªç„¶ä¸»é”®'
           primary key,
-      account  varchar(255) not null comment 'ÕËºÅ',
-      password blob         not null comment 'ÃÜÂë¹şÏ£Öµ',
-      salt     blob         not null comment 'ÑÎÖµ',
-      gid      bigint       not null comment '×éid',
-      admin    bit          not null comment '¹ÜÀíÔ±È¨ÏŞ',
+      account  varchar(255) not null comment 'è´¦å·',
+      password blob         not null comment 'å¯†ç å“ˆå¸Œå€¼',
+      salt     blob         not null comment 'ç›å€¼',
+      gid      bigint       not null comment 'ç»„id',
+      admin    bit          not null comment 'ç®¡ç†å‘˜æƒé™',
       constraint account
           unique (account)
   );
   ```
 
-  ¼ÓÃÜ·½·¨Îª½«passwordºÍsaltÆ´´®½øĞĞArgon2Ëã·¨¹şÏ£¼ÓÃÜ£¬±£»¤Êı¾İ¿â±ÜÃâ·¢ÉúÊı¾İ¿âÃÜÂëĞ¹Â¶
+  åŠ å¯†æ–¹æ³•ä¸ºå°†passwordå’Œsaltæ‹¼ä¸²è¿›è¡ŒArgon2ç®—æ³•å“ˆå¸ŒåŠ å¯†ï¼Œä¿æŠ¤æ•°æ®åº“é¿å…å‘ç”Ÿæ•°æ®åº“å¯†ç æ³„éœ²
 
-  µÇÂ¼ÊµÏÖÂß¼­ÈçÏÂ£º
+  ç™»å½•å®ç°é€»è¾‘å¦‚ä¸‹ï¼š
 
   ```java
-  //ÑéÖ¤ÃÜÂë²¢¸üĞÂ¼ÓÃÜ
+  //éªŒè¯å¯†ç å¹¶æ›´æ–°åŠ å¯†
   user = loginService.loginVerify(user);
   loginService.updateEncrypt(user);
   ```
 
-  ÑéÖ¤µÇÂ¼ÃÜÂë
+  éªŒè¯ç™»å½•å¯†ç 
 
   ```java
-  //²éÑ¯ÓÃ»§
+  //æŸ¥è¯¢ç”¨æˆ·
   QueryWrapper<User> accountQuery = new QueryWrapper<User>().eq("account", inputUser.getAccount());
   User user = userMapper.selectOne(accountQuery);
   
   if (user == null) {
-      throw new NotFindUserException("¸ÃÓÃ»§²»´æÔÚ");
+      throw new NotFindUserException("è¯¥ç”¨æˆ·ä¸å­˜åœ¨");
   }
   
-  //ÑéÖ¤ÃÜÂë
+  //éªŒè¯å¯†ç 
   boolean passVerify = encryptUtil.passwordVerify(inputUser.getPassword(), user);
   
   if (!passVerify) {
-      throw new PasswordErrorException("ÃÜÂë´íÎó");
+      throw new PasswordErrorException("å¯†ç é”™è¯¯");
   }
   
-  //´«ÈëÃÜÂëÒÔ¸üĞÂ¼ÓÃÜ
+  //ä¼ å…¥å¯†ç ä»¥æ›´æ–°åŠ å¯†
   user.setPassword(inputUser.getPassword());
   
   return user;
   ```
 
-  ¸üĞÂ¼ÓÃÜ½á¹û
+  æ›´æ–°åŠ å¯†ç»“æœ
 
-  Ã¿´ÎµÇÂ¼£¬ÖØĞÂ»ñÈ¡ÑÎÖµ£¬¸úĞÂÊı¾İ¿âÖĞĞÅÏ¢£¬±ÜÃâĞÅÏ¢Ğ¹Â¶Ôì³É°²È«ÎÊÌâ
+  æ¯æ¬¡ç™»å½•ï¼Œé‡æ–°è·å–ç›å€¼ï¼Œè·Ÿæ–°æ•°æ®åº“ä¸­ä¿¡æ¯ï¼Œé¿å…ä¿¡æ¯æ³„éœ²é€ æˆå®‰å…¨é—®é¢˜
 
   ```java
   encryptUtil.passwordEncrypt(user);
   int updateSuccess = userMapper.updateById(user);
   if (updateSuccess != 1) {
-      log.error("´«ÈëÓÃ»§²ÎÊı {} Ê±·¢ÉúÏµÍ³¸üĞÂ´íÎó", user);
-      throw new PasswordUpdateFailException("ÃÜÂë¸üĞÂ·¢Éú´íÎó");
+      log.error("ä¼ å…¥ç”¨æˆ·å‚æ•° {} æ—¶å‘ç”Ÿç³»ç»Ÿæ›´æ–°é”™è¯¯", user);
+      throw new PasswordUpdateFailException("å¯†ç æ›´æ–°å‘ç”Ÿé”™è¯¯");
   }
   ```
 
-  ´¦ÀíĞÅÏ¢
+  å¤„ç†ä¿¡æ¯
 
   ```java
-  //ÄÃÈ¡ÓÃ»§ĞÅÏ¢
+  //æ‹¿å–ç”¨æˆ·ä¿¡æ¯
   String ip = ipUtil.getIp(request);
-  //½âÎöÇëÇóÍ·ÖĞUser-Agent
+  //è§£æè¯·æ±‚å¤´ä¸­User-Agent
   String userAgent = request.getHeader("User-Agent");
   UserAgent parseUserAgent = UserAgent.parseUserAgentString(userAgent);
-  //»ñÈ¡ÓÃ»§Éè±¸ĞÅÏ¢
+  //è·å–ç”¨æˆ·è®¾å¤‡ä¿¡æ¯
   Browser browser = parseUserAgent.getBrowser();
   Version browserVersion = parseUserAgent.getBrowserVersion();
   OperatingSystem os = parseUserAgent.getOperatingSystem();
@@ -1967,7 +1967,7 @@ public class Result {
   Long gid = user.getGid();
   Boolean admin = user.getAdmin();
   
-  //°ÑÓÃ»§ĞÅÏ¢¼¯ºÏ³Émap
+  //æŠŠç”¨æˆ·ä¿¡æ¯é›†åˆæˆmap
   Map<String, Object> claim = new HashMap<>();
   claim.put("id", id);
   claim.put("account", account);
@@ -1975,16 +1975,16 @@ public class Result {
   claim.put("admin", admin);
   claim.put("ip", ip);
   
-  //´«ÈëÓÃ»§ĞÅÏ¢map£¬ÎªÓÃ»§Éú³Étoken
+  //ä¼ å…¥ç”¨æˆ·ä¿¡æ¯mapï¼Œä¸ºç”¨æˆ·ç”Ÿæˆtoken
   String token = jwtUtil.getLimitlessToken(claim);
   
-  //½«token´æÈëredis
+  //å°†tokenå­˜å…¥redis
   whitelistUtil.setToken(id, ip, token);
   
-  //¸ù¾İuid×î´óÏŞÖÆÌŞ³ı¶àÓàµÄipÏÂµÄtoken
+  //æ ¹æ®uidæœ€å¤§é™åˆ¶å‰”é™¤å¤šä½™çš„ipä¸‹çš„token
   whitelistUtil.limitToken(id);
   
-  //¼ÇÂ¼µÇÂ¼ÈÕÖ¾
+  //è®°å½•ç™»å½•æ—¥å¿—
   LoginMsg loginMsg = new LoginMsg();
   loginMsg.setIp(ip);
   loginMsg.setGid(gid);
@@ -1995,62 +1995,62 @@ public class Result {
   loginMsg.setDevice(os.getDeviceType().getName());
   boolean success = loginMsgService.save(loginMsg);
   if (!success) {
-      log.error("¼ÇÂ¼µÇÂ¼ĞÅÏ¢ {} ³ö´í", loginMsg);
-      throw new SaveFailException("µÇÂ¼³ö´í");
+      log.error("è®°å½•ç™»å½•ä¿¡æ¯ {} å‡ºé”™", loginMsg);
+      throw new SaveFailException("ç™»å½•å‡ºé”™");
   }
   ```
 
-- ÍË³öµÇÂ¼ÊµÏÖÂß¼­
+- é€€å‡ºç™»å½•å®ç°é€»è¾‘
 
   ```java
-  //»ñÈ¡id
+  //è·å–id
   Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
   Long id = (Long) info.get("id");
   
-  //ÌŞ³ıÏßÉÏtoken
+  //å‰”é™¤çº¿ä¸Štoken
   whitelistUtil.deleteToken(id);
   
-  //Ïú»Ùsession
+  //é”€æ¯session
   session.invalidate();
   ```
 
-- ÃâµÇÂ¼ÑéÖ¤
+- å…ç™»å½•éªŒè¯
 
-  ÓëµÇÂ¼À¹½ØÆ÷Âß¼­ÀàËÆ
+  ä¸ç™»å½•æ‹¦æˆªå™¨é€»è¾‘ç±»ä¼¼
 
-- ĞŞ¸ÄÃÜÂëÂß¼­ÊµÏÖ
+- ä¿®æ”¹å¯†ç é€»è¾‘å®ç°
 
   ```java
-  //ÑéÖ¤Ô­ÃÜÂë
+  //éªŒè¯åŸå¯†ç 
   loginService.loginVerify(user);
   
-  //×°ÅäÎªÏÖÃÜÂë
+  //è£…é…ä¸ºç°å¯†ç 
   user.setPassword(userVo.getNewPassword().getBytes());
   
-  //Ìí¼Óid
+  //æ·»åŠ id
   Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
   Long id = (Long) info.get("id");
   user.setId(id);
   
-  //¸üĞÂÃÜÂë£¬²¢¼ÓÃÜ
+  //æ›´æ–°å¯†ç ï¼Œå¹¶åŠ å¯†
   loginService.updateEncrypt(user);
   
-  //ÌŞ³ıÏßÉÏtoken
+  //å‰”é™¤çº¿ä¸Štoken
   whitelistUtil.deleteToken(id);
   ```
 
-##### 2.2.9.2 Ñ¡ÏîÅäÖÃ×Öµä·şÎñ
+##### 2.2.9.2 é€‰é¡¹é…ç½®å­—å…¸æœåŠ¡
 
-´Ë·şÎñµÄÉè¼ÆÖ¼ÔÚÌá¸ß´úÂë¸´ÓÃÂÊ£¬µ«¿ÉÄÜ´æÔÚÇ±ÔÚµÄSQL×¢Èë·çÏÕ¡£ÎªÁËÓ¦¶ÔÕâ¸öÎÊÌâ£¬ÒıÈëÁË×Ö¶ÎÃûĞ£Ñé»úÖÆ£¬²¢¶ÔSQL×¢ÈëÕß½øĞĞ³Í·£¡£
+æ­¤æœåŠ¡çš„è®¾è®¡æ—¨åœ¨æé«˜ä»£ç å¤ç”¨ç‡ï¼Œä½†å¯èƒ½å­˜åœ¨æ½œåœ¨çš„SQLæ³¨å…¥é£é™©ã€‚ä¸ºäº†åº”å¯¹è¿™ä¸ªé—®é¢˜ï¼Œå¼•å…¥äº†å­—æ®µåæ ¡éªŒæœºåˆ¶ï¼Œå¹¶å¯¹SQLæ³¨å…¥è€…è¿›è¡Œæƒ©ç½šã€‚
 
-- Ğ£ÑéÅäÖÃ
+- æ ¡éªŒé…ç½®
 
   ```java
   @Value("${xxpz.tableNames}")
   private String[] names;
   ```
 
-- ³õÊ¼»¯
+- åˆå§‹åŒ–
 
   ```java
   private Set<String> tableNames;
@@ -2058,113 +2058,113 @@ public class Result {
   @PostConstruct
   public void init() {
       tableNames = Set.of(names);
-      log.info("Ñ¡ÏîÅäÖÃÀàĞÍ·À×¢Èëset³õÊ¼»¯Íê³É");
+      log.info("é€‰é¡¹é…ç½®ç±»å‹é˜²æ³¨å…¥setåˆå§‹åŒ–å®Œæˆ");
   }
   ```
 
-- ºËĞÄÂß¼­ÊµÏÖ
+- æ ¸å¿ƒé€»è¾‘å®ç°
 
   ```java
   /**
-   * »ñÈ¡ËùÓĞÀàĞÍµÄËùÓĞÊı¾İ
+   * è·å–æ‰€æœ‰ç±»å‹çš„æ‰€æœ‰æ•°æ®
    */
   @GetMapping
   public Result getAll(HttpServletRequest request) {
-      //»ñÈ¡gid
+      //è·å–gid
       Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
       Long gid = (Long) info.get("gid");
   
-      //Ìí¼ÓÌõ¼ş gid or gid = systemGid
+      //æ·»åŠ æ¡ä»¶ gid or gid = systemGid
       QueryWrapper<Xxpz> wrapper = new QueryWrapper<>();
       wrapper.eq("gid", gid).or().eq("gid", systemGid);
   
-      //×Ö¶Î
+      //å­—æ®µ
       wrapper.select("name", "type");
   
-      //²éÑ¯
+      //æŸ¥è¯¢
       List<Xxpz> list = xxpzService.list(wrapper);
-      return new Result(list, SuccessCode.Success.code, "²éÑ¯³É¹¦");
+      return new Result(list, SuccessCode.Success.code, "æŸ¥è¯¢æˆåŠŸ");
   }
   
   /**
-   * ¸ù¾İÀàĞÍ»ñÈ¡ËùÓĞÊı¾İ
+   * æ ¹æ®ç±»å‹è·å–æ‰€æœ‰æ•°æ®
    */
   @GetMapping("{type}")
   public Result getAllByType(@PathVariable String type, HttpServletRequest request) {
-      //ÅĞ¶ÏÊÇ·ñÒì³£type×¢Èë
+      //åˆ¤æ–­æ˜¯å¦å¼‚å¸¸typeæ³¨å…¥
       if (!tableNames.contains(type)) {
-          //ÖĞ¼¶²»»á·¢Éúsql×¢Èë
-          throw new MaliciousSqlInjectionException("ÅäÖÃÀàĞÍÒì³£×¢Èë", SeverityLevel.Critical);
+          //ä¸­çº§ä¸ä¼šå‘ç”Ÿsqlæ³¨å…¥
+          throw new MaliciousSqlInjectionException("é…ç½®ç±»å‹å¼‚å¸¸æ³¨å…¥", SeverityLevel.Critical);
       }
   
-      //»ñÈ¡gid
+      //è·å–gid
       Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
       Long gid = (Long) info.get("gid");
   
-      //Ìí¼ÓÌõ¼ş type and gid or gid
+      //æ·»åŠ æ¡ä»¶ type and gid or gid
       QueryWrapper<Xxpz> wrapper = new QueryWrapper<>();
       wrapper.eq("type", type).and(qw -> qw.eq("gid", systemGid).or().eq("gid", gid));
   
-      //²éÑ¯
+      //æŸ¥è¯¢
       List<Xxpz> list = xxpzService.list(wrapper);
-      return new Result(list, SuccessCode.Success.code, "²éÑ¯³É¹¦");
+      return new Result(list, SuccessCode.Success.code, "æŸ¥è¯¢æˆåŠŸ");
   }
   
   /**
-   * ¸ù¾İidÉ¾³ıÊı¾İ
+   * æ ¹æ®idåˆ é™¤æ•°æ®
    */
   @DeleteMapping("{id}")
   public Result deleteOne(@PathVariable("id") Long id, HttpServletRequest request) {
-      //»ñÈ¡gid
+      //è·å–gid
       Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
       Long gid = (Long) info.get("gid");
   
-      //Ìí¼ÓÌõ¼ş id = id and gid = gid
+      //æ·»åŠ æ¡ä»¶ id = id and gid = gid
       QueryWrapper<Xxpz> wrapper = new QueryWrapper<>();
       wrapper.eq("gid", gid).eq("id", id);
   
-      //Ö´ĞĞ
+      //æ‰§è¡Œ
       boolean success = xxpzService.remove(wrapper);
       if (!success) {
-          throw new DeleteFailException("ÅäÖÃÑ¡Ïî²»´æÔÚ»òÎŞ·¨É¾³ı");
+          throw new DeleteFailException("é…ç½®é€‰é¡¹ä¸å­˜åœ¨æˆ–æ— æ³•åˆ é™¤");
       }
-      return new Result(SuccessCode.Success.code, "É¾³ı³É¹¦");
+      return new Result(SuccessCode.Success.code, "åˆ é™¤æˆåŠŸ");
   }
   
   /**
-   * ÅúÁ¿É¾³ıÑ¡ÏîÅäÖÃ
+   * æ‰¹é‡åˆ é™¤é€‰é¡¹é…ç½®
    */
   @Transactional
   @PostMapping("delete")
   public Result batchDelete(@RequestBody List<Long> ids, HttpServletRequest request) {
-      //»ñÈ¡gid
+      //è·å–gid
       Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
       Long gid = (Long) info.get("gid");
   
-      //Ìõ¼ş (id in ids) and gid = gid
+      //æ¡ä»¶ (id in ids) and gid = gid
       QueryWrapper<Xxpz> wrapper = new QueryWrapper<>();
       wrapper.in("id", ids).eq("gid", gid);
   
       boolean success = xxpzService.remove(wrapper);
       if (!success) {
-          throw new DeleteFailException("ÅäÖÃÑ¡Ïî²»´æÔÚ»òÎŞ·¨É¾³ı");
+          throw new DeleteFailException("é…ç½®é€‰é¡¹ä¸å­˜åœ¨æˆ–æ— æ³•åˆ é™¤");
       }
   
-      return new Result(SuccessCode.Success.code, "É¾³ı³É¹¦");
+      return new Result(SuccessCode.Success.code, "åˆ é™¤æˆåŠŸ");
   }
   
   /**
-   * ĞÂÔöÑ¡ÏîÅäÖÃ
+   * æ–°å¢é€‰é¡¹é…ç½®
    */
   @PostMapping("{type}")
   public Result add(@RequestBody Xxpz xxpz, @PathVariable String type, HttpServletRequest request) {
-      //ÅĞ¶ÏÊÇ·ñÒì³£type×¢Èë
+      //åˆ¤æ–­æ˜¯å¦å¼‚å¸¸typeæ³¨å…¥
       if (!tableNames.contains(type)) {
-          //ÖĞ¼¶ĞŞ¸ÄÇëÇó£¬µ«²»»á·¢Éúsql×¢Èë
-          throw new MaliciousSqlInjectionException("ÅäÖÃÀàĞÍÒì³£×¢Èë", SeverityLevel.Critical);
+          //ä¸­çº§ä¿®æ”¹è¯·æ±‚ï¼Œä½†ä¸ä¼šå‘ç”Ÿsqlæ³¨å…¥
+          throw new MaliciousSqlInjectionException("é…ç½®ç±»å‹å¼‚å¸¸æ³¨å…¥", SeverityLevel.Critical);
       }
   
-      //´ÓÇëÇóÓòÖĞ»ñÈ¡ÓÃ»§ĞÅÏ¢
+      //ä»è¯·æ±‚åŸŸä¸­è·å–ç”¨æˆ·ä¿¡æ¯
       Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
       xxpz.setAuthor((String) info.get("account"));
       xxpz.setGid((Long) info.get("gid"));
@@ -2172,45 +2172,45 @@ public class Result {
   
       boolean success = xxpzService.save(xxpz);
       if (!success) {
-          log.error("ĞÂÔöÅäÖÃ´«Èë {} Ê±·¢Éú·şÎñ´íÎó", xxpz);
-          throw new SaveFailException("·şÎñ´íÎó£¬Ìí¼ÓÊ§°Ü");
+          log.error("æ–°å¢é…ç½®ä¼ å…¥ {} æ—¶å‘ç”ŸæœåŠ¡é”™è¯¯", xxpz);
+          throw new SaveFailException("æœåŠ¡é”™è¯¯ï¼Œæ·»åŠ å¤±è´¥");
       }
   
-      return new Result(xxpz, SuccessCode.Success.code, "Ìí¼Ó³É¹¦");
+      return new Result(xxpz, SuccessCode.Success.code, "æ·»åŠ æˆåŠŸ");
   }
   
   /**
-   * ¸ù¾İid¸üĞÂÊı¾İ
+   * æ ¹æ®idæ›´æ–°æ•°æ®
    */
   @PutMapping
   public Result update(@RequestBody Xxpz xxpz, HttpServletRequest request) {
-      //»ñÈ¡gid
+      //è·å–gid
       Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
       Long gid = (Long) info.get("gid");
   
-      //°²È«¼ì²é
+      //å®‰å…¨æ£€æŸ¥
       if (xxpz.getGid() == null || !xxpz.getGid().equals(gid)) {
-          throw new SaveFailException("ÓÃ»§ĞÅÏ¢²»Æ¥Åä£¬ÇëÖØÊÔ");
+          throw new SaveFailException("ç”¨æˆ·ä¿¡æ¯ä¸åŒ¹é…ï¼Œè¯·é‡è¯•");
       }
   
-      //Ìõ¼ş id = id and gid = gid
+      //æ¡ä»¶ id = id and gid = gid
       QueryWrapper<Xxpz> wrapper = new QueryWrapper<>();
       wrapper.eq("id", xxpz.getId()).eq("gid", gid);
   
-      //Ö´ĞĞ
+      //æ‰§è¡Œ
       boolean success = xxpzService.update(xxpz, wrapper);
       if (!success) {
-          throw new SaveFailException("Êı¾İ¸üĞÂÊ§°Ü£¬ÇëÖØÊÔ");
+          throw new SaveFailException("æ•°æ®æ›´æ–°å¤±è´¥ï¼Œè¯·é‡è¯•");
       }
-      return new Result(SuccessCode.Success.code, "¸üĞÂ³É¹¦");
+      return new Result(SuccessCode.Success.code, "æ›´æ–°æˆåŠŸ");
   }
   ```
 
-##### 2.2.9.3 ÑªÍ³ÊéÅäÖÃ·şÎñ
+##### 2.2.9.3 è¡€ç»Ÿä¹¦é…ç½®æœåŠ¡
 
-´Ë·şÎñÌá¹©Í¼Æ¬ÎÄ¼şµÄÉÏ´«£¬Îª´ËÉè¼ÆÁËÎÄ¼ş¸ñÊ½¼ì²é£¬ºÍ×ÊÔ´Â·¾¶ÅäÖÃ
+æ­¤æœåŠ¡æä¾›å›¾ç‰‡æ–‡ä»¶çš„ä¸Šä¼ ï¼Œä¸ºæ­¤è®¾è®¡äº†æ–‡ä»¶æ ¼å¼æ£€æŸ¥ï¼Œå’Œèµ„æºè·¯å¾„é…ç½®
 
-- ÅäÖÃÓë³õÊ¼»¯
+- é…ç½®ä¸åˆå§‹åŒ–
 
   ```java
   @Value("${file.logo.path}")
@@ -2220,97 +2220,97 @@ public class Result {
   @Autowired
   private XtspzService xtspzService;
   /**
-   * Í¼Æ¬ÀàĞÍ
+   * å›¾ç‰‡ç±»å‹
    */
   private Set<String> type;
   private Path path;
   
   /**
-   * bean³õÊ¼»¯
+   * beanåˆå§‹åŒ–
    */
   @PostConstruct
   public void init() {
-      //³õÊ¼»¯×ÊÔ´
+      //åˆå§‹åŒ–èµ„æº
       path = Paths.get(basePath);
       type = Set.of(typeArray);
-      //³õÊ¼»¯ÎÄ¼ş¼Ğ
+      //åˆå§‹åŒ–æ–‡ä»¶å¤¹
       fileUtil.initDirectory(path);
   }
   ```
 
-- ÉÏ´«Í¼Æ¬
+- ä¸Šä¼ å›¾ç‰‡
 
   ```java
   /**
-   * ÉÏ´«logoÍ¼Æ¬
+   * ä¸Šä¼ logoå›¾ç‰‡
    */
   @PostMapping("logo")
   public Result uploadLogo(MultipartFile file) {
   
       if (Objects.isNull(file) || file.isEmpty()) {
-          throw new FileSaveException("²»ÄÜÉÏ´«¿ÕÎÄ¼ş");
+          throw new FileSaveException("ä¸èƒ½ä¸Šä¼ ç©ºæ–‡ä»¶");
       }
   
-      //¼ì²éÎÄ¼şÀàĞÍ
+      //æ£€æŸ¥æ–‡ä»¶ç±»å‹
       fileUtil.checkFileType(file, type);
   
-      //ÎÄ±£´æµ½·şÎñÆ÷
+      //æ–‡ä¿å­˜åˆ°æœåŠ¡å™¨
       String fileName = fileUtil.storeFile(file, path);
   
-      return new Result(fileName, SuccessCode.Success.code, "±£´æ³É¹¦");
+      return new Result(fileName, SuccessCode.Success.code, "ä¿å­˜æˆåŠŸ");
   }
   ```
 
-- ÆäËûĞÅÏ¢µÄ±£´æÓë¶ÁÈ¡
+- å…¶ä»–ä¿¡æ¯çš„ä¿å­˜ä¸è¯»å–
 
   ```java
   /**
-   * »ñÈ¡ËùÓĞĞÅÏ¢
+   * è·å–æ‰€æœ‰ä¿¡æ¯
    */
   @GetMapping
   public Result getInfo(HttpServletRequest request) {
-      //´ÓÇëÇóÓòÖĞ»ñÈ¡ÓÃ»§ĞÅÏ¢
+      //ä»è¯·æ±‚åŸŸä¸­è·å–ç”¨æˆ·ä¿¡æ¯
       Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
       Long gid = (Long) info.get("gid");
-      //Ìõ¼ş gid = gid
+      //æ¡ä»¶ gid = gid
       QueryWrapper<Xtspz> wrapper = new QueryWrapper<>();
       wrapper.eq("gid", gid);
-      //²éÑ¯×Ö¶Î
+      //æŸ¥è¯¢å­—æ®µ
       wrapper.select("logo_url", "name", "short_name", "phone", "mail", "url", "address");
       Xtspz xtspz = xtspzService.getOne(wrapper);
       if (xtspz == null) {
           xtspz = new Xtspz();
       }
-      return new Result(xtspz, SuccessCode.Success.code, "²éÑ¯³É¹¦");
+      return new Result(xtspz, SuccessCode.Success.code, "æŸ¥è¯¢æˆåŠŸ");
   }
   
   /**
-   * ±£´æĞÅÏ¢Êı¾İ
+   * ä¿å­˜ä¿¡æ¯æ•°æ®
    */
   @PostMapping
   public Result postInfo(@RequestBody Xtspz xtspz, HttpServletRequest request) {
-      //´ÓÇëÇóÓòÖĞ»ñÈ¡ÓÃ»§ĞÅÏ¢
+      //ä»è¯·æ±‚åŸŸä¸­è·å–ç”¨æˆ·ä¿¡æ¯
       Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
       Long gid = (Long) info.get("gid");
-      //Ìõ¼ş gid = gid
+      //æ¡ä»¶ gid = gid
       QueryWrapper<Xtspz> wrapper = new QueryWrapper<>();
       wrapper.eq("gid", gid);
-      //×°Ìî
+      //è£…å¡«
       xtspz.setGid(gid);
-      //Ö´ĞĞ
+      //æ‰§è¡Œ
       boolean success = xtspzService.saveOrUpdate(xtspz, wrapper);
       if (!success) {
-          throw new SaveFailException("ĞÅÏ¢±£´æÊ§°Ü");
+          throw new SaveFailException("ä¿¡æ¯ä¿å­˜å¤±è´¥");
       }
-      return new Result(SuccessCode.Success.code, "±£´æ³É¹¦");
+      return new Result(SuccessCode.Success.code, "ä¿å­˜æˆåŠŸ");
   }
   ```
 
-##### 2.2.9.4 ÍÅ¶ÓÓÃ»§ÕËºÅ¹ÜÀí·şÎñ
+##### 2.2.9.4 å›¢é˜Ÿç”¨æˆ·è´¦å·ç®¡ç†æœåŠ¡
 
-Ìá¹©ÁË³ÉÔ±µÄÌí¼Ó¡¢É¾³ı¡¢²é¿´ĞÅÏ¢¡¢²é¿´×´Ì¬µÈ¹¦ÄÜ
+æä¾›äº†æˆå‘˜çš„æ·»åŠ ã€åˆ é™¤ã€æŸ¥çœ‹ä¿¡æ¯ã€æŸ¥çœ‹çŠ¶æ€ç­‰åŠŸèƒ½
 
-- ÃÜÂë×Ö½Ú³õÊ¼»¯
+- å¯†ç å­—èŠ‚åˆå§‹åŒ–
 
   ```java
   @Value("${user.defaultPassword}")
@@ -2318,24 +2318,24 @@ public class Result {
   private byte[] defaultPasswordBin;
   
   /**
-   * Ò»´ÎĞÔ³õÊ¼»¯Îª×Ö½ÚÊı×é
-   * ¼õÉÙ·şÎñÆ÷×ÊÔ´ÏûºÄ
+   * ä¸€æ¬¡æ€§åˆå§‹åŒ–ä¸ºå­—èŠ‚æ•°ç»„
+   * å‡å°‘æœåŠ¡å™¨èµ„æºæ¶ˆè€—
    */
   @PostConstruct
   public void init() {
       defaultPasswordBin = defaultPassword.getBytes();
-      log.info("³õÊ¼»¯ defaultPassword »¯Îª×Ö½ÚÊı×éÍê³É {}", defaultPasswordBin);
+      log.info("åˆå§‹åŒ– defaultPassword åŒ–ä¸ºå­—èŠ‚æ•°ç»„å®Œæˆ {}", defaultPasswordBin);
   }
   ```
 
-- »ñÈ¡³ÉÔ±ÔÚÏß×´Ì¬
+- è·å–æˆå‘˜åœ¨çº¿çŠ¶æ€
 
-  Í¨¹ı²é¿´redisÖĞµÄĞÅÏ¢»ñÈ¡ÔÚÏß×´Ì¬£¬×´Ì¬·ÖÎªÈı¸ö¼¶±ğ¾ßÌåÊµÏÖ¼û **°×Ãûµ¥¹¤¾ß**¡£
+  é€šè¿‡æŸ¥çœ‹redisä¸­çš„ä¿¡æ¯è·å–åœ¨çº¿çŠ¶æ€ï¼ŒçŠ¶æ€åˆ†ä¸ºä¸‰ä¸ªçº§åˆ«å…·ä½“å®ç°è§ **ç™½åå•å·¥å…·**ã€‚
 
-  ·şÎñ²ãÂß¼­ÈçÏÂ£º
+  æœåŠ¡å±‚é€»è¾‘å¦‚ä¸‹ï¼š
 
   ```java
-  //»ñÈ¡gid
+  //è·å–gid
   Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
   Long gid = (Long) info.get("gid");
   
@@ -2343,20 +2343,20 @@ public class Result {
   QueryWrapper<User> wrapper = new QueryWrapper<>();
   wrapper.eq("gid", gid);
   
-  //ÉèÖÃ²éÑ¯×Ö¶Î id gid account admin
+  //è®¾ç½®æŸ¥è¯¢å­—æ®µ id gid account admin
   wrapper.select("id", "gid", "account", "admin");
   
-  //Ö´ĞĞ
+  //æ‰§è¡Œ
   List<User> list = userService.list(wrapper);
   
-  //²é¿´ÔÚÏß×´Ì¬²¢½«ËùÓĞĞÅÏ¢×°Èëvo
+  //æŸ¥çœ‹åœ¨çº¿çŠ¶æ€å¹¶å°†æ‰€æœ‰ä¿¡æ¯è£…å…¥vo
   List<AdminUserVo> adminUserList = new ArrayList<>();
   list.forEach(user -> {
-      //»ñÈ¡id
+      //è·å–id
       Long id = user.getId();
-      //»ñÈ¡×´Ì¬
+      //è·å–çŠ¶æ€
       int state = whitelistUtil.getState(RedisNamespace.Whitelist, id + ":");
-      //¼ÓÈë·µ»ØÁĞ±í
+      //åŠ å…¥è¿”å›åˆ—è¡¨
       AdminUserVo adminUser = AdminUserVo.builder()
               .state(state)
               .account(user.getAccount())
@@ -2368,51 +2368,51 @@ public class Result {
   });
   ```
 
-- ÖØÖÃÃÜÂë
+- é‡ç½®å¯†ç 
 
-  ÖØÖÃÃÜÂëÂß¼­ÓëĞŞ¸ÄÓÃ»§×ÔÉíÃÜÂëÂß¼­ÀàËÆ¡£
+  é‡ç½®å¯†ç é€»è¾‘ä¸ä¿®æ”¹ç”¨æˆ·è‡ªèº«å¯†ç é€»è¾‘ç±»ä¼¼ã€‚
 
-  ÆäÖĞ°²È«¼ì²éÑÏÃÜ¶ÈÓÉÒÔÏÂ´úÂëÌåÏÖ£º
+  å…¶ä¸­å®‰å…¨æ£€æŸ¥ä¸¥å¯†åº¦ç”±ä»¥ä¸‹ä»£ç ä½“ç°ï¼š
 
   ```java
-  //»ñÈ¡gid
+  //è·å–gid
   Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
   Long gid = (Long) info.get("gid");
   
-  //¼ì²égid°²È«
+  //æ£€æŸ¥gidå®‰å…¨
   if (!user.getGid().equals(gid)) {
-      throw new SaveFailException("ÓÃ»§ĞÅÏ¢²»Æ¥Åä£¬ÇëÖØÊÔ");
+      throw new SaveFailException("ç”¨æˆ·ä¿¡æ¯ä¸åŒ¹é…ï¼Œè¯·é‡è¯•");
   }
   
-  //»ñÈ¡´«ÈëµÄid
+  //è·å–ä¼ å…¥çš„id
   Long id = user.getId();
   
   //id = id and gid = gid
   QueryWrapper<User> wrapper = new QueryWrapper<>();
   wrapper.eq("id", id).eq("gid", gid);
   
-  //ÉèÖÃ×Ö¶Î admin
+  //è®¾ç½®å­—æ®µ admin
   wrapper.select("admin");
   
-  //¼ì²â²Ù×÷¶ÔÏóÊÇ·ñÎª¹ÜÀíÔ±
+  //æ£€æµ‹æ“ä½œå¯¹è±¡æ˜¯å¦ä¸ºç®¡ç†å‘˜
   user = userService.getOne(wrapper);
   if (user == null) {
-      throw new SaveFailException("ÓÃ»§ĞÅÏ¢²»Æ¥Åä£¬ÇëÖØÊÔ");
+      throw new SaveFailException("ç”¨æˆ·ä¿¡æ¯ä¸åŒ¹é…ï¼Œè¯·é‡è¯•");
   }
   if (user.getAdmin()) {
-      throw new SaveFailException("ÎŞ·¨²Ù×÷¹ÜÀíÔ±ĞÅÏ¢");
+      throw new SaveFailException("æ— æ³•æ“ä½œç®¡ç†å‘˜ä¿¡æ¯");
   }
   ```
 
-##### 2.2.9.5 ¸ëÉáĞÅÏ¢ÉèÖÃ·şÎñ
+##### 2.2.9.5 é¸½èˆä¿¡æ¯è®¾ç½®æœåŠ¡
 
-»ñÈ¡ĞÅÏ¢ºÍ±£´æĞÅÏ¢µÄÂß¼­ÓëÑªÍ³ÊéÅäÖÃ·şÎñÏàËÆ¡£ÊµÏÖÂß¼­¼û **2.2.9.3 ÑªÍ³ÊéÅäÖÃ·şÎñ**¡£
+è·å–ä¿¡æ¯å’Œä¿å­˜ä¿¡æ¯çš„é€»è¾‘ä¸è¡€ç»Ÿä¹¦é…ç½®æœåŠ¡ç›¸ä¼¼ã€‚å®ç°é€»è¾‘è§ **2.2.9.3 è¡€ç»Ÿä¹¦é…ç½®æœåŠ¡**ã€‚
 
-##### 2.2.9.6 µØÖ·ĞÅÏ¢·şÎñ
+##### 2.2.9.6 åœ°å€ä¿¡æ¯æœåŠ¡
 
-¸ëÉáĞÅÏ¢ÉèÖÃ·şÎñĞèÒªÊµÏÖÊ¡ÊĞÇøµÄ¼¶Áª²éÑ¯¡£´Ë·şÎñÌá¹©ÁËÊ¡ÊĞÇø¼¶Áª²éÑ¯¹¦ÄÜ£¬ÒÔÏÂÊÇ¼¶Áª²éÑ¯ºó¶Ë½Ó¿ÚµÄ¼òµ¥ÊµÏÖ£º
+é¸½èˆä¿¡æ¯è®¾ç½®æœåŠ¡éœ€è¦å®ç°çœå¸‚åŒºçš„çº§è”æŸ¥è¯¢ã€‚æ­¤æœåŠ¡æä¾›äº†çœå¸‚åŒºçº§è”æŸ¥è¯¢åŠŸèƒ½ï¼Œä»¥ä¸‹æ˜¯çº§è”æŸ¥è¯¢åç«¯æ¥å£çš„ç®€å•å®ç°ï¼š
 
-Ë¼Â·£º¸ù¾İ¸¸¼¶id²éÑ¯×Ó¼¶ĞÅÏ¢¡£
+æ€è·¯ï¼šæ ¹æ®çˆ¶çº§idæŸ¥è¯¢å­çº§ä¿¡æ¯ã€‚
 
 ```java
 @RestController
@@ -2427,99 +2427,99 @@ public class AddressController {
     private AreasService areasService;
 
     /**
-     * ²éÑ¯Ê¡
+     * æŸ¥è¯¢çœ
      */
     @GetMapping("provincial")
     public Result getProvincial() {
         List<Provincial> list = provincialService.list();
-        return new Result(list, SuccessCode.Success.code, "²éÑ¯³É¹¦");
+        return new Result(list, SuccessCode.Success.code, "æŸ¥è¯¢æˆåŠŸ");
     }
 
     /**
-     * ¸ù¾İÊ¡²éÑ¯ÊĞ
+     * æ ¹æ®çœæŸ¥è¯¢å¸‚
      */
     @GetMapping("urban/{id}")
     public Result getUrban(@PathVariable Long id) {
         QueryWrapper<Urban> wrapper = new QueryWrapper<>();
         wrapper.eq("pid", id);
         List<Urban> list = urbanService.list(wrapper);
-        return new Result(list, SuccessCode.Success.code, "²éÑ¯³É¹¦");
+        return new Result(list, SuccessCode.Success.code, "æŸ¥è¯¢æˆåŠŸ");
     }
 
     /**
-     * ¸ù¾İÊĞ²éÑ¯Çø
+     * æ ¹æ®å¸‚æŸ¥è¯¢åŒº
      */
     @GetMapping("area/{id}")
     public Result getAreas(@PathVariable Long id) {
         QueryWrapper<Area> wrapper = new QueryWrapper<>();
         wrapper.eq("uid", id);
         List<Area> list = areasService.list(wrapper);
-        return new Result(list, SuccessCode.Success.code, "²éÑ¯³É¹¦");
+        return new Result(list, SuccessCode.Success.code, "æŸ¥è¯¢æˆåŠŸ");
     }
 }
 ```
 
-##### 2.2.9.7 ¸ëÅï³²Ïä·şÎñ
+##### 2.2.9.7 é¸½æ£šå·¢ç®±æœåŠ¡
 
-¸Ã·şÎñÌá¹©£º»ñÈ¡¸ëÅï³²ÏäĞÅÏ¢¡¢Ìí¼Ó¸ëÅï³²Ïä¡¢ĞŞ¸ÄĞÅÏ¢¡¢É¾³ı¸ëÅï³²Ïä¡¢¼ÓÈë¸ë×Ó¡¢Í³¼Æ¸ë×ÓÊıÁ¿µÈ½Ó¿Ú£º
+è¯¥æœåŠ¡æä¾›ï¼šè·å–é¸½æ£šå·¢ç®±ä¿¡æ¯ã€æ·»åŠ é¸½æ£šå·¢ç®±ã€ä¿®æ”¹ä¿¡æ¯ã€åˆ é™¤é¸½æ£šå·¢ç®±ã€åŠ å…¥é¸½å­ã€ç»Ÿè®¡é¸½å­æ•°é‡ç­‰æ¥å£ï¼š
 
-ÓÉÓÚÊı¾İ±ít_pigeon_gpcxÎ´Ìá¹©È¨ÏŞ¿ØÖÆ×Ö¶Î£¬ËùÒÔĞèÒªÁ¬±í½øĞĞÈ¨ÏŞ²éÑ¯
+ç”±äºæ•°æ®è¡¨t_pigeon_gpcxæœªæä¾›æƒé™æ§åˆ¶å­—æ®µï¼Œæ‰€ä»¥éœ€è¦è¿è¡¨è¿›è¡Œæƒé™æŸ¥è¯¢
 
-- Í³Ò»È¨ÏŞ²éÑ¯·â×°
+- ç»Ÿä¸€æƒé™æŸ¥è¯¢å°è£…
 
   ```java
   /**
-   * ¼ì²éÈ¨ÏŞ
-   * ¼ì²éÊÇ·ñgpcxId±»ÓÃ»§ĞŞ¸Ä
-   * ÓÃÒÔ²éÑ¯·Ç±¾ÍÅ¶ÓµÄgpcxĞÅÏ¢
+   * æ£€æŸ¥æƒé™
+   * æ£€æŸ¥æ˜¯å¦gpcxIdè¢«ç”¨æˆ·ä¿®æ”¹
+   * ç”¨ä»¥æŸ¥è¯¢éæœ¬å›¢é˜Ÿçš„gpcxä¿¡æ¯
    */
   private String check(Long gpcxId, HttpServletRequest request) {
-      //»ñÈ¡gid
+      //è·å–gid
       Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
       Long gid = (Long) info.get("gid");
   
-      //Ìõ¼ş id = gpcxId
+      //æ¡ä»¶ id = gpcxId
       QueryWrapper<Gpcx> wrapper = new QueryWrapper<>();
       wrapper.eq("id", gpcxId);
   
-      //×Ö¶Î gid
+      //å­—æ®µ gid
       wrapper.select("gid", "name");
   
-      //Ö´ĞĞ
+      //æ‰§è¡Œ
       Gpcx gpcx = gpcxService.getOne(wrapper);
   
-      //¼ì²é
+      //æ£€æŸ¥
       if (!gid.equals(gpcx.getGid())) {
-          throw new MaliciousSqlInjectionException("·Ç·¨²éÑ¯", SeverityLevel.Critical);
+          throw new MaliciousSqlInjectionException("éæ³•æŸ¥è¯¢", SeverityLevel.Critical);
       }
   
       return gpcx.getName();
   }
   ```
 
-- Í³¼Æ¸ëÅï³²ÏäÖĞ¸ë×ÓÊıÁ¿Âß¼­
+- ç»Ÿè®¡é¸½æ£šå·¢ç®±ä¸­é¸½å­æ•°é‡é€»è¾‘
 
   ```java
   /**
-   * »ñÈ¡¸ëÅï³²ÏäÖĞ¸ë×ÓµÄÊıÁ¿
+   * è·å–é¸½æ£šå·¢ç®±ä¸­é¸½å­çš„æ•°é‡
    */
   @GetMapping("pigeon/{gpcxId}")
   public Result getPigeonNumber(@PathVariable Long gpcxId, HttpServletRequest request) {
-      //¼ì²éÈ¨ÏŞ
+      //æ£€æŸ¥æƒé™
       check(gpcxId, request);
-      //Ö´ĞĞ²éÑ¯
-      //Ìõ¼ş gpcxId = gpcxId
+      //æ‰§è¡ŒæŸ¥è¯¢
+      //æ¡ä»¶ gpcxId = gpcxId
       QueryWrapper<PigeonGpcx> wrapper = new QueryWrapper<>();
       wrapper.eq("gpcx_id", gpcxId);
-      //Ö´ĞĞ¼ÆÊı
+      //æ‰§è¡Œè®¡æ•°
       long count = pigeonGpcxService.count(wrapper);
-      return new Result(count, SuccessCode.Success.code, "²éÑ¯³É¹¦");
+      return new Result(count, SuccessCode.Success.code, "æŸ¥è¯¢æˆåŠŸ");
   }
   ```
 
-- Ìí¼Ó¸ë×ÓÒµÎñ£¨¼ÇÂ¼ÈÕÖ¾¾ßÌåÂß¼­¼û **2.2.9.10 ²Ù×÷ÈÕÖ¾·şÎñ**£©
+- æ·»åŠ é¸½å­ä¸šåŠ¡ï¼ˆè®°å½•æ—¥å¿—å…·ä½“é€»è¾‘è§ **2.2.9.10 æ“ä½œæ—¥å¿—æœåŠ¡**ï¼‰
 
-  Âß¼­Ë¼Â·£ºÅúÁ¿²Ù×÷£¬²»¿¼Â¼Ô­¸ëÅï³²Ïä£¬¶¼¸ÄÎªÄ¿±ê¸ëÅï³²Ïä£¬×îºóÏëÓÃ»§·´À¡¾ßÌå²Ù×÷ÊıÁ¿
+  é€»è¾‘æ€è·¯ï¼šæ‰¹é‡æ“ä½œï¼Œä¸è€ƒå½•åŸé¸½æ£šå·¢ç®±ï¼Œéƒ½æ”¹ä¸ºç›®æ ‡é¸½æ£šå·¢ç®±ï¼Œæœ€åæƒ³ç”¨æˆ·åé¦ˆå…·ä½“æ“ä½œæ•°é‡
 
   ```java
   @Override
@@ -2527,79 +2527,79 @@ public class AddressController {
   public int addPigeonToGpcx(List<Long> ids, Long gpcxId, String name, String account, Long gid) {
   
       AtomicReference<Integer> updateNumber = new AtomicReference<>(0);
-      //»ñÈ¡¸üĞÂÊ±¼ä
+      //è·å–æ›´æ–°æ—¶é—´
       LocalDate now = LocalDate.now();
   
       ids.forEach(id -> {
           UpdateWrapper<PigeonGpcx> updateWrapper = new UpdateWrapper<>();
           updateWrapper.eq("pid", id).set("gpcx_id", gpcxId);
-          //¸üĞÂ
+          //æ›´æ–°
           int update = pigeonGpcxMapper.update(null, updateWrapper);
   
           if (!SqlHelper.retBool(update)) {
-              //ĞÂÔö
+              //æ–°å¢
               PigeonGpcx pigeonGpcx = new PigeonGpcx();
               pigeonGpcx.setPid(id);
               pigeonGpcx.setGpcxId(gpcxId);
               int insert = pigeonGpcxMapper.insert(pigeonGpcx);
   
               if (!SqlHelper.retBool(insert)) {
-                  throw new SaveFailException("ĞÂÔöÊ±·¢Éú´íÎó");
+                  throw new SaveFailException("æ–°å¢æ—¶å‘ç”Ÿé”™è¯¯");
               }
           } else {
-              //¼ÇÂ¼¸üĞÂÊı
+              //è®°å½•æ›´æ–°æ•°
               updateNumber.getAndSet(updateNumber.get() + 1);
           }
   
           oplogService.oplog(account, id, gid, name, LogType.TRANSFER);
       });
   
-      //¸üĞÂ¸ë×ÓĞÅÏ¢
-      //Ìõ¼ş id = ids ÉèÖÃ ¸üĞÂ Ê±¼ä ºÍ ¸ëÅïÃû
+      //æ›´æ–°é¸½å­ä¿¡æ¯
+      //æ¡ä»¶ id = ids è®¾ç½® æ›´æ–° æ—¶é—´ å’Œ é¸½æ£šå
       UpdateWrapper<Pigeon> wrapper = new UpdateWrapper<>();
       wrapper.in("id", ids)
               .set("gpcx", name)
               .set("update_data", now);
       int update = pigeonMapper.update(null, wrapper);
       if (!SqlHelper.retBool(update) || update != ids.size()) {
-          throw new SaveFailException("¸üĞÂ¸ë×ÓĞÅÏ¢Ê§°Ü£¬ÇëÖØÊÔ");
+          throw new SaveFailException("æ›´æ–°é¸½å­ä¿¡æ¯å¤±è´¥ï¼Œè¯·é‡è¯•");
       }
   
       return updateNumber.get();
   }
   ```
 
-- ÔöÉ¾¸Ä²éÒµÎñ£¨´óÌåÏàËÆ£©
+- å¢åˆ æ”¹æŸ¥ä¸šåŠ¡ï¼ˆå¤§ä½“ç›¸ä¼¼ï¼‰
 
-##### 2.2.9.8 ¸ë×ÓĞÅÏ¢·şÎñ
+##### 2.2.9.8 é¸½å­ä¿¡æ¯æœåŠ¡
 
-ÁĞ¾ÙÖØÒªÄÚÈİ
+åˆ—ä¸¾é‡è¦å†…å®¹
 
-- ·ÖÒ³¶ÁÈ¡¸ë×ÓĞÅÏ¢
+- åˆ†é¡µè¯»å–é¸½å­ä¿¡æ¯
 
-  Ê¹ÓÃ·ÖÒ³²å¼şÊµÏÖ
+  ä½¿ç”¨åˆ†é¡µæ’ä»¶å®ç°
 
   ```java
-  //»ñÈ¡gid
+  //è·å–gid
   Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
   Long gid = (Long) info.get("gid");
   
-  //»ñÈ¡Ò³ÃæĞÅÏ¢
+  //è·å–é¡µé¢ä¿¡æ¯
   Long current = pageInfo.get("current");
   Long pageSize = pageInfo.get("pageSize");
   
-  //¼ì²é
+  //æ£€æŸ¥
   if (current == null || pageSize == null) {
-      throw new NotFoundException("·ÖÒ³ĞÅÏ¢´íÎó");
+      throw new NotFoundException("åˆ†é¡µä¿¡æ¯é”™è¯¯");
   }
   
-  //ÉèÖÃ·ÖÒ³Ìõ¼ş
+  //è®¾ç½®åˆ†é¡µæ¡ä»¶
   Page<Pigeon> page = new Page<>();
   page.setCurrent(current)
           .setSize(pageSize)
           .setSearchCount(false);
   
-  //Ìõ¼ş gid = gid
+  //æ¡ä»¶ gid = gid
   QueryWrapper<Pigeon> wrapper = new QueryWrapper<>();
   wrapper.eq("gid", gid);
   
@@ -2607,190 +2607,290 @@ public class AddressController {
   List<Pigeon> records = page.getRecords();
   ```
 
-- ĞÂÔö¸ë×ÓÒµÎñ
+- æ–°å¢é¸½å­ä¸šåŠ¡
 
-  ´ËÒµÎñ¶ÔÂ¼ÈëĞÅÏ¢½ÏÎª¿íÈİ£¬ÊÊÓÃĞÔÇ¿£¬µ¼ÖÂ´úÂëÈ¦¸´ÔÓ¶È½Ï¸ß
+  æ­¤ä¸šåŠ¡å¯¹å½•å…¥ä¿¡æ¯è¾ƒä¸ºå®½å®¹ï¼Œé€‚ç”¨æ€§å¼ºï¼Œå¯¼è‡´ä»£ç åœˆå¤æ‚åº¦è¾ƒé«˜
 
-  Âß¼­Ë¼Â·£º
+  é€»è¾‘æ€è·¯ï¼š
 
-  1. »ñÈ¡µ±Ç°ÈÕÆÚ¡£
-  2. ÉèÖÃ¸ë×ÓÊı¾İµÄ¸üĞÂÊ±¼äÎªµ±Ç°ÈÕÆÚ¡£
-  3. ¼ì²é¸ë×ÓÊı¾İµÄ`id`×Ö¶ÎÊÇ·ñÎª¿Õ£¬Èç¹ûÎª¿ÕÔò±íÊ¾¸Ã¼ÇÂ¼²»´æÔÚ£¬Ö´ĞĞĞÂÔö²Ù×÷¡£
-  4. Èç¹û¸ë×ÓÊı¾İµÄ`id`×Ö¶Î²»Îª¿Õ£¬±íÊ¾¼ÇÂ¼ÒÑ´æÔÚ£¬Ö´ĞĞ¸üĞÂ²Ù×÷¡£
-  5. ÔÚĞÂÔö²Ù×÷ÖĞ£¬Ìî³ä¸ë×Ó¶îÍâĞÅÏ¢µÄ´´½¨Ê±¼ä¡¢`gid`ºÍ`pid`×Ö¶Î£¬È»ºó·Ö±ğÖ´ĞĞ»ù´¡ĞÅÏ¢ºÍ¶îÍâĞÅÏ¢µÄ²åÈë²Ù×÷¡£
-  6. ÔÚ¸üĞÂ²Ù×÷ÖĞ£¬¸ù¾İ¸ø¶¨µÄ`gid`ºÍ`id`¹¹½¨²éÑ¯Ìõ¼ş£¬È»ºóÖ´ĞĞ»ù´¡ĞÅÏ¢µÄ¸üĞÂ²Ù×÷¡£
-  7. Í¬Ñù¸ù¾İ`pid`¹¹½¨²éÑ¯Ìõ¼ş£¬Ö´ĞĞ¶îÍâĞÅÏ¢µÄ¸üĞÂ²Ù×÷¡£
-  8. ¼ÇÂ¼ÏàÓ¦²Ù×÷µÄÈÕÖ¾£¬°üÀ¨ÕËºÅĞÅÏ¢¡¢¸ë×ÓµÄ»·ºÅ¡¢`pid`¡¢`gid`ºÍ²Ù×÷ÀàĞÍ¡£
-  9. Èç¹û´æÔÚÖ¸¶¨µÄ×Ó´ú¸ë×ÓµÄ`oid`£¬Ôò¸üĞÂÆä¸¸´ú×Ö¶ÎÎªµ±Ç°¸ë×ÓµÄ`pid`£¬¸ù¾İ¸ë×ÓµÄĞÔ±ğ¾ö¶¨ÊÇ¸üĞÂ`fid`»¹ÊÇ`mid`×Ö¶Î¡£
-  10. ÔÙ´Î¼ÇÂ¼¸üĞÂ×Ó´ú¸¸´ú¹ØÏµµÄÈÕÖ¾£¬°üÀ¨ÕËºÅĞÅÏ¢¡¢×Ó´ú¸ë×ÓµÄ»·ºÅ¡¢`gid`¡¢µ±Ç°¸ë×ÓµÄ»·ºÅºÍ²Ù×÷ÀàĞÍ¡£
-  11. ·µ»Ø¸ë×ÓÊı¾İµÄ`pid`¡£
+  1. è·å–å½“å‰æ—¥æœŸã€‚
+  2. è®¾ç½®é¸½å­æ•°æ®çš„æ›´æ–°æ—¶é—´ä¸ºå½“å‰æ—¥æœŸã€‚
+  3. æ£€æŸ¥é¸½å­æ•°æ®çš„`id`å­—æ®µæ˜¯å¦ä¸ºç©ºï¼Œå¦‚æœä¸ºç©ºåˆ™è¡¨ç¤ºè¯¥è®°å½•ä¸å­˜åœ¨ï¼Œæ‰§è¡Œæ–°å¢æ“ä½œã€‚
+  4. å¦‚æœé¸½å­æ•°æ®çš„`id`å­—æ®µä¸ä¸ºç©ºï¼Œè¡¨ç¤ºè®°å½•å·²å­˜åœ¨ï¼Œæ‰§è¡Œæ›´æ–°æ“ä½œã€‚
+  5. åœ¨æ–°å¢æ“ä½œä¸­ï¼Œå¡«å……é¸½å­é¢å¤–ä¿¡æ¯çš„åˆ›å»ºæ—¶é—´ã€`gid`å’Œ`pid`å­—æ®µï¼Œç„¶ååˆ†åˆ«æ‰§è¡ŒåŸºç¡€ä¿¡æ¯å’Œé¢å¤–ä¿¡æ¯çš„æ’å…¥æ“ä½œã€‚
+  6. åœ¨æ›´æ–°æ“ä½œä¸­ï¼Œæ ¹æ®ç»™å®šçš„`gid`å’Œ`id`æ„å»ºæŸ¥è¯¢æ¡ä»¶ï¼Œç„¶åæ‰§è¡ŒåŸºç¡€ä¿¡æ¯çš„æ›´æ–°æ“ä½œã€‚
+  7. åŒæ ·æ ¹æ®`pid`æ„å»ºæŸ¥è¯¢æ¡ä»¶ï¼Œæ‰§è¡Œé¢å¤–ä¿¡æ¯çš„æ›´æ–°æ“ä½œã€‚
+  8. è®°å½•ç›¸åº”æ“ä½œçš„æ—¥å¿—ï¼ŒåŒ…æ‹¬è´¦å·ä¿¡æ¯ã€é¸½å­çš„ç¯å·ã€`pid`ã€`gid`å’Œæ“ä½œç±»å‹ã€‚
+  9. å¦‚æœå­˜åœ¨æŒ‡å®šçš„å­ä»£é¸½å­çš„`oid`ï¼Œåˆ™æ›´æ–°å…¶çˆ¶ä»£å­—æ®µä¸ºå½“å‰é¸½å­çš„`pid`ï¼Œæ ¹æ®é¸½å­çš„æ€§åˆ«å†³å®šæ˜¯æ›´æ–°`fid`è¿˜æ˜¯`mid`å­—æ®µã€‚
+  10. å†æ¬¡è®°å½•æ›´æ–°å­ä»£çˆ¶ä»£å…³ç³»çš„æ—¥å¿—ï¼ŒåŒ…æ‹¬è´¦å·ä¿¡æ¯ã€å­ä»£é¸½å­çš„ç¯å·ã€`gid`ã€å½“å‰é¸½å­çš„ç¯å·å’Œæ“ä½œç±»å‹ã€‚
+  11. è¿”å›é¸½å­æ•°æ®çš„`pid`ã€‚
+ ```java
+@Override
+@Transactional
+public Long saveOrUpdatePigeonById(Pigeon pigeon, PigeonInfo pigeonInfo, Long oid, Long gid, String account) {
+    //è·å–å½“å‰æ—¶é—´
+    LocalDate now = LocalDate.now();
 
-- É¾³ı¡¢ÅúÁ¿É¾³ı¸ë×ÓÒµÎñ£¨¼ÇÂ¼ÈÕÖ¾¾ßÌåÂß¼­¼û **2.2.9.10 ²Ù×÷ÈÕÖ¾·şÎñ**£©
+    //è£…å¡«æ›´æ–°æ—¶é—´
+    pigeon.setUpdateData(now);
 
-  Âß¼­Ë¼Â·£º
+    //pid
+    Long pid = pigeon.getId();
 
-  1. Ê¹ÓÃ`id`ºÍ`gid`Ìõ¼ş¹¹½¨²éÑ¯Ìõ¼ş`pigeonQueryWrapper`£¬È»ºóÍ¨¹ı`selectOne`·½·¨»ñÈ¡·ûºÏÌõ¼şµÄ¸ë×ÓÊı¾İ`pigeon`£¬ÒÔ±¸ºóĞø¼ÇÂ¼ÈÕÖ¾Ê¹ÓÃ¡£
-  2. Ê¹ÓÃ`pigeonQueryWrapper`É¾³ı»ù´¡ĞÅÏ¢£¬¼´´ÓÊı¾İ¿âÖĞÉ¾³ıÂú×ãÌõ¼şµÄ¸ë×ÓÊı¾İ¡£Èç¹ûÉ¾³ıÊ§°Ü£¬ÔòÅ×³ö`DeleteFailException`Òì³£¡£
-  3. Ê¹ÓÃ`id`Ìõ¼ş¹¹½¨²éÑ¯Ìõ¼ş`pigeonInfoQueryWrapper`£¬È»ºóÍ¨¹ı`delete`·½·¨É¾³ı¶îÍâĞÅÏ¢£¬¼´É¾³ıÓë¸Ã¸ë×ÓÊı¾İ¹ØÁªµÄ¶îÍâĞÅÏ¢¡£Èç¹ûÉ¾³ıÊ§°Ü£¬ÔòÅ×³ö`DeleteFailException`Òì³£¡£
-  4. ¼ÇÂ¼É¾³ı²Ù×÷µÄÈÕÖ¾£¬µ÷ÓÃ`oplogService.oplog`·½·¨¼ÇÂ¼²Ù×÷ÈÕÖ¾£¬°üÀ¨ÕËºÅĞÅÏ¢¡¢¸ë×ÓµÄ»·ºÅ¡¢`gid`ºÍ²Ù×÷ÀàĞÍ¡£
-  5. ¸üĞÂ×Ó´úµÄ¸¸´úĞÅÏ¢¡£Ê×ÏÈ¸ù¾İ`gid`ºÍĞÔ±ğÌõ¼ş£¨"´Æ"»ò"ĞÛ"£©¹¹½¨²éÑ¯Ìõ¼ş`queryWrapper`£¬È»ºóÊ¹ÓÃ`selectList`·½·¨»ñÈ¡ËùÓĞÂú×ãÌõ¼şµÄ×Ó´ú¸ë×ÓÊı¾İ`offspringPigeons`¡£
-  6. »ñÈ¡µ±Ç°ÈÕÆÚ¡£
-  7. ±éÀúÃ¿¸ö×Ó´ú¸ë×ÓÊı¾İ£¬Í¨¹ı`UpdateWrapper`¹¹½¨¸üĞÂÌõ¼ş`updateWrapper`£¬¸ù¾İ×Ó´ú¸ë×ÓµÄĞÔ±ğÉèÖÃ¶ÔÓ¦µÄ¸¸´ú×Ö¶ÎÎª`null`£¬²¢ÉèÖÃ`update_data`Îªµ±Ç°ÈÕÆÚ¡£
-  8. Ê¹ÓÃ`pigeonMapper`µÄ`update`·½·¨Ö´ĞĞ¸üĞÂ²Ù×÷£¬Èç¹û¸üĞÂÊ§°Ü£¬ÔòÅ×³ö`SaveFailException`Òì³£¡£
-  9. ¼ÇÂ¼½â³ıÑªÇ×¹ØÏµµÄÈÕÖ¾£¬µ÷ÓÃ`oplogService.oplog`·½·¨¼ÇÂ¼²Ù×÷ÈÕÖ¾£¬°üÀ¨ÕËºÅĞÅÏ¢¡¢×Ó´ú¸ë×ÓµÄ»·ºÅ¡¢`gid`ºÍ²Ù×÷ÀàĞÍ¡£
+    //åˆ¤æ–­æ­¤è®°å½•æ˜¯å¦å­˜åœ¨
+    if (pid == null) {
+        //ä¸å­˜åœ¨ï¼Œæ–°å¢
+        //è£…å¡«åˆ›å»ºæ—¶é—´
+        pigeonInfo.setCreateTime(now);
+
+        //è£…å¡«gid
+        pigeon.setGid(gid);
+
+        //æ‰§è¡Œæ–°å¢
+        int insertPigeon = pigeonMapper.insert(pigeon);
+
+        //æ£€æŸ¥æ–°å¢
+        if (!SqlHelper.retBool(insertPigeon)) {
+            throw new SaveFailException("æ–°å¢é¸½å­åŸºç¡€ä¿¡æ¯æ—¶å¤±è´¥");
+        }
+
+        //è·å–pid
+        pid = pigeon.getId();
+
+        //è£…å¡«pid
+        pigeonInfo.setPid(pid);
+
+        //æ‰§è¡Œæ–°å¢
+        int insertPigeonInfo = pigeonInfoMapper.insert(pigeonInfo);
+
+        //æ£€æŸ¥æ–°å¢
+        if (!SqlHelper.retBool(insertPigeonInfo)) {
+            throw new SaveFailException("æ–°å¢é¸½å­é¢å¤–ä¿¡æ¯æ—¶å¤±è´¥");
+        }
+
+        //è®°å½•æ—¥å¿—
+        oplogService.oplog(account, pigeon.getRingNumber(), pid, gid, LogType.INSERT);
+    } else {
+        //å­˜åœ¨ï¼Œæ›´æ–°
+        //æ¡ä»¶ gid = gid and id = id
+        QueryWrapper<Pigeon> pigeonWrapper = new QueryWrapper<>();
+        pigeonWrapper.eq("gid", gid).eq("id", pid);
+
+        //æ‰§è¡Œæ›´æ–°
+        int pigeonUpdate = pigeonMapper.update(pigeon, pigeonWrapper);
+
+        //æ£€æŸ¥æ›´æ–°
+        if (!SqlHelper.retBool(pigeonUpdate)) {
+            throw new SaveFailException("æ›´æ–°é¸½å­åŸºç¡€ä¿¡æ¯æ—¶å¤±è´¥");
+        }
+
+        //æ¡ä»¶ pid = pid
+        QueryWrapper<PigeonInfo> pigeonInfoWrapper = new QueryWrapper<>();
+        pigeonInfoWrapper.eq("pid", pid);
+
+        //æ‰§è¡Œæ›´æ–°
+        int updatePigeonInfo = pigeonInfoMapper.update(pigeonInfo, pigeonInfoWrapper);
+
+        //æ£€æŸ¥æ›´æ–°
+        if (!SqlHelper.retBool(updatePigeonInfo)) {
+            throw new SaveFailException("æ›´æ–°é¸½å­åŸºé¢å¤–æ¯æ—¶å¤±è´¥");
+        }
+
+        //è®°å½•æ—¥å¿—
+        oplogService.oplog(account, pigeon.getRingNumber(), pid, gid, LogType.UPDATE);
+    }
+
+    //ä¸ºæ­¤é¸½å­çš„å­ä»£æ›´æ–°çˆ¶ä»£id
+    if (oid != null) {
+        //æ¡ä»¶
+        UpdateWrapper<Pigeon> wrapper = new UpdateWrapper<>();
+        wrapper.eq("id", oid)
+                .eq("gid", gid)
+                .set("update_data", now)
+                .set(pigeon.getSex().equals("é›„"), "fid", pid)
+                .set(pigeon.getSex().equals("é›Œ"), "mid", pid);
+
+        int offspringPigeonUpdate = pigeonMapper.update(null, wrapper);
+
+        //æ£€æŸ¥è·Ÿæ–°
+        if (!SqlHelper.retBool(offspringPigeonUpdate)) {
+            throw new SaveFailException("é¸½å­å­ä»£ä¿¡æ¯æ›´æ–°å¤±è´¥");
+        }
+
+        //è®°å½•æ—¥å¿—
+        oplogService.oplog(account, oid, gid, pigeon.getRingNumber(), LogType.RELATE);
+    }
+
+    return pid;
+}
+```
+
+- åˆ é™¤ã€æ‰¹é‡åˆ é™¤é¸½å­ä¸šåŠ¡ï¼ˆè®°å½•æ—¥å¿—å…·ä½“é€»è¾‘è§ **2.2.9.10 æ“ä½œæ—¥å¿—æœåŠ¡**ï¼‰
+
+  é€»è¾‘æ€è·¯ï¼š
+
+  1. ä½¿ç”¨`id`å’Œ`gid`æ¡ä»¶æ„å»ºæŸ¥è¯¢æ¡ä»¶`pigeonQueryWrapper`ï¼Œç„¶åé€šè¿‡`selectOne`æ–¹æ³•è·å–ç¬¦åˆæ¡ä»¶çš„é¸½å­æ•°æ®`pigeon`ï¼Œä»¥å¤‡åç»­è®°å½•æ—¥å¿—ä½¿ç”¨ã€‚
+  2. ä½¿ç”¨`pigeonQueryWrapper`åˆ é™¤åŸºç¡€ä¿¡æ¯ï¼Œå³ä»æ•°æ®åº“ä¸­åˆ é™¤æ»¡è¶³æ¡ä»¶çš„é¸½å­æ•°æ®ã€‚å¦‚æœåˆ é™¤å¤±è´¥ï¼Œåˆ™æŠ›å‡º`DeleteFailException`å¼‚å¸¸ã€‚
+  3. ä½¿ç”¨`id`æ¡ä»¶æ„å»ºæŸ¥è¯¢æ¡ä»¶`pigeonInfoQueryWrapper`ï¼Œç„¶åé€šè¿‡`delete`æ–¹æ³•åˆ é™¤é¢å¤–ä¿¡æ¯ï¼Œå³åˆ é™¤ä¸è¯¥é¸½å­æ•°æ®å…³è”çš„é¢å¤–ä¿¡æ¯ã€‚å¦‚æœåˆ é™¤å¤±è´¥ï¼Œåˆ™æŠ›å‡º`DeleteFailException`å¼‚å¸¸ã€‚
+  4. è®°å½•åˆ é™¤æ“ä½œçš„æ—¥å¿—ï¼Œè°ƒç”¨`oplogService.oplog`æ–¹æ³•è®°å½•æ“ä½œæ—¥å¿—ï¼ŒåŒ…æ‹¬è´¦å·ä¿¡æ¯ã€é¸½å­çš„ç¯å·ã€`gid`å’Œæ“ä½œç±»å‹ã€‚
+  5. æ›´æ–°å­ä»£çš„çˆ¶ä»£ä¿¡æ¯ã€‚é¦–å…ˆæ ¹æ®`gid`å’Œæ€§åˆ«æ¡ä»¶ï¼ˆ"é›Œ"æˆ–"é›„"ï¼‰æ„å»ºæŸ¥è¯¢æ¡ä»¶`queryWrapper`ï¼Œç„¶åä½¿ç”¨`selectList`æ–¹æ³•è·å–æ‰€æœ‰æ»¡è¶³æ¡ä»¶çš„å­ä»£é¸½å­æ•°æ®`offspringPigeons`ã€‚
+  6. è·å–å½“å‰æ—¥æœŸã€‚
+  7. éå†æ¯ä¸ªå­ä»£é¸½å­æ•°æ®ï¼Œé€šè¿‡`UpdateWrapper`æ„å»ºæ›´æ–°æ¡ä»¶`updateWrapper`ï¼Œæ ¹æ®å­ä»£é¸½å­çš„æ€§åˆ«è®¾ç½®å¯¹åº”çš„çˆ¶ä»£å­—æ®µä¸º`null`ï¼Œå¹¶è®¾ç½®`update_data`ä¸ºå½“å‰æ—¥æœŸã€‚
+  8. ä½¿ç”¨`pigeonMapper`çš„`update`æ–¹æ³•æ‰§è¡Œæ›´æ–°æ“ä½œï¼Œå¦‚æœæ›´æ–°å¤±è´¥ï¼Œåˆ™æŠ›å‡º`SaveFailException`å¼‚å¸¸ã€‚
+  9. è®°å½•è§£é™¤è¡€äº²å…³ç³»çš„æ—¥å¿—ï¼Œè°ƒç”¨`oplogService.oplog`æ–¹æ³•è®°å½•æ“ä½œæ—¥å¿—ï¼ŒåŒ…æ‹¬è´¦å·ä¿¡æ¯ã€å­ä»£é¸½å­çš„ç¯å·ã€`gid`å’Œæ“ä½œç±»å‹ã€‚
 
   ```java
   @Override
   @Transactional
   public void deletePigeonById(Long id, String sex, Long gid, String account) {
-      //Ìõ¼ş id AND gid
+      //æ¡ä»¶ id AND gid
       QueryWrapper<Pigeon> pigeonQueryWrapper = new QueryWrapper<>();
       pigeonQueryWrapper.eq("id", id).eq("gid", gid);
   
-      //»ñÈ¡ĞÅÏ¢ÒÔ¼ÇÂ¼ÈÕÖ¾
+      //è·å–ä¿¡æ¯ä»¥è®°å½•æ—¥å¿—
       Pigeon pigeon = pigeonMapper.selectOne(pigeonQueryWrapper);
   
-      //É¾³ı»ù´¡ĞÅÏ¢
+      //åˆ é™¤åŸºç¡€ä¿¡æ¯
       int deletePigeon = pigeonMapper.delete(pigeonQueryWrapper);
   
       if (!SqlHelper.retBool(deletePigeon)) {
-          throw new DeleteFailException("»ù´¡ĞÅÏ¢É¾³ıÊ§°Ü£¬ÇëÖØÊÔ");
+          throw new DeleteFailException("åŸºç¡€ä¿¡æ¯åˆ é™¤å¤±è´¥ï¼Œè¯·é‡è¯•");
       }
   
-      //Ìõ¼ş pid = id
+      //æ¡ä»¶ pid = id
       QueryWrapper<PigeonInfo> pigeonInfoQueryWrapper = new QueryWrapper<>();
       pigeonInfoQueryWrapper.eq("pid", id);
   
-      //É¾³ı¶îÍâĞÅÏ¢
+      //åˆ é™¤é¢å¤–ä¿¡æ¯
       int deletePigeonInfo = pigeonInfoMapper.delete(pigeonInfoQueryWrapper);
   
       if (!SqlHelper.retBool(deletePigeonInfo)) {
-          log.error("id = {} Ê±£¬¶îÍâĞÅÏ¢É¾³ıÊ§°Ü", id);
-          throw new DeleteFailException("¶îÍâĞÅÏ¢É¾³ıÊ§°Ü£¬ÇëÖØÊÔ");
+          log.error("id = {} æ—¶ï¼Œé¢å¤–ä¿¡æ¯åˆ é™¤å¤±è´¥", id);
+          throw new DeleteFailException("é¢å¤–ä¿¡æ¯åˆ é™¤å¤±è´¥ï¼Œè¯·é‡è¯•");
       }
   
-      //¼ÇÂ¼ÈÕÖ¾
+      //è®°å½•æ—¥å¿—
       oplogService.oplog(account, pigeon.getRingNumber(), gid, LogType.DELETE);
   
-      //¸üĞÂ×Ó´úµÄ¸¸´úĞÅÏ¢
-      //ÒòÎªÒª¼ÇÂ¼ÈÕÖ¾ËùÒÔÏÈ¼ìË÷ËùÓĞÒª¸üĞÂµÄÊı¾İ
+      //æ›´æ–°å­ä»£çš„çˆ¶ä»£ä¿¡æ¯
+      //å› ä¸ºè¦è®°å½•æ—¥å¿—æ‰€ä»¥å…ˆæ£€ç´¢æ‰€æœ‰è¦æ›´æ–°çš„æ•°æ®
       QueryWrapper<Pigeon> queryWrapper = new QueryWrapper<>();
-      //Ìõ¼ş
+      //æ¡ä»¶
       queryWrapper.eq("gid", gid)
-              .eq(sex.equals("´Æ"), "mid", id)
-              .eq(sex.equals("ĞÛ"), "fid", id);
+              .eq(sex.equals("é›Œ"), "mid", id)
+              .eq(sex.equals("é›„"), "fid", id);
       List<Pigeon> offspringPigeons = pigeonMapper.selectList(queryWrapper);
   
-      //»ñÈ¡¸üĞÂÊ±¼ä
+      //è·å–æ›´æ–°æ—¶é—´
       LocalDate now = LocalDate.now();
   
-      //¸üĞÂ
+      //æ›´æ–°
       offspringPigeons.forEach(offspringPigeon -> {
           UpdateWrapper<Pigeon> updateWrapper = new UpdateWrapper<>();
           updateWrapper.eq("id", offspringPigeon.getId())
                   .set("update_data", now)
-                  .set(sex.equals("ĞÛ"), "fid", null)
-                  .set(sex.equals("´Æ"), "mid", null);
+                  .set(sex.equals("é›„"), "fid", null)
+                  .set(sex.equals("é›Œ"), "mid", null);
   
           int update = pigeonMapper.update(null, updateWrapper);
   
           if (!SqlHelper.retBool(update)) {
-              throw new SaveFailException("½â³ıÑªÇ×¹ØÏµ³ö´í");
+              throw new SaveFailException("è§£é™¤è¡€äº²å…³ç³»å‡ºé”™");
           }
   
-          //¼ÇÂ¼ÈÕÖ¾
+          //è®°å½•æ—¥å¿—
           oplogService.oplog(account, offspringPigeon.getRingNumber(), offspringPigeon.getId(), gid, LogType.UNPARENT);
       });
   }
   ```
 
-- ·ÖÏíÑªÍ³ÒµÎñ£¨¼ÇÂ¼ÈÕÖ¾¾ßÌåÂß¼­¼û **2.2.9.10 ²Ù×÷ÈÕÖ¾·şÎñ**£©
+- åˆ†äº«è¡€ç»Ÿä¸šåŠ¡ï¼ˆè®°å½•æ—¥å¿—å…·ä½“é€»è¾‘è§ **2.2.9.10 æ“ä½œæ—¥å¿—æœåŠ¡**ï¼‰
 
-  Âß¼­Ë¼Â·£º
+  é€»è¾‘æ€è·¯ï¼š
 
-  1. ¸ù¾İ¸ø¶¨µÄ`ids`ºÍ`gid`Ìõ¼ş£¬Ê¹ÓÃ`QueryWrapper`¹¹½¨²éÑ¯Ìõ¼ş£¬´Ó`Pigeon`±íÖĞ»ñÈ¡·ûºÏÌõ¼şµÄÊı¾İ¡£
-  2. ¼ì²é·µ»ØµÄÊı¾İÊıÁ¿ÊÇ·ñÓë`ids`ÊıÁ¿Ò»ÖÂ£¬Èç¹û²»Ò»ÖÂÔòÅ×³ö`NotFoundException`Òì³£¡£
-  3. ´´½¨Ò»¸ö¿ÕµÄ`pigeonInfos`ÁĞ±í£¬ÓÃÓÚ´æ´¢¶îÍâĞÅÏ¢¡£
-  4. ±éÀúÃ¿¸ö¸ë×ÓÊı¾İ£¬¸ù¾İ¸ë×ÓµÄ`id`²éÑ¯¶ÔÓ¦µÄ¶îÍâĞÅÏ¢£¬Èç¹ûĞÅÏ¢²»´æÔÚÔòÅ×³ö`NotFoundException`Òì³££¬·ñÔò½«ĞÅÏ¢Ìí¼Óµ½`pigeonInfos`ÁĞ±íÖĞ¡£
-  5. »ñÈ¡µ±Ç°ÈÕÆÚ¡£
-  6. ±éÀúÃ¿¸ö¸ë×ÓÊı¾İ£¬½øĞĞÊı¾İ´¦ÀíºÍ²åÈë²Ù×÷¡£
-  7. ¶ÔÓÚÃ¿¸ö¸ë×ÓÊı¾İ£¬ÏÈ¼ÇÂ¼·¢ËÍÕßµÄÈÕÖ¾¡£
-  8. ¶ÔÓÚ¸ë×ÓÊı¾İ£¬Çå³ı`id`¡¢`fid`ºÍ`mid`×Ö¶Î£¬ĞŞ¸Ä`updateData`Îªµ±Ç°ÈÕÆÚ£¬½«`gid`ÉèÖÃÎª½ÓÊÕ·½µÄ`receiveGid`£¬È»ºó²åÈëµ½Êı¾İ¿âÖĞ£¬Èç¹û²åÈëÊ§°ÜÔòÅ×³ö`SaveFailException`Òì³£¡£
-  9. ¶ÔÓÚ¸ë×Ó¶îÍâĞÅÏ¢£¬Çå³ı`id`×Ö¶Î£¬ĞŞ¸Ä`createTime`Îªµ±Ç°ÈÕÆÚ£¬½«`pid`ÉèÖÃÎª¸Õ²åÈëµÄ¸ë×ÓÊı¾İµÄ`id`£¬È»ºó²åÈëµ½Êı¾İ¿âÖĞ£¬Èç¹û²åÈëÊ§°ÜÔòÅ×³ö`SaveFailException`Òì³£¡£
-  10. ×îºó¼ÇÂ¼½ÓÊÕÕßµÄÈÕÖ¾¡£
+  1. æ ¹æ®ç»™å®šçš„`ids`å’Œ`gid`æ¡ä»¶ï¼Œä½¿ç”¨`QueryWrapper`æ„å»ºæŸ¥è¯¢æ¡ä»¶ï¼Œä»`Pigeon`è¡¨ä¸­è·å–ç¬¦åˆæ¡ä»¶çš„æ•°æ®ã€‚
+  2. æ£€æŸ¥è¿”å›çš„æ•°æ®æ•°é‡æ˜¯å¦ä¸`ids`æ•°é‡ä¸€è‡´ï¼Œå¦‚æœä¸ä¸€è‡´åˆ™æŠ›å‡º`NotFoundException`å¼‚å¸¸ã€‚
+  3. åˆ›å»ºä¸€ä¸ªç©ºçš„`pigeonInfos`åˆ—è¡¨ï¼Œç”¨äºå­˜å‚¨é¢å¤–ä¿¡æ¯ã€‚
+  4. éå†æ¯ä¸ªé¸½å­æ•°æ®ï¼Œæ ¹æ®é¸½å­çš„`id`æŸ¥è¯¢å¯¹åº”çš„é¢å¤–ä¿¡æ¯ï¼Œå¦‚æœä¿¡æ¯ä¸å­˜åœ¨åˆ™æŠ›å‡º`NotFoundException`å¼‚å¸¸ï¼Œå¦åˆ™å°†ä¿¡æ¯æ·»åŠ åˆ°`pigeonInfos`åˆ—è¡¨ä¸­ã€‚
+  5. è·å–å½“å‰æ—¥æœŸã€‚
+  6. éå†æ¯ä¸ªé¸½å­æ•°æ®ï¼Œè¿›è¡Œæ•°æ®å¤„ç†å’Œæ’å…¥æ“ä½œã€‚
+  7. å¯¹äºæ¯ä¸ªé¸½å­æ•°æ®ï¼Œå…ˆè®°å½•å‘é€è€…çš„æ—¥å¿—ã€‚
+  8. å¯¹äºé¸½å­æ•°æ®ï¼Œæ¸…é™¤`id`ã€`fid`å’Œ`mid`å­—æ®µï¼Œä¿®æ”¹`updateData`ä¸ºå½“å‰æ—¥æœŸï¼Œå°†`gid`è®¾ç½®ä¸ºæ¥æ”¶æ–¹çš„`receiveGid`ï¼Œç„¶åæ’å…¥åˆ°æ•°æ®åº“ä¸­ï¼Œå¦‚æœæ’å…¥å¤±è´¥åˆ™æŠ›å‡º`SaveFailException`å¼‚å¸¸ã€‚
+  9. å¯¹äºé¸½å­é¢å¤–ä¿¡æ¯ï¼Œæ¸…é™¤`id`å­—æ®µï¼Œä¿®æ”¹`createTime`ä¸ºå½“å‰æ—¥æœŸï¼Œå°†`pid`è®¾ç½®ä¸ºåˆšæ’å…¥çš„é¸½å­æ•°æ®çš„`id`ï¼Œç„¶åæ’å…¥åˆ°æ•°æ®åº“ä¸­ï¼Œå¦‚æœæ’å…¥å¤±è´¥åˆ™æŠ›å‡º`SaveFailException`å¼‚å¸¸ã€‚
+  10. æœ€åè®°å½•æ¥æ”¶è€…çš„æ—¥å¿—ã€‚
 
   ```java
   @Override
   @Transactional
   public void sharePigeon(List<Long> ids, Long receiveGid, Long gid, String account) {
-      //¸ù¾İids»ñÈ¡ËùÓĞÊı¾İ
-      //Ìõ¼ş gid and id in ids
+      //æ ¹æ®idsè·å–æ‰€æœ‰æ•°æ®
+      //æ¡ä»¶ gid and id in ids
       QueryWrapper<Pigeon> pigeonWrapper = new QueryWrapper<>();
       pigeonWrapper.eq("gid", gid).in("id", ids);
       List<Pigeon> pigeons = pigeonMapper.selectList(pigeonWrapper);
   
-      //¼ì²éÊı¾İ¸öÊıÊÇ·ñ×¼È·
+      //æ£€æŸ¥æ•°æ®ä¸ªæ•°æ˜¯å¦å‡†ç¡®
       int n = ids.size();
       if (n != pigeons.size()) {
-          throw new NotFoundException("Êı¾İ»ñÈ¡´íÎó");
+          throw new NotFoundException("æ•°æ®è·å–é”™è¯¯");
       }
   
-      //Í¬Ê±»ñÈ¡¶îÍâĞÅÏ¢£¬Ò»Ò»¶ÔÓ¦
+      //åŒæ—¶è·å–é¢å¤–ä¿¡æ¯ï¼Œä¸€ä¸€å¯¹åº”
       List<PigeonInfo> pigeonInfos = new ArrayList<>();
       pigeons.forEach(pigeon -> {
           QueryWrapper<PigeonInfo> pigeonInfoWrapper = new QueryWrapper<>();
           pigeonInfoWrapper.eq("pid", pigeon.getId());
           PigeonInfo pigeonInfo = pigeonInfoMapper.selectOne(pigeonInfoWrapper);
-          //¼ì²é
+          //æ£€æŸ¥
           if (pigeonInfo == null) {
-              throw new NotFoundException("Êı¾İ»ñÈ¡´íÎó");
+              throw new NotFoundException("æ•°æ®è·å–é”™è¯¯");
           }
           pigeonInfos.add(pigeonInfo);
       });
   
-      //»ñÈ¡ÈÕÆÚ
+      //è·å–æ—¥æœŸ
       LocalDate now = LocalDate.now();
   
-      //´¦ÀíÊı¾İ£¬²¢²åÈë
+      //å¤„ç†æ•°æ®ï¼Œå¹¶æ’å…¥
       for (int i = 0; i < n; i++) {
           Pigeon pigeon = pigeons.get(i);
-          //·¢ËÍÕß¼ÇÂ¼ÈÕÖ¾
+          //å‘é€è€…è®°å½•æ—¥å¿—
           oplogService.oplog(account, pigeon.getRingNumber(), pigeon.getId(), gid, LogType.SHARE);
   
           //pigeon
-          //Çå³ı id, fid, mid
-          //ĞŞ¸Ä update_data, gid
-          //Çå³ı
+          //æ¸…é™¤ id, fid, mid
+          //ä¿®æ”¹ update_data, gid
+          //æ¸…é™¤
           pigeon.setId(null);
           pigeon.setFid(null);
           pigeon.setMid(null);
-          //ĞŞ¸Ä
+          //ä¿®æ”¹
           pigeon.setUpdateData(now);
           pigeon.setGid(receiveGid);
-          //²åÈë
+          //æ’å…¥
           int insertPigeon = pigeonMapper.insert(pigeon);
-          //¼ì²é
+          //æ£€æŸ¥
           if (!SqlHelper.retBool(insertPigeon)) {
-              throw new SaveFailException("·ÖÏí»ù´¡ĞÅÏ¢Ê§°Ü");
+              throw new SaveFailException("åˆ†äº«åŸºç¡€ä¿¡æ¯å¤±è´¥");
           }
   
           //pigeonInfo
-          //Çå³ı id
-          //ĞŞ¸Ä create_time, pid
+          //æ¸…é™¤ id
+          //ä¿®æ”¹ create_time, pid
           PigeonInfo pigeonInfo = pigeonInfos.get(i);
-          //Çå³ı
+          //æ¸…é™¤
           pigeonInfo.setId(null);
-          //ĞŞ¸Ä
+          //ä¿®æ”¹
           pigeonInfo.setCreateTime(now);
           pigeonInfo.setPid(pigeon.getId());
-          //²åÈë
+          //æ’å…¥
           int insertPigeonInfo = pigeonInfoMapper.insert(pigeonInfo);
-          //¼ì²é
+          //æ£€æŸ¥
           if (!SqlHelper.retBool(insertPigeonInfo)) {
-              throw new SaveFailException("¶îÍâ»ù´¡ĞÅÏ¢Ê§°Ü");
+              throw new SaveFailException("é¢å¤–åŸºç¡€ä¿¡æ¯å¤±è´¥");
           }
   
-          //½ÓÊÕÕß¼ÇÂ¼ÈÕÖ¾
+          //æ¥æ”¶è€…è®°å½•æ—¥å¿—
           oplogService.oplog(account, pigeon.getRingNumber(), pigeon.getId(), receiveGid, LogType.RECEIVE);
       }
   }
@@ -2798,72 +2898,72 @@ public class AddressController {
 
   
 
-- ¹ØÁªÑªÇ×ÒµÎñ£¨¼ÇÂ¼ÈÕÖ¾¾ßÌåÂß¼­¼û **2.2.9.10 ²Ù×÷ÈÕÖ¾·şÎñ**£©
+- å…³è”è¡€äº²ä¸šåŠ¡ï¼ˆè®°å½•æ—¥å¿—å…·ä½“é€»è¾‘è§ **2.2.9.10 æ“ä½œæ—¥å¿—æœåŠ¡**ï¼‰
 
-  ´«Èë×Ó´úºÍ¸¸´ú£¬½«×Ó´úĞÅÏ¢¸ÄÎª¸¸´úid
+  ä¼ å…¥å­ä»£å’Œçˆ¶ä»£ï¼Œå°†å­ä»£ä¿¡æ¯æ”¹ä¸ºçˆ¶ä»£id
 
-  Éè¼ÆË¼Â·£º
+  è®¾è®¡æ€è·¯ï¼š
 
-  1. ¹¹½¨Ìõ¼ş£¬Í¨¹ı`oid`ºÍ`gid`É¸Ñ¡ĞèÒª¸üĞÂµÄ¸ë×Ó¼ÇÂ¼¡£
-  2. Ê¹ÓÃÌõ¼ş¹¹½¨Æ÷(`UpdateWrapper`)ÉèÖÃ¸üĞÂµÄ×Ö¶ÎºÍÖµ£¬°üÀ¨¸üĞÂÈÕÆÚ(`update_data`)¡¢¸¸´ú(`fid`)»òÄ¸´ú(`mid`)×Ö¶ÎµÄÖµ¡£
-  3. Ö´ĞĞ¸üĞÂ²Ù×÷£¬½«¸üĞÂÓ¦ÓÃµ½·ûºÏÌõ¼şµÄ¸ë×Ó¼ÇÂ¼¡£
-  4. ¼ì²é¸üĞÂÊÇ·ñ³É¹¦£¬Èç¹û¸üĞÂÊ§°Ü£¬Ôò¼ÇÂ¼´íÎóÈÕÖ¾²¢Å×³ö±£´æÊ§°ÜµÄÒì³£¡£
-  5. ¼ÇÂ¼¹ØÁª²Ù×÷µÄÈÕÖ¾£¬°üÀ¨ÕËºÅĞÅÏ¢¡¢×Ó´ú¸ë×ÓµÄ`oid`¡¢`gid`ÒÔ¼°Ïà¹ØµÄ»·ºÅ¡£
+  1. æ„å»ºæ¡ä»¶ï¼Œé€šè¿‡`oid`å’Œ`gid`ç­›é€‰éœ€è¦æ›´æ–°çš„é¸½å­è®°å½•ã€‚
+  2. ä½¿ç”¨æ¡ä»¶æ„å»ºå™¨(`UpdateWrapper`)è®¾ç½®æ›´æ–°çš„å­—æ®µå’Œå€¼ï¼ŒåŒ…æ‹¬æ›´æ–°æ—¥æœŸ(`update_data`)ã€çˆ¶ä»£(`fid`)æˆ–æ¯ä»£(`mid`)å­—æ®µçš„å€¼ã€‚
+  3. æ‰§è¡Œæ›´æ–°æ“ä½œï¼Œå°†æ›´æ–°åº”ç”¨åˆ°ç¬¦åˆæ¡ä»¶çš„é¸½å­è®°å½•ã€‚
+  4. æ£€æŸ¥æ›´æ–°æ˜¯å¦æˆåŠŸï¼Œå¦‚æœæ›´æ–°å¤±è´¥ï¼Œåˆ™è®°å½•é”™è¯¯æ—¥å¿—å¹¶æŠ›å‡ºä¿å­˜å¤±è´¥çš„å¼‚å¸¸ã€‚
+  5. è®°å½•å…³è”æ“ä½œçš„æ—¥å¿—ï¼ŒåŒ…æ‹¬è´¦å·ä¿¡æ¯ã€å­ä»£é¸½å­çš„`oid`ã€`gid`ä»¥åŠç›¸å…³çš„ç¯å·ã€‚
 
   ```java
   @Override
   @Transactional
   public void relatePigeon(Long id, String sex, String ringNumber, Long oid, Long gid, String account) {
-      //»ñÈ¡¸üĞÂÈÕÆÚ
+      //è·å–æ›´æ–°æ—¥æœŸ
       LocalDate now = LocalDate.now();
   
-      //Ìõ¼ş
+      //æ¡ä»¶
       UpdateWrapper<Pigeon> wrapper = new UpdateWrapper<>();
       wrapper.eq("id", oid)
               .eq("gid", gid)
               .set("update_data", now)
-              .set(sex.equals("ĞÛ"), "fid", id)
-              .set(sex.equals("´Æ"), "mid", id);
+              .set(sex.equals("é›„"), "fid", id)
+              .set(sex.equals("é›Œ"), "mid", id);
   
       int update = pigeonMapper.update(null, wrapper);
   
       if (!SqlHelper.retBool(update)) {
-          log.error("¹ØÁª id = {}, oid = {} Ê±·¢Éú´íÎó", id, oid);
-          throw new SaveFailException("¹ØÁªÊ§°Ü");
+          log.error("å…³è” id = {}, oid = {} æ—¶å‘ç”Ÿé”™è¯¯", id, oid);
+          throw new SaveFailException("å…³è”å¤±è´¥");
       }
   
-      //¼ÇÂ¼ÈÕÖ¾
+      //è®°å½•æ—¥å¿—
       oplogService.oplog(account, oid, gid, ringNumber, LogType.RELATE);
   }
   ```
 
-- ½âÎöÎÄ¼ş±£´æ¸ë×ÓÒµÎñ
+- è§£ææ–‡ä»¶ä¿å­˜é¸½å­ä¸šåŠ¡
 
-  - ÎÄ¼şĞ£Ñé
+  - æ–‡ä»¶æ ¡éªŒ
 
     ```java
     if (Objects.isNull(file) || file.isEmpty()) {
-        throw new FileSaveException("²»ÄÜÉÏ´«¿ÕÎÄ¼ş");
+        throw new FileSaveException("ä¸èƒ½ä¸Šä¼ ç©ºæ–‡ä»¶");
     }
     
-    //¼ì²éÎÄ¼ş¸ñÊ½
+    //æ£€æŸ¥æ–‡ä»¶æ ¼å¼
     String fileType = fileUtil.checkFileType(file, "application/vnd.ms-excel", "application/x-tika-ooxml", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
     
     ```
 
-  - ÎªÎÄ¼ş½âÎöÌá¹©Ğ£ÑéÊı¾İ
+  - ä¸ºæ–‡ä»¶è§£ææä¾›æ ¡éªŒæ•°æ®
 
     ```java
-    //»ñÈ¡¼ìÑéÊı¾İ
-    //Ìí¼ÓÌõ¼ş gid or gid = systemGid
+    //è·å–æ£€éªŒæ•°æ®
+    //æ·»åŠ æ¡ä»¶ gid or gid = systemGid
     QueryWrapper<Xxpz> wrapper = new QueryWrapper<>();
     wrapper.eq("gid", gid).or().eq("gid", systemGid);
-    //×Ö¶Î
+    //å­—æ®µ
     wrapper.select("name", "type");
-    //²éÑ¯
+    //æŸ¥è¯¢
     List<Xxpz> list = xxpzService.list(wrapper);
     
-    //·â×°¼ìÑéÊı¾İ
+    //å°è£…æ£€éªŒæ•°æ®
     Map<String, Set<String>> xxpzMap = new HashMap<>();
     xxpzMap.put("yspz", new HashSet<>());
     xxpzMap.put("yanpz", new HashSet<>());
@@ -2884,31 +2984,31 @@ public class AddressController {
     });
     ```
 
-  - Çø·Ö°æ±¾Ìá¸ßÊÊÓ¦ĞÔ
+  - åŒºåˆ†ç‰ˆæœ¬æé«˜é€‚åº”æ€§
 
     ```java
     List<Map<String, PigeonWrapperVo>> pigeonWrappers;
     
     if (fileType.equals("application/vnd.ms-excel")) {
-        //¾É°æ
+        //æ—§ç‰ˆ
         pigeonWrappers = pigeonFileUtil.getPigeonByXls(file, xxpzMap);
     } else {
-        //ĞÂ°æ
+        //æ–°ç‰ˆ
         pigeonWrappers = pigeonFileUtil.getPigeonByXlsx(file, xxpzMap);
     }
     
     if (pigeonWrappers == null) {
-        throw new FileParseException("½âÎöÊ§°Ü");
+        throw new FileParseException("è§£æå¤±è´¥");
     }
     ```
 
-  - PigeonFileUtil ÎÄ¼ş½âÎö¹¤¾ß
+  - PigeonFileUtil æ–‡ä»¶è§£æå·¥å…·
 
-    - ÎÄ¼ş½âÎö
+    - æ–‡ä»¶è§£æ
 
       ```java
       /**
-       * ¾É°æ.xls½âÎö¹¤¾ß
+       * æ—§ç‰ˆ.xlsè§£æå·¥å…·
        * Office 2007- XML
        */
       public List<Map<String, PigeonWrapperVo>> getPigeonByXls(MultipartFile file, Map<String, Set<String>> xxpzMap) {
@@ -2920,15 +3020,15 @@ public class AddressController {
               pigeonWrappers = parsePojo(sheet, xxpzMap);
               sheets.close();
           } catch (IOException e) {
-              log.error("¼ì²éÎÄ¼ş {} Ê±ÎÄ¼şÁ÷·¢Éú´íÎó", file, e);
-              throw new FileSaveException("ÎÄ¼ş±£´æÊ§°Ü");
+              log.error("æ£€æŸ¥æ–‡ä»¶ {} æ—¶æ–‡ä»¶æµå‘ç”Ÿé”™è¯¯", file, e);
+              throw new FileSaveException("æ–‡ä»¶ä¿å­˜å¤±è´¥");
           }
       
           return pigeonWrappers;
       }
       
       /**
-       * ĞÂ°æ.xlsx½âÎö¹¤¾ß
+       * æ–°ç‰ˆ.xlsxè§£æå·¥å…·
        * Office 2007+ XML
        */
       public List<Map<String, PigeonWrapperVo>> getPigeonByXlsx(MultipartFile file, Map<String, Set<String>> xxpzMap) {
@@ -2940,21 +3040,21 @@ public class AddressController {
               pigeonWrappers = parsePojo(sheet, xxpzMap);
               sheets.close();
           } catch (IOException e) {
-              log.error("¼ì²éÎÄ¼ş {} Ê±ÎÄ¼şÁ÷·¢Éú´íÎó", file, e);
-              throw new FileSaveException("ÎÄ¼ş±£´æÊ§°Ü");
+              log.error("æ£€æŸ¥æ–‡ä»¶ {} æ—¶æ–‡ä»¶æµå‘ç”Ÿé”™è¯¯", file, e);
+              throw new FileSaveException("æ–‡ä»¶ä¿å­˜å¤±è´¥");
           }
       
           return pigeonWrappers;
       }
       ```
 
-    - ½âÎö±í¸ñ£¨¾ÙÀı£©
+    - è§£æè¡¨æ ¼ï¼ˆä¸¾ä¾‹ï¼‰
 
       ```java
       /**
-       * »ñÈ¡²¢¼ìÑé
-       * Èü¼¨ÃèÊö
-       * ¹Ì¶¨ĞĞ£º8
+       * è·å–å¹¶æ£€éªŒ
+       * èµ›ç»©æè¿°
+       * å›ºå®šè¡Œï¼š8
        */
       private String getDetail(Row row) {
           Cell cell = row.getCell(8);
@@ -2965,9 +3065,9 @@ public class AddressController {
       }
       
       /**
-       * »ñÈ¡²¢¼ìÑé
-       * ÓğÉ«
-       * ¹Ì¶¨ĞĞ£º6
+       * è·å–å¹¶æ£€éªŒ
+       * ç¾½è‰²
+       * å›ºå®šè¡Œï¼š6
        */
       private String getYs(Row row, Map<String, Set<String>> xxpzMap) {
           Cell cell = row.getCell(6);
@@ -2975,171 +3075,171 @@ public class AddressController {
               return null;
           }
           String ys = cell.getStringCellValue();
-          //¼ìÑé
+          //æ£€éªŒ
           if (!xxpzMap.get("yspz").contains(ys)) {
-              throw new FileParseException("ÓğÉ«Òì³£");
+              throw new FileParseException("ç¾½è‰²å¼‚å¸¸");
           }
           return ys;
       }
       
       /**
-       * »ñÈ¡²¢¼ìÑé
-       * ×ã»·ºÅ
-       * ¹Ì¶¨ĞĞ£º0
+       * è·å–å¹¶æ£€éªŒ
+       * è¶³ç¯å·
+       * å›ºå®šè¡Œï¼š0
        */
       private String getRingNumber(Row row, Map<String, Set<String>> xxpzMap) {
           Cell cell = row.getCell(0);
           if (cell == null || cell.getCellType() != CellType.STRING) {
-              throw new FileParseException("×ã»·ºÅÒì³£");
+              throw new FileParseException("è¶³ç¯å·å¼‚å¸¸");
           }
           String ringNumber = cell.getStringCellValue();
-          //¼ìÑé
+          //æ£€éªŒ
           verifyRingNumber(ringNumber, xxpzMap);
           return ringNumber;
       }
       ```
 
-    - ½âÎö±í¸ñ´úÂëÖĞÊ¹ÓÃµ½µÄĞ£Ñé
+    - è§£æè¡¨æ ¼ä»£ç ä¸­ä½¿ç”¨åˆ°çš„æ ¡éªŒ
 
       ```java
       /**
-       * ¼ìÑé×ã»·¹æ·¶
+       * æ£€éªŒè¶³ç¯è§„èŒƒ
        */
       private void verifyRingNumber(String ringNumber, Map<String, Set<String>> xxpzMap) {
-          //¼ìÑé
+          //æ£€éªŒ
           String[] ringNumberSplit = ringNumber.split("-");
           Set<String> country = xxpzMap.get("country");
           Set<String> province = xxpzMap.get("province");
-          //¹ú¼Ò
+          //å›½å®¶
           if (!country.contains(ringNumberSplit[0])) {
-              throw new FileParseException("×ã»·´íÎó£º²»´æÔÚµÄ¹ú¼Ò´úºÅ");
+              throw new FileParseException("è¶³ç¯é”™è¯¯ï¼šä¸å­˜åœ¨çš„å›½å®¶ä»£å·");
           }
-          //Äê·İ
+          //å¹´ä»½
           if (ringNumberSplit[1].length() != 4) {
-              throw new FileParseException("×ã»·´íÎó£º´íÎóµÄÄê·İ");
+              throw new FileParseException("è¶³ç¯é”™è¯¯ï¼šé”™è¯¯çš„å¹´ä»½");
           }
-          //¹ú¼Ò
+          //å›½å®¶
           if (!province.contains(ringNumberSplit[2])) {
-              throw new FileParseException("×ã»·´íÎó£º²»´æÔÚµÄÊ¡·İ´úºÅ");
+              throw new FileParseException("è¶³ç¯é”™è¯¯ï¼šä¸å­˜åœ¨çš„çœä»½ä»£å·");
           }
       }
       ```
 
-  - ×îºó½«ÎÄ¼ş½âÎöµÄĞÅÏ¢´æÈëÊı¾İ¿â£¨¼ÇÂ¼ÈÕÖ¾¾ßÌåÂß¼­¼û **2.2.9.10 ²Ù×÷ÈÕÖ¾·şÎñ**£©
+  - æœ€åå°†æ–‡ä»¶è§£æçš„ä¿¡æ¯å­˜å…¥æ•°æ®åº“ï¼ˆè®°å½•æ—¥å¿—å…·ä½“é€»è¾‘è§ **2.2.9.10 æ“ä½œæ—¥å¿—æœåŠ¡**ï¼‰
 
-    Éè¼ÆË¼Â·£º
+    è®¾è®¡æ€è·¯ï¼š
 
-    1. »ñÈ¡µ±Ç°ÈÕÆÚ¡£
-    2. ¶ÔÃ¿¸ö¸¸´ú×Ó´úĞÅÏ¢½øĞĞ±£´æ²Ù×÷¡£
-    3. ¶ÔÓÚÃ¿¸ö¸¸´ú£¬Ê×ÏÈ¸ù¾İ×ã»·¡¢ĞÔ±ğºÍ`gid`½øĞĞ¼ìË÷£¬ÅĞ¶ÏÊÇ·ñÒÑ´æÔÚ¶ÔÓ¦µÄ¸ë×Ó¼ÇÂ¼¡£
-    4. Èç¹û¸ë×Ó¼ÇÂ¼²»´æÔÚ£¬ÔòÖ´ĞĞĞÂÔö²Ù×÷¡£ÉèÖÃ¸¸´ú¸ë×ÓµÄ¸üĞÂÊ±¼ä¡¢`gid`µÈĞÅÏ¢£¬²¢·Ö±ğÖ´ĞĞ»ù´¡ĞÅÏ¢ºÍ¶îÍâĞÅÏ¢µÄ²åÈë²Ù×÷¡£
-    5. Èç¹û¸ë×Ó¼ÇÂ¼ÒÑ´æÔÚ£¬ÔòÖ±½Ó»ñÈ¡Æä`id`×÷Îª×Ó´ú¸ë×ÓµÄ¸¸´ú`fid`¡£
-    6. ¶ÔÓÚÃ¿¸öÄ¸´ú£¬²ÉÈ¡ÀàËÆµÄ²Ù×÷£¬ÅĞ¶Ï¸ë×Ó¼ÇÂ¼ÊÇ·ñÒÑ´æÔÚ£¬Èç¹û²»´æÔÚÔòÖ´ĞĞĞÂÔö²Ù×÷£¬Èç¹û´æÔÚÔò»ñÈ¡Æä`id`×÷Îª×Ó´ú¸ë×ÓµÄÄ¸´ú`mid`¡£
-    7. ¶ÔÓÚÃ¿¸ö×Ó´ú¸ë×Ó£¬ÉèÖÃÆä¸üĞÂÊ±¼ä¡¢`gid`µÈĞÅÏ¢£¬²¢·Ö±ğÖ´ĞĞ»ù´¡ĞÅÏ¢ºÍ¶îÍâĞÅÏ¢µÄ²åÈë²Ù×÷¡£
-    8. ¼ÇÂ¼Ïà¹Ø²Ù×÷µÄÈÕÖ¾£¬°üÀ¨ÕËºÅĞÅÏ¢¡¢¸ë×ÓµÄ»·ºÅ¡¢`id`¡¢`gid`ºÍ²Ù×÷ÀàĞÍ¡£
-    9. Èç¹û´æÔÚ¸¸´ú£¬¼ÇÂ¼×Ó´úÓë¸¸´úµÄ¹ØÏµµÄÈÕÖ¾£¬°üÀ¨ÕËºÅĞÅÏ¢¡¢×Ó´ú¸ë×ÓµÄ»·ºÅ¡¢`id`¡¢`gid`ÒÔ¼°¸¸´ú¸ë×ÓµÄ»·ºÅ¡£
-    10. Èç¹û´æÔÚÄ¸´ú£¬¼ÇÂ¼×Ó´úÓëÄ¸´úµÄ¹ØÏµµÄÈÕÖ¾£¬°üÀ¨ÕËºÅĞÅÏ¢¡¢×Ó´ú¸ë×ÓµÄ»·ºÅ¡¢`id`¡¢`gid`ÒÔ¼°Ä¸´ú¸ë×ÓµÄ»·ºÅ¡£
+    1. è·å–å½“å‰æ—¥æœŸã€‚
+    2. å¯¹æ¯ä¸ªçˆ¶ä»£å­ä»£ä¿¡æ¯è¿›è¡Œä¿å­˜æ“ä½œã€‚
+    3. å¯¹äºæ¯ä¸ªçˆ¶ä»£ï¼Œé¦–å…ˆæ ¹æ®è¶³ç¯ã€æ€§åˆ«å’Œ`gid`è¿›è¡Œæ£€ç´¢ï¼Œåˆ¤æ–­æ˜¯å¦å·²å­˜åœ¨å¯¹åº”çš„é¸½å­è®°å½•ã€‚
+    4. å¦‚æœé¸½å­è®°å½•ä¸å­˜åœ¨ï¼Œåˆ™æ‰§è¡Œæ–°å¢æ“ä½œã€‚è®¾ç½®çˆ¶ä»£é¸½å­çš„æ›´æ–°æ—¶é—´ã€`gid`ç­‰ä¿¡æ¯ï¼Œå¹¶åˆ†åˆ«æ‰§è¡ŒåŸºç¡€ä¿¡æ¯å’Œé¢å¤–ä¿¡æ¯çš„æ’å…¥æ“ä½œã€‚
+    5. å¦‚æœé¸½å­è®°å½•å·²å­˜åœ¨ï¼Œåˆ™ç›´æ¥è·å–å…¶`id`ä½œä¸ºå­ä»£é¸½å­çš„çˆ¶ä»£`fid`ã€‚
+    6. å¯¹äºæ¯ä¸ªæ¯ä»£ï¼Œé‡‡å–ç±»ä¼¼çš„æ“ä½œï¼Œåˆ¤æ–­é¸½å­è®°å½•æ˜¯å¦å·²å­˜åœ¨ï¼Œå¦‚æœä¸å­˜åœ¨åˆ™æ‰§è¡Œæ–°å¢æ“ä½œï¼Œå¦‚æœå­˜åœ¨åˆ™è·å–å…¶`id`ä½œä¸ºå­ä»£é¸½å­çš„æ¯ä»£`mid`ã€‚
+    7. å¯¹äºæ¯ä¸ªå­ä»£é¸½å­ï¼Œè®¾ç½®å…¶æ›´æ–°æ—¶é—´ã€`gid`ç­‰ä¿¡æ¯ï¼Œå¹¶åˆ†åˆ«æ‰§è¡ŒåŸºç¡€ä¿¡æ¯å’Œé¢å¤–ä¿¡æ¯çš„æ’å…¥æ“ä½œã€‚
+    8. è®°å½•ç›¸å…³æ“ä½œçš„æ—¥å¿—ï¼ŒåŒ…æ‹¬è´¦å·ä¿¡æ¯ã€é¸½å­çš„ç¯å·ã€`id`ã€`gid`å’Œæ“ä½œç±»å‹ã€‚
+    9. å¦‚æœå­˜åœ¨çˆ¶ä»£ï¼Œè®°å½•å­ä»£ä¸çˆ¶ä»£çš„å…³ç³»çš„æ—¥å¿—ï¼ŒåŒ…æ‹¬è´¦å·ä¿¡æ¯ã€å­ä»£é¸½å­çš„ç¯å·ã€`id`ã€`gid`ä»¥åŠçˆ¶ä»£é¸½å­çš„ç¯å·ã€‚
+    10. å¦‚æœå­˜åœ¨æ¯ä»£ï¼Œè®°å½•å­ä»£ä¸æ¯ä»£çš„å…³ç³»çš„æ—¥å¿—ï¼ŒåŒ…æ‹¬è´¦å·ä¿¡æ¯ã€å­ä»£é¸½å­çš„ç¯å·ã€`id`ã€`gid`ä»¥åŠæ¯ä»£é¸½å­çš„ç¯å·ã€‚
 
     ```java
     @Override
     @Transactional
     public void savePigeonByFile(List<Map<String, PigeonWrapperVo>> pigeonWrappers, Long gid, String account) {
-        //»ñÈ¡Ê±¼ä
+        //è·å–æ—¶é—´
         LocalDate now = LocalDate.now();
     
-        //±£´æ¸¸´ú
+        //ä¿å­˜çˆ¶ä»£
         pigeonWrappers.forEach(pigeonMap -> {
             PigeonWrapperVo pigeonWrapperVo = pigeonMap.get("pigeon");
-            //¸¸
+            //çˆ¶
             PigeonWrapperVo father = pigeonMap.get("father");
             if (father != null) {
-                //¸¸fatherPigeon
+                //çˆ¶fatherPigeon
                 Pigeon fatherPigeon = father.getPigeon();
     
-                //ÏÈ¸ù¾İ×ã»·¼ìË÷ÊÇ·ñ´æÔÚ
+                //å…ˆæ ¹æ®è¶³ç¯æ£€ç´¢æ˜¯å¦å­˜åœ¨
                 QueryWrapper<Pigeon> wrapper = new QueryWrapper<>();
                 wrapper.eq("ring_number", fatherPigeon.getRingNumber())
-                        .eq("sex", "ĞÛ")
+                        .eq("sex", "é›„")
                         .eq("gid", gid);
                 Pigeon selectPigeon = pigeonMapper.selectOne(wrapper);
     
                 if (selectPigeon == null) {
-                    //ĞÂÔö
+                    //æ–°å¢
                     fatherPigeon.setUpdateData(now);
                     fatherPigeon.setGid(gid);
                     int fatherPigeonInsert = pigeonMapper.insert(fatherPigeon);
                     if (!SqlHelper.retBool(fatherPigeonInsert)) {
-                        throw new SaveFailException("¸¸¸ë»ù´¡ĞÅÏ¢±£´æÊ§°Ü");
+                        throw new SaveFailException("çˆ¶é¸½åŸºç¡€ä¿¡æ¯ä¿å­˜å¤±è´¥");
                     }
     
-                    //¸¸fatherPigeonInfo
+                    //çˆ¶fatherPigeonInfo
                     PigeonInfo fatherPigeonInfo = new PigeonInfo();
                     fatherPigeonInfo.setCreateTime(now);
                     fatherPigeonInfo.setPid(fatherPigeon.getId());
                     int fatherPigeonInfoInsert = pigeonInfoMapper.insert(fatherPigeonInfo);
                     if (!SqlHelper.retBool(fatherPigeonInfoInsert)) {
-                        throw new SaveFailException("¸¸¸ë¶îÍâĞÅÏ¢±£´æÊ§°Ü");
+                        throw new SaveFailException("çˆ¶é¸½é¢å¤–ä¿¡æ¯ä¿å­˜å¤±è´¥");
                     }
     
-                    //¸ø×Ó´ú×°Ìîfid
+                    //ç»™å­ä»£è£…å¡«fid
                     pigeonWrapperVo.getPigeon().setFid(fatherPigeon.getId());
     
-                    //¼ÇÂ¼ÈÕÖ¾
+                    //è®°å½•æ—¥å¿—
                     oplogService.oplog(account, fatherPigeon.getRingNumber(), fatherPigeon.getId(), gid, LogType.INSERT);
                 } else {
-                    //¸ø×Ó´ú×°Ìîfid
+                    //ç»™å­ä»£è£…å¡«fid
                     pigeonWrapperVo.getPigeon().setFid(selectPigeon.getId());
                 }
             }
     
-            //Ä¸
+            //æ¯
             PigeonWrapperVo mother = pigeonMap.get("mother");
             if (mother != null) {
-                //Ä¸motherPigeon
+                //æ¯motherPigeon
                 Pigeon motherPigeon = mother.getPigeon();
     
-                //ÏÈ¸ù¾İ×ã»·¼ìË÷ÊÇ·ñ´æÔÚ
+                //å…ˆæ ¹æ®è¶³ç¯æ£€ç´¢æ˜¯å¦å­˜åœ¨
                 QueryWrapper<Pigeon> wrapper = new QueryWrapper<>();
                 wrapper.eq("ring_number", motherPigeon.getRingNumber())
-                        .eq("sex", "´Æ")
+                        .eq("sex", "é›Œ")
                         .eq("gid", gid);
                 Pigeon selectPigeon = pigeonMapper.selectOne(wrapper);
     
                 if (selectPigeon == null) {
-                    //ĞÂÔö
+                    //æ–°å¢
                     motherPigeon.setUpdateData(now);
                     motherPigeon.setGid(gid);
                     int fatherPigeonInsert = pigeonMapper.insert(motherPigeon);
                     if (!SqlHelper.retBool(fatherPigeonInsert)) {
-                        throw new SaveFailException("Ä¸¸ë»ù´¡ĞÅÏ¢±£´æÊ§°Ü");
+                        throw new SaveFailException("æ¯é¸½åŸºç¡€ä¿¡æ¯ä¿å­˜å¤±è´¥");
                     }
-                    //Ä¸motherPigeonInfo
+                    //æ¯motherPigeonInfo
                     PigeonInfo motherPigeonInfo = new PigeonInfo();
                     motherPigeonInfo.setCreateTime(now);
                     motherPigeonInfo.setPid(motherPigeon.getId());
                     int motherPigeonInfoInsert = pigeonInfoMapper.insert(motherPigeonInfo);
                     if (!SqlHelper.retBool(motherPigeonInfoInsert)) {
-                        throw new SaveFailException("Ä¸¸ë¶îÍâĞÅÏ¢±£´æÊ§°Ü");
+                        throw new SaveFailException("æ¯é¸½é¢å¤–ä¿¡æ¯ä¿å­˜å¤±è´¥");
                     }
-                    //¸ø×Ó´ú×°Ìîmid
+                    //ç»™å­ä»£è£…å¡«mid
                     pigeonWrapperVo.getPigeon().setMid(motherPigeon.getId());
     
-                    //¼ÇÂ¼ÈÕÖ¾
+                    //è®°å½•æ—¥å¿—
                     oplogService.oplog(account, motherPigeon.getRingNumber(), motherPigeon.getId(), gid, LogType.INSERT);
                 } else {
-                    //¸ø×Ó´ú×°Ìîmid
+                    //ç»™å­ä»£è£…å¡«mid
                     pigeonWrapperVo.getPigeon().setMid(selectPigeon.getId());
                 }
             }
     
-            //±£´æ×Ó´úĞÅÏ¢
+            //ä¿å­˜å­ä»£ä¿¡æ¯
             //pigeon
             Pigeon pigeon = pigeonWrapperVo.getPigeon();
             pigeon.setUpdateData(now);
             pigeon.setGid(gid);
             int pigeonInsert = pigeonMapper.insert(pigeon);
             if (!SqlHelper.retBool(pigeonInsert)) {
-                throw new SaveFailException("×Ó´ú¸ë»ù´¡ĞÅÏ¢±£´æÊ§°Ü");
+                throw new SaveFailException("å­ä»£é¸½åŸºç¡€ä¿¡æ¯ä¿å­˜å¤±è´¥");
             }
             //pigeonInfo
             PigeonInfo pigeonInfo = pigeonWrapperVo.getPigeonInfo();
@@ -3147,10 +3247,10 @@ public class AddressController {
             pigeonInfo.setPid(pigeon.getId());
             int pigeonInfoInsert = pigeonInfoMapper.insert(pigeonInfo);
             if (!SqlHelper.retBool(pigeonInfoInsert)) {
-                throw new SaveFailException("×Ó´ú¸ë¶îÍâĞÅÏ¢±£´æÊ§°Ü");
+                throw new SaveFailException("å­ä»£é¸½é¢å¤–ä¿¡æ¯ä¿å­˜å¤±è´¥");
             }
     
-            //¼ÇÂ¼ÈÕÖ¾
+            //è®°å½•æ—¥å¿—
             oplogService.oplog(account, pigeon.getRingNumber(), pigeon.getId(), gid, LogType.INSERT);
             if (father != null) {
                 oplogService.oplog(account, pigeon.getRingNumber(),
@@ -3170,56 +3270,56 @@ public class AddressController {
     }
     ```
 
-- ·µ»Øºó¶ËÎÄ¼şÄ£°å
+- è¿”å›åç«¯æ–‡ä»¶æ¨¡æ¿
 
   ```java
   /**
-   * ¶ÁÈ¡Ä£°å·µ»Ø¸øÇ°¶Ë
+   * è¯»å–æ¨¡æ¿è¿”å›ç»™å‰ç«¯
    */
   @GetMapping("template")
   public void getFileTemplate(HttpServletResponse response) {
-      // ÉèÖÃÏìÓ¦ÕıÎÄµÄMIMEÀàĞÍ
+      // è®¾ç½®å“åº”æ­£æ–‡çš„MIMEç±»å‹
       response.setContentType("application/vnd.ms-excel");
-      //·µ»ØÎÄ¼ş
+      //è¿”å›æ–‡ä»¶
       fileUtil.responseFileByRelativePath(pigeonTemplatePath, response);
   }
   ```
 
-##### 2.2.9.9 ¿ìËÙÈë¿â·şÎñ
+##### 2.2.9.9 å¿«é€Ÿå…¥åº“æœåŠ¡
 
-- Ä£ºı²éÑ¯£¬Îª¿ìËÙÈë¿âÌá¹©ËÑË÷
+- æ¨¡ç³ŠæŸ¥è¯¢ï¼Œä¸ºå¿«é€Ÿå…¥åº“æä¾›æœç´¢
 
   ```java
-  //»ñÈ¡gid
+  //è·å–gid
   Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
   Long gid = (Long) info.get("gid");
   
-  //Ìõ¼ş gid and sex and ring like value
+  //æ¡ä»¶ gid and sex and ring like value
   QueryWrapper<Pigeon> wrapper = new QueryWrapper<>();
   wrapper.eq("gid", gid)
-          .eq(sex.equals("father"), "sex", "ĞÛ")
-          .eq(sex.equals("mother"), "sex", "´Æ")
+          .eq(sex.equals("father"), "sex", "é›„")
+          .eq(sex.equals("mother"), "sex", "é›Œ")
           .like("ring_number", value);
   
-  //×Ö¶Î
+  //å­—æ®µ
   wrapper.select("id", "ring_number");
   
   List<Pigeon> list = pigeonService.list(wrapper);
   ```
 
-- ¿ìËÙÈë¿â
+- å¿«é€Ÿå…¥åº“
 
-  - ½âÎöÇ°¶ËĞÅÏ¢
+  - è§£æå‰ç«¯ä¿¡æ¯
 
     ```java
-    //½âÎöÇëÇóÌå
+    //è§£æè¯·æ±‚ä½“
     Long fid = map.get("fid") == null ? null : Long.valueOf((String) map.get("fid"));
     Long mid = map.get("mid") == null ? null : Long.valueOf((String) map.get("mid"));
     List<Map<String, Object>> pigeonMaps = (List<Map<String, Object>>) map.get("pigeons");
     
     String fr = null;
     String mr = null;
-    //»ñÈ¡¸¸´ú×ã»·
+    //è·å–çˆ¶ä»£è¶³ç¯
     if (fid != null) {
         Pigeon fp = pigeonService.getById(fid);
         fr = fp.getRingNumber();
@@ -3229,20 +3329,20 @@ public class AddressController {
         mr = mp.getRingNumber();
     }
     
-    //¼ì²é
+    //æ£€æŸ¥
     if (fr == null && mr == null) {
-        throw new SaveFailException("ĞÅÏ¢²»ÍêÕû");
+        throw new SaveFailException("ä¿¡æ¯ä¸å®Œæ•´");
     }
     
-    //»ñÈ¡gid
+    //è·å–gid
     Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
     Long gid = (Long) info.get("gid");
     String account = (String) info.get("account");
     
-    //»ñÈ¡ÈÕÆÚ
+    //è·å–æ—¥æœŸ
     LocalDate now = LocalDate.now();
     
-    //×°Åä
+    //è£…é…
     List<Pigeon> pigeons = new ArrayList<>();
     List<PigeonInfo> pigeonInfos = new ArrayList<>();
     pigeonMaps.forEach(pigeonMap -> {
@@ -3262,20 +3362,20 @@ public class AddressController {
     });
     ```
 
-  - Èë¿â
+  - å…¥åº“
 
-    Éè¼ÆË¼Â·£º
+    è®¾è®¡æ€è·¯ï¼š
 
-    1. Ê¹ÓÃÑ­»·±éÀú`pigeons`ÁĞ±í£¬Öğ¸ö´¦ÀíÃ¿¸ö¸ë×Ó¶ÔÏó¡£
-    2. ¶ÔÓÚÃ¿¸ö¸ë×Ó¶ÔÏó£¬Ö´ĞĞ²åÈë²Ù×÷£¬½«¸ë×Ó»ù´¡ĞÅÏ¢±£´æµ½Êı¾İ¿âÖĞ¡£
-    3. ¼ì²é²åÈë²Ù×÷µÄ½á¹û£¬Èç¹û²åÈëÊ§°Ü£¬ÔòÅ×³ö±£´æÊ§°ÜµÄÒì³£¡£
-    4. »ñÈ¡²åÈëºóµÄ¸ë×Ó¼ÇÂ¼µÄIDºÍ»·ºÅ¡£
-    5. ½«¸ë×ÓµÄID¸³Öµ¸ø¶ÔÓ¦µÄ¸ë×Ó¶îÍâĞÅÏ¢(`pigeonInfos`)ÖĞµÄ`pid`×Ö¶Î¡£
-    6. ¼ÇÂ¼¸ë×Ó»ù´¡ĞÅÏ¢µÄ²åÈëÈÕÖ¾£¬°üÀ¨ÕËºÅĞÅÏ¢¡¢»·ºÅ¡¢ID¡¢GIDºÍ²Ù×÷ÀàĞÍÎªINSERT¡£
-    7. Èç¹û´æÔÚ¸¸´ú»·ºÅ(`fatherRingNumber`)£¬¼ÇÂ¼Óë¸¸´úµÄ¹ØÁªÈÕÖ¾¡£
-    8. Èç¹û´æÔÚÄ¸´ú»·ºÅ(`motherRingNumber`)£¬¼ÇÂ¼ÓëÄ¸´úµÄ¹ØÁªÈÕÖ¾¡£
-    9. ¶ÔÓÚÃ¿¸ö¸ë×Ó¶îÍâĞÅÏ¢(`pigeonInfo`)£¬Ö´ĞĞ²åÈë²Ù×÷£¬½«¶îÍâĞÅÏ¢±£´æµ½Êı¾İ¿âÖĞ¡£
-    10. ¼ì²é²åÈë²Ù×÷µÄ½á¹û£¬Èç¹û²åÈëÊ§°Ü£¬ÔòÅ×³ö±£´æÊ§°ÜµÄÒì³£¡£
+    1. ä½¿ç”¨å¾ªç¯éå†`pigeons`åˆ—è¡¨ï¼Œé€ä¸ªå¤„ç†æ¯ä¸ªé¸½å­å¯¹è±¡ã€‚
+    2. å¯¹äºæ¯ä¸ªé¸½å­å¯¹è±¡ï¼Œæ‰§è¡Œæ’å…¥æ“ä½œï¼Œå°†é¸½å­åŸºç¡€ä¿¡æ¯ä¿å­˜åˆ°æ•°æ®åº“ä¸­ã€‚
+    3. æ£€æŸ¥æ’å…¥æ“ä½œçš„ç»“æœï¼Œå¦‚æœæ’å…¥å¤±è´¥ï¼Œåˆ™æŠ›å‡ºä¿å­˜å¤±è´¥çš„å¼‚å¸¸ã€‚
+    4. è·å–æ’å…¥åçš„é¸½å­è®°å½•çš„IDå’Œç¯å·ã€‚
+    5. å°†é¸½å­çš„IDèµ‹å€¼ç»™å¯¹åº”çš„é¸½å­é¢å¤–ä¿¡æ¯(`pigeonInfos`)ä¸­çš„`pid`å­—æ®µã€‚
+    6. è®°å½•é¸½å­åŸºç¡€ä¿¡æ¯çš„æ’å…¥æ—¥å¿—ï¼ŒåŒ…æ‹¬è´¦å·ä¿¡æ¯ã€ç¯å·ã€IDã€GIDå’Œæ“ä½œç±»å‹ä¸ºINSERTã€‚
+    7. å¦‚æœå­˜åœ¨çˆ¶ä»£ç¯å·(`fatherRingNumber`)ï¼Œè®°å½•ä¸çˆ¶ä»£çš„å…³è”æ—¥å¿—ã€‚
+    8. å¦‚æœå­˜åœ¨æ¯ä»£ç¯å·(`motherRingNumber`)ï¼Œè®°å½•ä¸æ¯ä»£çš„å…³è”æ—¥å¿—ã€‚
+    9. å¯¹äºæ¯ä¸ªé¸½å­é¢å¤–ä¿¡æ¯(`pigeonInfo`)ï¼Œæ‰§è¡Œæ’å…¥æ“ä½œï¼Œå°†é¢å¤–ä¿¡æ¯ä¿å­˜åˆ°æ•°æ®åº“ä¸­ã€‚
+    10. æ£€æŸ¥æ’å…¥æ“ä½œçš„ç»“æœï¼Œå¦‚æœæ’å…¥å¤±è´¥ï¼Œåˆ™æŠ›å‡ºä¿å­˜å¤±è´¥çš„å¼‚å¸¸ã€‚
 
     ```java
     @Override
@@ -3285,21 +3385,21 @@ public class AddressController {
         for (int i = 0, pigeonsSize = pigeons.size(); i < pigeonsSize; i++) {
             Pigeon pigeon = pigeons.get(i);
     
-            //ĞÂÔö
+            //æ–°å¢
             int insert = pigeonMapper.insert(pigeon);
     
-            //¼ì²é
+            //æ£€æŸ¥
             if (!SqlHelper.retBool(insert)) {
-                throw new SaveFailException("±£´æ¸ë×Ó»ù´¡ĞÅÏ¢Ê§°Ü");
+                throw new SaveFailException("ä¿å­˜é¸½å­åŸºç¡€ä¿¡æ¯å¤±è´¥");
             }
     
             Long id = pigeon.getId();
             String ringNumber = pigeon.getRingNumber();
     
-            //×°Ìîpid
+            //è£…å¡«pid
             pigeonInfos.get(i).setPid(id);
     
-            //¼ÇÂ¼ÈÕÖ¾
+            //è®°å½•æ—¥å¿—
             oplogService.oplog(account, ringNumber, id, gid, LogType.INSERT);
             if (fatherRingNumber != null) {
                 oplogService.oplog(account, ringNumber, id, gid, fatherRingNumber, LogType.RELATE);
@@ -3312,17 +3412,17 @@ public class AddressController {
         pigeonInfos.forEach(pigeonInfo -> {
             int insert = pigeonInfoMapper.insert(pigeonInfo);
     
-            //¼ì²é
+            //æ£€æŸ¥
             if (!SqlHelper.retBool(insert)) {
-                throw new SaveFailException("±£´æ¸ë×Ó¶îÍâĞÅÏ¢Ê§°Ü");
+                throw new SaveFailException("ä¿å­˜é¸½å­é¢å¤–ä¿¡æ¯å¤±è´¥");
             }
         });
     }
     ```
 
-##### 2.2.9.10 ²Ù×÷ÈÕÖ¾·şÎñ
+##### 2.2.9.10 æ“ä½œæ—¥å¿—æœåŠ¡
 
-- ºó¶ËÄÚ²¿ÈÕÖ¾²Ù×÷£¨¾ÙÀı£©
+- åç«¯å†…éƒ¨æ—¥å¿—æ“ä½œï¼ˆä¸¾ä¾‹ï¼‰
 
   ```java
   @Override
@@ -3334,8 +3434,8 @@ public class AddressController {
       );
       int insert = oplogMapper.insert(oplog);
       if (!SqlHelper.retBool(insert)) {
-          log.error("{} ÈÕÖ¾¼ÇÂ¼Ê§°Ü", oplog);
-          throw new LogException("ÈÕÖ¾±£´æÊ§°Ü");
+          log.error("{} æ—¥å¿—è®°å½•å¤±è´¥", oplog);
+          throw new LogException("æ—¥å¿—ä¿å­˜å¤±è´¥");
       }
   }
   
@@ -3343,7 +3443,7 @@ public class AddressController {
   @Transactional
   public void oplog(String account, String ringNumber, Long gid, LogType type) {
       if (type != LogType.DELETE) {
-          throw new LogException("ÈÕÖ¾ÀàĞÍ´íÎó");
+          throw new LogException("æ—¥å¿—ç±»å‹é”™è¯¯");
       }
       Oplog oplog = new Oplog(
               account, ringNumber, type.getIndex(),
@@ -3351,36 +3451,36 @@ public class AddressController {
       );
       int insert = oplogMapper.insert(oplog);
       if (!SqlHelper.retBool(insert)) {
-          log.error("{} ÈÕÖ¾¼ÇÂ¼Ê§°Ü", oplog);
-          throw new LogException("ÈÕÖ¾±£´æÊ§°Ü");
+          log.error("{} æ—¥å¿—è®°å½•å¤±è´¥", oplog);
+          throw new LogException("æ—¥å¿—ä¿å­˜å¤±è´¥");
       }
   }
   ```
 
-- Ìõ¼ş·ÖÒ³²éÑ¯
+- æ¡ä»¶åˆ†é¡µæŸ¥è¯¢
 
-  Éè¼ÆË¼Â·£º
+  è®¾è®¡æ€è·¯ï¼š
 
-  1. ´ÓÇëÇóÊôĞÔÖĞ»ñÈ¡`info`²ÎÊı£¬¸Ã²ÎÊıÊÇÒ»¸öMap¶ÔÏó£¬°üº¬ÁËÒ»¸öÃûÎª`gid`µÄLongÀàĞÍÖµ£¬±íÊ¾¸ëÉáµÄID¡£
-  2. ½âÎöÇëÇóÌåÖĞµÄÌõ¼ş²ÎÊı£¬°üÀ¨`content`¡¢`tip`¡¢`ringNumber`¡¢`timeRange`¡¢`author`¡¢`current`ºÍ`pageSize`µÈ¡£
-  3. ¼ì²é`current`ºÍ`pageSize`ÊÇ·ñÎª¿Õ£¬Èç¹ûÎª¿Õ£¬ÔòÅ×³öÒì³£¡£
-  4. ½âÎöÊ±¼ä·¶Î§²ÎÊı`timeRange`£¬»ñÈ¡¿ªÊ¼Ê±¼ä`startTime`ºÍ½áÊøÊ±¼ä`endTime`¡£
-  5. ´´½¨²éÑ¯Ìõ¼ş`QueryWrapper`¶ÔÏó`wrapper`£¬ÉèÖÃ¸÷¸ö²éÑ¯Ìõ¼ş£¬°üÀ¨¸ëÉáID¡¢ÄÚÈİ¡¢ÌáÊ¾¡¢»·ºÅ¡¢×÷ÕßºÍÊ±¼ä·¶Î§µÈ¡£
-  6. ´´½¨·ÖÒ³¶ÔÏó`Page`£¬ÉèÖÃµ±Ç°Ò³Êı`current`¡¢Ã¿Ò³ÊıÁ¿`pageSize`ºÍ×î´óÏŞÖÆ`maxLimit`¡£
-  7. µ÷ÓÃ`oplogService`µÄ`page`·½·¨Ö´ĞĞ·ÖÒ³²éÑ¯£¬´«Èë·ÖÒ³¶ÔÏóºÍ²éÑ¯Ìõ¼ş¶ÔÏó¡£
-  8. »ñÈ¡²éÑ¯½á¹ûµÄ·ÖÒ³¶ÔÏó`page`¡£
+  1. ä»è¯·æ±‚å±æ€§ä¸­è·å–`info`å‚æ•°ï¼Œè¯¥å‚æ•°æ˜¯ä¸€ä¸ªMapå¯¹è±¡ï¼ŒåŒ…å«äº†ä¸€ä¸ªåä¸º`gid`çš„Longç±»å‹å€¼ï¼Œè¡¨ç¤ºé¸½èˆçš„IDã€‚
+  2. è§£æè¯·æ±‚ä½“ä¸­çš„æ¡ä»¶å‚æ•°ï¼ŒåŒ…æ‹¬`content`ã€`tip`ã€`ringNumber`ã€`timeRange`ã€`author`ã€`current`å’Œ`pageSize`ç­‰ã€‚
+  3. æ£€æŸ¥`current`å’Œ`pageSize`æ˜¯å¦ä¸ºç©ºï¼Œå¦‚æœä¸ºç©ºï¼Œåˆ™æŠ›å‡ºå¼‚å¸¸ã€‚
+  4. è§£ææ—¶é—´èŒƒå›´å‚æ•°`timeRange`ï¼Œè·å–å¼€å§‹æ—¶é—´`startTime`å’Œç»“æŸæ—¶é—´`endTime`ã€‚
+  5. åˆ›å»ºæŸ¥è¯¢æ¡ä»¶`QueryWrapper`å¯¹è±¡`wrapper`ï¼Œè®¾ç½®å„ä¸ªæŸ¥è¯¢æ¡ä»¶ï¼ŒåŒ…æ‹¬é¸½èˆIDã€å†…å®¹ã€æç¤ºã€ç¯å·ã€ä½œè€…å’Œæ—¶é—´èŒƒå›´ç­‰ã€‚
+  6. åˆ›å»ºåˆ†é¡µå¯¹è±¡`Page`ï¼Œè®¾ç½®å½“å‰é¡µæ•°`current`ã€æ¯é¡µæ•°é‡`pageSize`å’Œæœ€å¤§é™åˆ¶`maxLimit`ã€‚
+  7. è°ƒç”¨`oplogService`çš„`page`æ–¹æ³•æ‰§è¡Œåˆ†é¡µæŸ¥è¯¢ï¼Œä¼ å…¥åˆ†é¡µå¯¹è±¡å’ŒæŸ¥è¯¢æ¡ä»¶å¯¹è±¡ã€‚
+  8. è·å–æŸ¥è¯¢ç»“æœçš„åˆ†é¡µå¯¹è±¡`page`ã€‚
 
   ```java
   /**
-   * ¸ù¾İ·ÖÒ³Ìõ¼ş»ñÈ¡Ò³ÃæĞÅÏ¢
+   * æ ¹æ®åˆ†é¡µæ¡ä»¶è·å–é¡µé¢ä¿¡æ¯
    */
   @PostMapping
   public Result getConditionPage(@RequestBody @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss") PagingConditionVo condition, HttpServletRequest request) {
-      //»ñÈ¡gid
+      //è·å–gid
       Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
       Long gid = (Long) info.get("gid");
   
-      //½âÎöÇëÇóÌå
+      //è§£æè¯·æ±‚ä½“
       Integer content = condition.getContent();
       String tip = condition.getTip();
       String ringNumber = condition.getRingNumber();
@@ -3390,8 +3490,8 @@ public class AddressController {
       Integer pageSize = condition.getPageSize();
   
       if (current == null || pageSize == null) {
-          log.error("PagingCondition {} È±ÉÙ±ØÒªÌõ¼ş", condition);
-          throw new NotFoundException("·şÎñ´íÎó");
+          log.error("PagingCondition {} ç¼ºå°‘å¿…è¦æ¡ä»¶", condition);
+          throw new NotFoundException("æœåŠ¡é”™è¯¯");
       }
   
       LocalDateTime startTime = null;
@@ -3401,7 +3501,7 @@ public class AddressController {
           endTime = timeRange.get(1);
       }
   
-      //Ìõ¼ş
+      //æ¡ä»¶
       QueryWrapper<Oplog> wrapper = new QueryWrapper<>();
       wrapper.eq(content != null, "content", content)
               .like(tip != null, "tip", tip)
@@ -3411,7 +3511,7 @@ public class AddressController {
               .orderByDesc("time")
               .eq("gid", gid);
   
-      //·ÖÒ³
+      //åˆ†é¡µ
       Page<Oplog> page = new Page<>();
       page.setCurrent(current)
               .setSize(pageSize)
@@ -3420,46 +3520,46 @@ public class AddressController {
   
       page = oplogService.page(page, wrapper);
   
-      return new Result(page, SuccessCode.Success.code, "²éÑ¯³É¹¦");
+      return new Result(page, SuccessCode.Success.code, "æŸ¥è¯¢æˆåŠŸ");
   }
   ```
 
-##### 2.2.9.12 ¸ë×ÓÏêÏ¸ĞÅÏ¢·şÎñ
+##### 2.2.9.12 é¸½å­è¯¦ç»†ä¿¡æ¯æœåŠ¡
 
-´Ë·şÎñÌá¹©ÏêÏ¸Ò³ÃæµÄĞÅÏ¢Êı¾İ¿â²éÑ¯ÓëÕûºÏ
+æ­¤æœåŠ¡æä¾›è¯¦ç»†é¡µé¢çš„ä¿¡æ¯æ•°æ®åº“æŸ¥è¯¢ä¸æ•´åˆ
 
-- ²éÑ¯×Ó´ú
+- æŸ¥è¯¢å­ä»£
 
-  Éè¼ÆË¼Â·£º
+  è®¾è®¡æ€è·¯ï¼š
 
-  1. ´ÓÇëÇóÊôĞÔÖĞ»ñÈ¡`info`²ÎÊı£¬¸Ã²ÎÊıÊÇÒ»¸öMap¶ÔÏó£¬°üº¬ÁËÒ»¸öÃûÎª`gid`µÄLongÀàĞÍÖµ£¬±íÊ¾¸ëÉáµÄID¡£
-  2. ´´½¨Ò»¸ö¿ÕµÄ`pigeonOffspringList`£¬ÓÃÓÚ´æ´¢Ã¿Ò»´úµÄ×ÓËï¸ë×ÓÁĞ±í¡£
-  3. ´´½¨Ò»¸ö³õÊ¼´úµÄ¸ë×ÓÁĞ±í£¬ÆäÖĞÖ»°üº¬Ò»¸ö×æÏÈ¸ë×Ó£¬½«ÆäÌí¼Óµ½`pigeonOffspringList`ÖĞ¡£
-  4. ÉèÖÃ³õÊ¼´úÊı`generation`Îª0¡£
-  5. ½øÈëµü´úÑ­»·£¬µ±´úÊıĞ¡ÓÚÏŞÖÆÊı`limit`ÇÒµ±Ç°´úµÄ¸ë×ÓÁĞ±í²»Îª¿ÕÊ±½øĞĞµü´ú¡£
-  6. »ñÈ¡µ±Ç°´úµÄ¸ë×ÓÁĞ±í`pigeonList`¡£
-  7. ´´½¨Ò»¸ö¿ÕµÄÏÂÒ»´ú¸ë×ÓÁĞ±í`nextPigeonList`¡£
-  8. ±éÀúµ±Ç°´úµÄ¸ë×ÓÁĞ±í£¬¶ÔÓÚÃ¿Ö»¸ë×Ó£¬»ñÈ¡ÆäID×÷Îª×æÏÈID¡£
-  9. ¹¹½¨²éÑ¯Ìõ¼ş£¬ÒªÇó`gid`µÈÓÚÖ¸¶¨µÄ¸ëÉáID£¬²¢ÇÒ×æÏÈIDµÈÓÚµ±Ç°¸ë×ÓµÄID£¨¼´²éÕÒÆä×Ó´ú¸ë×Ó£©¡£
-  10. Ê¹ÓÃ²éÑ¯Ìõ¼ş²éÑ¯¸ë×ÓÁĞ±í£¬²¢½«½á¹ûÌí¼Óµ½ÏÂÒ»´ú¸ë×ÓÁĞ±í`nextPigeonList`ÖĞ¡£
-  11. ½«ÏÂÒ»´ú¸ë×ÓÁĞ±í`nextPigeonList`Ìí¼Óµ½`pigeonOffspringList`ÖĞ¡£
-  12. ´úÊı`generation`µİÔö¡£
-  13. Ñ­»·»Øµ½²½Öè5£¬¼ÌĞøµü´úÏÂÒ»´ú¸ë×Ó£¬Ö±µ½´ïµ½ÏŞÖÆÊı`limit`»òÕßµ±Ç°´úµÄ¸ë×ÓÁĞ±íÎª¿Õ¡£
-  14. µü´ú½áÊøºó£¬`pigeonOffspringList`ÖĞ´æ´¢ÁËÃ¿Ò»´úµÄ×ÓËï¸ë×ÓÁĞ±í¡£
+  1. ä»è¯·æ±‚å±æ€§ä¸­è·å–`info`å‚æ•°ï¼Œè¯¥å‚æ•°æ˜¯ä¸€ä¸ªMapå¯¹è±¡ï¼ŒåŒ…å«äº†ä¸€ä¸ªåä¸º`gid`çš„Longç±»å‹å€¼ï¼Œè¡¨ç¤ºé¸½èˆçš„IDã€‚
+  2. åˆ›å»ºä¸€ä¸ªç©ºçš„`pigeonOffspringList`ï¼Œç”¨äºå­˜å‚¨æ¯ä¸€ä»£çš„å­å­™é¸½å­åˆ—è¡¨ã€‚
+  3. åˆ›å»ºä¸€ä¸ªåˆå§‹ä»£çš„é¸½å­åˆ—è¡¨ï¼Œå…¶ä¸­åªåŒ…å«ä¸€ä¸ªç¥–å…ˆé¸½å­ï¼Œå°†å…¶æ·»åŠ åˆ°`pigeonOffspringList`ä¸­ã€‚
+  4. è®¾ç½®åˆå§‹ä»£æ•°`generation`ä¸º0ã€‚
+  5. è¿›å…¥è¿­ä»£å¾ªç¯ï¼Œå½“ä»£æ•°å°äºé™åˆ¶æ•°`limit`ä¸”å½“å‰ä»£çš„é¸½å­åˆ—è¡¨ä¸ä¸ºç©ºæ—¶è¿›è¡Œè¿­ä»£ã€‚
+  6. è·å–å½“å‰ä»£çš„é¸½å­åˆ—è¡¨`pigeonList`ã€‚
+  7. åˆ›å»ºä¸€ä¸ªç©ºçš„ä¸‹ä¸€ä»£é¸½å­åˆ—è¡¨`nextPigeonList`ã€‚
+  8. éå†å½“å‰ä»£çš„é¸½å­åˆ—è¡¨ï¼Œå¯¹äºæ¯åªé¸½å­ï¼Œè·å–å…¶IDä½œä¸ºç¥–å…ˆIDã€‚
+  9. æ„å»ºæŸ¥è¯¢æ¡ä»¶ï¼Œè¦æ±‚`gid`ç­‰äºæŒ‡å®šçš„é¸½èˆIDï¼Œå¹¶ä¸”ç¥–å…ˆIDç­‰äºå½“å‰é¸½å­çš„IDï¼ˆå³æŸ¥æ‰¾å…¶å­ä»£é¸½å­ï¼‰ã€‚
+  10. ä½¿ç”¨æŸ¥è¯¢æ¡ä»¶æŸ¥è¯¢é¸½å­åˆ—è¡¨ï¼Œå¹¶å°†ç»“æœæ·»åŠ åˆ°ä¸‹ä¸€ä»£é¸½å­åˆ—è¡¨`nextPigeonList`ä¸­ã€‚
+  11. å°†ä¸‹ä¸€ä»£é¸½å­åˆ—è¡¨`nextPigeonList`æ·»åŠ åˆ°`pigeonOffspringList`ä¸­ã€‚
+  12. ä»£æ•°`generation`é€’å¢ã€‚
+  13. å¾ªç¯å›åˆ°æ­¥éª¤5ï¼Œç»§ç»­è¿­ä»£ä¸‹ä¸€ä»£é¸½å­ï¼Œç›´åˆ°è¾¾åˆ°é™åˆ¶æ•°`limit`æˆ–è€…å½“å‰ä»£çš„é¸½å­åˆ—è¡¨ä¸ºç©ºã€‚
+  14. è¿­ä»£ç»“æŸåï¼Œ`pigeonOffspringList`ä¸­å­˜å‚¨äº†æ¯ä¸€ä»£çš„å­å­™é¸½å­åˆ—è¡¨ã€‚
 
   ```java
   /**
-   * ¸ù¾İid²éÑ¯×Ó´úÁĞ±í
+   * æ ¹æ®idæŸ¥è¯¢å­ä»£åˆ—è¡¨
    */
   @GetMapping("offspring/{id}")
   public Result getOffspringList(@PathVariable Long id, HttpServletRequest request) {
-      //»ñÈ¡gid
+      //è·å–gid
       Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
       Long gid = (Long) info.get("gid");
   
       List<ArrayList<Pigeon>> pigeonOffspringList = new ArrayList<>();
   
-      //×°Ìî×æÏÈ
+      //è£…å¡«ç¥–å…ˆ
       {
           Pigeon pigeon = new Pigeon();
           pigeon.setId(id);
@@ -3469,14 +3569,14 @@ public class AddressController {
       }
       int generation = 0;
   
-      //µü´ú
+      //è¿­ä»£
       while (generation < limit && pigeonOffspringList.get(generation).size() > 0) {
           ArrayList<Pigeon> pigeonList = pigeonOffspringList.get(generation);
           ArrayList<Pigeon> nextPigeonList = new ArrayList<>();
   
           pigeonList.forEach(pigeon -> {
               Long tid = pigeon.getId();
-              //Ìõ¼ş gid = gid and (mid = id or fid = id)
+              //æ¡ä»¶ gid = gid and (mid = id or fid = id)
               LambdaQueryWrapper<Pigeon> wrapper = new LambdaQueryWrapper<Pigeon>()
                       .eq(Pigeon::getGid, gid)
                       .and(w -> w.eq(Pigeon::getMid, tid).or().eq(Pigeon::getFid, tid));
@@ -3488,51 +3588,51 @@ public class AddressController {
           generation++;
       }
   
-      return new Result(pigeonOffspringList, SuccessCode.Success.code, "²éÑ¯³É¹¦");
+      return new Result(pigeonOffspringList, SuccessCode.Success.code, "æŸ¥è¯¢æˆåŠŸ");
   }
   ```
 
   
 
-- ËÑË÷Í¬±²
+- æœç´¢åŒè¾ˆ
 
-  Éè¼ÆË¼Â·£º
+  è®¾è®¡æ€è·¯ï¼š
 
-  1. ´ÓÇëÇóÊôĞÔÖĞ»ñÈ¡`info`²ÎÊı£¬¸Ã²ÎÊıÊÇÒ»¸öMap¶ÔÏó£¬°üº¬ÁËÒ»¸öÃûÎª`gid`µÄLongÀàĞÍÖµ£¬±íÊ¾¸ëÉáµÄID¡£
-  2. ¹¹½¨²éÑ¯Ìõ¼ş£¬ÒªÇó`gid`µÈÓÚÖ¸¶¨µÄ¸ëÉáID£¬²¢ÇÒ`id`µÈÓÚÖ¸¶¨µÄ¸ë×ÓID¡£
-  3. ÉèÖÃÒª²éÑ¯µÄ×Ö¶ÎÎª`fid`ºÍ`mid`¡£
-  4. Ê¹ÓÃ²éÑ¯Ìõ¼ş²éÑ¯¸ë×ÓĞÅÏ¢£¬»ñÈ¡Âú×ãÌõ¼şµÄµ¥¸ö¸ë×Ó¶ÔÏó¡£
-  5. Èç¹ûÃ»ÓĞÕÒµ½Âú×ãÌõ¼şµÄ¸ë×Ó¶ÔÏó£¬Ôò·µ»Ø²éÑ¯³É¹¦µÄ½á¹û¡£
-  6. ´Ó²éÑ¯½á¹ûÖĞ»ñÈ¡¸¸´úID`fid`ºÍÄ¸´úID`mid`¡£
-  7. ´´½¨Ò»¸ö¿ÕµÄ`pigeonMap`£¬ÓÃÓÚ´æ´¢²»Í¬ÀàĞÍµÄÇ×Ôµ¹ØÏµ¸ë×ÓÁĞ±í¡£
-  8. Èç¹û´æÔÚ¸¸´úID`fid`£¬Ôò½øĞĞÍ¬¸¸ÒìÄ¸¹ØÏµµÄ²éÑ¯¡£¹¹½¨²éÑ¯Ìõ¼şÒªÇó`fid`µÈÓÚÖ¸¶¨µÄ¸¸´úID£¬²¢ÇÒ`id`²»µÈÓÚÖ¸¶¨µÄ¸ë×ÓID£¬`gid`µÈÓÚÖ¸¶¨µÄ¸ëÉáID£¬Í¬Ê±Èç¹û´æÔÚÄ¸´úID`mid`£¬ÒªÇó`mid`²»µÈÓÚÖ¸¶¨µÄÄ¸´úID¡£Ö´ĞĞ²éÑ¯£¬²¢½«½á¹û´æ´¢µ½`pigeonMap`µÄ"fatherHalf"¼üÏÂ¡£
-  9. Èç¹û´æÔÚÄ¸´úID`mid`£¬Ôò½øĞĞÍ¬Ä¸Òì¸¸¹ØÏµµÄ²éÑ¯¡£¹¹½¨²éÑ¯Ìõ¼şÒªÇó`mid`µÈÓÚÖ¸¶¨µÄÄ¸´úID£¬²¢ÇÒ`id`²»µÈÓÚÖ¸¶¨µÄ¸ë×ÓID£¬`gid`µÈÓÚÖ¸¶¨µÄ¸ëÉáID£¬Í¬Ê±Èç¹û´æÔÚ¸¸´úID`fid`£¬ÒªÇó`fid`²»µÈÓÚÖ¸¶¨µÄ¸¸´úID¡£Ö´ĞĞ²éÑ¯£¬²¢½«½á¹û´æ´¢µ½`pigeonMap`µÄ"motherHalf"¼üÏÂ¡£
-  10. Èç¹ûÍ¬Ê±´æÔÚ¸¸´úID`fid`ºÍÄ¸´úID`mid`£¬Ôò½øĞĞÍ¬¸¸Í¬Ä¸¹ØÏµµÄ²éÑ¯¡£¹¹½¨²éÑ¯Ìõ¼şÒªÇó`fid`µÈÓÚÖ¸¶¨µÄ¸¸´úID£¬`mid`µÈÓÚÖ¸¶¨µÄÄ¸´úID£¬²¢ÇÒ`id`²»µÈÓÚÖ¸¶¨µÄ¸ë×ÓID£¬`gid`µÈÓÚÖ¸¶¨µÄ¸ëÉáID¡£Ö´ĞĞ²éÑ¯£¬²¢½«½á¹û´æ´¢µ½`pigeonMap`µÄ"full"¼üÏÂ¡£
-  11. ×îÖÕ£¬`pigeonMap`ÖĞ´æ´¢ÁË²»Í¬ÀàĞÍµÄÇ×Ôµ¹ØÏµ¸ë×ÓÁĞ±í¡£
+  1. ä»è¯·æ±‚å±æ€§ä¸­è·å–`info`å‚æ•°ï¼Œè¯¥å‚æ•°æ˜¯ä¸€ä¸ªMapå¯¹è±¡ï¼ŒåŒ…å«äº†ä¸€ä¸ªåä¸º`gid`çš„Longç±»å‹å€¼ï¼Œè¡¨ç¤ºé¸½èˆçš„IDã€‚
+  2. æ„å»ºæŸ¥è¯¢æ¡ä»¶ï¼Œè¦æ±‚`gid`ç­‰äºæŒ‡å®šçš„é¸½èˆIDï¼Œå¹¶ä¸”`id`ç­‰äºæŒ‡å®šçš„é¸½å­IDã€‚
+  3. è®¾ç½®è¦æŸ¥è¯¢çš„å­—æ®µä¸º`fid`å’Œ`mid`ã€‚
+  4. ä½¿ç”¨æŸ¥è¯¢æ¡ä»¶æŸ¥è¯¢é¸½å­ä¿¡æ¯ï¼Œè·å–æ»¡è¶³æ¡ä»¶çš„å•ä¸ªé¸½å­å¯¹è±¡ã€‚
+  5. å¦‚æœæ²¡æœ‰æ‰¾åˆ°æ»¡è¶³æ¡ä»¶çš„é¸½å­å¯¹è±¡ï¼Œåˆ™è¿”å›æŸ¥è¯¢æˆåŠŸçš„ç»“æœã€‚
+  6. ä»æŸ¥è¯¢ç»“æœä¸­è·å–çˆ¶ä»£ID`fid`å’Œæ¯ä»£ID`mid`ã€‚
+  7. åˆ›å»ºä¸€ä¸ªç©ºçš„`pigeonMap`ï¼Œç”¨äºå­˜å‚¨ä¸åŒç±»å‹çš„äº²ç¼˜å…³ç³»é¸½å­åˆ—è¡¨ã€‚
+  8. å¦‚æœå­˜åœ¨çˆ¶ä»£ID`fid`ï¼Œåˆ™è¿›è¡ŒåŒçˆ¶å¼‚æ¯å…³ç³»çš„æŸ¥è¯¢ã€‚æ„å»ºæŸ¥è¯¢æ¡ä»¶è¦æ±‚`fid`ç­‰äºæŒ‡å®šçš„çˆ¶ä»£IDï¼Œå¹¶ä¸”`id`ä¸ç­‰äºæŒ‡å®šçš„é¸½å­IDï¼Œ`gid`ç­‰äºæŒ‡å®šçš„é¸½èˆIDï¼ŒåŒæ—¶å¦‚æœå­˜åœ¨æ¯ä»£ID`mid`ï¼Œè¦æ±‚`mid`ä¸ç­‰äºæŒ‡å®šçš„æ¯ä»£IDã€‚æ‰§è¡ŒæŸ¥è¯¢ï¼Œå¹¶å°†ç»“æœå­˜å‚¨åˆ°`pigeonMap`çš„"fatherHalf"é”®ä¸‹ã€‚
+  9. å¦‚æœå­˜åœ¨æ¯ä»£ID`mid`ï¼Œåˆ™è¿›è¡ŒåŒæ¯å¼‚çˆ¶å…³ç³»çš„æŸ¥è¯¢ã€‚æ„å»ºæŸ¥è¯¢æ¡ä»¶è¦æ±‚`mid`ç­‰äºæŒ‡å®šçš„æ¯ä»£IDï¼Œå¹¶ä¸”`id`ä¸ç­‰äºæŒ‡å®šçš„é¸½å­IDï¼Œ`gid`ç­‰äºæŒ‡å®šçš„é¸½èˆIDï¼ŒåŒæ—¶å¦‚æœå­˜åœ¨çˆ¶ä»£ID`fid`ï¼Œè¦æ±‚`fid`ä¸ç­‰äºæŒ‡å®šçš„çˆ¶ä»£IDã€‚æ‰§è¡ŒæŸ¥è¯¢ï¼Œå¹¶å°†ç»“æœå­˜å‚¨åˆ°`pigeonMap`çš„"motherHalf"é”®ä¸‹ã€‚
+  10. å¦‚æœåŒæ—¶å­˜åœ¨çˆ¶ä»£ID`fid`å’Œæ¯ä»£ID`mid`ï¼Œåˆ™è¿›è¡ŒåŒçˆ¶åŒæ¯å…³ç³»çš„æŸ¥è¯¢ã€‚æ„å»ºæŸ¥è¯¢æ¡ä»¶è¦æ±‚`fid`ç­‰äºæŒ‡å®šçš„çˆ¶ä»£IDï¼Œ`mid`ç­‰äºæŒ‡å®šçš„æ¯ä»£IDï¼Œå¹¶ä¸”`id`ä¸ç­‰äºæŒ‡å®šçš„é¸½å­IDï¼Œ`gid`ç­‰äºæŒ‡å®šçš„é¸½èˆIDã€‚æ‰§è¡ŒæŸ¥è¯¢ï¼Œå¹¶å°†ç»“æœå­˜å‚¨åˆ°`pigeonMap`çš„"full"é”®ä¸‹ã€‚
+  11. æœ€ç»ˆï¼Œ`pigeonMap`ä¸­å­˜å‚¨äº†ä¸åŒç±»å‹çš„äº²ç¼˜å…³ç³»é¸½å­åˆ—è¡¨ã€‚
 
   ```java
   /**
-   * ¸ù¾İidËÑË÷Í¬±²
+   * æ ¹æ®idæœç´¢åŒè¾ˆ
    */
   @GetMapping("peer/{id}")
   public Result getPeerList(@PathVariable Long id, HttpServletRequest request) {
-      //»ñÈ¡gid
+      //è·å–gid
       Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
       Long gid = (Long) info.get("gid");
   
-      //¼ìË÷×Ô¼º»ñÈ¡fidºÍmid
-      //Ìõ¼ş id and gid
+      //æ£€ç´¢è‡ªå·±è·å–fidå’Œmid
+      //æ¡ä»¶ id and gid
       QueryWrapper<Pigeon> wrapper = new QueryWrapper<>();
       wrapper.eq("gid", gid).eq("id", id);
   
-      //×Ö¶Î
+      //å­—æ®µ
       wrapper.select("fid", "mid");
   
       Pigeon pigeon = pigeonService.getOne(wrapper);
   
-      //Ã»ÓĞÕÒµ½¸¸´ú
+      //æ²¡æœ‰æ‰¾åˆ°çˆ¶ä»£
       if (pigeon == null) {
-          return new Result(SuccessCode.Success.code, "²éÑ¯³É¹¦");
+          return new Result(SuccessCode.Success.code, "æŸ¥è¯¢æˆåŠŸ");
       }
   
   
@@ -3541,9 +3641,9 @@ public class AddressController {
   
       Map<String, List<Pigeon>> pigeonMap = new HashMap<>();
   
-      //Í¬¸¸ÒìÄ¸
+      //åŒçˆ¶å¼‚æ¯
       if (fid != null) {
-          //Ìõ¼ş fid = fid and id != id and gid = gid and mid != mid
+          //æ¡ä»¶ fid = fid and id != id and gid = gid and mid != mid
           QueryWrapper<Pigeon> fatherHalfWrapper = new QueryWrapper<>();
           fatherHalfWrapper.eq("fid", fid)
                   .eq("gid", gid)
@@ -3553,9 +3653,9 @@ public class AddressController {
           pigeonMap.put("fatherHalf", list);
       }
   
-      //Í¬Ä¸Òì¸¸
+      //åŒæ¯å¼‚çˆ¶
       if (mid != null) {
-          //Ìõ¼ş mid = mid and id != id and gid = gid and fid != fid
+          //æ¡ä»¶ mid = mid and id != id and gid = gid and fid != fid
           QueryWrapper<Pigeon> motherHalfWrapper = new QueryWrapper<>();
           motherHalfWrapper.eq("mid", mid)
                   .eq("gid", gid)
@@ -3565,9 +3665,9 @@ public class AddressController {
           pigeonMap.put("motherHalf", list);
       }
   
-      //Í¬¸¸Í¬Ä¸
+      //åŒçˆ¶åŒæ¯
       if (fid != null && mid != null) {
-          //Ìõ¼ş fid = fid and id != id and gid = gid and mid = mid
+          //æ¡ä»¶ fid = fid and id != id and gid = gid and mid = mid
           QueryWrapper<Pigeon> fullWrapper = new QueryWrapper<>();
           fullWrapper.eq("fid", fid)
                   .eq("gid", gid)
@@ -3577,74 +3677,74 @@ public class AddressController {
           pigeonMap.put("full", list);
       }
   
-      return new Result(pigeonMap, SuccessCode.Success.code, "²éÑ¯³É¹¦");
+      return new Result(pigeonMap, SuccessCode.Success.code, "æŸ¥è¯¢æˆåŠŸ");
   }
   ```
 
-##### 2.2.9.13 Ê×Ò³ĞÅÏ¢·ÖÎö·şÎñ
+##### 2.2.9.13 é¦–é¡µä¿¡æ¯åˆ†ææœåŠ¡
 
-ÁĞ¾ÙÒ»Ğ©Âß¼­½ÏÎª¸´ÔÓµÄ½Ó¿Ú£º
+åˆ—ä¸¾ä¸€äº›é€»è¾‘è¾ƒä¸ºå¤æ‚çš„æ¥å£ï¼š
 
-- »ñÈ¡´´½¨Ê±¼ä±ä»¯Êı¾İ
+- è·å–åˆ›å»ºæ—¶é—´å˜åŒ–æ•°æ®
 
-  Éè¼ÆË¼Â·£º
+  è®¾è®¡æ€è·¯ï¼š
 
-  1. ´ÓÇëÇóÊôĞÔÖĞ»ñÈ¡`info`²ÎÊı£¬¸Ã²ÎÊıÊÇÒ»¸öMap¶ÔÏó£¬°üº¬ÁËÒ»¸öÃûÎª`gid`µÄLongÀàĞÍÖµ£¬±íÊ¾¸ëÉáµÄID¡£
-  2. ¹¹½¨²éÑ¯Ìõ¼ş£¬ÒªÇó`gid`µÈÓÚÖ¸¶¨µÄ¸ëÉáID¡£
-  3. ÉèÖÃÒª²éÑ¯µÄ×Ö¶ÎÎª`id`¡£
-  4. Ê¹ÓÃ²éÑ¯Ìõ¼ş²éÑ¯¸ë×ÓĞÅÏ¢£¬»ñÈ¡Âú×ãÌõ¼şµÄ¸ë×ÓÁĞ±í¡£
-  5. ´´½¨Ò»¸ö¿ÕµÄ`countMap`£¬ÓÃÓÚ´æ´¢¸ë×ÓÊıÁ¿µÄ¹şÏ£¼ÆÊı¡£
-  6. »ñÈ¡Ò»¸öÔÂÇ°µÄÈÕÆÚ`recent`£¬Í¨¹ıµ±Ç°ÈÕÆÚ¼õÈ¥Ö¸¶¨µÄÌìÊı`createRecent`µÃµ½¡£
-  7. ¶ÔÓÚÃ¿¸ö¸ë×Ó¶ÔÏó£¬¸ù¾İÆäID²éÑ¯¶ÔÓ¦µÄ¸ë×ÓĞÅÏ¢¡£
-  8. »ñÈ¡¸ë×ÓĞÅÏ¢ÖĞµÄ´´½¨Ê±¼ä`createTime`£¬ÅĞ¶ÏÆäÊÇ·ñÔÚ×î½üÒ»¸öÔÂÖ®ÄÚ¡£
-  9. Èç¹û¸ë×Ó´´½¨Ê±¼äÔÚ×î½üÒ»¸öÔÂÖ®ÄÚ£¬½«Æä¼ÆÊı¼Ó1£¬²¢´æ´¢µ½`countMap`ÖĞ¶ÔÓ¦ÈÕÆÚµÄ¼ÆÊıÖµÉÏ¡£
-  10. Èç¹û¸ë×Ó´´½¨Ê±¼ä²»ÔÚ×î½üÒ»¸öÔÂÖ®ÄÚ£¬²»½øĞĞ¼ÆÊı¡£
+  1. ä»è¯·æ±‚å±æ€§ä¸­è·å–`info`å‚æ•°ï¼Œè¯¥å‚æ•°æ˜¯ä¸€ä¸ªMapå¯¹è±¡ï¼ŒåŒ…å«äº†ä¸€ä¸ªåä¸º`gid`çš„Longç±»å‹å€¼ï¼Œè¡¨ç¤ºé¸½èˆçš„IDã€‚
+  2. æ„å»ºæŸ¥è¯¢æ¡ä»¶ï¼Œè¦æ±‚`gid`ç­‰äºæŒ‡å®šçš„é¸½èˆIDã€‚
+  3. è®¾ç½®è¦æŸ¥è¯¢çš„å­—æ®µä¸º`id`ã€‚
+  4. ä½¿ç”¨æŸ¥è¯¢æ¡ä»¶æŸ¥è¯¢é¸½å­ä¿¡æ¯ï¼Œè·å–æ»¡è¶³æ¡ä»¶çš„é¸½å­åˆ—è¡¨ã€‚
+  5. åˆ›å»ºä¸€ä¸ªç©ºçš„`countMap`ï¼Œç”¨äºå­˜å‚¨é¸½å­æ•°é‡çš„å“ˆå¸Œè®¡æ•°ã€‚
+  6. è·å–ä¸€ä¸ªæœˆå‰çš„æ—¥æœŸ`recent`ï¼Œé€šè¿‡å½“å‰æ—¥æœŸå‡å»æŒ‡å®šçš„å¤©æ•°`createRecent`å¾—åˆ°ã€‚
+  7. å¯¹äºæ¯ä¸ªé¸½å­å¯¹è±¡ï¼Œæ ¹æ®å…¶IDæŸ¥è¯¢å¯¹åº”çš„é¸½å­ä¿¡æ¯ã€‚
+  8. è·å–é¸½å­ä¿¡æ¯ä¸­çš„åˆ›å»ºæ—¶é—´`createTime`ï¼Œåˆ¤æ–­å…¶æ˜¯å¦åœ¨æœ€è¿‘ä¸€ä¸ªæœˆä¹‹å†…ã€‚
+  9. å¦‚æœé¸½å­åˆ›å»ºæ—¶é—´åœ¨æœ€è¿‘ä¸€ä¸ªæœˆä¹‹å†…ï¼Œå°†å…¶è®¡æ•°åŠ 1ï¼Œå¹¶å­˜å‚¨åˆ°`countMap`ä¸­å¯¹åº”æ—¥æœŸçš„è®¡æ•°å€¼ä¸Šã€‚
+  10. å¦‚æœé¸½å­åˆ›å»ºæ—¶é—´ä¸åœ¨æœ€è¿‘ä¸€ä¸ªæœˆä¹‹å†…ï¼Œä¸è¿›è¡Œè®¡æ•°ã€‚
 
   ```java
   /**
-   * »ñÈ¡´´½¨Ê±¼ä±ä»¯Êı¾İ
-   * ¸ù¾İÉè¶¨µÄ×î½üÔÂÊı»ñÈ¡Êı¾İ
+   * è·å–åˆ›å»ºæ—¶é—´å˜åŒ–æ•°æ®
+   * æ ¹æ®è®¾å®šçš„æœ€è¿‘æœˆæ•°è·å–æ•°æ®
    */
   @GetMapping("create")
   public Result getCreate(HttpServletRequest request) {
-      //»ñÈ¡gid
+      //è·å–gid
       Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
       Long gid = (Long) info.get("gid");
   
-      //¼ìË÷»ñÈ¡ËùÓĞid
+      //æ£€ç´¢è·å–æ‰€æœ‰id
       QueryWrapper<Pigeon> pigeonWrapper = new QueryWrapper<>();
       pigeonWrapper.eq("gid", gid);
       pigeonWrapper.select("id");
       List<Pigeon> pigeonList = pigeonService.list(pigeonWrapper);
   
-      //¹şÏ£¼ÆÊımap
+      //å“ˆå¸Œè®¡æ•°map
       Map<String, Integer> countMap = new HashMap<>();
-      //»ñÈ¡Ò»¸öÔÂÇ°Ê±¼ä
+      //è·å–ä¸€ä¸ªæœˆå‰æ—¶é—´
       LocalDate recent = LocalDate.now().minusDays(createRecent);
       pigeonList.forEach(pigeon -> {
-          //¸ù¾İid»ñÈ¡Ê±¼ä
+          //æ ¹æ®idè·å–æ—¶é—´
           Long id = pigeon.getId();
           QueryWrapper<PigeonInfo> wrapper = new QueryWrapper<>();
           wrapper.eq("pid", id)
                   .select("create_time");
           PigeonInfo pigeonInfo = pigeonInfoService.getOne(wrapper);
-          //ÅĞ¶ÏÊ±¼äÊÇ·ñÕıÈ·
+          //åˆ¤æ–­æ—¶é—´æ˜¯å¦æ­£ç¡®
           LocalDate createTime = pigeonInfo.getCreateTime();
           if (createTime.isAfter(recent)) {
-              //Èç¹û´æÔÚ
+              //å¦‚æœå­˜åœ¨
               countMap.computeIfPresent(createTime.toString(), (k, v) -> v + 1);
-              //Èç¹û²»´æÔÚ
+              //å¦‚æœä¸å­˜åœ¨
               countMap.computeIfAbsent(createTime.toString(), k -> 1);
           }
       });
   
-      return new Result(countMap, SuccessCode.Success.code, "²éÑ¯³É¹¦");
+      return new Result(countMap, SuccessCode.Success.code, "æŸ¥è¯¢æˆåŠŸ");
   }
   ```
 
-- »ñÈ¡É¾³ıÊ±¼ä±ä»¯Êı¾İ
+- è·å–åˆ é™¤æ—¶é—´å˜åŒ–æ•°æ®
 
-  sqlÓï¾ä£º
+  sqlè¯­å¥ï¼š
 
   ```sql
   select DATE(time), count(0)
@@ -3656,19 +3756,19 @@ public class AddressController {
 
   ```java
   /**
-   * »ñÈ¡É¾³ıÊ±¼ä±ä»¯Êı¾İ
-   * ¸ù¾İÉè¶¨µÄ×î½üÔÂÊı»ñÈ¡Êı¾İ
+   * è·å–åˆ é™¤æ—¶é—´å˜åŒ–æ•°æ®
+   * æ ¹æ®è®¾å®šçš„æœ€è¿‘æœˆæ•°è·å–æ•°æ®
    */
   @GetMapping("delete")
   public Result getDelete(HttpServletRequest request) {
-  »ñÈ¡gid
+  è·å–gid
       Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
       Long gid = (Long) info.get("gid");
   
-  »ñÈ¡×î½üÊ±¼ä
+  è·å–æœ€è¿‘æ—¶é—´
       LocalDateTime recent = LocalDateTime.now().minusDays(deleteRecent);
   
-      //Ìõ¼şÓï¾ä
+      //æ¡ä»¶è¯­å¥
       //select DATE(time), count(0)
       //from t_oplog
       //where gid and content = 2 and time > recent
@@ -3683,13 +3783,13 @@ public class AddressController {
               .select("DATE(time) time", "count(0) count");
   
       List<Map<String, Object>> countMap = oplogService.listMaps(wrapper);
-      return new Result(countMap, SuccessCode.Success.code, "²éÑ¯³É¹¦");
+      return new Result(countMap, SuccessCode.Success.code, "æŸ¥è¯¢æˆåŠŸ");
   }
   ```
 
-- ¸ù¾İ×î½üÈÕÆÚ»ñÈ¡²Ù×÷µÄÊı¾İ±ä»¯
+- æ ¹æ®æœ€è¿‘æ—¥æœŸè·å–æ“ä½œçš„æ•°æ®å˜åŒ–
 
-  sqlÓï¾ä£º
+  sqlè¯­å¥ï¼š
 
   ```sql
   select DATE(time), count(0), content
@@ -3702,15 +3802,15 @@ public class AddressController {
 
   ```java
   /**
-   * ¸ù¾İ×î½üÈÕÆÚ»ñÈ¡²Ù×÷µÄÊı¾İ±ä»¯
+   * æ ¹æ®æœ€è¿‘æ—¥æœŸè·å–æ“ä½œçš„æ•°æ®å˜åŒ–
    */
   @GetMapping("oplog/line")
   public Result getOplogLine(HttpServletRequest request) {
-      //»ñÈ¡gid
+      //è·å–gid
       Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
       Long gid = (Long) info.get("gid");
   
-      //»ñÈ¡×î½üÊ±¼ä
+      //è·å–æœ€è¿‘æ—¶é—´
       LocalDateTime recent = LocalDateTime.now().minusDays(oplogRecent);
   
       //select DATE(time), count(0), content
@@ -3727,13 +3827,13 @@ public class AddressController {
               .orderByAsc("time");
       List<Map<String, Object>> countMap = oplogService.listMaps(wrapper);
   
-      return new Result(countMap, SuccessCode.Success.code, "²éÑ¯³É¹¦");
+      return new Result(countMap, SuccessCode.Success.code, "æŸ¥è¯¢æˆåŠŸ");
   }
   ```
 
-- Í³¼ÆµÇÂ¼ÈËÔ±Êı¾İ
+- ç»Ÿè®¡ç™»å½•äººå‘˜æ•°æ®
 
-  sqlÓï¾ä£º
+  sqlè¯­å¥ï¼š
 
   ```sql
   select account, count(0), DATE(time)
@@ -3746,15 +3846,15 @@ public class AddressController {
 
   ```java
   /**
-   * Í³¼ÆµÇÂ¼ÈËÔ±Êı¾İ
+   * ç»Ÿè®¡ç™»å½•äººå‘˜æ•°æ®
    */
   @GetMapping("login/count")
   public Result getLoginCount(HttpServletRequest request) {
-      //»ñÈ¡gid
+      //è·å–gid
       Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
       Long gid = (Long) info.get("gid");
   
-      //»ñÈ¡×î½üÊ±¼ä
+      //è·å–æœ€è¿‘æ—¶é—´
       LocalDateTime recent = LocalDateTime.now().minusDays(oplogRecent);
   
       //select account, count(0), DATE(time)
@@ -3772,36 +3872,36 @@ public class AddressController {
   
       List<Map<String, Object>> countMap = loginMsgService.listMaps(wrapper);
   
-      return new Result(countMap, SuccessCode.Success.code, "²éÑ¯³É¹¦");
+      return new Result(countMap, SuccessCode.Success.code, "æŸ¥è¯¢æˆåŠŸ");
   }
   ```
 
-- »ñÈ¡×éÔ±ÔÚÏßÈËÊı
+- è·å–ç»„å‘˜åœ¨çº¿äººæ•°
 
-  Éè¼ÆË¼Â·£¨redis²Ù×÷¼û **2.2.6 ÏµÍ³¹¤¾ßÀà utils - redis°×Ãûµ¥¹¤¾ß**£©£º
+  è®¾è®¡æ€è·¯ï¼ˆredisæ“ä½œè§ **2.2.6 ç³»ç»Ÿå·¥å…·ç±» utils - redisç™½åå•å·¥å…·**ï¼‰ï¼š
 
-  1. ´ÓÇëÇóÊôĞÔÖĞ»ñÈ¡`info`²ÎÊı£¬¸Ã²ÎÊıÊÇÒ»¸öMap¶ÔÏó£¬°üº¬ÁËÒ»¸öÃûÎª`gid`µÄLongÀàĞÍÖµ£¬±íÊ¾¸ëÉáµÄID¡£
-  2. ¹¹½¨²éÑ¯Ìõ¼ş£¬ÒªÇó`gid`µÈÓÚÖ¸¶¨µÄ¸ëÉáID¡£
-  3. ÉèÖÃ²éÑ¯½á¹ûÒª·µ»ØµÄ×Ö¶Î£¬°üÀ¨`id`×Ö¶Î£¬Ê¹ÓÃ`select`·½·¨Ö¸¶¨²éÑ¯×Ö¶Î¡£
-  4. Ê¹ÓÃ`list`·½·¨Ö´ĞĞ²éÑ¯£¬·µ»Ø½á¹ûÎªÒ»¸öList<User>£¬Ã¿¸öUser¶ÔÏó±íÊ¾Ò»¸ö×éÄÚÈËÔ±¡£
-  5. ´´½¨Ò»¸öAtomicLongÀàĞÍµÄ±äÁ¿`count`£¬ÓÃÓÚ¼ÆÊı¡£
-  6. ±éÀú×éÄÚÈËÔ±ÁĞ±í`userList`£¬¶ÔÃ¿¸öÈËÔ±Ö´ĞĞÒÔÏÂ²Ù×÷£º
-     - »ñÈ¡ÈËÔ±µÄID¡£
-     - µ÷ÓÃ`whitelistUtil.getActive`·½·¨£¬´«ÈëRedisÃüÃû¿Õ¼äºÍID×÷Îª²ÎÊı£¬»ñÈ¡¸ÃÈËÔ±µÄ»î¶¯Êı¡£
-     - ½«»î¶¯ÊıÀÛ¼Óµ½`count`±äÁ¿ÖĞ¡£
-  7. Ñ­»·½áÊøºó£¬`count`±äÁ¿ÖĞ´æ´¢ÁË×éÄÚËùÓĞÈËÔ±µÄ»î¶¯×ÜÊı¡£
+  1. ä»è¯·æ±‚å±æ€§ä¸­è·å–`info`å‚æ•°ï¼Œè¯¥å‚æ•°æ˜¯ä¸€ä¸ªMapå¯¹è±¡ï¼ŒåŒ…å«äº†ä¸€ä¸ªåä¸º`gid`çš„Longç±»å‹å€¼ï¼Œè¡¨ç¤ºé¸½èˆçš„IDã€‚
+  2. æ„å»ºæŸ¥è¯¢æ¡ä»¶ï¼Œè¦æ±‚`gid`ç­‰äºæŒ‡å®šçš„é¸½èˆIDã€‚
+  3. è®¾ç½®æŸ¥è¯¢ç»“æœè¦è¿”å›çš„å­—æ®µï¼ŒåŒ…æ‹¬`id`å­—æ®µï¼Œä½¿ç”¨`select`æ–¹æ³•æŒ‡å®šæŸ¥è¯¢å­—æ®µã€‚
+  4. ä½¿ç”¨`list`æ–¹æ³•æ‰§è¡ŒæŸ¥è¯¢ï¼Œè¿”å›ç»“æœä¸ºä¸€ä¸ªList<User>ï¼Œæ¯ä¸ªUserå¯¹è±¡è¡¨ç¤ºä¸€ä¸ªç»„å†…äººå‘˜ã€‚
+  5. åˆ›å»ºä¸€ä¸ªAtomicLongç±»å‹çš„å˜é‡`count`ï¼Œç”¨äºè®¡æ•°ã€‚
+  6. éå†ç»„å†…äººå‘˜åˆ—è¡¨`userList`ï¼Œå¯¹æ¯ä¸ªäººå‘˜æ‰§è¡Œä»¥ä¸‹æ“ä½œï¼š
+     - è·å–äººå‘˜çš„IDã€‚
+     - è°ƒç”¨`whitelistUtil.getActive`æ–¹æ³•ï¼Œä¼ å…¥Rediså‘½åç©ºé—´å’ŒIDä½œä¸ºå‚æ•°ï¼Œè·å–è¯¥äººå‘˜çš„æ´»åŠ¨æ•°ã€‚
+     - å°†æ´»åŠ¨æ•°ç´¯åŠ åˆ°`count`å˜é‡ä¸­ã€‚
+  7. å¾ªç¯ç»“æŸåï¼Œ`count`å˜é‡ä¸­å­˜å‚¨äº†ç»„å†…æ‰€æœ‰äººå‘˜çš„æ´»åŠ¨æ€»æ•°ã€‚
 
   ```java
   /**
-   * »ñÈ¡×éÔ±ÔÚÏßÈËÊı
+   * è·å–ç»„å‘˜åœ¨çº¿äººæ•°
    */
   @GetMapping("online/group")
   public Result getOnlineGroup(HttpServletRequest request) {
-      //»ñÈ¡gid
+      //è·å–gid
       Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
       Long gid = (Long) info.get("gid");
   
-      //¸ù¾İgid»ñÈ¡×éÄÚÈËÔ±µÄid
+      //æ ¹æ®gidè·å–ç»„å†…äººå‘˜çš„id
       QueryWrapper<User> wrapper = new QueryWrapper<>();
       wrapper.select("id")
               .eq("gid", gid);
@@ -3816,21 +3916,21 @@ public class AddressController {
           count.addAndGet(active);
       });
   
-      return new Result(count, SuccessCode.Success.code, "²éÑ¯³É¹¦");
+      return new Result(count, SuccessCode.Success.code, "æŸ¥è¯¢æˆåŠŸ");
   }
   ```
 
-##### 2.2.9.14 ÏêÏ¸Êı¾İ·ÖÎö·şÎñ
+##### 2.2.9.14 è¯¦ç»†æ•°æ®åˆ†ææœåŠ¡
 
-ÁĞ¾Ù²»Í¬ÖÖÀàµÄ·şÎñ½Ó¿Ú£º
+åˆ—ä¸¾ä¸åŒç§ç±»çš„æœåŠ¡æ¥å£ï¼š
 
-- »ñÈ¡ÓÃ»§¸ë×ÓÊı¾İÖĞµÄ´ÆĞÛÊıÁ¿
+- è·å–ç”¨æˆ·é¸½å­æ•°æ®ä¸­çš„é›Œé›„æ•°é‡
 
-  sqlÓï¾ä£º
+  sqlè¯­å¥ï¼š
 
-  1. ¹¹½¨²éÑ¯Ìõ¼ş£¬ÒªÇó`gid`µÈÓÚÖ¸¶¨µÄ¸ëÉáID£¬²¢ÇÒ`sex`×Ö¶Î²»Îª¿Õ¡£
-  2. ÉèÖÃ²éÑ¯½á¹ûÒª·µ»ØµÄ×Ö¶Î£¬°üÀ¨`count(sex)`ºÍ`sex`£¬Ê¹ÓÃ`select`·½·¨Ö¸¶¨²éÑ¯×Ö¶Î¡£
-  3. Ê¹ÓÃ`groupBy`·½·¨½«½á¹û°´ÕÕ`sex`×Ö¶Î½øĞĞ·Ö×é¡£
+  1. æ„å»ºæŸ¥è¯¢æ¡ä»¶ï¼Œè¦æ±‚`gid`ç­‰äºæŒ‡å®šçš„é¸½èˆIDï¼Œå¹¶ä¸”`sex`å­—æ®µä¸ä¸ºç©ºã€‚
+  2. è®¾ç½®æŸ¥è¯¢ç»“æœè¦è¿”å›çš„å­—æ®µï¼ŒåŒ…æ‹¬`count(sex)`å’Œ`sex`ï¼Œä½¿ç”¨`select`æ–¹æ³•æŒ‡å®šæŸ¥è¯¢å­—æ®µã€‚
+  3. ä½¿ç”¨`groupBy`æ–¹æ³•å°†ç»“æœæŒ‰ç…§`sex`å­—æ®µè¿›è¡Œåˆ†ç»„ã€‚
 
   ```sql
   select count(sex), sex
@@ -3842,11 +3942,11 @@ public class AddressController {
 
   ```java
   /**
-   * ¸ù¾İgid»ñÈ¡ÓÃ»§¸ë×ÓÊı¾İÖĞµÄ´ÆĞÛÊıÁ¿
+   * æ ¹æ®gidè·å–ç”¨æˆ·é¸½å­æ•°æ®ä¸­çš„é›Œé›„æ•°é‡
    */
   @GetMapping("sex")
   public Result getSexData(HttpServletRequest request) {
-      //»ñÈ¡gid
+      //è·å–gid
       Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
       Long gid = (Long) info.get("gid");
   
@@ -3863,18 +3963,18 @@ public class AddressController {
   
       List<Map<String, Object>> maps = pigeonService.listMaps(wrapper);
   
-      return new Result(maps, SuccessCode.Success.code, "²éÑ¯³É¹¦");
+      return new Result(maps, SuccessCode.Success.code, "æŸ¥è¯¢æˆåŠŸ");
   }
   ```
 
-- »ñÈ¡ÑÛÉ«Í³¼ÆÊı¾İ
+- è·å–çœ¼è‰²ç»Ÿè®¡æ•°æ®
 
-  sqlÓï¾ä£º
+  sqlè¯­å¥ï¼š
 
-  1. ¹¹½¨²éÑ¯Ìõ¼ş£¬ÒªÇó`gid`µÈÓÚÖ¸¶¨µÄ¸ëÉáID£¬²¢ÇÒ`yan`×Ö¶Î²»Îª¿Õ¡£
-  2. ÉèÖÃ²éÑ¯½á¹ûÒª·µ»ØµÄ×Ö¶Î£¬°üÀ¨`count(yan)`ºÍ`yan`£¬Ê¹ÓÃ`select`·½·¨Ö¸¶¨²éÑ¯×Ö¶Î¡£
-  3. Ê¹ÓÃ`groupBy`·½·¨½«½á¹û°´ÕÕ`yan`×Ö¶Î½øĞĞ·Ö×é¡£
-  4. Ê¹ÓÃ`orderByAsc`·½·¨½«½á¹û°´ÕÕ`count(yan)`½øĞĞÉıĞòÅÅĞò¡£
+  1. æ„å»ºæŸ¥è¯¢æ¡ä»¶ï¼Œè¦æ±‚`gid`ç­‰äºæŒ‡å®šçš„é¸½èˆIDï¼Œå¹¶ä¸”`yan`å­—æ®µä¸ä¸ºç©ºã€‚
+  2. è®¾ç½®æŸ¥è¯¢ç»“æœè¦è¿”å›çš„å­—æ®µï¼ŒåŒ…æ‹¬`count(yan)`å’Œ`yan`ï¼Œä½¿ç”¨`select`æ–¹æ³•æŒ‡å®šæŸ¥è¯¢å­—æ®µã€‚
+  3. ä½¿ç”¨`groupBy`æ–¹æ³•å°†ç»“æœæŒ‰ç…§`yan`å­—æ®µè¿›è¡Œåˆ†ç»„ã€‚
+  4. ä½¿ç”¨`orderByAsc`æ–¹æ³•å°†ç»“æœæŒ‰ç…§`count(yan)`è¿›è¡Œå‡åºæ’åºã€‚
 
   ```sql
   select count(yan), yan
@@ -3887,12 +3987,12 @@ public class AddressController {
 
   ```java
   /**
-   * ¸ù¾İgid»ñÈ¡ÑÛÉ«Í³¼ÆÊı¾İ
-   * ²¢ÅÅĞò·µ»Ø
+   * æ ¹æ®gidè·å–çœ¼è‰²ç»Ÿè®¡æ•°æ®
+   * å¹¶æ’åºè¿”å›
    */
   @GetMapping("yan")
   public Result getYanData(HttpServletRequest request) {
-      //»ñÈ¡gid
+      //è·å–gid
       Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
       Long gid = (Long) info.get("gid");
   
@@ -3911,37 +4011,37 @@ public class AddressController {
   
       List<Map<String, Object>> maps = pigeonService.listMaps(wrapper);
   
-      return new Result(maps, SuccessCode.Success.code, "²éÑ¯³É¹¦");
+      return new Result(maps, SuccessCode.Success.code, "æŸ¥è¯¢æˆåŠŸ");
   }
   ```
 
-- »ñÈ¡×÷ÓıÕßµÄÍ³¼ÆÊı¾İ
+- è·å–ä½œè‚²è€…çš„ç»Ÿè®¡æ•°æ®
 
-  Éè¼ÆË¼Â·£º
+  è®¾è®¡æ€è·¯ï¼š
 
-  1. ¸ù¾İ¸ø¶¨µÄ¸ëÉáID£¨gid£©£¬Ê¹ÓÃ²éÑ¯Ìõ¼ş¹¹½¨Æ÷£¨QueryWrapper£©ÉèÖÃ²éÑ¯Ìõ¼ş£¬ÒªÇó`gid`×Ö¶ÎµÈÓÚÖ¸¶¨µÄ¸ëÉáID¡£
-  2. ÉèÖÃ²éÑ¯½á¹ûÒª·µ»ØµÄ×Ö¶Î£¬°üÀ¨`id`£¬Ê¹ÓÃ`select`·½·¨Ö¸¶¨²éÑ¯×Ö¶Î¡£
-  3. Ö´ĞĞ²éÑ¯£¬»ñÈ¡¸ë×ÓÁĞ±í£¨pigeonList£©¡£
-  4. ´´½¨Ò»¸ö¿ÕµÄ¹şÏ£Ó³Éä£¨HashMap£©`countMap`£¬ÓÃÓÚ´æ´¢Í³¼Æ½á¹û£¬ÆäÖĞ¼üÎªÀ´Ô´£¨source£©£¬ÖµÎª¸ë×ÓÊıÁ¿¡£
-  5. ±éÀú¸ë×ÓÁĞ±í£¬¶ÔÓÚÃ¿¸ö¸ë×Ó£¬»ñÈ¡ÆäID£¨id£©¡£
-  6. Ê¹ÓÃ²éÑ¯Ìõ¼ş¹¹½¨Æ÷£¨QueryWrapper£©ÉèÖÃ²éÑ¯Ìõ¼ş£¬ÒªÇó`pid`×Ö¶ÎµÈÓÚµ±Ç°¸ë×ÓµÄID¡£
-  7. ÉèÖÃ²éÑ¯½á¹ûÒª·µ»ØµÄ×Ö¶Î£¬°üÀ¨`source`£¬Ê¹ÓÃ`select`·½·¨Ö¸¶¨²éÑ¯×Ö¶Î¡£
-  8. Ö´ĞĞ²éÑ¯£¬»ñÈ¡¸ë×ÓĞÅÏ¢£¨pigeonInfo£©¡£
-  9. ÅĞ¶Ï¸ë×ÓĞÅÏ¢ÊÇ·ñÎª¿Õ£¬Èç¹ûÎª¿ÕÔòÌø¹ıµ±Ç°Ñ­»·¡£
-  10. ¼ì²é`countMap`ÖĞÊÇ·ñÒÑ´æÔÚ¸ÃÀ´Ô´£¨source£©µÄÍ³¼ÆĞÅÏ¢£¬Èç¹û²»´æÔÚÔò½«ÆäÌí¼Óµ½`countMap`ÖĞ£¬²¢½«¸ë×ÓÊıÁ¿ÉèÖÃÎª1¡£
-  11. Èç¹û`countMap`ÖĞÒÑ´æÔÚ¸ÃÀ´Ô´µÄÍ³¼ÆĞÅÏ¢£¬Ôò½«¸ÃÀ´Ô´¶ÔÓ¦µÄ¸ë×ÓÊıÁ¿¼Ó1¡£
+  1. æ ¹æ®ç»™å®šçš„é¸½èˆIDï¼ˆgidï¼‰ï¼Œä½¿ç”¨æŸ¥è¯¢æ¡ä»¶æ„å»ºå™¨ï¼ˆQueryWrapperï¼‰è®¾ç½®æŸ¥è¯¢æ¡ä»¶ï¼Œè¦æ±‚`gid`å­—æ®µç­‰äºæŒ‡å®šçš„é¸½èˆIDã€‚
+  2. è®¾ç½®æŸ¥è¯¢ç»“æœè¦è¿”å›çš„å­—æ®µï¼ŒåŒ…æ‹¬`id`ï¼Œä½¿ç”¨`select`æ–¹æ³•æŒ‡å®šæŸ¥è¯¢å­—æ®µã€‚
+  3. æ‰§è¡ŒæŸ¥è¯¢ï¼Œè·å–é¸½å­åˆ—è¡¨ï¼ˆpigeonListï¼‰ã€‚
+  4. åˆ›å»ºä¸€ä¸ªç©ºçš„å“ˆå¸Œæ˜ å°„ï¼ˆHashMapï¼‰`countMap`ï¼Œç”¨äºå­˜å‚¨ç»Ÿè®¡ç»“æœï¼Œå…¶ä¸­é”®ä¸ºæ¥æºï¼ˆsourceï¼‰ï¼Œå€¼ä¸ºé¸½å­æ•°é‡ã€‚
+  5. éå†é¸½å­åˆ—è¡¨ï¼Œå¯¹äºæ¯ä¸ªé¸½å­ï¼Œè·å–å…¶IDï¼ˆidï¼‰ã€‚
+  6. ä½¿ç”¨æŸ¥è¯¢æ¡ä»¶æ„å»ºå™¨ï¼ˆQueryWrapperï¼‰è®¾ç½®æŸ¥è¯¢æ¡ä»¶ï¼Œè¦æ±‚`pid`å­—æ®µç­‰äºå½“å‰é¸½å­çš„IDã€‚
+  7. è®¾ç½®æŸ¥è¯¢ç»“æœè¦è¿”å›çš„å­—æ®µï¼ŒåŒ…æ‹¬`source`ï¼Œä½¿ç”¨`select`æ–¹æ³•æŒ‡å®šæŸ¥è¯¢å­—æ®µã€‚
+  8. æ‰§è¡ŒæŸ¥è¯¢ï¼Œè·å–é¸½å­ä¿¡æ¯ï¼ˆpigeonInfoï¼‰ã€‚
+  9. åˆ¤æ–­é¸½å­ä¿¡æ¯æ˜¯å¦ä¸ºç©ºï¼Œå¦‚æœä¸ºç©ºåˆ™è·³è¿‡å½“å‰å¾ªç¯ã€‚
+  10. æ£€æŸ¥`countMap`ä¸­æ˜¯å¦å·²å­˜åœ¨è¯¥æ¥æºï¼ˆsourceï¼‰çš„ç»Ÿè®¡ä¿¡æ¯ï¼Œå¦‚æœä¸å­˜åœ¨åˆ™å°†å…¶æ·»åŠ åˆ°`countMap`ä¸­ï¼Œå¹¶å°†é¸½å­æ•°é‡è®¾ç½®ä¸º1ã€‚
+  11. å¦‚æœ`countMap`ä¸­å·²å­˜åœ¨è¯¥æ¥æºçš„ç»Ÿè®¡ä¿¡æ¯ï¼Œåˆ™å°†è¯¥æ¥æºå¯¹åº”çš„é¸½å­æ•°é‡åŠ 1ã€‚
 
   ```java
   /**
-   * ¸ù¾İgid»ñÈ¡×÷ÓıÕßµÄÍ³¼ÆÊı¾İ
+   * æ ¹æ®gidè·å–ä½œè‚²è€…çš„ç»Ÿè®¡æ•°æ®
    */
   @GetMapping("source")
   public Result getSourceData(HttpServletRequest request) {
-      //»ñÈ¡gid
+      //è·å–gid
       Map<?, ?> info = (Map<?, ?>) request.getAttribute("info");
       Long gid = (Long) info.get("gid");
   
-      //¸ù¾İgid»ñÈ¡ËùÓĞµÄpid
+      //æ ¹æ®gidè·å–æ‰€æœ‰çš„pid
       QueryWrapper<Pigeon> pigeonQueryWrapper = new QueryWrapper<>();
       pigeonQueryWrapper.select("id")
               .eq("gid", gid);
@@ -3949,7 +4049,7 @@ public class AddressController {
       List<Pigeon> pigeonList = pigeonService.list(pigeonQueryWrapper);
   
       Map<String, Integer> countMap = new HashMap<>();
-      //¸ù¾İpid»ñÈ¡source
+      //æ ¹æ®pidè·å–source
       pigeonList.forEach(pigeon -> {
           Long id = pigeon.getId();
   
@@ -3961,19 +4061,19 @@ public class AddressController {
           if (pigeonInfo == null) {
               return;
           }
-          //mapÖĞÃ»ÓĞ£¬¸³ÖµÎªÒ»
+          //mapä¸­æ²¡æœ‰ï¼Œèµ‹å€¼ä¸ºä¸€
           countMap.computeIfAbsent(pigeonInfo.getSource(), k -> 1);
-          //mapÖĞ´æÔÚÔò¼ÆÊı
+          //mapä¸­å­˜åœ¨åˆ™è®¡æ•°
           countMap.computeIfPresent(pigeonInfo.getSource(), (k, v) -> v + 1);
       });
   
-      return new Result(countMap, SuccessCode.Success.code, "»ñÈ¡³É¹¦");
+      return new Result(countMap, SuccessCode.Success.code, "è·å–æˆåŠŸ");
   }
   ```
 
-##### 2.2.9.15 ĞÅÏ¢·´À¡ÖĞĞÄ·şÎñ
+##### 2.2.9.15 ä¿¡æ¯åé¦ˆä¸­å¿ƒæœåŠ¡
 
-½«Éè¶¨ºÃµÄĞÅÏ¢µØÖ·ÒÑ¶şÎ¬ÂëĞÎÊ½·µ»ØÇ°¶Ë£¨¶şÎ¬Âë´´½¨·½·¨¼û**2.2.6 ÏµÍ³¹¤¾ßÀà utils - ¶şÎ¬Âë¹¤¾ß**£©
+å°†è®¾å®šå¥½çš„ä¿¡æ¯åœ°å€å·²äºŒç»´ç å½¢å¼è¿”å›å‰ç«¯ï¼ˆäºŒç»´ç åˆ›å»ºæ–¹æ³•è§**2.2.6 ç³»ç»Ÿå·¥å…·ç±» utils - äºŒç»´ç å·¥å…·**ï¼‰
 
 ```java
 @RestController
@@ -3993,30 +4093,30 @@ public class FeedBackController {
     public Result getGithubQrCode() {
         String uuid = IdWorker.get32UUID();
         String qrCode = qrCodeUtil.createQrCode(githubUrl + "?t=" + uuid);
-        return new Result(qrCode, SuccessCode.Success.code, "»ñÈ¡³É¹¦");
+        return new Result(qrCode, SuccessCode.Success.code, "è·å–æˆåŠŸ");
     }
 
     @GetMapping("guat")
     public Result getGuatQrCode() {
         String uuid = IdWorker.get32UUID();
         String qrCode = qrCodeUtil.createQrCode(guatUrl + "?t=" + uuid);
-        return new Result(qrCode, SuccessCode.Success.code, "»ñÈ¡³É¹¦");
+        return new Result(qrCode, SuccessCode.Success.code, "è·å–æˆåŠŸ");
     }
 
     @GetMapping("mail")
     public Result getMainQrCode() {
         String uuid = IdWorker.get32UUID();
         String qrCode = qrCodeUtil.createQrCode(mailUrl + "?t=" + uuid);
-        return new Result(qrCode, SuccessCode.Success.code, "»ñÈ¡³É¹¦");
+        return new Result(qrCode, SuccessCode.Success.code, "è·å–æˆåŠŸ");
     }
 }
 ```
 
-#### 2.2.10 ×Ü½á
+#### 2.2.10 æ€»ç»“
 
-##### 2.2.10.1 È¦¸´ÔÓ¶È·ÖÎö
+##### 2.2.10.1 åœˆå¤æ‚åº¦åˆ†æ
 
-- È¦¸´ÔÓ¶È±í£¨²¿·Ö£©
+- åœˆå¤æ‚åº¦è¡¨ï¼ˆéƒ¨åˆ†ï¼‰
 
 | Method                                                       | CogC | ev(G) | iv(G) | v(G) |
 | ------------------------------------------------------------ | ---- | ----- | ----- | ---- |
@@ -4136,56 +4236,56 @@ public class FeedBackController {
 | com.AE.sgmis.controller.AddressController.getProvincial()    | 0    | 1     | 1     | 1    |
 | com.AE.sgmis.controller.AddressController.getUrban(Long)     | 0    | 1     | 1     | 1    |
 
-- Öù×´·ÖÎöÍ¼
+- æŸ±çŠ¶åˆ†æå›¾
 
 ![image-20230608201923566](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608201923566.png?raw=true)
 
-- ×Ü½á
+- æ€»ç»“
 
-´ó²¿·Ö·½·¨µÄÈ¦¸´ÔÓ¶È½ÏµÍ£¬ÕâÊ¹µÃÕâĞ©·½·¨Ïà¶Ô¼òµ¥ÇÒÒ×¶Á¡£ËüÃÇ¿ÉÄÜÊÇÒ»Ğ©»ù±¾µÄ¹¤¾ß·½·¨£¬ÀıÈçÎÄ¼ş´¦Àí»òIP»ñÈ¡µÈ£¬ÕâĞ©·½·¨µÄ¹¦ÄÜÏà¶Ô¶ÀÁ¢ºÍ¼òµ¥£¬²»ĞèÒªÌ«¶àµÄÌõ¼ş·ÖÖ§»òÑ­»·¡£ÕâÊÇÒ»¸ö»ı¼«µÄ·½Ãæ£¬ÒòÎªµÍÈ¦¸´ÔÓ¶ÈµÄ·½·¨¸üÈİÒ×Àí½â¡¢²âÊÔºÍÎ¬»¤¡£
+å¤§éƒ¨åˆ†æ–¹æ³•çš„åœˆå¤æ‚åº¦è¾ƒä½ï¼Œè¿™ä½¿å¾—è¿™äº›æ–¹æ³•ç›¸å¯¹ç®€å•ä¸”æ˜“è¯»ã€‚å®ƒä»¬å¯èƒ½æ˜¯ä¸€äº›åŸºæœ¬çš„å·¥å…·æ–¹æ³•ï¼Œä¾‹å¦‚æ–‡ä»¶å¤„ç†æˆ–IPè·å–ç­‰ï¼Œè¿™äº›æ–¹æ³•çš„åŠŸèƒ½ç›¸å¯¹ç‹¬ç«‹å’Œç®€å•ï¼Œä¸éœ€è¦å¤ªå¤šçš„æ¡ä»¶åˆ†æ”¯æˆ–å¾ªç¯ã€‚è¿™æ˜¯ä¸€ä¸ªç§¯æçš„æ–¹é¢ï¼Œå› ä¸ºä½åœˆå¤æ‚åº¦çš„æ–¹æ³•æ›´å®¹æ˜“ç†è§£ã€æµ‹è¯•å’Œç»´æŠ¤ã€‚
 
-È»¶ø£¬Ò²ÓĞÉÙÊı·½·¨µÄÈ¦¸´ÔÓ¶È½Ï¸ß£¬ÕâÒâÎ¶×ÅËüÃÇµÄ¿ØÖÆÁ÷³ÌÏà¶Ô¸´ÔÓ£¬¿ÉÄÜ°üº¬¶à¸öÌõ¼ş·ÖÖ§»òÑ­»·Óï¾ä¡£ÕâĞ©·½·¨¿ÉÄÜÊÇÒµÎñÂß¼­½ÏÎª¸´ÔÓµÄ·½·¨£¬ĞèÒª¸ü¶àµÄ²âÊÔÓÃÀıÀ´¸²¸Ç²»Í¬µÄ·ÖÖ§Çé¿ö¡£¾¡¹ÜÈç´Ë£¬¿ª·¢ÕßÈÔÈ»Å¬Á¦¼ò»¯ÕâĞ©·½·¨µÄ´úÂë£¬²¢Ìí¼ÓÁËÏê¾¡µÄ×¢ÊÍÀ´½âÊÍÆäÂß¼­¡£ÕâÊÇÒ»¸ö»ı¼«µÄÅ¬Á¦£¬ÒòÎª×¢ÊÍ¿ÉÒÔ°ïÖúÆäËûÈËÀí½â´úÂëµÄ¸´ÔÓĞÔ£¬´Ó¶øÌá¸ß¿ÉÎ¬»¤ĞÔ¡£
+ç„¶è€Œï¼Œä¹Ÿæœ‰å°‘æ•°æ–¹æ³•çš„åœˆå¤æ‚åº¦è¾ƒé«˜ï¼Œè¿™æ„å‘³ç€å®ƒä»¬çš„æ§åˆ¶æµç¨‹ç›¸å¯¹å¤æ‚ï¼Œå¯èƒ½åŒ…å«å¤šä¸ªæ¡ä»¶åˆ†æ”¯æˆ–å¾ªç¯è¯­å¥ã€‚è¿™äº›æ–¹æ³•å¯èƒ½æ˜¯ä¸šåŠ¡é€»è¾‘è¾ƒä¸ºå¤æ‚çš„æ–¹æ³•ï¼Œéœ€è¦æ›´å¤šçš„æµ‹è¯•ç”¨ä¾‹æ¥è¦†ç›–ä¸åŒçš„åˆ†æ”¯æƒ…å†µã€‚å°½ç®¡å¦‚æ­¤ï¼Œå¼€å‘è€…ä»ç„¶åŠªåŠ›ç®€åŒ–è¿™äº›æ–¹æ³•çš„ä»£ç ï¼Œå¹¶æ·»åŠ äº†è¯¦å°½çš„æ³¨é‡Šæ¥è§£é‡Šå…¶é€»è¾‘ã€‚è¿™æ˜¯ä¸€ä¸ªç§¯æçš„åŠªåŠ›ï¼Œå› ä¸ºæ³¨é‡Šå¯ä»¥å¸®åŠ©å…¶ä»–äººç†è§£ä»£ç çš„å¤æ‚æ€§ï¼Œä»è€Œæé«˜å¯ç»´æŠ¤æ€§ã€‚
 
-È»¶ø£¬»¹ĞèÒª×¢ÒâµÄÊÇ£¬¾¡¹ÜÒÑ¾­½øĞĞÁË´úÂë¼ò»¯ºÍ×¢ÊÍµÄÅ¬Á¦£¬µ«ÈÔÈ»ĞèÒª¾«½ø´úÂëµÄÈ¦¸´ÔÓ¶È¡£¸ßÈ¦¸´ÔÓ¶ÈµÄ·½·¨¿ÉÄÜµ¼ÖÂ´úÂëÄÑÒÔÀí½â¡¢²âÊÔºÍÎ¬»¤¡£Òò´Ë£¬¿ª·¢ÕßÓ¦¸Ã¿¼ÂÇ½øÒ»²½ÓÅ»¯¸ßÈ¦¸´ÔÓ¶ÈµÄ·½·¨£¬ÒÔ½µµÍ¸´ÔÓ¶È²¢ÔöÇ¿´úÂëµÄ¿É¶ÁĞÔºÍ¿ÉÎ¬»¤ĞÔ¡£Õâ¿ÉÒÔÍ¨¹ıÊ¹ÓÃÌõ¼şÖØ¹¹¡¢Ñ­»·ÖØ¹¹¡¢ÌáÈ¡·½·¨µÈ¼¼ÊõÀ´ÊµÏÖ¡£
+ç„¶è€Œï¼Œè¿˜éœ€è¦æ³¨æ„çš„æ˜¯ï¼Œå°½ç®¡å·²ç»è¿›è¡Œäº†ä»£ç ç®€åŒ–å’Œæ³¨é‡Šçš„åŠªåŠ›ï¼Œä½†ä»ç„¶éœ€è¦ç²¾è¿›ä»£ç çš„åœˆå¤æ‚åº¦ã€‚é«˜åœˆå¤æ‚åº¦çš„æ–¹æ³•å¯èƒ½å¯¼è‡´ä»£ç éš¾ä»¥ç†è§£ã€æµ‹è¯•å’Œç»´æŠ¤ã€‚å› æ­¤ï¼Œå¼€å‘è€…åº”è¯¥è€ƒè™‘è¿›ä¸€æ­¥ä¼˜åŒ–é«˜åœˆå¤æ‚åº¦çš„æ–¹æ³•ï¼Œä»¥é™ä½å¤æ‚åº¦å¹¶å¢å¼ºä»£ç çš„å¯è¯»æ€§å’Œå¯ç»´æŠ¤æ€§ã€‚è¿™å¯ä»¥é€šè¿‡ä½¿ç”¨æ¡ä»¶é‡æ„ã€å¾ªç¯é‡æ„ã€æå–æ–¹æ³•ç­‰æŠ€æœ¯æ¥å®ç°ã€‚
 
-×ÛÉÏËùÊö£¬´ó²¿·Ö·½·¨¾ßÓĞ½ÏµÍµÄÈ¦¸´ÔÓ¶È£¬¼òµ¥Ò×¶Á¡£¶ÔÓÚÈ¦¸´ÔÓ¶È½Ï¸ßµÄ·½·¨£¬ÒÑ¾­²ÉÈ¡ÁË¼ò»¯´úÂëºÍÌí¼Ó×¢ÊÍµÄ´ëÊ©¡£È»¶ø£¬ÈÔĞèÒª¼ÌĞøÅ¬Á¦ÓÅ»¯¸ßÈ¦¸´ÔÓ¶ÈµÄ·½·¨£¬²¢¾«½ø´úÂëµÄÈ¦¸´ÔÓ¶È¡£ÕâÑù¿ÉÒÔÌá¸ß´úÂëµÄ¿É¶ÁĞÔ¡¢¿É²âÊÔĞÔºÍ¿ÉÎ¬»¤ĞÔ£¬Ê¹Õû¸ö´úÂë¿â¸ü¼Ó½¡×³ºÍ¿É³ÖĞø¡£
+ç»¼ä¸Šæ‰€è¿°ï¼Œå¤§éƒ¨åˆ†æ–¹æ³•å…·æœ‰è¾ƒä½çš„åœˆå¤æ‚åº¦ï¼Œç®€å•æ˜“è¯»ã€‚å¯¹äºåœˆå¤æ‚åº¦è¾ƒé«˜çš„æ–¹æ³•ï¼Œå·²ç»é‡‡å–äº†ç®€åŒ–ä»£ç å’Œæ·»åŠ æ³¨é‡Šçš„æªæ–½ã€‚ç„¶è€Œï¼Œä»éœ€è¦ç»§ç»­åŠªåŠ›ä¼˜åŒ–é«˜åœˆå¤æ‚åº¦çš„æ–¹æ³•ï¼Œå¹¶ç²¾è¿›ä»£ç çš„åœˆå¤æ‚åº¦ã€‚è¿™æ ·å¯ä»¥æé«˜ä»£ç çš„å¯è¯»æ€§ã€å¯æµ‹è¯•æ€§å’Œå¯ç»´æŠ¤æ€§ï¼Œä½¿æ•´ä¸ªä»£ç åº“æ›´åŠ å¥å£®å’Œå¯æŒç»­ã€‚
 
-##### 2.2.10.2 Éè¼ÆÖØµã
+##### 2.2.10.2 è®¾è®¡é‡ç‚¹
 
-- ÒıÈëredis£¬ÀûÓÃredis»º´æÉè¼Æ°×Ãûµ¥¡¢ºÚÃûµ¥¹¦ÄÜ
-  - ÍË³öµÇÂ¼¡¢¸üĞÂÃÜÂëµÈĞèÒªÇ¿ÖÆÏÂÏßµÄÒµÎñ¿ÉÒÔÌŞ³ıÏßÉÏtoken
-  - ½ûÓÃipµØÖ·
-- ¸üĞÂtokenÔÚredisµÄ¹ıÆÚÊ±¼ä·ÀÖ¹»îÔ¾ÓÃ»§¹ıÆÚ
-- ¶à×ÊÔ´Â·¾¶ÅäÖÃ½×¶Î£¬Éè¼Æ½âÎö»·¾³ÅäÖÃÎÄ¼ş¹¦ÄÜ
-- ÀûÓÃ¶¨Ê±ÈÎÎñÉè¼Æ¶¨Ê±ÇåÀí¹ıÆÚ×ÊÔ´¡¢Í³¼ÆÔÚÏßÈËÊıÒÔ¼õÇá·şÎñÆ÷Ñ¹Á¦
-- ·şÎñÆ÷ÃÜÂë°²È«´ëÊ©£¬ÃÜÂë²ÉÓÃArgon2¼ÓÑÎ¼ÓÃÜ£¬Ã¿´ÎµÇÂ¼¶ÔÑÎÖµ½øĞĞ¸üĞÂ
-- ¶¯Ì¬×Ö¶Î»á·¢Éúsql×¢Èë£¬Éè¼ÆĞ£Ñé·ÀÖ¹sql×¢Èë£¬²¢ÒıÈë½ûÓÃip»úÖÆ
+- å¼•å…¥redisï¼Œåˆ©ç”¨redisç¼“å­˜è®¾è®¡ç™½åå•ã€é»‘åå•åŠŸèƒ½
+  - é€€å‡ºç™»å½•ã€æ›´æ–°å¯†ç ç­‰éœ€è¦å¼ºåˆ¶ä¸‹çº¿çš„ä¸šåŠ¡å¯ä»¥å‰”é™¤çº¿ä¸Štoken
+  - ç¦ç”¨ipåœ°å€
+- æ›´æ–°tokenåœ¨redisçš„è¿‡æœŸæ—¶é—´é˜²æ­¢æ´»è·ƒç”¨æˆ·è¿‡æœŸ
+- å¤šèµ„æºè·¯å¾„é…ç½®é˜¶æ®µï¼Œè®¾è®¡è§£æç¯å¢ƒé…ç½®æ–‡ä»¶åŠŸèƒ½
+- åˆ©ç”¨å®šæ—¶ä»»åŠ¡è®¾è®¡å®šæ—¶æ¸…ç†è¿‡æœŸèµ„æºã€ç»Ÿè®¡åœ¨çº¿äººæ•°ä»¥å‡è½»æœåŠ¡å™¨å‹åŠ›
+- æœåŠ¡å™¨å¯†ç å®‰å…¨æªæ–½ï¼Œå¯†ç é‡‡ç”¨Argon2åŠ ç›åŠ å¯†ï¼Œæ¯æ¬¡ç™»å½•å¯¹ç›å€¼è¿›è¡Œæ›´æ–°
+- åŠ¨æ€å­—æ®µä¼šå‘ç”Ÿsqlæ³¨å…¥ï¼Œè®¾è®¡æ ¡éªŒé˜²æ­¢sqlæ³¨å…¥ï¼Œå¹¶å¼•å…¥ç¦ç”¨ipæœºåˆ¶
 
-### 2.3 Ç°¶ËÉè¼Æ
+### 2.3 å‰ç«¯è®¾è®¡
 
-#### 2.3.1 µÇÂ¼½çÃæ
+#### 2.3.1 ç™»å½•ç•Œé¢
 
 ![image-20230608202850022](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608202850022.png?raw=true)
 
-#### 2.3.2 Ê×Ò³
+#### 2.3.2 é¦–é¡µ
 
-- ÂÖ²¥Í¼
+- è½®æ’­å›¾
 
   ![image-20230608203100298](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608203100298.png?raw=true)
 
-- Êı¾İ·ÖÎöÍ¼±í
+- æ•°æ®åˆ†æå›¾è¡¨
 
   ![image-20230608203148795](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608203148795.png?raw=true)
 
-#### 2.3.3 ¸ë×Ó¿â
+#### 2.3.3 é¸½å­åº“
 
-- Ö÷ÒªĞÅÏ¢½çÃæ
+- ä¸»è¦ä¿¡æ¯ç•Œé¢
 
 ![image-20230608203434860](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608203434860.png?raw=true)
 
 ![image-20230608203246770](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608203246770.png?raw=true)
 
-- µ¯´°
+- å¼¹çª—
 
   ![image-20230608210747662](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608210747662.png?raw=true)
 
@@ -4197,7 +4297,7 @@ public class FeedBackController {
 
   ![image-20230608210853911](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608210853911.png?raw=true)
 
-#### 2.3.4 ±à¼­ÑªÍ³
+#### 2.3.4 ç¼–è¾‘è¡€ç»Ÿ
 
 ![image-20230608211007461](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608211007461.png?raw=true)
 
@@ -4207,23 +4307,23 @@ public class FeedBackController {
 
 ![image-20230608211046662](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608211046662.png?raw=true)
 
-#### 2.3.5 ¿ìËÙÈë¿â
+#### 2.3.5 å¿«é€Ÿå…¥åº“
 
 ![image-20230608211248677](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608211248677.png?raw=true)
 
-#### 2.3.6 ¸ß¼¶ÅúÁ¿²Ù×÷
+#### 2.3.6 é«˜çº§æ‰¹é‡æ“ä½œ
 
 ![image-20230608211351932](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608211351932.png?raw=true)
 
-#### 2.3.7 ²Ù×÷ÈÕÖ¾
+#### 2.3.7 æ“ä½œæ—¥å¿—
 
 ![image-20230608211534296](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608211534296.png?raw=true)
 
-#### 2.3.8 Í³¼ÆÖĞĞÄ
+#### 2.3.8 ç»Ÿè®¡ä¸­å¿ƒ
 
 ![image-20230608211604815](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608211604815.png?raw=true)
 
-#### 2.3.9 ¸ëÅï³²Ïä
+#### 2.3.9 é¸½æ£šå·¢ç®±
 
 ![image-20230608211711405](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608211711405.png?raw=true)
 
@@ -4231,25 +4331,25 @@ public class FeedBackController {
 
 ![image-20230608211733245](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608211733245.png?raw=true)
 
-#### 2.3.10 Ñ¡ÏîÉèÖÃ
+#### 2.3.10 é€‰é¡¹è®¾ç½®
 
 ![image-20230608211849462](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608211849462.png?raw=true)
 
 ![image-20230608211911349](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608211911349.png?raw=true)
 
-#### 2.3.11 ¸ëÉáĞÅÏ¢
+#### 2.3.11 é¸½èˆä¿¡æ¯
 
 ![image-20230608211935810](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608211935810.png?raw=true)
 
-#### 2.3.12 ÑªÍ³ÊéÅäÖÃ
+#### 2.3.12 è¡€ç»Ÿä¹¦é…ç½®
 
 ![image-20230608212003602](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608212003602.png?raw=true)
 
-#### 2.3.13 ÓÃ»§ÉèÖÃ
+#### 2.3.13 ç”¨æˆ·è®¾ç½®
 
 ![image-20230608212057499](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608212057499.png?raw=true)
 
-#### 2.3.14 ¹ÜÀíÔ±ÉèÖÃ
+#### 2.3.14 ç®¡ç†å‘˜è®¾ç½®
 
 ![image-20230608212133891](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608212133891.png?raw=true)
 
@@ -4257,15 +4357,15 @@ public class FeedBackController {
 
 ![image-20230608212203883](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608212203883.png?raw=true)
 
-#### 2.3.15 µÇÂ¼ĞÅÏ¢
+#### 2.3.15 ç™»å½•ä¿¡æ¯
 
 ![image-20230608212321792](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608212321792.png?raw=true)
 
-#### 2.3.16 ·´À¡ÖĞĞÄ
+#### 2.3.16 åé¦ˆä¸­å¿ƒ
 
 ![image-20230608212357639](https://github.com/Shi-AE/sgmis/blob/main/README/image-20230608212357639.png?raw=true)
 
-#### 2.3.17 È«¾ÖÅäÖÃ
+#### 2.3.17 å…¨å±€é…ç½®
 
 ##### 2.3.17.1 vite.config.js
 
@@ -4300,7 +4400,7 @@ export default defineConfig({
 })
 ```
 
-##### 2.3.17.2 axios·â×°
+##### 2.3.17.2 axioså°è£…
 
 ```js
 import axios from "axios"
@@ -4310,7 +4410,7 @@ import store from "@/store"
 import {Notification} from '@arco-design/web-vue'
 import JSONbigint from "json-bigint"
 
-//¶¨Òå¼üÅÌÊÂ¼ş
+//å®šä¹‰é”®ç›˜äº‹ä»¶
 function preventKeyDown(event) {
     event.preventDefault();
     event.stopPropagation();
@@ -4320,7 +4420,7 @@ const axiosx = axios.create({
     baseURL: "/api",
     timeout: 30000,
     transformResponse: [function (data) {
-        // Ê¹ÓÃjson-bigint½âÎöLongĞÍÏìÓ¦Êı¾İ
+        // ä½¿ç”¨json-bigintè§£æLongå‹å“åº”æ•°æ®
         try {
             return JSONbigint.parse(data)
         } catch (error) {
@@ -4329,17 +4429,17 @@ const axiosx = axios.create({
     }]
 })
 
-//ÇëÇóÀ¹½Ø
+//è¯·æ±‚æ‹¦æˆª
 axiosx.interceptors.request.use(config => {
-    //½ûÖ¹¼üÅÌÊÂ¼ş
+    //ç¦æ­¢é”®ç›˜äº‹ä»¶
     document.addEventListener('keydown', preventKeyDown, false);
-    //Ìí¼Ó¼ÓÔØÍ¼±ê
+    //æ·»åŠ åŠ è½½å›¾æ ‡
     addLoading(config.message)
-    //ÉèÖÃÎªÕıÔÚ·¢ËÍÇëÇó
+    //è®¾ç½®ä¸ºæ­£åœ¨å‘é€è¯·æ±‚
     store.commit("setPending", true)
     return {
         ...config,
-        //Ìí¼ÓÇëÇóÍ·
+        //æ·»åŠ è¯·æ±‚å¤´
         headers: {
             ...config.headers,
 
@@ -4347,29 +4447,29 @@ axiosx.interceptors.request.use(config => {
         }
     }
 }, error => {
-    //½â³ı¼üÅÌÊÂ¼ş
+    //è§£é™¤é”®ç›˜äº‹ä»¶
     document.removeEventListener('keydown', preventKeyDown, false);
     store.commit("setPending", false)
     return Promise.reject(error);
 })
 
-//ÏìÓ¦À¹½Ø
+//å“åº”æ‹¦æˆª
 axiosx.interceptors.response.use(response => {
     clearLoading()
-    //½â³ı¼üÅÌÊÂ¼ş
+    //è§£é™¤é”®ç›˜äº‹ä»¶
     document.removeEventListener('keydown', preventKeyDown, false);
-    //¶ñÒâsql×¢Èë
+    //æ¶æ„sqlæ³¨å…¥
     if (response.data.code === 411) {
         Notification.error(response.data.message)
         store.commit("setToken", "")
         router.push({name: "403"})
     }
-    //·ÃÎÊÈ¨ÏŞÒì³£
+    //è®¿é—®æƒé™å¼‚å¸¸
     if (response.data.code === 403) {
         Notification.error(response.data.message)
         router.push({name: "403"})
     }
-    //¸üĞÂtoken·ÀÖ¹»îÔ¾ÓÃ»§¹ıÆÚ£¨ÒÑÆúÓÃ£©
+    //æ›´æ–°tokené˜²æ­¢æ´»è·ƒç”¨æˆ·è¿‡æœŸï¼ˆå·²å¼ƒç”¨ï¼‰
     // if (response.headers.authorization) {
     //     store.commit("setToken", response.headers.authorization)
     // }
@@ -4377,7 +4477,7 @@ axiosx.interceptors.response.use(response => {
     return response;
 }, error => {
     clearLoading()
-    //½â³ı¼üÅÌÊÂ¼ş
+    //è§£é™¤é”®ç›˜äº‹ä»¶
     document.removeEventListener('keydown', preventKeyDown, false);
     // router.push({ name: "500" })
     Notification.error(`${error.message} ${error.code}`)
@@ -4389,7 +4489,7 @@ export default axiosx
 
 ```
 
-##### 2.3.17.3 routerÂ·ÓÉ
+##### 2.3.17.3 routerè·¯ç”±
 
 ```js
 import { createRouter, createWebHistory } from "vue-router"
@@ -4404,7 +4504,7 @@ const router = createRouter({
             name: "login",
             component: () => import('@/views/login/login.vue'),
             meta: {
-                title: "µÇÂ¼",
+                title: "ç™»å½•",
                 free: true
             }
         },
@@ -4417,7 +4517,7 @@ const router = createRouter({
                     name: "home",
                     component: () => import("@/views/home/home.vue"),
                     meta: {
-                        title: "Ê×Ò³"
+                        title: "é¦–é¡µ"
                     }
                 },
                 {
@@ -4425,7 +4525,7 @@ const router = createRouter({
                     name: "loginMsg",
                     component: () => import("@/views/loginMsg/loginMsg.vue"),
                     meta: {
-                        title: "µÇÂ¼ĞÅÏ¢"
+                        title: "ç™»å½•ä¿¡æ¯"
                     }
                 },
                 {
@@ -4433,7 +4533,7 @@ const router = createRouter({
                     name: "feedback",
                     component: () => import("@/views/feedback/feedback.vue"),
                     meta: {
-                        title: "·´À¡ÖĞĞÄ"
+                        title: "åé¦ˆä¸­å¿ƒ"
                     }
                 },
                 {
@@ -4441,7 +4541,7 @@ const router = createRouter({
                     name: "statistic",
                     component: () => import("@/views/statistic/statistic.vue"),
                     meta: {
-                        title: "Í³¼ÆÖĞĞÄ"
+                        title: "ç»Ÿè®¡ä¸­å¿ƒ"
                     }
                 },
                 {
@@ -4449,7 +4549,7 @@ const router = createRouter({
                     name: "gpcx",
                     component: () => import("@/views/gpcx/gpcx.vue"),
                     meta: {
-                        title: "¸ëÅï³²Ïä"
+                        title: "é¸½æ£šå·¢ç®±"
                     }
                 },
                 {
@@ -4457,7 +4557,7 @@ const router = createRouter({
                     name: "gsxx",
                     component: () => import("@/views/gsxx/gsxx.vue"),
                     meta: {
-                        title: "¸ëÉáĞÅÏ¢"
+                        title: "é¸½èˆä¿¡æ¯"
                     }
                 },
                 {
@@ -4465,7 +4565,7 @@ const router = createRouter({
                     name: "gzk",
                     component: () => import("@/views/gzk/gzk.vue"),
                     meta: {
-                        title: "¸ë×Ó¿â"
+                        title: "é¸½å­åº“"
                     }
                 },
                 {
@@ -4473,7 +4573,7 @@ const router = createRouter({
                     name: "editPigeon",
                     component: () => import("@/views/editPigeon/editPigeon.vue"),
                     meta: {
-                        title: "±à¼­ÑªÍ³"
+                        title: "ç¼–è¾‘è¡€ç»Ÿ"
                     }
                 },
                 {
@@ -4481,7 +4581,7 @@ const router = createRouter({
                     name: "rapid",
                     component: () => import("@/views/rapid/rapid.vue"),
                     meta: {
-                        title: "¿ìËÙÈë¿â"
+                        title: "å¿«é€Ÿå…¥åº“"
                     }
                 },
                 {
@@ -4489,7 +4589,7 @@ const router = createRouter({
                     name: "batch",
                     component: () => import("@/views/batch/batch.vue"),
                     meta: {
-                        title: "¸ß¼¶ÅúÁ¿²Ù×÷"
+                        title: "é«˜çº§æ‰¹é‡æ“ä½œ"
                     }
                 },
                 {
@@ -4497,7 +4597,7 @@ const router = createRouter({
                     name: "log",
                     component: () => import("@/views/log/log.vue"),
                     meta: {
-                        title: "²Ù×÷ÈÕÖ¾"
+                        title: "æ“ä½œæ—¥å¿—"
                     }
                 },
                 {
@@ -4505,7 +4605,7 @@ const router = createRouter({
                     name: "help",
                     component: () => import("@/views/help/help.vue"),
                     meta: {
-                        title: "°ïÖúÖĞĞÄ"
+                        title: "å¸®åŠ©ä¸­å¿ƒ"
                     }
                 },
                 {
@@ -4513,7 +4613,7 @@ const router = createRouter({
                     name: "options",
                     component: () => import("@/views/options/options.vue"),
                     meta: {
-                        title: "Ñ¡ÏîÉèÖÃ"
+                        title: "é€‰é¡¹è®¾ç½®"
                     }
                 },
                 {
@@ -4521,7 +4621,7 @@ const router = createRouter({
                     name: "xtspz",
                     component: () => import("@/views/xtspz/xtspz.vue"),
                     meta: {
-                        title: "ÑªÍ³ÊéÅäÖÃ"
+                        title: "è¡€ç»Ÿä¹¦é…ç½®"
                     }
                 },
                 {
@@ -4529,7 +4629,7 @@ const router = createRouter({
                     name: "admin",
                     component: () => import("@/views/admin/admin.vue"),
                     meta: {
-                        title: "¹ÜÀíÔ±ÉèÖÃ",
+                        title: "ç®¡ç†å‘˜è®¾ç½®",
                         requiresAdminAuth: true
                     }
                 },
@@ -4538,7 +4638,7 @@ const router = createRouter({
                     name: "user",
                     component: () => import("@/views/user/user.vue"),
                     meta: {
-                        title: "ÓÃ»§ÉèÖÃ"
+                        title: "ç”¨æˆ·è®¾ç½®"
                     }
                 },
                 {
@@ -4546,7 +4646,7 @@ const router = createRouter({
                     name: "detail",
                     component: () => import("@/views/detail/detail.vue"),
                     meta: {
-                        title: "ÏêÇé"
+                        title: "è¯¦æƒ…"
                     }
                 }
             ],
@@ -4597,12 +4697,12 @@ const router = createRouter({
 })
 
 router.beforeEach(async (to) => {
-    //ÃâÃÜµÇÂ¼
+    //å…å¯†ç™»å½•
     if (to.meta.free) {
         await axiosx({
             method: "GET",
             url: "login/free",
-            message: "ÑéÖ¤ĞÅÏ¢"
+            message: "éªŒè¯ä¿¡æ¯"
         }).then(res => {
             if (res.data.code === 200) {
                 router.push({ name: "home" })
@@ -4610,32 +4710,32 @@ router.beforeEach(async (to) => {
             }
         })
     }
-    //ÑéÖ¤·ÃÎÊ
+    //éªŒè¯è®¿é—®
     if (to.meta.requiresAuth) {
         await axiosx({
             method: "GET",
             url: "login",
-            message: "µÇÂ¼ÑéÖ¤"
+            message: "ç™»å½•éªŒè¯"
         })
     }
-    //ÑéÖ¤¹ÜÀíÔ±·ÃÎÊ
+    //éªŒè¯ç®¡ç†å‘˜è®¿é—®
     if(to.meta.requiresAdminAuth) {
         await axiosx({
             method: "GET",
             url: "login/admin",
-            message: "ÑéÖ¤¹ÜÀíÔ±ĞÅÏ¢"
+            message: "éªŒè¯ç®¡ç†å‘˜ä¿¡æ¯"
         })
     }
-    //¶¯Ì¬±êÌâ
+    //åŠ¨æ€æ ‡é¢˜
     if (to.meta.title) {
-        document.title = `Èü¸ëÔÆ¿â -- ${to.meta.title}`
+        document.title = `èµ›é¸½äº‘åº“ -- ${to.meta.title}`
     }
 })
 
 export default router
 ```
 
-##### 2.3.17.4 store vuexÅäÖÃ
+##### 2.3.17.4 store vuexé…ç½®
 
 ```js
 import {createStore} from 'vuex'
@@ -4697,11 +4797,11 @@ const store = createStore({
 export default store
 ```
 
-##### 2.3.17.5 debounce.js·À¶¶
+##### 2.3.17.5 debounce.jsé˜²æŠ–
 
 ```js
 export function toDebounceFunction(func, delay, ...args) {
-    //Ä¬ÈÏ300ºÁÃë
+    //é»˜è®¤300æ¯«ç§’
     delay = delay || 300
 
     let timer;
@@ -4714,57 +4814,57 @@ export function toDebounceFunction(func, delay, ...args) {
 }
 ```
 
-## 3 ²¿Êğ¼ÇÂ¼
+## 3 éƒ¨ç½²è®°å½•
 
 ### 3.1 mysql
 
-1. ÏÂÔØ `mysql-8.0.33-linux-glibc2.28-x86_64.tar.gz` ÎÄ¼ş
+1. ä¸‹è½½ `mysql-8.0.33-linux-glibc2.28-x86_64.tar.gz` æ–‡ä»¶
 
-3. ½âÑ¹ `mysql-8.0.33-linux-glibc2.28-x86_64.tar.gz` ÎÄ¼ş
+3. è§£å‹ `mysql-8.0.33-linux-glibc2.28-x86_64.tar.gz` æ–‡ä»¶
    ```shell
    tar xzf mysql-8.0.33-linux-glibc2.28-x86_64.tar.gz
    ```
 
-5. ½øÈë MySQL °²×°Ä¿Â¼£º
+5. è¿›å…¥ MySQL å®‰è£…ç›®å½•ï¼š
    ```shell
    cd /usr/local/mysql
    ```
 
-6. ´´½¨Ò»¸öÃûÎª `mysql` µÄÏµÍ³ÓÃ»§ºÍÓÃ»§×é£¬ÒÔ±ã MySQL ·şÎñ¿ÉÒÔÒÔ·ÇÌØÈ¨ÓÃ»§Éí·İÔËĞĞ£º
+6. åˆ›å»ºä¸€ä¸ªåä¸º `mysql` çš„ç³»ç»Ÿç”¨æˆ·å’Œç”¨æˆ·ç»„ï¼Œä»¥ä¾¿ MySQL æœåŠ¡å¯ä»¥ä»¥éç‰¹æƒç”¨æˆ·èº«ä»½è¿è¡Œï¼š
    ```shell
    groupadd mysql
    useradd -r -g mysql -s /bin/false mysql
    ```
 
-7. Îª MySQL Êı¾İÄ¿Â¼´´½¨ÏàÓ¦µÄÄ¿Â¼£¬²¢ÉèÖÃÕıÈ·µÄÈ¨ÏŞ£º
+7. ä¸º MySQL æ•°æ®ç›®å½•åˆ›å»ºç›¸åº”çš„ç›®å½•ï¼Œå¹¶è®¾ç½®æ­£ç¡®çš„æƒé™ï¼š
    ```shell
    mkdir data
    chown -R mysql:mysql data
    ```
 
-8. ³õÊ¼»¯ MySQL Êı¾İÄ¿Â¼£º
+8. åˆå§‹åŒ– MySQL æ•°æ®ç›®å½•ï¼š
    ```shell
    sudo bin/mysqld --initialize-insecure --user=mysql --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data
    ```
 
-9. ÅäÖÃ MySQL ·şÎñÆ÷¡£½« MySQL ÅäÖÃÎÄ¼ş `my.cnf` ¸´ÖÆµ½ÕıÈ·µÄÎ»ÖÃ£º
+9. é…ç½® MySQL æœåŠ¡å™¨ã€‚å°† MySQL é…ç½®æ–‡ä»¶ `my.cnf` å¤åˆ¶åˆ°æ­£ç¡®çš„ä½ç½®ï¼š
    ```shell
    cp support-files/my-default.cnf /etc/my.cnf
    ```
 
-   È»ºó±à¼­ `/etc/my.cnf` ÎÄ¼ş£¬¶Ô MySQL ½øĞĞ±ØÒªµÄÅäÖÃ¡£
+   ç„¶åç¼–è¾‘ `/etc/my.cnf` æ–‡ä»¶ï¼Œå¯¹ MySQL è¿›è¡Œå¿…è¦çš„é…ç½®ã€‚
 
-10. Æô¶¯ MySQL ·şÎñÆ÷£º
+10. å¯åŠ¨ MySQL æœåŠ¡å™¨ï¼š
     ```shell
     bin/mysqld_safe --user=mysql &
     ```
 
-11. ÔËĞĞÒÔÏÂÃüÁî½« MySQL ¿Í»§¶Ë¿ÉÖ´ĞĞÎÄ¼şÌí¼Óµ½ÏµÍ³µÄ PATH ÖĞ£º
+11. è¿è¡Œä»¥ä¸‹å‘½ä»¤å°† MySQL å®¢æˆ·ç«¯å¯æ‰§è¡Œæ–‡ä»¶æ·»åŠ åˆ°ç³»ç»Ÿçš„ PATH ä¸­ï¼š
     ```shell
     sudo ln -s /usr/local/mysql/bin/mysql /usr/local/bin/mysql
     ```
 
-12. ÑéÖ¤ MySQL ÊÇ·ñ³É¹¦°²×°¡£Ö´ĞĞÒÔÏÂÃüÁî£º
+12. éªŒè¯ MySQL æ˜¯å¦æˆåŠŸå®‰è£…ã€‚æ‰§è¡Œä»¥ä¸‹å‘½ä»¤ï¼š
     ```shell
     mysql --version
     ```
@@ -4772,28 +4872,28 @@ export function toDebounceFunction(func, delay, ...args) {
 
 ### 3.2 jdk
 
-1. ÏÂÔØ `jdk-20_linux-x64_bin.tar.gz` ÎÄ¼ş
+1. ä¸‹è½½ `jdk-20_linux-x64_bin.tar.gz` æ–‡ä»¶
 
-2. ½âÑ¹ `jdk-20_linux-x64_bin.tar.gz` ÎÄ¼ş
+2. è§£å‹ `jdk-20_linux-x64_bin.tar.gz` æ–‡ä»¶
 
    ```
    tar xzf jdk-20_linux-x64_bin.tar.gz
    ```
 
-3. ÅäÖÃ»·¾³±äÁ¿£¬±à¼­ `/etc/profile` ÎÄ¼ş
+3. é…ç½®ç¯å¢ƒå˜é‡ï¼Œç¼–è¾‘ `/etc/profile` æ–‡ä»¶
 
    ```
    export JAVA_HOME=/usr/app/jdk-20.0.1
    export PATH=$JAVA_HOME/bin:$PATH
    ```
 
-4. Ö´ĞĞÒÔÏÂÃüÁîÊ¹»·¾³±äÁ¿ÉúĞ§
+4. æ‰§è¡Œä»¥ä¸‹å‘½ä»¤ä½¿ç¯å¢ƒå˜é‡ç”Ÿæ•ˆ
 
    ```
    source /etc/profile
    ```
 
-5. ÑéÖ¤ JDK °²×°ÊÇ·ñ³É¹¦
+5. éªŒè¯ JDK å®‰è£…æ˜¯å¦æˆåŠŸ
 
    ```
    java -version
@@ -4801,41 +4901,41 @@ export function toDebounceFunction(func, delay, ...args) {
 
 ### 3.3 redis
 
-1. ÏÂÔØ`redis-7.0.11.tar.gz`ÎÄ¼ş
+1. ä¸‹è½½`redis-7.0.11.tar.gz`æ–‡ä»¶
 
-2. ½âÑ¹`redis-7.0.11.tar.gz`
+2. è§£å‹`redis-7.0.11.tar.gz`
 
    ```
    tar xzf redis-7.0.11.tar.gz
    ```
 
-3. ½øÈë½âÑ¹ºóµÄ Redis Ä¿Â¼
+3. è¿›å…¥è§£å‹åçš„ Redis ç›®å½•
 
    ```
    cd redis-7.0.11
    ```
 
-4. ±àÒëºÍ°²×° Redis
+4. ç¼–è¯‘å’Œå®‰è£… Redis
 
    ```
    make
    ```
 
-5. ±àÒëÍê³Éºó£¬Ö´ĞĞÒÔÏÂÃüÁîÀ´°²×° Redis
+5. ç¼–è¯‘å®Œæˆåï¼Œæ‰§è¡Œä»¥ä¸‹å‘½ä»¤æ¥å®‰è£… Redis
 
    ```
    make install
    ```
 
-6. °²×°Íê³Éºó£¬Äú¿ÉÒÔÔÚ Redis µÄÔ´´úÂëÄ¿Â¼ÖĞÕÒµ½±àÒëÉú³ÉµÄ¿ÉÖ´ĞĞÎÄ¼şºÍÅäÖÃÎÄ¼ş¡£
+6. å®‰è£…å®Œæˆåï¼Œæ‚¨å¯ä»¥åœ¨ Redis çš„æºä»£ç ç›®å½•ä¸­æ‰¾åˆ°ç¼–è¯‘ç”Ÿæˆçš„å¯æ‰§è¡Œæ–‡ä»¶å’Œé…ç½®æ–‡ä»¶ã€‚
 
-7. ÔËĞĞ Redis ·şÎñÆ÷¡£ÔÚÖÕ¶ËÖĞÖ´ĞĞÒÔÏÂÃüÁîÆô¶¯ Redis ·şÎñÆ÷
+7. è¿è¡Œ Redis æœåŠ¡å™¨ã€‚åœ¨ç»ˆç«¯ä¸­æ‰§è¡Œä»¥ä¸‹å‘½ä»¤å¯åŠ¨ Redis æœåŠ¡å™¨
 
    ```
    redis-server
    ```
 
-8. ¼ì²é Redis ·şÎñÆ÷µÄÔËĞĞ×´Ì¬
+8. æ£€æŸ¥ Redis æœåŠ¡å™¨çš„è¿è¡ŒçŠ¶æ€
 
    ```
    redis-cli ping
@@ -4843,34 +4943,34 @@ export function toDebounceFunction(func, delay, ...args) {
 
 ### 3.4 nginx
 
-1. ÏÂÔØ `nginx-1.24.0.tar.gz` ÎÄ¼ş
+1. ä¸‹è½½ `nginx-1.24.0.tar.gz` æ–‡ä»¶
 
-2. ½âÑ¹ `nginx-1.24.0.tar.gz` ÎÄ¼ş
+2. è§£å‹ `nginx-1.24.0.tar.gz` æ–‡ä»¶
 
    ```sh
    tar xzf nginx-1.24.0.tar.gz
    ```
 
-3. ½øÈë½âÑ¹ºóµÄ Nginx Ä¿Â¼
+3. è¿›å…¥è§£å‹åçš„ Nginx ç›®å½•
 
    ```
    cd nginx-1.24.0
    ```
 
-4. ÅäÖÃ±àÒëÑ¡Ïî²¢±àÒë Nginx
+4. é…ç½®ç¼–è¯‘é€‰é¡¹å¹¶ç¼–è¯‘ Nginx
 
    ```
    ./configure
    make
    ```
 
-5. ±àÒëÍê³Éºó£¬Ö´ĞĞÒÔÏÂÃüÁî°²×°
+5. ç¼–è¯‘å®Œæˆåï¼Œæ‰§è¡Œä»¥ä¸‹å‘½ä»¤å®‰è£…
 
    ```
    make install
    ```
 
-6. ÅäÖÃ nginx.config
+6. é…ç½® nginx.config
 
    ```
    worker_processes  1;
@@ -4918,7 +5018,7 @@ export function toDebounceFunction(func, delay, ...args) {
    }
    ```
 
-7. ½øÈënginx°²×°Ä¿Â¼Æô¶¯
+7. è¿›å…¥nginxå®‰è£…ç›®å½•å¯åŠ¨
 
    ```
    ./sbin/nginx -c ./conf/nginx.conf
