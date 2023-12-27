@@ -1,5 +1,7 @@
 # sgmis 鸽子数据管理系统
 
+# 基于spring Boot 前后端分离 Java EE \ Java Web 课程设计
+
 ## 1 项目分析
 
 ### 1.1 项目概述
@@ -81,11 +83,916 @@
    4. json-bigint: 一个用于处理大整数的JSON解析和序列化库。
    5. arco-design: 提供了一系列现代化的UI组件和样式，用于构建用户界面。
 
+### 1.4 UML分析
+
+#### 1.4.1  系统的功能需求
+
+根据上述对多人协作赛鸽信息管理系统的分析，可以得出对系统管理员、团队管理员、组员功能性分析：
+
+系统管理员功能：
+
+(1)  分配团队管理员账号
+
+(2)  重置团队管理员密码
+
+(3)  设置系统公告
+
+(4)  设置帮助信息
+
+(5)  接受用户反馈
+
+
+
+ 
+
+团队管理员功能：
+
+(1)  拥有账号
+
+(2)  登录
+
+(3)  修改密码
+
+(4)  修改个人信息
+
+(5)  添加鸽子信息
+
+(6)  鸽子快速入库
+
+(7)  文件方式快速入库
+
+(8)  修改鸽子信息
+
+(9)  批量修改鸽子信息
+
+(10) 查看鸽子信息
+
+(11) 删除鸽子信息
+
+(12) 填写鸽子日志
+
+(13) 共享鸽子信息
+
+(14) 将鸽子加入巢箱
+
+(15) 查看操作日志
+
+(16) 查看统计信息
+
+(17) 新建鸽棚巢箱
+
+(18) 修改巢箱信息
+
+(19) 删除鸽棚巢箱
+
+(20) 查看鸽棚巢箱
+
+(21) 查看巢箱鸽子
+
+(22) 添加私有选项名称
+
+(23) 修改私有选项名称
+
+(24) 查看私有选项名称
+
+(25) 删除私有选项名称
+
+(26) 修改鸽舍信息
+
+(27) 查看鸽舍信息
+
+(28) 修改血统书信息
+
+(29) 查看血统书信息
+
+(30) 新增组员
+
+(31) 查看组员
+
+(32) 重置组员密码
+
+(33) 删除组员
+
+(34) 查看组员在线情况
+
+(35) 查看组员登录信息
+
+(36) 查看帮助信息
+
+(37) 联系系统管理员
+
+ 
+
+组员功能：
+
+(1)  拥有账号
+
+(2)  登录
+
+(3)  修改密码
+
+(4)  修改个人信息
+
+(5)  添加鸽子信息
+
+(6)  鸽子快速入库
+
+(7)  文件方式快速入库
+
+(8)  修改鸽子信息
+
+(9)  批量修改鸽子信息
+
+(10) 查看鸽子信息
+
+(11) 删除鸽子信息
+
+(12) 填写鸽子日志
+
+(13) 将鸽子加入巢箱
+
+(14) 查看操作日志
+
+(15) 查看统计信息
+
+(16) 新建鸽棚巢箱
+
+(17) 修改巢箱信息
+
+(18) 查看鸽棚巢箱
+
+(19) 查看巢箱鸽子
+
+(20) 查看帮助信息
+
+(21) 联系系统管理员
+
+ 
+
+#### 1.4.2  需求模型设计
+
+##### 1.4.2.1 系统参与者
+
+根据对多人协作赛鸽信息管理系统的分析，可以确定系统有三类用户：系统管理员、团队管理员、组员对系统参与者的描述如下。
+
+1)   系统管理员
+
+**描述**: 系统管理员可以分配团队管理员账号、重置团队管理员密码、设置系统公告、设置帮助信息、接受用户反馈
+
+ 
+
+2)   团队管理员
+
+**描述**: 团队管理员可以登录、修改密码、修改个人信息、添加鸽子信息、鸽子快速入库、文件方式快速入库、修改鸽子信息、查看鸽子信息、批量修改鸽子信息、删除鸽子信息、填写鸽子日志、共享鸽子信息、将鸽子加入巢箱、查看操作日志、查看统计信息、新建鸽棚巢箱、修改巢箱信息、查看鸽棚巢箱、查看巢箱鸽子、添加私有选项名称、修改私有选项名称、查看私有选项名称、删除私有选项名称、修改鸽舍信息、查看鸽舍信息、修改血统书信息、查看血统书信息、新增组员、查看组员、重置组员密码、删除组员、查看组员在线情况、查看组员登录信息、查看帮助信息、联系系统管理员。
+
+ 
+
+3)   团队成员
+
+**描述**: 团队成员可以登录、修改密码、修改个人信息、添加鸽子信息、鸽子快速入库、文件方式快速入库、修改鸽子信息、批量修改鸽子信息、查看鸽子信息、删除鸽子信息、填写鸽子日志、将鸽子加入巢箱、查看操作日志、查看统计信息、新建鸽棚巢箱、修改巢箱信息、查看鸽棚巢箱、查看巢箱鸽子、查看帮助信息、联系系统管理员。
+
+ 
+
+##### 1.4.2.2 系统用例
+
+在上述中，已经识别了两个参与者，接下来通过对需求的进一步分析，可以确定系统中有如下用例存在。
+
+(1)  登录
+
+本用例给团队管理员和团队成员实现登录的功能 
+
+(2)  修改密码
+
+本用例给团队管理员和团队成员实现修改密码的功能
+
+(3)  修改个人信息
+
+本用例给团队管理员和团队成员实现修改个人信息的功能
+
+(4)  添加鸽子信息
+
+本用例给团队管理员和团队成员实现添加鸽子信息的功能
+
+(5)  鸽子快速入库
+
+本用例给团队管理员和团队成员实现鸽子快速入库的功能
+
+(6)  文件方式快速入库
+
+本用例给团队管理员和团队成员实现文件方式快速入库的功能
+
+(7)  修改鸽子信息
+
+本用例给团队管理员和团队成员实现修改鸽子信息的功能
+
+(8)  批量修改鸽子信息
+
+本用例给团队管理员和团队成员实现批量修改鸽子信息的功能
+
+(9)  查看鸽子信息
+
+本用例给团队管理员和团队成员实现查看鸽子信息的功能
+
+(10)      删除鸽子信息
+
+本用例给团队管理员和团队成员实现删除鸽子信息的功能
+
+(11)      填写鸽子日志
+
+本用例给团队管理员和团队成员实现填写鸽子日志的功能
+
+(12)      共享鸽子信息
+
+本用例给团队管理员实现共享鸽子信息的功能
+
+(13)      将鸽子加入巢箱
+
+本用例给团队管理员和团队成员实现将鸽子加入巢箱的功能
+
+(14)      查看操作日志
+
+本用例给团队管理员和团队成员实现查看操作日志的功能
+
+(15)      查看统计信息
+
+本用例给团队管理员和团队成员实现查看统计信息的功能
+
+(16)      新建鸽棚巢箱
+
+本用例给团队管理员和团队成员实现新建鸽棚巢箱的功能
+
+(17)      修改巢箱信息
+
+本用例给团队管理员和团队成员实现修改巢箱信息的功能
+
+(18)      查看鸽棚巢箱
+
+本用例给团队管理员和团队成员实现查看鸽棚巢箱的功能
+
+(19)      查看巢箱鸽子
+
+本用例给团队管理员和团队成员实现查看巢箱鸽子的功能
+
+(20)      添加私有选项名称
+
+本用例给团队管理员实现添加私有选项名称的功能
+
+(21)      修改私有选项名称
+
+本用例给团队管理员实现修改私有选项名称的功能
+
+(22)      查看私有选项名称
+
+本用例给团队管理员实现查看私有选项名称的功能
+
+(23)      删除私有选项名称
+
+本用例给团队管理员实现共删除私有选项名称的功能
+
+(24)      修改鸽舍信息
+
+本用例给团队管理员实现修改鸽舍信息的功能
+
+(25)      查看鸽舍信息
+
+本用例给团队管理员实现查看鸽舍信息的功能
+
+(26)      修改血统书信息
+
+本用例给团队管理员实现修改血统书信息的功能
+
+(27)      查看血统书信息
+
+本用例给团队管理员实现查看血统书信息的功能
+
+(28)      新增组员
+
+本用例给团队管理员实现新增组员的功能
+
+(29)      查看组员
+
+本用例给团队管理员实现查看组员的功能
+
+(30)      重置组员密码
+
+本用例给团队管理员实现重置组员密码的功能
+
+(31)      删除组员
+
+本用例给团队管理员实现删除组员的功能
+
+(32)      查看组员在线情况
+
+本用例给团队管理员实现查看组员在线情况的功能
+
+(33)      查看组员登录信息
+
+本用例给团队管理员实现查看组员登录信息的功能
+
+(34)      查看帮助信息
+
+本用例给团队管理员和团队成员实现查看帮助信息的功能 
+
+(35)      联系系统管理员
+
+本用例给团队管理员和团队成员实现联系系统管理员的功能 
+
+(36)      分配团队管理员账号
+
+本用例给系统管理员实现分配团队管理员账号的功能 
+
+(37)      重置团队管理员密码
+
+本用例给系统管理员实现重置团队管理员密码的功能
+
+(38)      设置系统公告
+
+本用例给系统管理员实现设置系统公告的功能
+
+(39)      设置帮助信息
+
+本用例给系统管理员实现设置帮助信息的功能
+
+(40)      接受用户反馈
+
+本用例给系统管理员实现接受用户反馈的功能
+
+ 
+
+ 
+
+得出参与者和用例后，还要得出他们之间的关系。
+
+登录、修改密码、修改个人信息、添加鸽子信息、鸽子快速入库、文件方式快速入库、修改鸽子信息、批量修改鸽子信息、查看鸽子信息、删除鸽子信息、填写鸽子日志、将鸽子加入巢箱、查看操作日志、查看统计信息、新建鸽棚巢箱、修改巢箱信息、查看鸽棚巢箱、查看巢箱鸽子、查看帮助信息、联系系统管理员是团队管理员和团队成员共有的；共享鸽子信息、添加私有选项名称、修改私有选项名称、查看私有选项名称、删除私有选项名称、修改鸽舍信息、查看鸽舍信息、修改血统书信息、查看血统书信息、新增组员、查看组员、重置组员密码、删除组员、查看组员在线情况、查看组员登录信息是团队管理员拥有的；系统管理员可以分配团队管理员账号、重置团队管理员密码、设置系统公告、设置帮助信息、接受用户反馈是系统管理员拥有的。
+
+#### 1.4.3 用例图
+
+##### 1.4.3.1  系统管理员用例图
+
+![img](https://github.com/Shi-AE/sgmis/blob/main/README/clip_image002.png)
+
+图2-1 系统管理员用例图
+
+##### 1.4.3.2  团队管理员用例图
+
+![img](https://github.com/Shi-AE/sgmis/blob/main/README/clip_image004.png)
+
+图2-2 2.3.2  团队管理员用例图
+
+ 
+
+##### 1.4.3.3 团队成员用例图
+
+![img](https://github.com/Shi-AE/sgmis/blob/main/README/clip_image006.png)
+
+图2-2 2.3.3  团队成员用例图
+
+ 
+
+##### 1.4.3.4 用例的事件流描述
+
+a. 登录用例图事件流描述
+
+\1. 登录
+
+1.1前置条件
+
+无
+
+1.2后置条件（Post-Conditions）
+
+如果这个用例成功，系统显示登录成功并跳转到首页；如果用例失败，系统显示账号不存在或者密码错误，系统状态不发生变化。
+
+1.3扩充点
+
+自动登录
+
+1.4事件流
+
+1.4.1基流
+
+当团队管理员或团队成员打开登录界面，用例启动。
+
+团队管理员或团队成员提供token来检查token是否符合免登录规则
+
+1.4.2分支流
+
+如果提供的token不符合免登录规则，则要求团队管理员或团队成员提供账号密码，来确认登录权限
+
+1.4.3替代流
+
+E-1:如果符合面登录条件则跳转到首页，用例终止
+
+E-2:如果登录失败则要求用户重新输入登录账号密码，用例继续
+
+E-3:如果登录次数超过限制次数，则提示不允许登录，用例终止
+
+
+
+ 
+
+b. 查看组员在线情况用例图事件流描述
+
+\1. 查看组员在线情况
+
+1.1前置条件
+
+用例开始前，团队管理员处于登录状态
+
+1.2后置条件（Post-Conditions）
+
+如果用例成功，系统显示出成员的登录情况（活跃，离开，离线）；如果用例失败系统显示运行错误，系统跳转500页面
+
+1.3扩充点
+
+无
+
+1.4事件流
+
+1.4.1基流
+
+当团队管理员进入成员管理页面，用例启动
+
+系统根据团队id查看团队中所有成员的登录token状态判断成员的登录状态（活跃，离开，离线）
+
+1.4.2分支流
+
+如果提供的token不符合权限，系统跳转403页面 
+
+1.4.3替代流
+
+E-1: 如果查询失败跳转500提示页面，用例终止
+
+E-2:如果权限校验失败跳转403提示页面，用例终止
+
+ 
+
+c. 新增鸽子信息用例图事件流描述
+
+\1. 新增鸽子信息
+
+1.1前置条件
+
+用例开始前，团队管理员或者团队成员必须登录到系统中。
+
+1.2后置条件（Post-Conditions）
+
+如果用例成功，系统将鸽子信息添加入数据库，并显示添加成功；如果用例失败系统提示错误信息。
+
+1.3扩充点
+
+无
+
+1.4事件流
+
+1.4.1基流
+
+当团队管理员或团队成员提交鸽子信息，用例启动
+
+根据团队管理员或团队成员提交的信息，检查信息格式正确性，将鸽子信息存入数据库
+
+根据鸽子的父代id更新鸽子的父代信息
+
+1.4.2分支流
+
+当提交的鸽子id存在于记录中时执行更新操作
+
+根据团队管理员或团队成员提交的鸽子信息，检查信息格式正确性，更新数据库中的数据
+
+根据鸽子的父代id更新鸽子的父代信息
+
+1.4.3替代流
+
+E-1:如果提交信息格式检查错误，系统提示格式错误，用例终止
+
+E-2:鸽子id提交不正确，系统提示更新出错，用例终止 
+
+ 
+
+
+
+#### 1.4.3 静态模型设计
+
+##### 1.4.3.1 实体类
+
+1.用户实体类
+
+类User描述了用户的信息，用户的信息包括：用户id、用户账号、用户密码（加密）、用户密码盐值、用户所属组id、团队管理员判别符。
+
+私有属性包括如下：
+
+| id: Long         | 用户id           |
+| ---------------- | ---------------- |
+| account: String  | 用户账号         |
+| password: byte[] | 用户密码（加密） |
+| salt: byte[]     | 用户密码盐值     |
+| gid: Long        | 用户所属组id     |
+| admin: Boolean   | 团队管理员判别符 |
+
+公有方法：
+
+| getId():Long                | 获取用户id           |
+| --------------------------- | -------------------- |
+| getAccount ():String        | 获取用户账号         |
+| getPassword ():byte[]       | 获取用户密码（加密） |
+| getSalt ():byte[]           | 获取用户密码盐值     |
+| getGid ():Long              | 获取用户所属组id     |
+| getAdmin **():B****oolean** | 获取团队管理员判别符 |
+| setId():void                | 设置用户id           |
+| setAccount ():void          | 设置用户账号         |
+| setPassword ():void         | 设置用户密码（加密） |
+| setSalt ():void             | 设置用户密码盐值     |
+| setGid ():void              | 设置用户所属组id     |
+| setAdmin **():**void        | 设置团队管理员判别符 |
+
+ 
+
+2.鸽子信息实体类
+
+ 
+
+私有属性包括如下：
+
+| id: Long              | 鸽子id         |
+| --------------------- | -------------- |
+| updateData: LocalDate | 鸽子更新日期   |
+| gpcx: String          | 鸽子鸽棚巢箱名 |
+| pictureUrl: String    | 鸽子图片url    |
+| ringNumber: String    | 鸽子足环       |
+| name: String          | 鸽子名称       |
+| bloodline: String     | 鸽子血统名称   |
+| sex: String           | 鸽子性别       |
+| fid: Long             | 父鸽id         |
+| mid: Long             | 母鸽id         |
+| yan: String           | 鸽子眼色名称   |
+| ys: String            | 鸽子羽色名称   |
+| lx: String            | 鸽子类型名称   |
+| state: String         | 鸽子状态名称   |
+| jb: String            | 鸽子级别名称   |
+| isGrade: String       | 鸽子是否赛绩鸽 |
+| remark: String        | 鸽子备注       |
+| gid: Long             | 鸽子所属组id   |
+
+公有方法：
+
+| getId: Long              | 获取鸽子id         |
+| ------------------------ | ------------------ |
+| getUpdateData: LocalDate | 获取鸽子更新日期   |
+| getGpcx: String          | 获取鸽子鸽棚巢箱名 |
+| getPictureUrl: String    | 获取鸽子图片url    |
+| getRingNumber: String    | 获取鸽子足环       |
+| getName: String          | 获取鸽子名称       |
+| getBloodline: String     | 获取鸽子血统名称   |
+| getSex: String           | 获取鸽子性别       |
+| getFid: Long             | 获取父鸽id         |
+| getMid: Long             | 获取母鸽id         |
+| getYan: String           | 获取鸽子眼色名称   |
+| getYs: String            | 获取鸽子羽色名称   |
+| getLx: String            | 获取鸽子类型名称   |
+| getState: String         | 获取鸽子状态名称   |
+| getJb: String            | 获取鸽子级别名称   |
+| getIsGrade: String       | 获取鸽子是否赛绩鸽 |
+| getRemark: String        | 获取鸽子备注       |
+| getGid: Long             | 获取鸽子所属组id   |
+| setId: void              | 设置鸽子id         |
+| setUpdateData: void      | 设置鸽子更新日期   |
+| setGpcx: void            | 设置鸽子鸽棚巢箱名 |
+| setPictureUrl: void      | 设置鸽子图片url    |
+| setRingNumber: void      | 设置鸽子足环       |
+| setName: void            | 设置鸽子名称       |
+| setBloodline: void       | 设置鸽子血统名称   |
+| setSex: void             | 设置鸽子性别       |
+| setFid: void             | 设置父鸽id         |
+| setMid: void             | 设置母鸽id         |
+| setYan: void             | 设置鸽子眼色名称   |
+| setYs: void              | 设置鸽子羽色名称   |
+| setLx: void              | 设置鸽子类型名称   |
+| setState: void           | 设置鸽子状态名称   |
+| setJb: void              | 设置鸽子级别名称   |
+| setIsGrade: void         | 设置鸽子是否赛绩鸽 |
+| setRemark: void          | 设置鸽子备注       |
+| setGid: void             | 设置鸽子所属组id   |
+
+ 
+
+3.鸽舍实体类
+
+ 
+
+私有属性包括如下：
+
+| id: Long            | 鸽舍id       |
+| ------------------- | ------------ |
+| name: String        | 鸽舍名称     |
+| location: String    | 鸽舍地址定位 |
+| address: String     | 鸽舍详细地址 |
+| years: Integer      | 养鸽年数     |
+| bloodline: String   | 主养血系     |
+| performance: String | 优秀赛绩     |
+| gid: Long           | 所属组id     |
+
+公有方法：
+
+| getId: Long            | 获取鸽舍id       |
+| ---------------------- | ---------------- |
+| getName: String        | 获取鸽舍名称     |
+| getLocation: String    | 获取鸽舍地址定位 |
+| getAddress: String     | 获取鸽舍详细地址 |
+| getYears: Integer      | 获取养鸽年数     |
+| getBloodline: String   | 获取主养血系     |
+| getPerformance: String | 获取优秀赛绩     |
+| getGid: Long           | 获取所属组id     |
+| setId: void            | 设置鸽舍id       |
+| setName: void          | 设置鸽舍名称     |
+| setLocation: void      | 设置鸽舍地址定位 |
+| setAddress: void       | 设置鸽舍详细地址 |
+| setYears: void         | 设置养鸽年数     |
+| setBloodline: void     | 设置主养血系     |
+| setPerformance: void   | 设置优秀赛绩     |
+| setGid: void           | 设置所属组id     |
+
+ 
+
+4.血统书实体类
+
+ 
+
+私有属性包括如下：
+
+| id: Long          | 鸽舍id         |
+| ----------------- | -------------- |
+| logoUrl: String   | logo图片的地址 |
+| name: String      | 鸽舍全称       |
+| ShortName: String | 鸽舍简称       |
+| phone: String     | 联系电话       |
+| mail: String      | 联系邮箱       |
+| url: String       | 鸽舍网址       |
+| address: String   | 具体地址       |
+| gid: Long         | 所属组id       |
+
+公有方法：
+
+| getId: Long          | 获取鸽舍id         |
+| -------------------- | ------------------ |
+| getLogoUrl: String   | 获取logo图片的地址 |
+| getName: String      | 获取鸽舍全称       |
+| getShortName: String | 获取鸽舍简称       |
+| getPhone: String     | 获取联系电话       |
+| getMail: String      | 获取联系邮箱       |
+| getUrl: String       | 获取鸽舍网址       |
+| getAddress: String   | 获取具体地址       |
+| getGid: Long         | 获取所属组id       |
+| setId: void          | 设置鸽舍id         |
+| setLogoUrl: void     | 设置logo图片的地址 |
+| setName: void        | 设置鸽舍全称       |
+| setShortName: void   | 设置鸽舍简称       |
+| setPhone: void       | 设置联系电话       |
+| setMail: void        | 设置联系邮箱       |
+| setUrl: void         | 设置鸽舍网址       |
+| setAddress: void     | 设置具体地址       |
+| setGid: void         | 设置所属组id       |
+
+ 
+
+5.鸽棚巢箱实体类
+
+ 
+
+私有属性包括如下：
+
+| id: Long                   | 鸽棚巢箱id |
+| -------------------------- | ---------- |
+| name: String               | 鸽棚名称   |
+| cxNumber: Integer          | 巢箱数量   |
+| pigeonPopulation:  Integer | 鸽子数量   |
+| gid: Long                  | 所属组id   |
+
+公有方法：
+
+| getId: Long                  | 获取鸽棚巢箱id |
+| ---------------------------- | -------------- |
+| getName: String              | 获取鸽棚名称   |
+| getCxNumber: Integer         | 获取巢箱数量   |
+| getPigeonPopulation: Integer | 获取鸽子数量   |
+| getGid: Long                 | 获取所属组id   |
+| setId: void                  | 设置鸽棚巢箱id |
+| setName: void                | 设置鸽棚名称   |
+| setCxNumber: void            | 设置巢箱数量   |
+| setPigeonPopulation: void    | 设置鸽子数量   |
+| setGid: void                 | 设置所属组id   |
+
+ 
+
+6.系统配置实体类
+
+ 
+
+私有属性包括如下：
+
+| id: Long        | 系统配置id       |
+| --------------- | ---------------- |
+| name: LocalDate | 系统配置名称     |
+| author: String  | 系统配置创建者   |
+| type: String    | 系统配置类型     |
+| gid: String     | 系统配置所属组id |
+
+公有方法：
+
+| getId: Long       | 获取系统配置id       |
+| ----------------- | -------------------- |
+| getName: String   | 获取系统配置名称     |
+| getAuthor: String | 获取系统配置创建者   |
+| getType: String   | 获取系统配置类型     |
+| getGid: Long      | 获取系统配置所属组id |
+| setId: void       | 设置系统配置id       |
+| setName: void     | 设置系统配置名称     |
+| setAuthor: void   | 设置系统配置创建者   |
+| setType: void     | 设置系统配置类型     |
+| setGid: void      | 设置系统配置所属组id |
+
+ 
+
+##### 1.4.3.2 界面类
+
+1.鸽子库界面类
+
+ 
+
+公共操作包括如下： 
+
+listPigeon()
+
+根据用户组获取所有鸽子信息，当进入页面或更新页面时，该操作被调用
+
+updatePigeonByTypeAndIds(List<Long> ids, String field, String data)
+
+根据 字段类型 和 id列表 批量更新对应鸽子内容，当点击修改操作时，该操作被调用
+
+removePigeonById(id)
+
+根据id删除鸽子，当点击删除操作时，该操作被调用
+
+removePigeonByIds(List<Pigeon> pigeons)
+
+批量删除鸽子信息，当点击批量删除时，该操作被调用
+
+sharePigeon (List<Long> ids,  Long receiveGid)
+
+批量分享鸽子血统信息，当点击批量分享时，该操作被调用
+
+savePigeonByFile (MultipartFile file)
+
+文件形式批量上传鸽子信息，当点击上传文件时，该操作被调用
+
+ 
+
+2.选项设置界面类
+
+ 
+
+getAllByType(String type)
+
+根据类型获取所有数据，当进入页面时，该操作被调用
+
+deleteOne(Long id)
+
+根据id删除数据，当点击单个删除时，该操作被调用
+
+batchDelete(List<Long> ids)
+
+批量删除选项配置，当点击批量删除选项时，该操作被调用
+
+add(Xxpz xxpz, String type)
+
+新增选项配置，当点击新增时，该操作被调用
+
+update(Xxpz xxpz)
+
+根据id更新数据，当点击更新操作时，该操作被调用
+
+ 
+
+3.管理员设置界面类 
+
+ 
+
+getUserList()
+
+获取成员信息，当进入页面或页面跟新时，该操作被调用
+
+resetPassword(User user)
+
+重置成员密码，当点击重置成员密码时，该操作被调用
+
+addUser(User user)
+
+添加新成员，当点击新增成员时，该操作被调用
+
+deleteUser(Long id)
+
+根据id删除成员，当点击单个删除时，该操作被调用
+
+ 
+
+##### 1.4.3.3 包图
+
+将系统中的类分为11个包，及包config、包controller、包exceptions、包interceptor、包mapper、包pojo、包result、包runner、包schedule、包service、包util。包config由配置类构成，包controller由控制器类构成，包exceptions异常类构成，包interceptor由过滤器类构成，包mapper由数据库映射类构成，包pojo由实体类构成；包result结果包装类构成、包runner启动运行类构成、包schedule定时任务类构成、包service由业务服务类构成、包util工具类构成。依赖关系如下图3-1所示。
+
+![img](https://github.com/Shi-AE/sgmis/blob/main/README/clip_image008.png)
+
+图3-1 系统包图
+
+ 
+
+##### 1.4.3.4 类图   
+
+1.鸽子实体类图
+
+![img](https://github.com/Shi-AE/sgmis/blob/main/README/clip_image010.png)
+
+2.用户实体类图
+
+![img](https://github.com/Shi-AE/sgmis/blob/main/README/clip_image012.png)
+
+3.区域定位实体类图
+
+![img](https://github.com/Shi-AE/sgmis/blob/main/README/clip_image014.png)
+
+4. 团队管理员页面图
+
+![img](https://github.com/Shi-AE/sgmis/blob/main/README/clip_image016.png)
+
+#### 1.4.4 动态模型设计
+
+##### 1.4.4.1 顺序图
+
+1.团队管理员或团队成员添加或更新鸽子信息顺序图
+
+![img](https://github.com/Shi-AE/sgmis/blob/main/README/clip_image018.png)
+
+2.共享血统顺序图
+
+![img](https://github.com/Shi-AE/sgmis/blob/main/README/clip_image020.png)
+
+3.删除用户顺序图
+
+![img](https://github.com/Shi-AE/sgmis/blob/main/README/clip_image022.png)
+
+##### 1.4.4.2 通信图
+
+1.团队管理员或团队成员添加或更新鸽子信息通信图
+
+![img](https://github.com/Shi-AE/sgmis/blob/main/README/clip_image024.png)
+
+2.共享血统通信图
+
+![img](https://github.com/Shi-AE/sgmis/blob/main/README/clip_image026.png)
+
+3.删除用户通信图
+
+![img](https://github.com/Shi-AE/sgmis/blob/main/README/clip_image028.png)
+
+ 
+
+##### 1.4.4.3 活动图
+
+1.上传或更新鸽舍信息活动图
+
+![img](https://github.com/Shi-AE/sgmis/blob/main/README/clip_image030.png)
+
+2.重置用户密码活动图
+
+![img](https://github.com/Shi-AE/sgmis/blob/main/README/clip_image032.png)
+
+3.用户登录活动图
+
+![img](https://github.com/Shi-AE/sgmis/blob/main/README/clip_image034.png)
+
+##### 1.4.4.4 状态机图
+
+1.团队管理员状态图
+
+![img](https://github.com/Shi-AE/sgmis/blob/main/README/clip_image036.png)
+
+
+
+ 
+
+#### 1.4.5 物理模型设计
+
+-  部署图
+
+![img](https://github.com/Shi-AE/sgmis/blob/main/README/clip_image038.png)
+
+ 
+
+
+
 ## 2 系统设计分析
 
 ### 2.1 数据表设计
 
-![表设计](https://github.com/Shi-AE/sgmis/blob/main/README/表设计.png?raw=true)
+![img](https://github.com/Shi-AE/sgmis/blob/main/README/clip_image040.png)
 
 ### 2.2 后端设计
 
@@ -2723,7 +3630,7 @@ public Long saveOrUpdatePigeonById(Pigeon pigeon, PigeonInfo pigeonInfo, Long oi
 
     return pid;
 }
-```
+ ```
 
 - 删除、批量删除鸽子业务（记录日志具体逻辑见 **2.2.9.10 操作日志服务**）
 
