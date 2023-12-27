@@ -4,9 +4,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://42.193.192.61:3306/sgmis
+    url: jdbc:mysql://sgmis:3306/sgmis
     username: root
-    password: guatdev
+    password: sgmis
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: Asia/Shanghai
@@ -16,9 +16,9 @@ spring:
       max-request-size: 10MB
   data:
     redis:
-      host: 42.193.192.61
+      host: sgmis
       port: 6379
-      password: GUATdev!
+      password: sgmis
       database: 10
 
 encrypt:
