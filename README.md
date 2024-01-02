@@ -1,7 +1,5 @@
 # sgmis 鸽子数据管理系统
 
-# 基于spring Boot 前后端分离 Java EE \ Java Web 课程设计
-
 ## 1 项目分析
 
 ### 1.1 项目概述
