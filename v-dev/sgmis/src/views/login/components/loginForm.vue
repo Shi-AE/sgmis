@@ -6,8 +6,8 @@ export default {
     data() {
         return {
             formMess: {
-                account: "",
-                password: ""
+                account: "root",
+                password: "admin123"
             }
         }
     },

@@ -45,6 +45,12 @@
 3. Redis 服务，系统默认使用单体 Redis 模式为平台提供缓存服务，用于存储权限， 临时产生的数据等，默认端口 6379。
 4. Nginx 服务，为前端页面提供静态资源访问服务，以及为后端服务提供反向代理能力。
 
+##### 运行环境2.0
+
+1. docker容器 24.0.7 使用 `docker-compose up -d` 部署
+2. Docker Compose version v2.21.0
+3. 结尾处提供部署细节文件
+
 #### 1.2.3 开发环境
 
 1. IDEA 2023.3
@@ -74,6 +80,7 @@
    8. poi、poi-ooxml: 用于处理Microsoft Office文档（如Excel、Word）的Java库，提供了读写和操作这些文档的功能。
    9. UserAgentUtils: 用于解析和识别用户代理字符串（User-Agent）的工具，可用于获取用户的浏览器和操作系统信息。
    10. com.google.zxing:core: Google开发的二维码生成和解析库，可用于生成和解析二维码图像。
+   11. docker: 服务器端部署容器搭建工具
 2. 前端
    1. axios: 一个基于Promise的HTTP客户端，用于在浏览器和Node.js中发送HTTP请求。
    2. dayjs: 一个轻量级的日期处理库，用于解析、格式化和操作日期。
@@ -5929,4 +5936,116 @@ export function toDebounceFunction(func, delay, ...args) {
    ./sbin/nginx -c ./conf/nginx.conf
    ```
 
-   
+
+# 4 部署记录2.0
+
+- sgmis-jdk
+
+  - ```dockerfile
+    FROM oraclelinux:9-slim
+    
+    LABEL auth=A.E.
+    
+    RUN set -eux; \
+    	microdnf install \
+    		gzip \
+    		tar \
+    		\
+    		binutils \
+    		freetype fontconfig \
+    	; \
+    	microdnf clean all
+    
+    ADD jdk-21_linux-x64_bin.tar.gz /usr/local/java/
+    
+    ENV JAVA_HOME=/usr/local/java/jdk-21.0.2
+    ENV JRE_HOME=$JAVA_HOME/jre
+    ENV PATH=$JAVA_HOME/bin:$PATH
+    ENV CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+    ENV LANG C.UTF-8
+    ```
+
+- sgmis-web
+
+  - ```dockerfile
+    FROM nginx:1.24.0
+    
+    ENV LANG C.UTF-8
+    
+    COPY dist /dist
+    
+    CMD ["nginx", "-g", "daemon off;"]
+    ```
+
+- sgmis-app
+
+  - ```dockerfile
+    FROM jdk:21.0.2
+    
+    LABEL auth=A.E.
+    
+    ENV LANG C.UTF-8
+    
+    COPY app /app
+    
+    WORKDIR app
+    
+    ENTRYPOINT ["java", "-jar", "sgmis-1.0.jar"]
+    ```
+
+- compose.yml
+
+  - ```yml
+    name: sgmis
+    
+    services:
+      sgmis-app:
+        build: sgmis-app
+        image: sgmis:2.0
+        container_name: sgmis-app
+        restart: always
+        ports:
+          - 8080:8080
+        volumes:
+          - /usr/serverApp/sgmis/sgmis-app/app:/app
+        depends_on:
+          - sgmis-mysql
+          - sgmis-redis
+    
+      sgmis-mysql:
+        image: mysql:8.3.0
+        container_name: sgmis-mysql
+        restart: always
+        environment:
+          MYSQL_ROOT_PASSWORD: guatdev
+        ports:
+          - 3306:3306
+        volumes:
+          - /usr/serverApp/sgmis/sgmis-mysql/log:/var/log/mysql
+          - /usr/serverApp/sgmis/sgmis-mysql/conf:/etc/mysql/conf.d
+          - /usr/serverApp/sgmis/sgmis-mysql/data:/var/lib/mysql
+    
+      sgmis-redis:
+        image: redis:7.0
+        container_name: sgmis-redis
+        restart: always
+        ports:
+          - 6379:6379
+        volumes:
+          - /usr/serverApp/sgmis/sgmis-redis/conf:/etc/conf
+          - /usr/serverApp/sgmis/sgmis-redis/data:/data
+        command: redis-server /etc/conf/redis.conf
+    
+      sgmis-web:
+        image: sgmis-web:2.0
+        build: sgmis-web
+        restart: always
+        container_name: sgmis-web
+        ports:
+          - 80:80
+        volumes:
+          - /usr/serverApp/sgmis/sgmis-web/conf:/etc/nginx
+          - /usr/serverApp/sgmis/sgmis-web/dist:/dist
+    ```
+
+    

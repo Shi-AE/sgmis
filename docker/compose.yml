@@ -1,0 +1,50 @@
+name: sgmis
+
+services:
+  sgmis-app:
+    build: sgmis-app
+    image: sgmis:2.0
+    container_name: sgmis-app
+    restart: always
+    ports:
+      - 8080:8080
+    volumes:
+      - /usr/serverApp/sgmis/sgmis-app/app:/app
+    depends_on:
+      - sgmis-mysql
+      - sgmis-redis
+
+  sgmis-mysql:
+    image: mysql:8.3.0
+    container_name: sgmis-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: guatdev
+    ports:
+      - 3306:3306
+    volumes:
+      - /usr/serverApp/sgmis/sgmis-mysql/log:/var/log/mysql
+      - /usr/serverApp/sgmis/sgmis-mysql/conf:/etc/mysql/conf.d
+      - /usr/serverApp/sgmis/sgmis-mysql/data:/var/lib/mysql
+
+  sgmis-redis:
+    image: redis:7.0
+    container_name: sgmis-redis
+    restart: always
+    ports:
+      - 6379:6379
+    volumes:
+      - /usr/serverApp/sgmis/sgmis-redis/conf:/etc/conf
+      - /usr/serverApp/sgmis/sgmis-redis/data:/data
+    command: redis-server /etc/conf/redis.conf
+
+  sgmis-web:
+    image: sgmis-web:2.0
+    build: sgmis-web
+    restart: always
+    container_name: sgmis-web
+    ports:
+      - 80:80
+    volumes:
+      - /usr/serverApp/sgmis/sgmis-web/conf:/etc/nginx
+      - /usr/serverApp/sgmis/sgmis-web/dist:/dist

@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://sgmis:3306/sgmis
+    url: jdbc:mysql://sgmis-mysql:3306/sgmis
     username: root
     password: sgmis
   jackson:
@@ -16,7 +16,7 @@ spring:
       max-request-size: 10MB
   data:
     redis:
-      host: sgmis
+      host: sgmis-redis
       port: 6379
       password: sgmis
       database: 10

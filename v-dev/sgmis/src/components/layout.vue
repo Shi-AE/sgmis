@@ -2,9 +2,28 @@
 import {defineComponent, ref} from 'vue';
 import axiosx from "@/assets/js/axiosx.js"
 import {
-    IconApps, IconBook, IconBranch, IconCalendar, IconCaretLeft, IconCaretRight, IconFindReplace,
-    IconCustomerService, IconHome, IconNav, IconQuestionCircle, IconSearch, IconSettings, IconStorage,
-    IconUser, IconSubscribeAdd, IconEdit, IconExport, IconSelectAll, IconTool, IconIdcard, IconBarChart
+    IconApps,
+    IconBarChart,
+    IconBook,
+    IconBranch,
+    IconCalendar,
+    IconCaretLeft,
+    IconCaretRight,
+    IconCustomerService,
+    IconEdit,
+    IconExport,
+    IconFindReplace,
+    IconHome,
+    IconIdcard,
+    IconNav,
+    IconQuestionCircle,
+    IconSearch,
+    IconSelectAll,
+    IconSettings,
+    IconStorage,
+    IconSubscribeAdd,
+    IconTool,
+    IconUser
 } from '@arco-design/web-vue/es/icon'
 
 export default defineComponent({
@@ -148,7 +167,7 @@ export default defineComponent({
 
                 <RouterLink :to="{ name: 'statistic' }">
                     <a-menu-item key="statistic">
-                        <iconBarChart />
+                        <iconBarChart/>
                         统计中心
                     </a-menu-item>
                 </RouterLink>
@@ -249,7 +268,7 @@ export default defineComponent({
                 <div class="header-title .container-sm">{{ title }}</div>
                 <div class="user d-flex align-items-center">
                     <div class="header-title .container-sm" style="margin-right: 5px;">{{
-                        this.$store.state.account
+                            this.$store.state.account
                         }}
                     </div>
                     <a-dropdown>
@@ -265,7 +284,7 @@ export default defineComponent({
                 </div>
             </a-layout-header>
             <a-layout :style="{
-                padding: '0 10px',
+                padding: '0 20px',
                 'background-color': '#F5E8FF'
             }">
                 <a-breadcrumb :style="{ margin: '5px 0' }">
@@ -273,7 +292,14 @@ export default defineComponent({
                 <a-layout-content>
                     <RouterView></RouterView>
                 </a-layout-content>
-                <a-layout-footer>2023-09@sgmis</a-layout-footer>
+                <a-layout-footer>
+                    2023-09@SGMIS
+
+                    备案号：
+                    <a href="https://beian.miit.gov.cn" target="_blank" style=" text-decoration: none;">
+                        浙ICP备2024071340号
+                    </a>
+                </a-layout-footer>
             </a-layout>
         </a-layout>
     </a-layout>
@@ -373,4 +399,3 @@ export default defineComponent({
     color: #E865DF;
 }
 </style>
-  
