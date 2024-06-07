@@ -5,8 +5,8 @@ import com.AE.sgmis.exceptions.FreePassException;
 import com.AE.sgmis.exceptions.SaveFailException;
 import com.AE.sgmis.exceptions.UnchangedPasswordException;
 import com.AE.sgmis.pojo.LoginMsg;
-import com.AE.sgmis.pojo.vo.UpdateUserVo;
 import com.AE.sgmis.pojo.User;
+import com.AE.sgmis.pojo.vo.UpdateUserVo;
 import com.AE.sgmis.pojo.vo.UserVo;
 import com.AE.sgmis.result.Result;
 import com.AE.sgmis.result.SuccessCode;
@@ -23,6 +23,7 @@ import eu.bitwalker.useragentutils.OperatingSystem;
 import eu.bitwalker.useragentutils.UserAgent;
 import eu.bitwalker.useragentutils.Version;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,7 @@ import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 @Slf4j
 @RestController
@@ -57,7 +59,7 @@ public class LoginController {
      * 验证登录
      */
     @PostMapping("authority")
-    public Result login(@RequestBody UserVo userVo, HttpServletRequest request) {
+    public Result login(@RequestBody UserVo userVo, HttpServletRequest request, HttpServletResponse response) {
         String account = userVo.getAccount();
         String password = userVo.getPassword();
 
@@ -106,6 +108,9 @@ public class LoginController {
         loginMsg.setGid(gid);
         loginMsg.setTime(LocalDateTime.now());
         loginMsg.setAccount(account);
+        if (browserVersion == null) {
+            browserVersion = new Version("Unknown", "Unknown", "Unknown");
+        }
         loginMsg.setBrowser(browser.getName() + browserVersion.getVersion());
         loginMsg.setOs(os.getName());
         loginMsg.setDevice(os.getDeviceType().getName());
@@ -116,6 +121,8 @@ public class LoginController {
         }
 
         //返回给前端token
+        response.setHeader("Authorization", token);
+
         Map<String, Object> resultMap = new HashMap<>();
         resultMap.put("token", token);
         resultMap.put("admin", admin);
@@ -190,10 +197,10 @@ public class LoginController {
      */
     @PutMapping
     public Result updatePassword(@RequestBody UpdateUserVo userVo, HttpServletRequest request) {
-        if (!userVo.getNewPassword().equals(userVo.getConfirmPassword())) {
+        if (!Objects.equals(userVo.getNewPassword(), userVo.getConfirmPassword())) {
             throw new ConfirmPasswordInconsistencyException("新密码和确认密码不一致");
         }
-        if (userVo.getOldPassword().equals(userVo.getNewPassword())) {
+        if (Objects.equals(userVo.getOldPassword(), userVo.getNewPassword())) {
             throw new UnchangedPasswordException("密码未变更");
         }
 

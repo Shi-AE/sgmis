@@ -179,7 +179,8 @@ public class PigeonController {
 
         //条件 gid = gid
         QueryWrapper<Pigeon> wrapper = new QueryWrapper<>();
-        wrapper.eq("gid", gid);
+        wrapper.eq("gid", gid)
+                .orderByDesc("id");
 
         List<Pigeon> list = pigeonService.list(wrapper);
 
