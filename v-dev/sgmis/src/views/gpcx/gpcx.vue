@@ -190,7 +190,6 @@ export default {
             }).then(res => {
                 if (res.data.code === 200) {
                     Notification.success(res.data.message)
-                    console.log(this.fomr);
                     this.data.unshift({
                         key: this.data.length + 1,
                         ...res.data.data

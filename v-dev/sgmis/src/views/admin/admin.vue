@@ -47,7 +47,7 @@ export default {
                     color: "#86909c"
                 },
                 1: {
-                    value: "离开",
+                    value: "在线",
                     color: "#3491FA"
                 },
                 2: {

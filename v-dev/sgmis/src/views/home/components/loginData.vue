@@ -56,7 +56,6 @@ export default {
             }).then(res => {
                 if (res.data.code === 200) {
                     const data = res.data.data
-                    console.log(data)
                     //数据转化为map
                     const dataMap = {}
                     res.data.data.forEach(item => {
@@ -80,8 +79,6 @@ export default {
                         }
                         dataMap[account][item.time] = item.count
                     })
-
-                    console.log(legendData)
 
                     //从当前日期开始向前设定（30）天数创建时间表
                     const recent = this.$store.state.recent

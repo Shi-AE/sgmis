@@ -519,7 +519,6 @@ export default {
                 //关闭窗口
                 this.closeModal()
             } else {
-                console.log(record)
                 //关联血亲关系
                 axiosx({
                     method: "PATCH",

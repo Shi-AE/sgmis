@@ -55,7 +55,6 @@ export default {
                     Notification.error(res.data.message)
                 }
             })
-
             const opts = {
                 renderer: "svg",
                 locale: "ZH"
