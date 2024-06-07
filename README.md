@@ -1,3 +1,12 @@
+# 运行方法
+
+- 后端（spring boot）位于 `/sgmis/src`  配置 `src/main/resources/application.yml` 中`mysql`数据库和`redis`数据库
+- 前端（vite + vue）位于 `v-dev/sgmis` 进入文件夹执行
+  - 配置文件位于 `v-dev/sgmis/vite.config.js`
+  - `npm install`
+  - `npm run dev`
+- Android（java原生）端 位于`smgis/Android` （开发中）
+
 # sgmis 团队协作赛鸽数据管理系统
 
 ## 1 项目分析
