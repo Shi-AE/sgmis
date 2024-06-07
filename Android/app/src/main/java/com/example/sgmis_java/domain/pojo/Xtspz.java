@@ -25,7 +25,7 @@ public class Xtspz {
     /**
      * 鸽舍简称
      */
-    private String ShortName;
+    private String shortName;
     /**
      * 联系电话
      */

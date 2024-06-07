@@ -103,8 +103,6 @@ public class XtspzController {
         //条件 gid = gid
         QueryWrapper<Xtspz> wrapper = new QueryWrapper<>();
         wrapper.eq("gid", gid);
-        //装填
-        xtspz.setGid(gid);
         //执行
         boolean success = xtspzService.saveOrUpdate(xtspz, wrapper);
         if (!success) {
