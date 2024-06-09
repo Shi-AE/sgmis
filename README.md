@@ -7,6 +7,53 @@
   - `npm run dev`
 - Android（java原生）端 位于`smgis/Android` （开发中）
 
+### tip
+
+登录表单的默认值
+account：root
+password：admin123
+
+
+密码使用`Argon2`算法加密，依赖第三方库`org.bouncycastle`
+加密配置位于`application.yml`中
+``` yml
+encrypt:
+  memoryPowOfTwo: 13
+  iterations: 9
+  parallelism: 5
+  hashLength: 512
+```
+由于将参数设置过高，执行速度较慢，可自行调整参数，调整参数后需**重新创建用户**
+可以在测试类中通过这段代码创建用户
+```java
+@SpringBootTest
+public class AdminTest {
+
+    @Autowired
+    private UserService userService;
+    @Autowired
+    private EncryptUtil encryptUtil;
+
+    @Test
+    void add() {
+        String account = "user123";
+        String password = "123456";
+        Boolean admin = true;
+        User user = User
+                .builder()
+                .account(account)
+                .password(password.getBytes())
+                .admin(admin)
+                .gid(IdWorker.getId())
+                .build();
+        encryptUtil.passwordEncrypt(user);
+        System.out.println(user);
+        userService.save(user);
+    }
+}
+```
+![image](https://github.com/Shi-AE/sgmis/assets/111409670/0312e8e5-8981-4b7a-8ff1-b699d9aa4cb5)
+
 # sgmis 团队协作赛鸽数据管理系统
 
 ## 1 项目分析
