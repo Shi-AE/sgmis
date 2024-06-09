@@ -4,6 +4,7 @@ banner = "2.2.3"
 echarts = "3.0.0.6"
 glide = "5.0.0-rc01"
 gson = "2.11.0"
+hutoolCore = "5.8.28"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
@@ -27,6 +28,7 @@ converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 echarts = { module = "com.github.abel533:ECharts", version.ref = "echarts" }
+hutool-core = { module = "cn.hutool:hutool-core", version.ref = "hutoolCore" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }

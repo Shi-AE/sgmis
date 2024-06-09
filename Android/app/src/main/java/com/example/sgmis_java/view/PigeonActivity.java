@@ -62,11 +62,11 @@ public class PigeonActivity extends AppCompatActivity {
         ListView pigeonNav = findViewById(R.id.pigeon_nav);
         List<NavItemDTO> navItemDTOList = new ArrayList<>();
         navItemDTOList.add(new NavItemDTO(R.drawable.baseline_dns_36, "鸽子库", PigeonDataActivity.class));
-        navItemDTOList.add(new NavItemDTO(R.drawable.baseline_edit_24, "新增编辑", PigeonEditActivity.class));
+//        navItemDTOList.add(new NavItemDTO(R.drawable.baseline_edit_24, "新增编辑", PigeonEditActivity.class));
         navItemDTOList.add(new NavItemDTO(R.drawable.baseline_drive_file_move_outline_24, "快速入库", PigeonQuickEditActivity.class));
         navItemDTOList.add(new NavItemDTO(R.drawable.baseline_account_tree_24, "操作日志", OpLogActivity.class));
         navItemDTOList.add(new NavItemDTO(R.drawable.baseline_bar_chart_24, "统计中心", StatisticActivity.class));
-        navItemDTOList.add(new NavItemDTO(R.drawable.baseline_grid_on_24, "鸽棚巢箱", NestActivity.class));
+//        navItemDTOList.add(new NavItemDTO(R.drawable.baseline_grid_on_24, "鸽棚巢箱", NestActivity.class));
         pigeonNav.setAdapter(new ArrayAdapter<NavItemDTO>(this, R.layout.nav_item, navItemDTOList) {
             @NonNull
             @Override

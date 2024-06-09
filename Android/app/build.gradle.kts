@@ -68,6 +68,6 @@ dependencies {
     implementation(libs.banner)
     // https://mvnrepository.com/artifact/com.github.bumptech.glide/glide
     implementation(libs.glide)
-
-
+    // https://mvnrepository.com/artifact/cn.hutool/hutool-core
+    implementation(libs.hutool.core)
 }
