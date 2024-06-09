@@ -1,163 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            tools:ignore="UselessParent">
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="成员用户名"
-                android:textSize="22sp"
-                tools:ignore="HardcodedText" />
-
-            <TextView
-                android:id="@+id/account"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_margin="5dp"
                 android:gravity="center"
-                android:text="root"
-                android:textColor="#F979B7"
-                android:textSize="20sp"
-                tools:ignore="HardcodedText" />
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="登录IP"
-                android:textSize="22sp"
-                tools:ignore="HardcodedText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="成员用户名"
+                    android:textSize="22sp"
+                    tools:ignore="HardcodedText" />
 
-            <TextView
-                android:id="@+id/ip"
-                android:layout_width="0dp"
+                <TextView
+                    android:id="@+id/account"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="root"
+                    android:textColor="#F979B7"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="登录IP"
+                    android:textSize="22sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/ip"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="192.168.179.1"
+                    android:textColor="#F979B7"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_margin="5dp"
                 android:gravity="center"
-                android:text="192.168.179.1"
-                android:textColor="#F979B7"
-                android:textSize="20sp"
-                tools:ignore="HardcodedText" />
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="登录时间"
+                    android:textSize="22sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="2024-06-07 21:40:15"
+                    android:textColor="#F979B7"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="登录浏览器"
+                    android:textSize="22sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/browser"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="UnknownUnknown"
+                    android:textColor="#F979B7"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="登录系统"
+                    android:textSize="22sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/os"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Unknown"
+                    android:textColor="#F979B7"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="登录设备"
+                    android:textSize="22sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/device"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Unknown"
+                    android:textColor="#F979B7"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
 
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            tools:ignore="UselessParent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="登录时间"
-                android:textSize="22sp"
-                tools:ignore="HardcodedText" />
-
-            <TextView
-                android:id="@+id/time"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="2024-06-07 21:40:15"
-                android:textColor="#F979B7"
-                android:textSize="20sp"
-                tools:ignore="HardcodedText" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            tools:ignore="UselessParent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="登录浏览器"
-                android:textSize="22sp"
-                tools:ignore="HardcodedText" />
-
-            <TextView
-                android:id="@+id/browser"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="UnknownUnknown"
-                android:textColor="#F979B7"
-                android:textSize="20sp"
-                tools:ignore="HardcodedText" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            tools:ignore="UselessParent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="登录系统"
-                android:textSize="22sp"
-                tools:ignore="HardcodedText" />
-
-            <TextView
-                android:id="@+id/os"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Unknown"
-                android:textColor="#F979B7"
-                android:textSize="20sp"
-                tools:ignore="HardcodedText" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="登录设备"
-                android:textSize="22sp"
-                tools:ignore="HardcodedText" />
-
-            <TextView
-                android:id="@+id/device"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Unknown"
-                android:textColor="#F979B7"
-                android:textSize="20sp"
-                tools:ignore="HardcodedText" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
