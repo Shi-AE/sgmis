@@ -33,7 +33,6 @@ public class OpLogActivity extends AppCompatActivity {
     private int pages = Integer.MAX_VALUE;
     private final List<Oplog> oplogList = new ArrayList<>();
 
-    private ListView opList;
     private boolean isLoading = false;
 
     private final String[] contentOptions = new String[]{"新增", "修改", "删除", "共享血统", "接收血统", "关联血亲", "解除血亲", "转移鸽棚巢箱", "其他"};
@@ -51,12 +50,46 @@ public class OpLogActivity extends AppCompatActivity {
             return insets;
         });
 
-        opList = findViewById(R.id.opList);
+        ListView opList = findViewById(R.id.opList);
+
+        ArrayAdapter<Oplog> adapter = new ArrayAdapter<Oplog>(getApplication(), R.layout.oplog_item, oplogList) {
+            @NonNull
+            @Override
+            public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+
+                if (convertView == null) {
+                    convertView = LayoutInflater.from(getContext()).inflate(R.layout.oplog_item, parent, false);
+                }
+
+                Oplog item = getItem(position);
+
+                if (item == null) {
+                    return LayoutInflater.from(getContext()).inflate(R.layout.oplog_item, parent, false);
+                }
+
+                TextView content = convertView.findViewById(R.id.content);
+                TextView tip = convertView.findViewById(R.id.tip);
+                TextView ringNumber = convertView.findViewById(R.id.ringNumber);
+                TextView time = convertView.findViewById(R.id.time);
+                TextView author = convertView.findViewById(R.id.author);
+
+                content.setText(contentOptions[item.getContent()]);
+                tip.setText(item.getTip());
+                ringNumber.setText(item.getRingNumber());
+                time.setText(item.getTime().format(formatter));
+                author.setText(item.getAuthor());
+
+                return convertView;
+            }
+        };
+
+        opList.setAdapter(adapter);
 
         opList.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView absListView, int i) {
             }
+
             @Override
             public void onScroll(AbsListView absListView, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
                 if (!isLoading && current < pages && (firstVisibleItem + visibleItemCount >= totalItemCount)) {
@@ -76,38 +109,7 @@ public class OpLogActivity extends AppCompatActivity {
 
                                 oplogList.addAll(data.getRecords());
 
-                                opList.setAdapter(new ArrayAdapter<Oplog>(getApplication(), R.layout.oplog_item, oplogList) {
-                                    @NonNull
-                                    @Override
-                                    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-
-                                        if (convertView == null) {
-                                            convertView = LayoutInflater.from(getContext()).inflate(R.layout.oplog_item, parent, false);
-                                        }
-
-                                        Oplog item = getItem(position);
-
-                                        if (item == null) {
-                                            return LayoutInflater.from(getContext()).inflate(R.layout.oplog_item, parent, false);
-                                        }
-
-                                        TextView content = convertView.findViewById(R.id.content);
-                                        TextView tip = convertView.findViewById(R.id.tip);
-                                        TextView ringNumber = convertView.findViewById(R.id.ringNumber);
-                                        TextView time = convertView.findViewById(R.id.time);
-                                        TextView author = convertView.findViewById(R.id.author);
-
-                                        content.setText(contentOptions[item.getContent()]);
-                                        tip.setText(item.getTip());
-                                        ringNumber.setText(item.getRingNumber());
-                                        time.setText(item.getTime().format(formatter));
-                                        author.setText(item.getAuthor());
-
-                                        return convertView;
-                                    }
-                                });
-
-                                opList.setSelection(firstVisibleItem);
+                                adapter.notifyDataSetChanged();
 
                                 isLoading = false;
                             }
