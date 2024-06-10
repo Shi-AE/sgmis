@@ -2,6 +2,7 @@ package com.example.sgmis_java.api.service;
 
 import com.example.sgmis_java.domain.pojo.Pigeon;
 import com.example.sgmis_java.domain.pojo.Result;
+import com.example.sgmis_java.domain.vo.PigeonWrapperVo;
 
 import java.util.List;
 
@@ -16,4 +17,7 @@ public interface PigeonService {
 
     @DELETE("pigeon/{id}/{sex}")
     Observable<Result<Object>> removePigeonById(@Path("id") Long id, @Path("sex") String sex);
+
+    @GET("pigeon/{id}")
+    Observable<Result<PigeonWrapperVo>> getPigeon(@Path("id") Long id);
 }

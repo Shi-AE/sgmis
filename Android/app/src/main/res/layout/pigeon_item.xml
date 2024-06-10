@@ -109,7 +109,7 @@
                     android:clickable="true"
                     android:gravity="center"
                     android:text="root"
-                    android:textColor="#F979B7"
+                    android:textColor="#D91AD9"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText" />
 
@@ -136,7 +136,7 @@
                     android:clickable="true"
                     android:gravity="center"
                     android:text="root"
-                    android:textColor="#F979B7"
+                    android:textColor="#D91AD9"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText" />
 
@@ -163,7 +163,7 @@
                     android:clickable="true"
                     android:gravity="center"
                     android:text="root"
-                    android:textColor="#F979B7"
+                    android:textColor="#D91AD9"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText" />
 

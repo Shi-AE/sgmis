@@ -1,5 +1,6 @@
 package com.example.sgmis_java.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.bumptech.glide.Glide;
 import com.example.sgmis_java.R;
 import com.example.sgmis_java.api.Api;
 import com.example.sgmis_java.api.service.PigeonService;
@@ -99,6 +101,15 @@ public class PigeonDataActivity extends AppCompatActivity {
                     state.setText(StrUtil.blankToDefault(item.getState(), "---"));
                     jb.setText(StrUtil.blankToDefault(item.getJb(), "---"));
                     isGrade.setText(StrUtil.blankToDefault(item.getIsGrade(), "---"));
+                    if (StrUtil.isNotBlank(item.getPictureUrl())) {
+                        Glide.with(picture)
+                                .load(Api.baseUrl + Api.pigeon + item.getPictureUrl())
+                                .error(R.drawable.baseline_hourglass_empty_24)
+                                .into(picture);
+                        ViewGroup.LayoutParams layoutParams = picture.getLayoutParams();
+                        layoutParams.height = (int) (100 * getResources().getDisplayMetrics().density);;
+                        picture.setLayoutParams(layoutParams);
+                    }
                     remark.setText(StrUtil.blankToDefault(item.getRemark(), "---"));
 
                     delete.setOnClickListener(
@@ -122,18 +133,27 @@ public class PigeonDataActivity extends AppCompatActivity {
                     );
 
                     ringNumber.setOnClickListener(l -> {
-                        MessageUtils.showToast(getApplication(), item.getRingNumber());
+                        Intent intent = new Intent(getApplication(), DetailActivity.class);
+                        intent.putExtra("id", item.getId());
+                        startActivity(intent);
+                        overridePendingTransition(android.R.anim.slide_out_right, android.R.anim.slide_in_left);
                     });
 
                     if (fp != null) {
                         fatherRingNumber.setOnClickListener(l -> {
-                            MessageUtils.showToast(getApplication(), fp.getRingNumber());
+                            Intent intent = new Intent(getApplication(), DetailActivity.class);
+                            intent.putExtra("id", fp.getId());
+                            startActivity(intent);
+                            overridePendingTransition(android.R.anim.slide_out_right, android.R.anim.slide_in_left);
                         });
                     }
 
                     if (mp != null) {
                         motherRingNumber.setOnClickListener(l -> {
-                            MessageUtils.showToast(getApplication(), mp.getRingNumber());
+                            Intent intent = new Intent(getApplication(), DetailActivity.class);
+                            intent.putExtra("id", mp.getId());
+                            startActivity(intent);
+                            overridePendingTransition(android.R.anim.slide_out_right, android.R.anim.slide_in_left);
                         });
                     }
 
