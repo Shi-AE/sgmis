@@ -1,13 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="activity_pigeon_quick_edit.xml" />
+        android:orientation="vertical">
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="父亲环号"
+                        tools:ignore="HardcodedText" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/fatherItem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:completionThreshold="1"
+                        android:dropDownWidth="match_parent"
+                        android:dropDownVerticalOffset="10dp"
+                        android:hint="请输入父亲环号以搜素"
+                        android:inputType="text"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="母亲环号"
+                        tools:ignore="HardcodedText" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/matherItem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:completionThreshold="1"
+                        android:dropDownWidth="match_parent"
+                        android:dropDownVerticalOffset="10dp"
+                        android:hint="请输入母亲环号以搜素"
+                        android:inputType="text"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#B5E241"
+            android:gravity="center"
+            android:text="新增项"
+            tools:ignore="HardcodedText" />
+
+        <ListView
+            android:id="@+id/quickList"
+            android:layout_width="match_parent"
+            android:layout_height="650dp" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="#00B42A"
+            android:gravity="center"
+            android:text="提交信息"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

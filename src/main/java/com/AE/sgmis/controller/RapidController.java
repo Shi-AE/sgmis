@@ -96,6 +96,12 @@ public class RapidController {
             pigeon.setFid(fid);
             pigeon.setMid(mid);
             pigeon.setGid(gid);
+            pigeon.setYan((String) pigeonMap.get("yan"));
+            pigeon.setYs((String) pigeonMap.get("ys"));
+            pigeon.setLx((String) pigeonMap.get("lx"));
+            pigeon.setState((String) pigeonMap.get("state"));
+            pigeon.setJb((String) pigeonMap.get("jb"));
+            pigeon.setIsGrade((String) pigeonMap.get("isGrade"));
             pigeons.add(pigeon);
             //pigeonInfo
             PigeonInfo pigeonInfo = new PigeonInfo();

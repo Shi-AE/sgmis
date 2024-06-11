@@ -1,5 +1,7 @@
 package com.example.sgmis_java.domain.pojo;
 
+import androidx.annotation.NonNull;
+
 import java.time.LocalDate;
 
 import lombok.AllArgsConstructor;
@@ -81,4 +83,28 @@ public class Pigeon {
      * 组id
      */
     private Long gid;
+
+    /**
+     * 国家
+     */
+    private String country;
+
+    /**
+     * 代号
+     */
+    private String code;
+    /**
+     * 省份
+     */
+    private String province;
+    /**
+     * 年份
+     */
+    private String year;
+
+    @NonNull
+    @Override
+    public String toString() {
+        return ringNumber;
+    }
 }
