@@ -27,8 +27,18 @@ import com.example.sgmis_java.api.Api;
 import com.example.sgmis_java.api.service.DataService;
 import com.example.sgmis_java.domain.pojo.Oplog;
 import com.example.sgmis_java.domain.pojo.Pigeon;
+import com.example.sgmis_java.domain.vo.LoginCountVo;
 import com.example.sgmis_java.echarts.EchartView;
 import com.example.sgmis_java.utils.EchartOptionUtil;
+import com.github.abel533.echarts.Grid;
+import com.github.abel533.echarts.Legend;
+import com.github.abel533.echarts.Tooltip;
+import com.github.abel533.echarts.axis.AxisLabel;
+import com.github.abel533.echarts.axis.ValueAxis;
+import com.github.abel533.echarts.code.AxisType;
+import com.github.abel533.echarts.code.Trigger;
+import com.github.abel533.echarts.json.GsonOption;
+import com.github.abel533.echarts.series.Line;
 import com.youth.banner.Banner;
 import com.youth.banner.adapter.BannerAdapter;
 import com.youth.banner.adapter.BannerImageAdapter;
@@ -267,6 +277,69 @@ public class HomeActivity extends AppCompatActivity {
                 public void onPageFinished(WebView view, String url) {
                     super.onPageFinished(view, url);
                     optionPie.refreshEchartsWithOption(EchartOptionUtil.getOptionPieUtilOptions(countDataPie));
+                }
+            });
+        });
+
+        // 登录信息图表
+        EchartView loginList = findViewById(R.id.loginList);
+        Api.execute(this, Api.creat(DataService.class).getLoginCount(), (data, msg) -> {
+
+            Map<String, Line> loginData = data
+                    .stream()
+                    .collect(Collectors.groupingBy(LoginCountVo::getAccount))
+                    .entrySet()
+                    .stream()
+                    .collect(Collectors.toMap(
+                            Map.Entry::getKey,
+                            entry -> {
+                                String account = entry.getKey();
+                                List<LoginCountVo> loginCountVoList = entry.getValue();
+                                return new Line()
+                                        .name(account)
+                                        .data(loginCountVoList
+                                                .stream()
+                                                .map(item -> new Object[]{
+                                                        item.getTime().format(DateTimeFormatter.ofPattern(Api.yyyyMMdd)),
+                                                        item.getCount()
+                                                }).toArray()
+                                        );
+                            }
+                    ));
+
+            GsonOption option = new GsonOption();
+            option.title("登录信息")
+                    .tooltip(new Tooltip()
+                            .trigger(Trigger.axis)
+                    )
+                    .legend(new Legend()
+                            .data(new ArrayList<>(loginData.keySet()))
+                    )
+                    .grid(new Grid()
+                            .left("3%")
+                            .right("10%")
+                            .bottom("3%")
+                            .containLabel(true)
+                    )
+                    .xAxis(new ValueAxis()
+                            .type(AxisType.time)
+                            .name("日期")
+                            .boundaryGap(false)
+                            .axisLabel(new AxisLabel()
+                                    .formatter("{MM}/{dd}")
+                            )
+                    )
+                    .yAxis(new ValueAxis()
+                            .name("操作")
+                            .type(AxisType.value)
+                    )
+                    .series(new ArrayList<>(loginData.values()));
+
+            loginList.setWebViewClient(new WebViewClient() {
+                @Override
+                public void onPageFinished(WebView view, String url) {
+                    super.onPageFinished(view, url);
+                    loginList.refreshEchartsWithOption(option);
                 }
             });
         });

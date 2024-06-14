@@ -149,6 +149,14 @@
                 android:layout_margin="5dp"
                 android:theme="@style/CardView.Dark" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="近期操作日志"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
             <ListView
                 android:id="@+id/oplogData"
                 android:layout_width="match_parent"
@@ -158,6 +166,13 @@
 
             <com.example.sgmis_java.echarts.EchartView
                 android:id="@+id/optionPie"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_margin="5dp"
+                android:theme="@style/CardView.Dark" />
+
+            <com.example.sgmis_java.echarts.EchartView
+                android:id="@+id/loginList"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:layout_margin="5dp"

@@ -1,11 +1,12 @@
 package com.example.sgmis_java.api.service;
 
-import com.example.sgmis_java.domain.dto.OptionPieDTO;
 import com.example.sgmis_java.domain.dto.OplogLineDTO;
+import com.example.sgmis_java.domain.dto.OptionPieDTO;
 import com.example.sgmis_java.domain.dto.TotalDTO;
 import com.example.sgmis_java.domain.pojo.Oplog;
 import com.example.sgmis_java.domain.pojo.Pigeon;
 import com.example.sgmis_java.domain.pojo.Result;
+import com.example.sgmis_java.domain.vo.LoginCountVo;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -47,4 +48,7 @@ public interface DataService {
 
     @GET("data/oplog/content/total")
     Observable<Result<List<OptionPieDTO>>> getOptionPie();
+
+    @GET("data/login/count")
+    Observable<Result<List<LoginCountVo>>> getLoginCount();
 }

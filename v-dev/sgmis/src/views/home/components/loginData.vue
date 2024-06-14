@@ -55,7 +55,6 @@ export default {
                 url: "data/login/count"
             }).then(res => {
                 if (res.data.code === 200) {
-                    const data = res.data.data
                     //数据转化为map
                     const dataMap = {}
                     res.data.data.forEach(item => {
