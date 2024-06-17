@@ -34,7 +34,7 @@ public class Api {
 
     private static final Retrofit retrofit;
 
-    public static final String baseUrl = "http://192.168.179.1:8080/";
+    public static final String baseUrl = "http://shiyixiang.cn/";
 
     public static final String api = "api/";
 
