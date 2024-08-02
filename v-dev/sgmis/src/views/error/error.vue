@@ -33,6 +33,14 @@ export default {
                 </div>
             </a-space>
         </div>
+        <div :style="{background:'#FFFFFF', display: 'flex', alignItems: 'center', justifyContent: 'center', width:'100%' , position: 'absolute', bottom: 0}">
+            2023-09@SGMIS
+
+            备案号：
+            <a href="https://beian.miit.gov.cn" target="_blank" style=" text-decoration: none;">
+                浙ICP备2024071340号
+            </a>
+        </div>
     </div>
 </template>
 <style scoped>

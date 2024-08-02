@@ -22,6 +22,15 @@ import loginForm from "./components/loginForm.vue"
         <div class="bird-container bird-container--four">
             <div class="bird bird--four"></div>
         </div>
+
+        <div :style="{background:'#F5E8FF', display: 'flex', alignItems: 'center', justifyContent: 'center', width:'100%'}">
+            2023-09@SGMIS
+
+            备案号：
+            <a href="https://beian.miit.gov.cn" target="_blank" style=" text-decoration: none;">
+                浙ICP备2024071340号
+            </a>
+        </div>
     </div>
 </template>
 <style scoped lang="scss">
