@@ -5,7 +5,7 @@
   - 配置文件位于 `v-dev/sgmis/vite.config.js`
   - `npm install`
   - `npm run dev`
-- Android（java原生）端 位于`smgis/Android` （开发中）
+- Android（java原生）端 位于`smgis/Android`
 
 ### tip
 
